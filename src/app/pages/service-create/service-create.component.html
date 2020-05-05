@@ -1,0 +1,37 @@
+<div fxLayout="column" style='margin: 50px;'>
+  <mat-card class="mat-elevation-z8">
+    <mat-card-title>Create Service</mat-card-title>
+    <br/>
+    <form [formGroup]="form" (ngSubmit)="create()" #servicesForm>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <input matInput
+                   [formControl]="form.controls['description']"
+                   placeholder="Description"/>
+          </mat-form-field>
+
+        </div>
+      </mat-card-content>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <input matInput
+                   [formControl]="form.controls['price']"
+                   placeholder="Price"/>
+          </mat-form-field>
+
+        </div>
+      </mat-card-content>
+
+      <br/>
+      <mat-card-actions align="end">
+        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+        <button mat-raised-button color="accent">Submit</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
+
+
+
