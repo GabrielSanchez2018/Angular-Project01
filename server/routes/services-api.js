@@ -81,15 +81,30 @@ router.put('/:serviceId', function(req, res, next){
 });
 
 //Delete Service
-router.delete('/:serviceID', function(req, res, next){
-  Services.findOne({'_id': req.params.serviceID}, function(err, services){
-    if (err) {
-      console.log(err);
-      return next(err);
-    } else {
-      console.log(services);
-      res.json(services);
-    }
+router.delete('/:id', function(req, res, next) {
+  Services.findOne({'_id': req.params.id}, function(err, services) {
+      if (err) {
+          console.log(err);
+          return next(err);
+      } else {
+          console.log(err);
+
+          if (services) {
+              services.set({
+              isDisabled: true
+          });
+
+          services.save(function(err, savedService) {
+              if (err) {
+                  console.log(err);
+                  return next(err);
+                  } else {
+                  console.log(savedService);
+                  res.json(savedService);
+                  }
+              })
+          }
+      }
   });
 });
 
