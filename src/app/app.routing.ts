@@ -25,6 +25,8 @@ import { SecurityQuestionAskComponent } from './pages/security-question-ask/secu
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { ServiceCreateComponent } from './pages/service-create/service-create.component';
 import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
+import {ServiceManagementComponent} from './pages/service-management/service-management.component';
+
 
 export const AppRoutes: Routes = [
   {
@@ -92,7 +94,7 @@ export const AppRoutes: Routes = [
         canActivate: [SessionGuard]
       },
       {
-        path: 'service-create-edit',
+        path: 'service-create-edit/:serviceId',
         component: ServiceCreateEditComponent,
         canActivate: [SessionGuard]
       },
@@ -106,6 +108,12 @@ export const AppRoutes: Routes = [
         component: RoleCreateComponent,
         canActivate: [RoleGuard]
       },
+      {
+        path: 'service-management',
+        component: ServiceManagementComponent,
+        canActivate: [RoleGuard]
+      },
+
       {
         path: 'service-create',
         component: ServiceCreateComponent,

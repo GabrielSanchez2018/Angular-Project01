@@ -16,33 +16,34 @@ export class ServiceCreateEditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
     this.serviceId = this.route.snapshot.paramMap.get('serviceId');
 
-    this.http.get('api/service' + this.serviceId).subscribe(res =>{
-      this.serviceId = res;
+    this.http.get('api/services/' + this.serviceId).subscribe(res => {
+      this.service = res;
     }, err => {
       console.log(err);
-    }, () =>{
+    }, () => {
       this.form.controls.description.setValue(this.service.description);
       this.form.controls.price.setValue(this.service.price);
     });
   }
 
-
   ngOnInit() {
     this.form = this.fb.group({
       description: [null, Validators.compose([Validators.required])],
-      price: [null, Validators.compose([Validators.required])]
-    })
+      price: [null, Validators.compose([Validators.required])],
+    });
   }
 
-  saveService(){
-    this.http.put('/api/service/' + this.serviceId, {
+  saveService() {
+    this.http.put('/api/services/' + this.serviceId, {
       description: this.form.controls.description.value,
       price: this.form.controls.price.value
-    })
+    }).subscribe(res => {
+      this.router.navigate(['/service-management']);
+    });
   }
 
-  cancel(){
-    this.router.navigate(['/services'])
+  cancel() {
+    this.router.navigate(['/service-management']);
   }
 
 }

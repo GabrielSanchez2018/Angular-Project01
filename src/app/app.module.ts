@@ -59,6 +59,7 @@ import { PasswordResetComponent } from './pages/password-reset/password-reset.co
 import { ServiceCreateComponent } from './pages/service-create/service-create.component';
 import { ServiceCreateDeleteDialogComponent } from './dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
+import { ServiceManagementComponent } from './pages/service-management/service-management.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { ServiceCreateEditComponent } from './pages/service-create-edit/service-
     PasswordResetComponent,
     ServiceCreateComponent,
     ServiceCreateDeleteDialogComponent,
-    ServiceCreateEditComponent
+    ServiceCreateEditComponent,
+    ServiceManagementComponent
   ],
   imports: [
     BrowserModule,

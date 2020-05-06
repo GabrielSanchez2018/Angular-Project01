@@ -31,14 +31,14 @@ export class ServiceCreateComponent implements OnInit {
       description: description,
       price: price
     }).subscribe(res =>{
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/service-management']);
     }, err => {
       console.log(err)
     });
   }
 
   cancel() {
-    this.router.navigate(['/admin'])
+    this.router.navigate(['/service-management'])
   }
 
 }

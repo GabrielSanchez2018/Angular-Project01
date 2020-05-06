@@ -23,8 +23,8 @@ router.get('/', function(req, res, next) {
 });
 
 // Find by Id
-router.get('/:serviceId', function(req, res, next){
-  Services.findOne({'_id': req.params.serviceId}, function(err, services){
+router.get('/:id', function(req, res, next){
+  Services.findOne({'_id': req.params.id}, function(err, services){
     if(err) {
       console.log(err);
       return next(err);

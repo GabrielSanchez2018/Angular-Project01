@@ -1,44 +1,18 @@
-<!--=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
-Date: April 19, 2020
-Assignment: security question list
-Description: SQ list html build
-==========================-->
+<mat-card>
 
-<div fxLayout="column">
-  <mat-card>
-      <mat-card-title>Services</mat-card-title>
-      <mat-card-subtitle>
-          <button mat-raised-button routerLink="/service-create" color="accent">Create</button>
-      </mat-card-subtitle>
 
-      <br />
-      <mat-card-content *ngIf="services">
-          <mat-table [dataSource]="services">
-              <ng-container matColumnDef="description">
-                  <th mat-header-cell *matHeaderCellDef>Service</th>
-                  <td mat-cell *matCellDef="let element">
-                      {{element.description}}
-                      {{element.price}}
-                  </td>
-              </ng-container>
+  <div fxLayout="column">
+    <h4 fxFlex>Services</h4>
 
-              <ng-container matColumnDef="functions">
-                  <th mat-header-cell *matHeaderCellDef>Functions</th>
+    <div *ngFor="let service of services">
+      <mat-checkbox name="{{service.id}}" ngModel>
+        {{service.description}} ({{service.price | currency}})
+      </mat-checkbox>
+      <br/>
+    </div>
+  </div>
 
-                  <td mat-cell *matCellDef="let element">
-                      <button mat-icon-button routerLink="/service-create-edit/{{element._id}}">
-                          <mat-icon color="accent">edit</mat-icon>
-                      </button>
-                      <button mat-icon-button (click)="delete(element._id)">
-                        <mat-icon color="accent">delete</mat-icon>
-                      </button>
-                  </td>
-              </ng-container>
 
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </mat-table>
-      </mat-card-content>
-  </mat-card>
-</div>
+
+</mat-card>
+

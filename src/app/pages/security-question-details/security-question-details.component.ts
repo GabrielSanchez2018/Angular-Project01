@@ -1,9 +1,4 @@
-/*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
-Date: April 19, 2020
-Assignment: security question details
-Description: SQ function for details
-==========================*/
+
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';

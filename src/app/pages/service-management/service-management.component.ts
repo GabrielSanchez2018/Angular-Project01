@@ -7,15 +7,14 @@ import {MatDialog} from '@angular/material/dialog';
 import {CookieService} from 'ngx-cookie-service';
 import {HttpClient} from '@angular/common/http';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
-import {MatListModule} from '@angular/material/list';
 
 
 @Component({
-  selector: 'app-service-repair',
-  templateUrl: './service-repair.component.html',
-  styleUrls: ['./service-repair.component.css']
+  selector: 'app-service-management',
+  templateUrl: './service-management.component.html',
+  styleUrls: ['./service-management.component.css']
 })
-export class ServiceRepairComponent implements OnInit {
+export class ServiceManagementComponent implements OnInit {
   services: any;
   displayedColumns = ['description', 'functions']
 
