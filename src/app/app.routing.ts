@@ -24,6 +24,7 @@ import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/
 import { SecurityQuestionAskComponent } from './pages/security-question-ask/security-question-ask.component';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { ServiceCreateComponent } from './pages/service-create/service-create.component';
+import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
 
 export const AppRoutes: Routes = [
   {
@@ -88,6 +89,11 @@ export const AppRoutes: Routes = [
       {
         path: 'service-repair',
         component: ServiceRepairComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'service-create-edit',
+        component: ServiceCreateEditComponent,
         canActivate: [SessionGuard]
       },
       {

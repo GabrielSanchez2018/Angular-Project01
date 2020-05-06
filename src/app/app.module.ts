@@ -58,6 +58,7 @@ import { SecurityQuestionAskComponent } from './pages/security-question-ask/secu
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
 import { ServiceCreateComponent } from './pages/service-create/service-create.component';
 import { ServiceCreateDeleteDialogComponent } from './dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
+import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import { ServiceCreateDeleteDialogComponent } from './dialogs/service-create-del
     SecurityQuestionAskComponent,
     PasswordResetComponent,
     ServiceCreateComponent,
-    ServiceCreateDeleteDialogComponent
+    ServiceCreateDeleteDialogComponent,
+    ServiceCreateEditComponent
   ],
   imports: [
     BrowserModule,
