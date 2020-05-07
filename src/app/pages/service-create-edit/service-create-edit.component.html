@@ -6,8 +6,8 @@
           <mat-card-content>
               <div fxLayout="column" fxLayoutGap="10px">
                   <mat-form-field>
-                      <input matInput [formControl]="form.controls['description']"
-                          placeholder="Description"/>
+                      <input matInput [formControl]="form.controls['title']"
+                          placeholder="Title"/>
                   </mat-form-field>
               </div>
           </mat-card-content>
@@ -16,6 +16,14 @@
                 <mat-form-field>
                     <input matInput [formControl]="form.controls['price']"
                         placeholder="Price"/>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div fxLayout="column" fxLayoutGap="10px">
+                <mat-form-field>
+                    <input matInput [formControl]="form.controls['id']"
+                        placeholder="Id"/>
                 </mat-form-field>
             </div>
         </mat-card-content>
