@@ -20,7 +20,11 @@ export class ServiceRepairComponent implements OnInit {
   form: FormGroup;
   description: string;
   price: number;
+  service: any;
   services: any;
+  invoice: any = {
+    services: {}
+  }
 
 
 
@@ -31,19 +35,23 @@ export class ServiceRepairComponent implements OnInit {
       this.username = this.cookieService.get('sessionuser');
     // this api wil get the services
     this.http.get('api/services').subscribe(res =>{
-      this.services = res,
-
-      console.log(this.services);
+      this.services = res;
     }, err => {
       console.log(err);
+    }, () =>{
 
+    
+      this.form.controls.title.setValue(this.service.title);
+      this.form.controls.price.setValue(this.service.price);
+      this.form.controls.id.setValue(this.service.id)
     })
   }
 
   ngOnInit() {
     this.form = this.fb.group({
-      description: [null, Validators.compose([Validators.required])],
+      title: [null, Validators.compose([Validators.required])],
       price: [null, Validators.compose([Validators.required])],
+      id: [null, Validators.compose([Validators.required])],
       parts: [null, Validators.compose([Validators.required])],
       labor: [null, Validators.compose([Validators.required])],
       alternator: [null, null]
@@ -61,7 +69,9 @@ export class ServiceRepairComponent implements OnInit {
       }
     }
 
-    const lineItems = [];
+    const lineItems = [
+     
+    ];
 
     /**
      * Build the invoice object

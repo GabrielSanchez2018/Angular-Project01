@@ -34,7 +34,7 @@ export class BaseLayoutComponent implements OnInit {
     localStorage.removeItem(this.sessionuser);
     this.sessionuser = false;
     this.auth.logout();
-    //the follogin function will reload the browser when you signg out
+    //the follogin function will reload the browser when you sign out
     //This clears the cookie
     window.location.reload(); 
   }

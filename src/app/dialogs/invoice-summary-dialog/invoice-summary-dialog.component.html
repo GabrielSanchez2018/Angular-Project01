@@ -8,7 +8,7 @@
     <div *ngFor="let lineItem of invoice.lineItems">
         <mat-list>
             <mat-list-item>
-                {{lineItem.description}}:
+                {{lineItem.title}}:
                 <div fxFlex></div>
                 {{lineItem.price | currency}}
             </mat-list-item>

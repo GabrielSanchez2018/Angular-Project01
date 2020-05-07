@@ -9,11 +9,7 @@
 }
 
 .toolbar {
-  background: linear-gradient(
-        180deg,
-        white 0%,
-        #3e828a 100%
-    )
+  background: none;
 }
 
 .navbar-link {
@@ -36,11 +32,8 @@
   font-weight: lighter;
   padding-left: 100px;
   letter-spacing: 3px;
-  background: linear-gradient(
-    180deg,
-    #3e828a 100%,
-    white 0%
-  )
+  background: slateblue
+  
 }
 
 .bu-link {
