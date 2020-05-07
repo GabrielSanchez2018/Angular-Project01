@@ -16,7 +16,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 })
 export class ServiceManagementComponent implements OnInit {
   services: any;
-  displayedColumns = ['description', 'functions']
+  displayedColumns = ['description','functions']
 
   constructor(private http: HttpClient, private dialog: MatDialog) {
     this.http.get('api/services').subscribe(res =>{

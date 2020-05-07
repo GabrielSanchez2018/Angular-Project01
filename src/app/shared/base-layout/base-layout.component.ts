@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
+import {AuthService} from '../guards/auth.service';
 
 @Component({
   selector: 'app-base-layout',
@@ -12,8 +13,12 @@ export class BaseLayoutComponent implements OnInit {
   year: number = Date.now();
   authService: any;
   sessionuser: any;
+  username: string;
+  isAuthenticated: boolean;
 
-  constructor(private http: HttpClient, private cookieService: CookieService) {
+  constructor(private http: HttpClient, private cookieService: CookieService, private auth: AuthService)  {
+
+    this.username = this.cookieService.get('sessionuser');
     this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role').subscribe(res => {
       if (res === "admin") {
           this.show = true;
@@ -22,11 +27,12 @@ export class BaseLayoutComponent implements OnInit {
       }
     });
   }
-  onLogout() {
-    //log user out
 
-     this.sessionuser.onLogout();
+// this function will logout the user
+  onLogout() {
+    this.auth.logout();
   }
+
   ngOnInit() {
 
   }

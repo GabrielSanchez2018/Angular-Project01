@@ -38,8 +38,9 @@ router.get('/:id', function(req, res, next){
 // Create new service
 router.post('/', function(req, res, next){
   let newService = {
-    description: req.body.description,
-    price : req.body.price
+    title: req.body.title,
+    price : req.body.price,
+    id : req.body.id
   };
 
   Services.create(newService, function(err, services){
@@ -63,8 +64,9 @@ router.put('/:serviceId', function(req, res, next){
       console.log(services);
 
       services.set({
-        description: req.body.description,
-        price : req.body.price
+        title: req.body.title,
+        price : req.body.price,
+        id : req.body.id
       });
 
       services.save(function(err, services){

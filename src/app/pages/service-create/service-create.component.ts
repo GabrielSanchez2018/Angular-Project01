@@ -17,19 +17,22 @@ export class ServiceCreateComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      description: [null, Validators.compose([Validators.required])],
-      price: [null, Validators.compose([Validators.required])]
+      title: [null, Validators.compose([Validators.required])],
+      price: [null, Validators.compose([Validators.required])],
+      id: [null, Validators.compose([Validators.required])]
     });
   }
 
   create() {
     // I add services because in the Services API i have it set up as services
-    const description = this.form.controls['description'].value;
+    const title = this.form.controls['title'].value;
     const price = this.form.controls['price'].value;
+    const id = this.form.controls['id'].value;
 
     this.http.post('/api/services', {
-      description: description,
-      price: price
+      title: title,
+      price: price,
+      id : id
     }).subscribe(res =>{
       this.router.navigate(['/service-management']);
     }, err => {

@@ -50,3 +50,7 @@
 .bu-link:hover {
   text-decoration: underline;
 }
+
+.filler {
+  flex: 1 1 auto;
+}

@@ -8,23 +8,41 @@ Description: html for the delete dialog page
 <div fxLayout="column">
 
   <!-- navigation -->
-  <nav fxFlex>
-    <mat-toolbar class="toolbar">
-      <!-- navbar container -->
-      <div class="navbar-container">
-        <!-- logo -->
-        <button class="logo" routerLink="/" mat-button><b>BCRS</b></button>
-
-        <!-- nav bar links -->
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Great</h1>
+      <span class="menu-spacer"></span>
+      <div>
         <button class="navbar-link" routerLink="/" mat-button>Home</button>
         <button class="navbar-link" routerLink="/session/signin" mat-button>Login</button>
         <button class="navbar-link" routerLink="/about" mat-button>About</button>
         <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
-        <button *ngIf='show' class="navbar-link" routerLink="/admin" mat-button>Admin</button>
-        <button class="navbar-link" style="cursor: pointer;" (click)="onLogout()">Logout</button>
+        <button mat-icon-button *ngIf='show' class="navbar-link" routerLink="/admin" mat-icon-button><span class="material-icons">
+          home</span></button>
+
+
+            <button class="nav-link btn btn-sm btn-danger btn-sm" (click)="onLogout()">
+              Logout
+            </button>
+
+
       </div>
-    </mat-toolbar>
-  </nav>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+        <span style="font-size: 20px;">Welcome, {{username}}</span>
+      </mat-toolbar-row>
+  </mat-toolbar>
+
+
+
+
+
+
+
 
   <!-- main content -->
   <div fxFlex>

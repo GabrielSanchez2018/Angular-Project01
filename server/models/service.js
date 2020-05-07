@@ -10,8 +10,9 @@ const mongoose = require('mongoose');
 
 // This will be the model to create new services.
 let serviceSchema = mongoose.Schema({
-    description: {type: String},
+    title: {type: String},
     price: {type: Number},
+    id: {type:Number},
     isDisabled: {type: Boolean, default: false}
 });
 
