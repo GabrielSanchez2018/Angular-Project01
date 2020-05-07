@@ -60,6 +60,7 @@ import { ServiceCreateComponent } from './pages/service-create/service-create.co
 import { ServiceCreateDeleteDialogComponent } from './dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
 import { ServiceManagementComponent } from './pages/service-management/service-management.component';
+import { AuthService } from './shared/guards/auth.service';
 
 
 @NgModule({
@@ -128,7 +129,8 @@ import { ServiceManagementComponent } from './pages/service-management/service-m
   providers: [
     CookieService,
     SessionGuard,
-    RoleGuard
+    RoleGuard,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

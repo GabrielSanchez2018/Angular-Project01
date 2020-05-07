@@ -30,7 +30,13 @@ export class BaseLayoutComponent implements OnInit {
 
 // this function will logout the user
   onLogout() {
+    localStorage.clear();
+    localStorage.removeItem(this.sessionuser);
+    this.sessionuser = false;
     this.auth.logout();
+    //the follogin function will reload the browser when you signg out
+    //This clears the cookie
+    window.location.reload(); 
   }
 
   ngOnInit() {

@@ -18,22 +18,20 @@ Description: html for the delete dialog page
       <div>
         <button class="navbar-link" routerLink="/" mat-button>Home</button>
         <button class="navbar-link" routerLink="/session/signin" mat-button>Login</button>
-        <button class="navbar-link" routerLink="/about" mat-button>About</button>
         <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
         <button mat-icon-button *ngIf='show' class="navbar-link" routerLink="/admin" mat-icon-button><span class="material-icons">
           home</span></button>
 
 
-            <button class="nav-link btn btn-sm btn-danger btn-sm" (click)="onLogout()">
-              Logout
-            </button>
+            
+            <button class="navbar-link" (click)='onLogout()' mat-button>Logout</button>
 
 
       </div>
     </mat-toolbar-row>
 
     <mat-toolbar-row>
-        <span style="font-size: 20px;">Welcome, {{username}}</span>
+        <span style="font-size: 20px;">Welcome {{username}}</span>
       </mat-toolbar-row>
   </mat-toolbar>
 
