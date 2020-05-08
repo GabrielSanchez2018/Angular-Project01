@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import {InvoiceSummaryDialogComponent} from '../../dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -40,7 +39,7 @@ export class ServiceRepairComponent implements OnInit {
       console.log(err);
     }, () =>{
 
-    
+
       this.form.controls.title.setValue(this.service.title);
       this.form.controls.price.setValue(this.service.price);
       this.form.controls.id.setValue(this.service.id)
@@ -51,7 +50,7 @@ export class ServiceRepairComponent implements OnInit {
     this.form = this.fb.group({
       title: [null, Validators.compose([Validators.required])],
       price: [null, Validators.compose([Validators.required])],
-      id: [null, Validators.compose([Validators.required])],
+
       parts: [null, Validators.compose([Validators.required])],
       labor: [null, Validators.compose([Validators.required])],
       alternator: [null, null]
@@ -70,7 +69,7 @@ export class ServiceRepairComponent implements OnInit {
     }
 
     const lineItems = [
-     
+
     ];
 
     /**
