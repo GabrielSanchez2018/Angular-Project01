@@ -26,6 +26,7 @@ import { PasswordResetComponent } from './pages/password-reset/password-reset.co
 import { ServiceCreateComponent } from './pages/service-create/service-create.component';
 import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
 import {ServiceManagementComponent} from './pages/service-management/service-management.component';
+import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
 
 
 export const AppRoutes: Routes = [
@@ -91,6 +92,11 @@ export const AppRoutes: Routes = [
       {
         path: 'service-repair',
         component: ServiceRepairComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'my-orders',
+        component: MyOrdersComponent,
         canActivate: [SessionGuard]
       },
       {

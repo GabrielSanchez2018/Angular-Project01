@@ -61,6 +61,7 @@ import { ServiceCreateDeleteDialogComponent } from './dialogs/service-create-del
 import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
 import { ServiceManagementComponent } from './pages/service-management/service-management.component';
 import { AuthService } from './shared/guards/auth.service';
+import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
 
 
 @NgModule({
@@ -93,7 +94,8 @@ import { AuthService } from './shared/guards/auth.service';
     ServiceCreateComponent,
     ServiceCreateDeleteDialogComponent,
     ServiceCreateEditComponent,
-    ServiceManagementComponent
+    ServiceManagementComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,

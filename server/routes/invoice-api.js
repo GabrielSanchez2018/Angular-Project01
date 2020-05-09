@@ -10,6 +10,31 @@ const Invoice = require('../models/invoice');
 
 const router = express.Router();
 
+
+router.get('/', function(req, res, next){
+  Invoice.find({}, function(err, invoices){
+    if(err){
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(invoices);
+      res.json(invoices);
+    }
+  })
+})
+//get invoice by user
+router.get('/:username', function(req, res, next){
+  Invoice.find({'username': req.params.username}, function(err, invoices){
+    if(err){
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(invoices);
+      res.json(invoices);
+    }
+  })
+})
+
 // Create Invoice
 router.post('/:username', function(req, res, next) {
   const username = req.params.username;

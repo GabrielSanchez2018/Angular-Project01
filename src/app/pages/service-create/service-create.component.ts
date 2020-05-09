@@ -10,6 +10,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ServiceCreateComponent implements OnInit {
   form: FormGroup;
+  id: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
 
@@ -24,15 +25,23 @@ export class ServiceCreateComponent implements OnInit {
   }
 
   create() {
+
+    var increment = (function(n) {
+      return function() {
+        n += 1000;
+        return n;
+      }
+
+    }(0));
     // I add services because in the Services API i have it set up as services
     const title = this.form.controls['title'].value;
     const price = this.form.controls['price'].value;
-    const id = this.form.controls['id'].value;
+
 
     this.http.post('/api/services', {
       title: title,
       price: price,
-      id : id
+      id: increment(),
     }).subscribe(res =>{
       this.router.navigate(['/service-management']);
     }, err => {
