@@ -3,7 +3,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { CookieService } from 'ngx-cookie-service';
-import { JsonPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-my-orders',
@@ -13,7 +13,7 @@ import { JsonPipe } from '@angular/common';
 export class MyOrdersComponent implements OnInit {
 
   services: any;
-  displayedColumns = ['id','lineitems', 'partsamount','laboramount','total','date', 'functions'];
+  displayedColumns = ['id','lineitems', 'partsamount','laboramount','linetotal','total','date', 'functions'];
   name: string;
   id: number;
   title: string;

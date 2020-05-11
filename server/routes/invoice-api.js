@@ -22,18 +22,7 @@ router.get('/', function(req, res, next){
     }
   })
 })
-//get invoice by user
-router.get('/:username', function(req, res, next){
-  Invoice.find({'username': req.params.username}, function(err, invoices){
-    if(err){
-      console.log(err);
-      return next(err);
-    } else {
-      console.log(invoices);
-      res.json(invoices);
-    }
-  })
-})
+
 
 // Create Invoice
 router.post('/:username', function(req, res, next) {
@@ -88,4 +77,20 @@ router.get('/purchases-graph', function(req, res, next) {
   });
 });
 
+//this api goes after the purchase graph data structure because it mess it up if i put it before
+router.get('/:usernameId', function(req, res, next){
+  Invoice.find({'username': req.params.usernameId}, function(err, invoices){
+    if(err){
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(invoices);
+      res.json(invoices);
+    }
+  })
+})
+
 module.exports = router;
+
+
+

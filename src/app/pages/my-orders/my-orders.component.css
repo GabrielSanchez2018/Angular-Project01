@@ -7,3 +7,10 @@ table {
   margin: 0 auto;
   margin-top: 5%;
 }
+.ng-container, th, td, .mat-header-cell {
+  text-align: center;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
