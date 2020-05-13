@@ -21,6 +21,9 @@ export class MyOrdersComponent implements OnInit {
   invoices: Object;
   sessionuser: string;
   username: string;
+  usernameId: string;
+  user: string;
+  userId: string;
 
 
   constructor(private http: HttpClient, private dialog: MatDialog, private cookieService: CookieService) {
@@ -32,10 +35,7 @@ export class MyOrdersComponent implements OnInit {
       console.log(err);
     })
   }
-invoicePipe(){
-  this.invoices
-  console.log(this.invoices)
-}
+
 
 ngOnInit(){
 

@@ -32,7 +32,6 @@ export class ServiceRepairComponent implements OnInit {
       this.username = this.cookieService.get('sessionuser');
     // this api wil get the services
     this.http.get('api/services').subscribe(res =>{
-
       this.services = res;
     }, err => {
       console.log(err);
@@ -62,13 +61,13 @@ export class ServiceRepairComponent implements OnInit {
 
     const lineItems = [];
 
-    console.log("We are here in items", lineItems)
+    console.log("We are here in items", selectedServiceIds)
 
     /**
      * Build the invoice object
      */
     for (const savedService of this.services) {
-
+      console.log("here is the savedService.id",savedService)
       for (const selectedService of selectedServiceIds) {
         console.log("here is the selectedserviceid",selectedService.id)
         console.log("here is the savedService.id",savedService.id)
