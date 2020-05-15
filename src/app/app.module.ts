@@ -27,6 +27,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ChartModule } from 'primeng/chart';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -119,7 +120,8 @@ import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
     MatStepperModule,
     MatGridListModule,
     ChartModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSidenavModule
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
