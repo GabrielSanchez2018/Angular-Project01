@@ -27,6 +27,8 @@ import { ServiceCreateComponent } from './pages/service-create/service-create.co
 import { ServiceCreateEditComponent } from './pages/service-create-edit/service-create-edit.component';
 import {ServiceManagementComponent} from './pages/service-management/service-management.component';
 import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
+import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
+import { SellComponent } from './pages/sell/sell.component';
 
 
 export const AppRoutes: Routes = [
@@ -47,6 +49,16 @@ export const AppRoutes: Routes = [
       {
         path: 'users/:userId',
         component: UserDetailsComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'sell',
+        component: SellComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'all-orders',
+        component: AllOrdersComponent,
         canActivate: [RoleGuard]
       },
       {
