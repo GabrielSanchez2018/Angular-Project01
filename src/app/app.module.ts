@@ -63,6 +63,9 @@ import { ServiceCreateEditComponent } from './pages/service-create-edit/service-
 import { ServiceManagementComponent } from './pages/service-management/service-management.component';
 import { AuthService } from './shared/guards/auth.service';
 import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
+import { SellComponent } from './pages/sell/sell.component';
+import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
+import { BarcodeComponent } from './pages/barcode/barcode.component';
 
 
 @NgModule({
@@ -96,7 +99,10 @@ import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
     ServiceCreateDeleteDialogComponent,
     ServiceCreateEditComponent,
     ServiceManagementComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    SellComponent,
+    AllOrdersComponent,
+    BarcodeComponent
   ],
   imports: [
     BrowserModule,

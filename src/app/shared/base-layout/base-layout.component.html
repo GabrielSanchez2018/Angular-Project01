@@ -1,107 +1,131 @@
-<!--=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
-Date: April 19, 2020
-Assignment: basic layout for nav bar and styling
-Description: html for the delete dialog page
-==========================-->
+<!-- navigation -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <span>Pisteadores Antrax Delivery</span>
+
+    <div fxFlex fxLayout fxLayoutAlign="flex-end">
 
 
+      <ul fxLayout fxLayoutGap="20px" style="list-style: none;">
 
-  <!-- navigation -->
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-      </button>
-      <span>SPTM</span>
+        <li fxhide.xs>
+          <span style="font-size: 15px;">Welcome {{username.toUpperCase()}}</span>
+        </li>
 
-      <div fxFlex fxLayout fxLayoutAlign="flex-end">
-        
+        <li fxHide.xs>
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
 
-        <ul fxLayout fxLayoutGap="20px" style="list-style: none;">
-          
-          <li fxhide.xs>
-            <span style="font-size: 15px;">Welcome {{username.toUpperCase()}}</span>
-          </li>
+        <li fxHide.xs>
+          <button mat-icon-button>
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
 
-          <li fxHide.xs>
-            <button mat-icon-button>
-              <mat-icon>settings</mat-icon>
+        <li>
+          <button mat-icon-button [matMenuTriggerFor]="auth">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+          <mat-menu #auth="matMenu">
+            <button mat-menu-item (click)="onLogout()">
+              <mat-icon>exit_to_app</mat-icon>
+              <span>Sign out</span>
             </button>
-          </li>
+          </mat-menu>
+        </li>
 
-          <li fxHide.xs>
-            <button mat-icon-button>
-              <mat-icon>help_outline</mat-icon>
-            </button>
-          </li>
-
-          <li>
-            <button mat-icon-button [matMenuTriggerFor]="auth">
-              <mat-icon>person_outline</mat-icon>
-            </button>
-            <mat-menu #auth="matMenu">
-              <button mat-menu-item (click)="onLogout()">
-                <mat-icon>exit_to_app</mat-icon>
-                <span>Sign out</span>
-              </button>
-            </mat-menu>
-          </li>
-
-        </ul>
-
-        </div>
-
-    </mat-toolbar-row>
-
-  </mat-toolbar>
-
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-  
-        
-        <a mat-list-item [routerLink]="'/admin'">Admin</a>
-        <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-  
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div style="height: 88vh;">
-  
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-
-
-    
-     
-    
-
-
-
-
-      <!-- <span class="menu-spacer"></span>
-      <div>
-        <button class="navbar-link" routerLink="/" mat-button>Home</button>
-        <button class="navbar-link" routerLink="/session/signin" mat-button>Login</button>
-        <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
-        <button mat-icon-button *ngIf='show' class="navbar-link" routerLink="/admin" mat-icon-button><span class="material-icons">
-          home</span></button>
-
-
-          <span class="example-fill-remaining-space"></span>
-            <button class="navbar-link" (click)='onLogout()' mat-button>Logout</button>
-
+      </ul>
 
       </div>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <mat-nav-list>
+
+
+      <a mat-list-item *ngIf='show' [routerLink]="'/admin'">
+        <span class="material-icons">
+          settings
+          </span>
+          <span style="color: red;"> &nbsp;&nbsp; Admin</span>
+      </a>
+      <a mat-list-item [routerLink]="'/'">
+        <span class="material-icons">
+          dashboard
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;Services</span>
+      </a>
+      <a mat-list-item [routerLink]="'/my-orders'">
+        <span class="material-icons">
+          shopping_cart
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;My Orders</span>
+      </a>
+      <a mat-list-item *ngIf='show' [routerLink]="'/purchases-by-service'">
+        <span class="material-icons">
+          pie_chart
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;Reports</span>
+      </a>
+      <a mat-list-item *ngIf='show' [routerLink]="'/sell'">
+        <span class="material-icons">
+          store
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;Sell Items</span>
+      </a>
+
+      <a mat-list-item *ngIf='show' [routerLink]="'/all-orders'">
+        <span class="material-icons">
+          ballot
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;All Items</span>
+      </a>
+
+
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+    <!-- <span class="menu-spacer"></span>
+    <div>
+      <button class="navbar-link" routerLink="/" mat-button>Home</button>
+      <button class="navbar-link" routerLink="/session/signin" mat-button>Login</button>
+      <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
+      <button mat-icon-button *ngIf='show' class="navbar-link" routerLink="/admin" mat-icon-button><span class="material-icons">
+        home</span></button>
+        <span class="example-fill-remaining-space"></span>
+          <button class="navbar-link" (click)='onLogout()' mat-button>Logout</button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+      <span style="font-size: 20px;">Welcome {{username.toUpperCase()}}</span>
     </mat-toolbar-row>
-
-    <mat-toolbar-row>
-        <span style="font-size: 20px;">Welcome {{username.toUpperCase()}}</span>
-      </mat-toolbar-row>
-  </mat-toolbar> -->
+</mat-toolbar> -->
 
 
 
@@ -110,9 +134,7 @@ Description: html for the delete dialog page
 
 
 
-  <!-- main content -->
-  
+<!-- main content -->
 
-  <!-- footer -->
- 
 
+<!-- footer -->

@@ -18,12 +18,13 @@ export class MyOrdersComponent implements OnInit {
   id: number;
   title: string;
   price: number;
-  invoices: Object;
+  invoices: any;
   sessionuser: string;
   username: string;
   usernameId: string;
   user: string;
   userId: string;
+
 
 
   constructor(private http: HttpClient, private dialog: MatDialog, private cookieService: CookieService) {
@@ -42,10 +43,10 @@ ngOnInit(){
 
 }
 
-delete(serviceId) {
+delete(invoiceId) {
   const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
     data: {
-      serviceId
+      invoiceId
     },
     disableClose: true,
     width: '800px'
@@ -53,10 +54,10 @@ delete(serviceId) {
 
   dialogRef.afterClosed().subscribe(result =>{
     if (result === 'confirm'){
-      this.http.delete('/api/services/' + serviceId).subscribe(res => {
-        console.log('Service deleted');
-        this.services = this.services.filter(q => q._id !== serviceId);
-        console.log(this.services);
+      this.http.delete('/api/invoices/' + invoiceId).subscribe(res => {
+        console.log('Invoice deleted');
+        this.invoices = this.invoices.filter(q => q._id !== invoiceId);
+        console.log(this.invoices);
       });
     }
   });
