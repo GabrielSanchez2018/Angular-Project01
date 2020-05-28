@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -13,13 +14,24 @@ export class SellComponent implements OnInit {
 
   form: FormGroup;
   username: string;
-  cookieService: any;
   invoices: Object;
+  services: Object;
 
-  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService) {
+    this.username = this.cookieService.get('sessionuser');
+    this.http.get('api/invoices/' ).subscribe(res =>{
+      this.invoices = res;
+    }, err => {
+      console.log(err);
+    })
 
-
-
+    this.http.get('api/services/').subscribe(res =>{
+      this.services = res;
+      console.log('yest',this.services);
+      console.log(res)
+    }), err => {
+      console.log(err);
+    }
   }
 
 
@@ -29,8 +41,9 @@ export class SellComponent implements OnInit {
     });
   }
 
+
   create(){
-    this.http.post('/api/invoices/' + this.username +'/barcode', {
+    this.http.post('/api/barcodes/' + this.username + '/barcode', {
       barcode: this.form.controls.barcode.value,
     }).subscribe(res =>{
       this.router.navigate(['/barcode-info']);

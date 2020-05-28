@@ -22,6 +22,7 @@ const SessionApi = require('./routes/session-api');
 const RolesApi = require('./routes/roles-api');
 const InvoiceApi = require('./routes/invoice-api');
 const ServicesApi = require('./routes/services-api');
+const BarcodesApi = require('./routes/barcode-api');
 
 
 /**
@@ -64,6 +65,7 @@ app.use('/api/security-questions', SecurityQuestionApi);
 app.use('/api/roles', RolesApi);
 app.use('/api/invoices', InvoiceApi);
 app.use('/api/services', ServicesApi);//This is to create more service items
+app.use('/api/barcodes', BarcodesApi);
 
 /**
  * Create and start server

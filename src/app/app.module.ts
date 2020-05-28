@@ -66,6 +66,7 @@ import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
 import { SellComponent } from './pages/sell/sell.component';
 import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
 import { BarcodeComponent } from './pages/barcode/barcode.component';
+import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ import { BarcodeComponent } from './pages/barcode/barcode.component';
     MyOrdersComponent,
     SellComponent,
     AllOrdersComponent,
-    BarcodeComponent
+    BarcodeComponent,
+    BarcodeInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -75,7 +75,8 @@ export class ServiceRepairComponent implements OnInit {
         if (savedService.id == selectedService.id) {
           lineItems.push({
             title: savedService.title,
-            price: savedService.price
+            price: savedService.price,
+            id: savedService.id
 
           });
         }

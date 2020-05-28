@@ -29,6 +29,7 @@ import {ServiceManagementComponent} from './pages/service-management/service-man
 import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
 import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
 import { SellComponent } from './pages/sell/sell.component';
+import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
 
 
 export const AppRoutes: Routes = [
@@ -54,6 +55,11 @@ export const AppRoutes: Routes = [
       {
         path: 'sell',
         component: SellComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'barcode-info',
+        component: BarcodeInfoComponent,
         canActivate: [RoleGuard]
       },
       {
