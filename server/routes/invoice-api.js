@@ -53,89 +53,89 @@ router.post('/:username', function(req, res, next) {
 
 //Insert Barcode Schema into the invoce
 //Create barcode
-router.post('/:username/barcode', function(req, res, next){
-  Invoice.findOne({username: req.params.username}, function(err, invoices){
+// router.post('/:username/barcode', function(req, res, next){
+//   Invoice.findOne({username: req.params.username}, function(err, invoices){
 
-    if(err){
-      console.log(err);
-      return next(err)
-    } else {
-      console.log(invoices);
-
-
-
-      const barcodeId = req.body.barcode
-
-      console.log(barcodeId)
+//     if(err){
+//       console.log(err);
+//       return next(err)
+//     } else {
+//       console.log(invoices);
 
 
 
+//       const barcodeId = req.body.barcode
 
-      var shippingContainer = Array.from(barcodeId.slice(0,2));
-      labelShippingContainer = shippingContainer.join('');
-      //Packaging Indicator
-      var packagingIndicator = Array.from(barcodeId.slice(2,3));
-      labelpackagingIndicator = packagingIndicator.join('');
-      // Manufacturer number
-      var packagingManufacturerNumber = Array.from(barcodeId.slice(3,9));
-      labelpackagingManufacturerNumber = packagingManufacturerNumber.join('')
-      //Product Code
-      var productCode = Array.from(barcodeId.slice(9,15));
-      labelproductCode = productCode.join('');
-      //Shipping Container
-      var shippingContainercs = Array.from(barcodeId.slice(15,16));
-      labelshippingContainercs = shippingContainercs.join('');
-      //Net Weight
-      var BoxNetWeightIdentifier = Array.from(barcodeId.slice(16,20));
-      labelnetWeight = BoxNetWeightIdentifier.join('');
-
-      //Box Weight
-      var boxWeight = Array.from(barcodeId.slice(20,26));
-      labelWeight = boxWeight.join('')/10;
-      //Date of Production Indeentifier
-      var dateIndenfier = Array.from(barcodeId.slice(26,28));
-      labeldateindentifier = dateIndenfier.join('');
-      //Date of Production yymmdd
-      var dateOfProduction = Array.from(barcodeId.slice(28,34));
-      labeldateofproduction = dateOfProduction.join('');
-      //Serial Number
-      var serialNumberIndenfier = Array.from(barcodeId.slice(34,36));
-      labelserialnumber = serialNumberIndenfier.join('');
-      //10 Digit Serial
-      var serialIdenfier = Array.from(barcodeId.slice(34,46));
-      labelserialidentifier = serialIdenfier.join('')
+//       console.log(barcodeId)
 
 
-      const barcode = {
 
-        barcode: req.body.barcode,
-        barShippingContainerCode : labelShippingContainer,
-        barPackagingIndicator : labelpackagingIndicator,
-        barManufacturerNumber : labelpackagingManufacturerNumber,
-        barProductCode : labelproductCode,
-        barShippingContainerCS : labelshippingContainercs,
-        barBoxNetWeightIdentifier: labelnetWeight,
-        barBoxNetWeight : labelWeight,
-        barDateOfProduction : labeldateindentifier,
-        barDateOfProductionyymmdd : labeldateofproduction,
-        barSerialNumberIndentifier: labelserialnumber,
-        barTenDigitSerial : labelserialidentifier
-      }
 
-      invoices.barcode.push(barcode);
-      invoices.save(function(err, invoices){
-        if (err){
-          console.log(err);
-          return next(err);
-        } else {
-          console.log(invoices);
-          res.json(invoices)
-        }
-      });
+//       var shippingContainer = Array.from(barcodeId.slice(0,2));
+//       labelShippingContainer = shippingContainer.join('');
+//       //Packaging Indicator
+//       var packagingIndicator = Array.from(barcodeId.slice(2,3));
+//       labelpackagingIndicator = packagingIndicator.join('');
+//       // Manufacturer number
+//       var packagingManufacturerNumber = Array.from(barcodeId.slice(3,9));
+//       labelpackagingManufacturerNumber = packagingManufacturerNumber.join('')
+//       //Product Code
+//       var productCode = Array.from(barcodeId.slice(9,15));
+//       labelproductCode = productCode.join('');
+//       //Shipping Container
+//       var shippingContainercs = Array.from(barcodeId.slice(15,16));
+//       labelshippingContainercs = shippingContainercs.join('');
+//       //Net Weight
+//       var BoxNetWeightIdentifier = Array.from(barcodeId.slice(16,20));
+//       labelnetWeight = BoxNetWeightIdentifier.join('');
 
-    }
-  });
-});
+//       //Box Weight
+//       var boxWeight = Array.from(barcodeId.slice(20,26));
+//       labelWeight = boxWeight.join('')/10;
+//       //Date of Production Indeentifier
+//       var dateIndenfier = Array.from(barcodeId.slice(26,28));
+//       labeldateindentifier = dateIndenfier.join('');
+//       //Date of Production yymmdd
+//       var dateOfProduction = Array.from(barcodeId.slice(28,34));
+//       labeldateofproduction = dateOfProduction.join('');
+//       //Serial Number
+//       var serialNumberIndenfier = Array.from(barcodeId.slice(34,36));
+//       labelserialnumber = serialNumberIndenfier.join('');
+//       //10 Digit Serial
+//       var serialIdenfier = Array.from(barcodeId.slice(34,46));
+//       labelserialidentifier = serialIdenfier.join('')
+
+
+//       const barcode = {
+
+//         barcode: req.body.barcode,
+//         barShippingContainerCode : labelShippingContainer,
+//         barPackagingIndicator : labelpackagingIndicator,
+//         barManufacturerNumber : labelpackagingManufacturerNumber,
+//         barProductCode : labelproductCode,
+//         barShippingContainerCS : labelshippingContainercs,
+//         barBoxNetWeightIdentifier: labelnetWeight,
+//         barBoxNetWeight : labelWeight,
+//         barDateOfProduction : labeldateindentifier,
+//         barDateOfProductionyymmdd : labeldateofproduction,
+//         barSerialNumberIndentifier: labelserialnumber,
+//         barTenDigitSerial : labelserialidentifier
+//       }
+
+//       invoices.barcode.push(barcode);
+//       invoices.save(function(err, invoices){
+//         if (err){
+//           console.log(err);
+//           return next(err);
+//         } else {
+//           console.log(invoices);
+//           res.json(invoices)
+//         }
+//       });
+
+//     }
+//   });
+// });
 
 //Find barcode by Id
 router.get('/:usernameId/barcode', function(req, res, next){

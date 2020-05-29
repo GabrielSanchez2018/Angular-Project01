@@ -1,9 +1,13 @@
 
 const mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 let barcodeSchema = mongoose.Schema({
-  username: {type: String, unique: true},
-  barcode: {type: Number, unique: true, dropDups: true },
+  username: {type: String},
+  barcode: {type: Number },
+  price: {type: Number},
+  totalprice:{type: Number},
+  itemdescription:{type: String},
   barShippingContainerCode:{type: Number},
   barPackagingIndicator:{type: Number},
   barManufacturerNumber:{type: Number},
