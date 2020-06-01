@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { MatSnackBar } from '@angular/material';
+import { error } from 'util';
 
 @Component({
   selector: 'app-sell',
@@ -60,7 +61,16 @@ export class SellComponent implements OnInit {
       console.log(err)
     }
   }
-
+testSnackbar(){
+  this.snackBar.open(
+    "The employee ID you entered is invalid, please try again.",
+    "ERROR",
+    {
+      duration: 3000,
+      verticalPosition: "top"
+    }
+  );
+}
 
   ngOnInit() {
 
@@ -112,13 +122,11 @@ export class SellComponent implements OnInit {
    console.log('1', dataservices[0].id)
    console.log('price', dataservices[0].price)
 
+   var newError = new Error('plaease check')
 // this function gets the price of the item
 function myFunction(){
     if (labelproductCode == dataservices[0].id){
       return dataservices[0].price
-
-    } else if(labelproductCode == dataservices[1].id) {
-      return dataservices[1].price
 
     } else if(labelproductCode == dataservices[2].id){
       return dataservices[2].price
@@ -380,6 +388,7 @@ console.log('here is the total description', itemdescription);
 this.changeDetectorRefs.detectChanges();
 
 
+
     this.http.post('/api/barcodes/', {
       price: price,
       totalprice: totalprice,
@@ -393,6 +402,10 @@ this.changeDetectorRefs.detectChanges();
       this.changeDetectorRefs.detectChanges();
 
       this.form.reset();
+
+      if(error) {
+        console.log("this errror")
+      }
 
     })
   })
