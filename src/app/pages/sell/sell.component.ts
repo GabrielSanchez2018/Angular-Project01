@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
-
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-sell',
@@ -38,7 +38,8 @@ export class SellComponent implements OnInit {
   datasource: any;
 
 
-  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog,) {
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
+
     this.username = this.cookieService.get('sessionuser');
     this.http.get('api/invoices/' ).subscribe(res =>{
       this.invoices = res;
@@ -130,10 +131,74 @@ function myFunction(){
 
     } else if (labelproductCode == dataservices[5].id){
       return dataservices[5].price
-    }
 
+    } else if (labelproductCode == dataservices[6].id){
+      return dataservices[6].price
 
+    } else if (labelproductCode == dataservices[7].id){
+      return dataservices[7].price
+
+    } else if (labelproductCode == dataservices[8].id){
+      return dataservices[8].price
+
+    } else if (labelproductCode == dataservices[9].id){
+      return dataservices[9].price
+
+    } else if (labelproductCode == dataservices[10].id){
+     return dataservices[10].price
+
+    } else if (labelproductCode == dataservices[11].id){
+      return dataservices[11].price
+
+    } else if (labelproductCode == dataservices[12].id){
+      return dataservices[12].price
+
+    } else if (labelproductCode == dataservices[13].id){
+      return dataservices[13].price
+
+    } else if (labelproductCode == dataservices[14].id){
+      return dataservices[14].price
+
+    } else if (labelproductCode == dataservices[15].id){
+      return dataservices[15].price
+
+    } else if (labelproductCode == dataservices[16].id){
+      return dataservices[16].price
+
+    } else if (labelproductCode == dataservices[17].id){
+      return dataservices[17].price
+
+    } else if (labelproductCode == dataservices[19].id){
+      return dataservices[19].price
+
+    } else if (labelproductCode == dataservices[20].id){
+      return dataservices[20].price
+
+    } else if (labelproductCode == dataservices[21].id){
+      return dataservices[21].price
+
+    } else if (labelproductCode == dataservices[22].id){
+      return dataservices[22].price
+
+    } else if (labelproductCode == dataservices[23].id){
+      return dataservices[23].price
+
+    } else if (labelproductCode == dataservices[24].id){
+      return dataservices[24].price
+
+    } else if (labelproductCode == dataservices[25].id){
+      return dataservices[25].price
+
+    } else if (labelproductCode == dataservices[26].id){
+      return dataservices[26].price
   }
+
+
+
+
+
+
+      }
 // this function returns the total prices
   function totalPrice(){
     if (labelproductCode == dataservices[0].id){
@@ -153,8 +218,82 @@ function myFunction(){
 
     } else if (labelproductCode == dataservices[5].id){
       return dataservices[5].price * labelWeight
-    }
 
+    } else if(labelproductCode == dataservices[6].id) {
+      return dataservices[6].price * labelWeight
+
+    } else if(labelproductCode == dataservices[7].id){
+      return dataservices[7].price * labelWeight
+
+    } else if (labelproductCode == dataservices[8].id){
+      return dataservices[8].price * labelWeight
+
+    } else if (labelproductCode == dataservices[9].id){
+      return dataservices[9].price * labelWeight
+
+    } else if (labelproductCode == dataservices[10].id){
+      return dataservices[10].price * labelWeight
+
+    } else if(labelproductCode == dataservices[11].id) {
+      return dataservices[11].price * labelWeight
+
+    } else if(labelproductCode == dataservices[12].id){
+      return dataservices[12].price * labelWeight
+
+    } else if (labelproductCode == dataservices[13].id){
+      return dataservices[13].price * labelWeight
+
+    } else if (labelproductCode == dataservices[14].id){
+      return dataservices[14].price * labelWeight
+
+    } else if (labelproductCode == dataservices[15].id){
+      return dataservices[15].price * labelWeight
+
+    } else if(labelproductCode == dataservices[16].id) {
+      return dataservices[16].price * labelWeight
+
+    } else if(labelproductCode == dataservices[17].id){
+      return dataservices[17].price * labelWeight
+
+    } else if (labelproductCode == dataservices[18].id){
+      return dataservices[18].price * labelWeight
+
+    } else if (labelproductCode == dataservices[19].id){
+      return dataservices[19].price * labelWeight
+
+    } else if (labelproductCode == dataservices[20].id){
+      return dataservices[20].price * labelWeight
+
+    } else if(labelproductCode == dataservices[21].id) {
+      return dataservices[21].price * labelWeight
+
+    } else if(labelproductCode == dataservices[22].id){
+      return dataservices[22].price * labelWeight
+
+    } else if (labelproductCode == dataservices[23].id){
+      return dataservices[23].price * labelWeight
+
+    } else if (labelproductCode == dataservices[24].id){
+      return dataservices[24].price * labelWeight
+
+    } else if (labelproductCode == dataservices[25].id){
+      return dataservices[25].price * labelWeight
+
+    } else if(labelproductCode == dataservices[26].id) {
+      return dataservices[26].price * labelWeight
+
+    } else if(labelproductCode == dataservices[27].id){
+      return dataservices[27].price * labelWeight
+
+    } else if (labelproductCode == dataservices[28].id){
+      return dataservices[28].price * labelWeight
+
+    } else if (labelproductCode == dataservices[29].id){
+      return dataservices[29].price * labelWeight
+
+    } else if (labelproductCode == dataservices[30].id){
+      return dataservices[30].price * labelWeight
+    }
 
   }
 
@@ -176,6 +315,51 @@ function myFunction(){
 
     } else if (labelproductCode == dataservices[5].id){
       return dataservices[5].title
+
+    } else if(labelproductCode == dataservices[6].id) {
+      return dataservices[6].title
+
+    } else if(labelproductCode == dataservices[7].id){
+      return dataservices[7].title
+
+    } else if (labelproductCode == dataservices[8].id){
+      return dataservices[8].title
+
+    } else if (labelproductCode == dataservices[9].id){
+      return dataservices[9].title
+
+    } else if (labelproductCode == dataservices[10].id){
+      return dataservices[10].title
+
+    } else if(labelproductCode == dataservices[11].id) {
+      return dataservices[11].title
+
+    } else if(labelproductCode == dataservices[12].id){
+      return dataservices[12].title
+
+    } else if (labelproductCode == dataservices[13].id){
+      return dataservices[13].title
+
+    } else if (labelproductCode == dataservices[14].id){
+      return dataservices[14].title
+
+    } else if (labelproductCode == dataservices[15].id){
+      return dataservices[15].title
+
+    } else if(labelproductCode == dataservices[16].id) {
+      return dataservices[16].title
+
+    } else if(labelproductCode == dataservices[17].id){
+      return dataservices[17].title
+
+    } else if (labelproductCode == dataservices[18].id){
+      return dataservices[18].title
+
+    } else if (labelproductCode == dataservices[19].id){
+      return dataservices[19].title
+
+    } else if (labelproductCode == dataservices[20].id){
+      return dataservices[20].title
     }
 
 
@@ -193,7 +377,7 @@ console.log('here is the price', price);
 console.log('here is the total price', totalprice);
 console.log('here is the total description', itemdescription);
 
-
+this.changeDetectorRefs.detectChanges();
 
 
     this.http.post('/api/barcodes/', {
@@ -202,13 +386,14 @@ console.log('here is the total description', itemdescription);
       itemdescription: itemdescription,
       username: this.username,
       barcode: this.form.controls.barcode.value,
+
     }).subscribe(res =>{
       this.router.navigate(['/sell']);
       // this will reset the form
-
+      this.changeDetectorRefs.detectChanges();
 
       this.form.reset();
-      this.changeDetectorRefs.detectChanges();
+
     })
   })
   }

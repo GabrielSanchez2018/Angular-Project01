@@ -36,7 +36,7 @@ export class BaseLayoutComponent implements OnInit {
     this.auth.logout();
     //the follogin function will reload the browser when you sign out
     //This clears the cookie
-    window.location.reload(); 
+    window.location.reload();
   }
 
   ngOnInit() {

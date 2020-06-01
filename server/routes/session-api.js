@@ -7,6 +7,7 @@ Description: all API's used for sessions
 
 const express = require('express');
 const User = require('../models/user');
+const Employee = require('../models/employee')
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 
@@ -45,6 +46,21 @@ router.post('/signin', function(req, res, next) {
     }
   })
 });
+
+//Employee Sign in
+router.post('/signin-employee', function(req, res, next) {
+  console.log(req.body);
+  Employee.findOne({'EmployeeId': req.body.EmployeeId}, function(err, employee) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(employee);
+    }
+
+  })
+});
+
 
 // Register User
 router.post('/register', function(req, res, next) {

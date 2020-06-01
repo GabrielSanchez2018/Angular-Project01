@@ -121,6 +121,32 @@ router.get('/', function(req, res, next){
   });
 });
 
+// Find Barcode Report
+router.get('/barcodes-graph', function(req, res, next) {
+  Barcodes.aggregate([
+
+    {
+      "$group": {
+        "_id": {
+          "price": "$price"
+        },
+
+        "count": {"$sum": 1},
+      }
+    },{"$sort": {"_id.price": 1}}
+  ], function(err, barcodeGraph) {
+      if(err) {
+        console.log(err);
+        return next(err);
+      } else {
+        console.log("--PurchaseGraph data structure--");
+        console.log(barcodeGraph);
+        res.json(barcodeGraph);
+      }
+  });
+});
+
+
 
 router.delete('/:barcodeId', function(req, res, next){
   Barcodes.findOneAndDelete({'_id': req.params.barcodeId}, function(err, barcodes){

@@ -2,25 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-    selector: 'app-purchases-by-service',
-    templateUrl: './purchases-by-service.component.html',
-    styleUrls: ['./purchases-by-service.component.css']
+  selector: 'app-sell-report',
+  templateUrl: './sell-report.component.html',
+  styleUrls: ['./sell-report.component.css']
 })
-export class PurchasesByServiceComponent implements OnInit {
-    purchases: any;
+export class SellReportComponent implements OnInit {
+
+  ventas: any;
     data: any;
     itemCount = [];
     labels = [];
 
     constructor(private http: HttpClient) {
         // Call the purchases-graph API
-        this.http.get('api/invoices/purchases-graph').subscribe(res => {
+        this.http.get('api/barcodes/barcodes-graph').subscribe(res => {
             // map the response data to the purchases variable
-            this.purchases = res;
-            console.log('this are the purchases',this.purchases)
-
+            this.ventas = res;
+            console.log(this.ventas)
             // Loop over the purchases to split out the services and item count
-            for (const item of this.purchases) {
+            for (const item of this.ventas) {
                 this.labels.push(item._id.title);
                 this.itemCount.push(item.count);
             }

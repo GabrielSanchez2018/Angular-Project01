@@ -30,6 +30,8 @@ import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
 import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
 import { SellComponent } from './pages/sell/sell.component';
 import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
+import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-employeee.component';
+import { SellReportComponent } from './pages/sell-report/sell-report.component';
 
 
 export const AppRoutes: Routes = [
@@ -96,6 +98,11 @@ export const AppRoutes: Routes = [
         canActivate: [RoleGuard]
       },
       {
+        path: 'sell-report',
+        component: SellReportComponent,
+        canActivate: [RoleGuard]
+      },
+      {
         path: 'about',
         component: AboutComponent
       },
@@ -158,6 +165,11 @@ export const AppRoutes: Routes = [
         path: 'signin',
         component: SigninComponent
       },
+      {
+        path: 'sign-in-employee',
+        component: SignInEmployeeeComponent
+      },
+
       {
         path: 'account-registration',
         component: AccountRegistrationComponent

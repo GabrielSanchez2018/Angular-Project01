@@ -149,18 +149,18 @@ router.get('/:usernameId/barcode', function(req, res, next){
     }
   })
 })
-// Get all Barcodes
-router.get('/', function(req, res, next){
-  Barcodes.find({}, function(err, barcodes){
-    if(err){
-      console.log(err);
-      return next(err);
-    } else {
-      console.log(barcodes);
-      res.json(barcodes)
-    }
-  });
-});
+// // Get all Barcodes
+// router.get('/', function(req, res, next){
+//   Barcodes.find({}, function(err, barcodes){
+//     if(err){
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log(barcodes);
+//       res.json(barcodes)
+//     }
+//   });
+// });
 
 //Delete Barcode
 router.delete('/:usernameId/barcode/:barcodeId', function(req, res, next){

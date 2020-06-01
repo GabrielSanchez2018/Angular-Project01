@@ -28,6 +28,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ChartModule } from 'primeng/chart';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -67,6 +69,8 @@ import { SellComponent } from './pages/sell/sell.component';
 import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
 import { BarcodeComponent } from './pages/barcode/barcode.component';
 import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
+import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-employeee.component';
+import { SellReportComponent } from './pages/sell-report/sell-report.component';
 
 
 @NgModule({
@@ -104,7 +108,9 @@ import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.componen
     SellComponent,
     AllOrdersComponent,
     BarcodeComponent,
-    BarcodeInfoComponent
+    BarcodeInfoComponent,
+    SignInEmployeeeComponent,
+    SellReportComponent
   ],
   imports: [
     BrowserModule,
@@ -129,7 +135,8 @@ import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.componen
     MatGridListModule,
     ChartModule,
     MatCheckboxModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSnackBarModule
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
