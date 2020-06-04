@@ -24,6 +24,11 @@ router.get('/:EmployeeId', function (req, res, next) {
   } else {
     console.log(employee);
     res.json(employee);
+    res.status(200).send({
+      type: 'success',
+      auth: true,
+      time_stamp: new Date()
+    })
   }
 })
 });

@@ -202,7 +202,6 @@ router.delete('/:usernameId/barcode/:barcodeId', function(req, res, next){
 router.get('/purchases-graph', function(req, res, next) {
   Invoice.aggregate([
     {"$unwind": "$lineItems"},
-
     {
       "$group": {
         "_id": {

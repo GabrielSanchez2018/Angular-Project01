@@ -1,10 +1,12 @@
-<div fxLayout="column" style='margin: 50px;'>
-  <mat-card class="mat-elevation-z8">
+
+
+
+  <mat-card class="insert">
     <mat-card-title>Barcode Scann</mat-card-title>
     <br/>
     <form [formGroup]="form" (ngSubmit)="create();" #barcodeForm= "ngForm">
       <mat-card-content>
-        <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="column" fxLayoutGap="15px">
           <mat-form-field>
             <input matInput
                    [formControl]="form.controls['barcode']"
@@ -21,7 +23,7 @@
       </mat-card-actions>
     </form>
   </mat-card>
-</div>
+
 
 
 
@@ -86,14 +88,6 @@
   </td>
 </ng-container>
 
-
-
-
-
-
-
-
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
@@ -104,9 +98,6 @@
   <h1 id="demo">Here is the barcode: <span></span></h1>
 
 </mat-card> -->
-
-
-
 <br>
 <br>
 <br>

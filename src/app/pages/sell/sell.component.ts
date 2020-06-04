@@ -1,14 +1,18 @@
-import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { ViewChild, Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material';
-import {Table} from 'primeng/components/table/table';
-import { MatTableDataSource } from '@angular/material/table';
+
+import { MatTableDataSource, MatTable, MatTableModule } from '@angular/material/table';
+import {ObserversModule} from '@angular/cdk/observers';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { MatSnackBar } from '@angular/material';
-import { error } from 'util';
+import { DataSource } from '@angular/cdk/table';
+
+
+
 
 @Component({
   selector: 'app-sell',
@@ -16,7 +20,6 @@ import { error } from 'util';
   styleUrls: ['./sell.component.css']
 })
 export class SellComponent implements OnInit {
-
 
 
   form: FormGroup;
@@ -34,9 +37,12 @@ export class SellComponent implements OnInit {
   usernameId: string;
   user: string;
   userId: string;
-
   find: object;
-  datasource: any;
+
+
+
+
+
 
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
@@ -57,27 +63,32 @@ export class SellComponent implements OnInit {
     }
     this.http.get('api/barcodes/').subscribe(res =>{
       this.barcodes = res;
+
+      this.changeDetectorRefs.detectChanges();
     }), err =>{
       console.log(err)
     }
   }
-testSnackbar(){
+  //Snackbar success message
+successSnackbar(){
   this.snackBar.open(
-    "The employee ID you entered is invalid, please try again.",
-    "ERROR",
+    "Item Scaned.",
+    "SUCCESS",
     {
-      duration: 3000,
+      duration: 2000,
       verticalPosition: "top"
     }
   );
 }
 
+rerender(){
+  this.barcodes
+  this.changeDetectorRefs.detectChanges();
+}
+
   ngOnInit() {
-
-
     this.form = this.fb.group({
       barcode: [null, Validators.compose([Validators.required])]
-
     });
   }
 
@@ -110,7 +121,7 @@ testSnackbar(){
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
 
-      //Product Code label
+  //Product Code label
    var productCode = Array.from(enteredProductcode.slice(10,15));
    var labelproductCode = productCode.join('');
    //Box Weight
@@ -127,6 +138,10 @@ testSnackbar(){
 function myFunction(){
     if (labelproductCode == dataservices[0].id){
       return dataservices[0].price
+
+    } else if(labelproductCode == dataservices[1].id){
+      return dataservices[1].price
+
 
     } else if(labelproductCode == dataservices[2].id){
       return dataservices[2].price
@@ -199,6 +214,8 @@ function myFunction(){
 
     } else if (labelproductCode == dataservices[26].id){
       return dataservices[26].price
+
+
   }
 
 
@@ -304,7 +321,7 @@ function myFunction(){
     }
 
   }
-
+// this function get the description of the barcode
   function descriptionFunction(){
     if (labelproductCode == dataservices[0].id){
       return dataservices[0].title
@@ -373,6 +390,7 @@ function myFunction(){
 
   }
 
+// passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
 var totalprice = totalpriceResult.toFixed(1);
 var itemdescription = descriptionFunction();
@@ -397,15 +415,15 @@ this.changeDetectorRefs.detectChanges();
       barcode: this.form.controls.barcode.value,
 
     }).subscribe(res =>{
-      this.router.navigate(['/sell']);
-      // this will reset the form
       this.changeDetectorRefs.detectChanges();
+      console.log(this.barcodes);
+      this.router.navigate(['/barcode-info']);
+      // this will reset the form
+
+      this.successSnackbar();
 
       this.form.reset();
-
-      if(error) {
-        console.log("this errror")
-      }
+      this.rerender();
 
     })
   })

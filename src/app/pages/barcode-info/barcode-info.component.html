@@ -1,8 +1,34 @@
-<mat-card>
-  <mat-card-title style="text-align: center;">Barcodes</mat-card-title>
-  <mat-card-subtitle>
 
-  </mat-card-subtitle>
+
+
+  <mat-card class="insert">
+    <mat-card-title>Barcode Scann</mat-card-title>
+    <br/>
+    <form [formGroup]="form" (ngSubmit)="create();" #barcodeForm= "ngForm">
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="15px">
+          <mat-form-field>
+            <input matInput
+                   [formControl]="form.controls['barcode']"
+                   placeholder="Barcode"/>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+
+      <br/>
+      <mat-card-actions align="end">
+        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+        <button mat-raised-button (click)="testSnackbar()" color="warn">Test Snakbar</button>
+        <button mat-raised-button color="accent">Submit</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+
+
+
+
+  <mat-card-title style="text-align: center;">Barcodes</mat-card-title>
+
 <mat-card-content *ngIf='barcodes'>
 
 <table mat-table  [dataSource]="barcodes" class="mat-elevation-z8">
@@ -47,7 +73,7 @@
 <!--total -->
 <ng-container matColumnDef="total">
   <th mat-header-cell *matHeaderCellDef> Price </th>
-  <td mat-cell *matCellDef="let element">{{element.totalprice}} </td>
+  <td style="color: red;" mat-cell *matCellDef="let element">{{element.totalprice}} </td>
   </ng-container>
 
 
@@ -62,14 +88,6 @@
   </td>
 </ng-container>
 
-
-
-
-
-
-
-
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
@@ -80,11 +98,9 @@
   <h1 id="demo">Here is the barcode: <span></span></h1>
 
 </mat-card> -->
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>

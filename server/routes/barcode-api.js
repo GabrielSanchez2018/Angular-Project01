@@ -124,17 +124,14 @@ router.get('/', function(req, res, next){
 // Find Barcode Report
 router.get('/barcodes-graph', function(req, res, next) {
   Barcodes.aggregate([
-
-    {
-      "$group": {
-        "_id": {
-          "price": "$price"
-        },
-
-        "count": {"$sum": 1},
+    [
+      {
+        '$count': 'barcode'
       }
-    },{"$sort": {"_id.price": 1}}
-  ], function(err, barcodeGraph) {
+    ]
+
+  ], function(err, barcodeGraph){
+     console.log(barcodeGraph)
       if(err) {
         console.log(err);
         return next(err);

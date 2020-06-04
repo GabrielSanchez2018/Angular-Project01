@@ -21,7 +21,7 @@ router.post('/signin', function(req, res, next) {
       console.log(err);
       return next(err);
     } else {
-      console.log(user);
+      console.log('this is the user',user);
 
       if(user) {
         let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
@@ -49,14 +49,54 @@ router.post('/signin', function(req, res, next) {
 
 //Employee Sign in
 router.post('/signin-employee', function(req, res, next) {
-  console.log(req.body);
-  Employee.findOne({'EmployeeId': req.body.EmployeeId}, function(err, employee) {
-    if (err) {
+  console.log("found you",req.body);
+  Employee.findOne({'EmployeeID' : req.body.EmployeeID}, function(err, employee) {
+
+    if (err){
       console.log(err);
       return next(err);
     } else {
-      console.log(employee);
+      console.log('employee here mf', employee.EmployeeID)
+
+
+      // let employeeIsValied = compareSync(req.body.EmployeeID, employee.EmployeeID)
+      // console.log('here is the comparation', employeeIsValied)
+      if(req.body.EmployeeID !== employee){
+        res.status(200).send({
+          type: 'sucess',
+          auth: true,
+        })
+      } else {
+        console.log(`The password for username:  is invalid.`);
+          res.status(401).send({
+            type: 'error',
+            text: 'Invalid username/password, please try again.',
+            auth: false,
+            time_stamp: new Date()
+          })
+      }
     }
+
+  //   if('here is the emply',employee){
+  //     let employeeIsValied = bcrypt.compareSync(req.body.EmployeeId, employee.EmployeeId)
+
+  //     console.log('this', employeeIsValied)
+
+  //     if(employeeIsValied){
+  //       res.status(200).send({
+  //         type: 'success',
+  //         auth: true,
+  //       })
+  //     }else {
+  //       console.log(`The password for username:  is invalid.`);
+  //         res.status(401).send({
+  //           type: 'error',
+  //           text: 'Invalid username/password, please try again.',
+  //           auth: false,
+  //           time_stamp: new Date()
+  //         })
+  //     }
+  //   }
 
   })
 });

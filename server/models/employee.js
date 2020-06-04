@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+
 
 let employeeSchema = mongoose.Schema({
   EmployeeId: {type: String},

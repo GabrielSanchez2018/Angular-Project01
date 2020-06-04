@@ -17,6 +17,8 @@ export class SignInEmployeeeComponent implements OnInit {
 
   form: FormGroup;
   errorMessage: any;
+  username: string;
+  show: boolean;
 
   constructor(
     private router: Router,
@@ -25,7 +27,14 @@ export class SignInEmployeeeComponent implements OnInit {
     private http: HttpClient,
     private snackBar: MatSnackBar
   ) {
-
+    this.username = this.cookieService.get('sessionuser');
+    this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res =>{
+      if (res === "standard"){
+        this.show = true
+      } else {
+        this.show = false
+      }
+    })
 
   }
 
@@ -64,10 +73,20 @@ export class SignInEmployeeeComponent implements OnInit {
 
 
     // get all info
+    signinemp(){
+      this.username = this.cookieService.get('sessionuser');
+      this.http.get('/api/employee/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
+        if (res === "admin") {
+            this.show = true;
+        } else {
+          this.show = false
+            }
+      });
+    }
 
-
-  //}
+//}
   login() {
+    this.signinemp();
     const EmployeeId = this.form.controls.EmployeeId.value;
     //const password = this.form.controls.password.value;
 
@@ -78,6 +97,7 @@ export class SignInEmployeeeComponent implements OnInit {
       if (res['auth']) {
         this.cookieService.set('sessionuser', EmployeeId, 1);
         this.router.navigate(['/']);
+
       } else {
         this.errorMessage = res['text'];
       }

@@ -11,8 +11,17 @@ table {
   text-align: center;
   font-size: 15px;
   color: black;
+
 }
 
 tr.mat-footer-row {
   font-weight: bold;
+}
+
+.insert{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1%;
+
+
 }

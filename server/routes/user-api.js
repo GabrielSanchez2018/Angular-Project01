@@ -7,7 +7,7 @@ Description: all API's used for users
 
 const express = require('express');
 const User = require('../models/user');
-//const Employee = require('../models/employee')
+const Employee = require('../models/employee')
 const bcrypt = require('bcryptjs');
 const router = express.Router();
 const saltRounds = 10;
@@ -150,8 +150,8 @@ router.get('/:username/role', function(req, res, next) {
     } else {
       console.log(user.role);
       res.json(user.role);
-    };
-  });
+    }
+    })
 });
 
 router.get('/:EmployeeId/role', function(req, res, next) {

@@ -29,6 +29,7 @@ import { ChartModule } from 'primeng/chart';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ObserversModule} from '@angular/cdk/observers';
 
 
 
@@ -136,7 +137,8 @@ import { SellReportComponent } from './pages/sell-report/sell-report.component';
     ChartModule,
     MatCheckboxModule,
     MatSidenavModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ObserversModule
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
