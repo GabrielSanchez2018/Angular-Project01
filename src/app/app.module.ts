@@ -30,6 +30,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {ObserversModule} from '@angular/cdk/observers';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -72,6 +73,8 @@ import { BarcodeComponent } from './pages/barcode/barcode.component';
 import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
 import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-employeee.component';
 import { SellReportComponent } from './pages/sell-report/sell-report.component';
+import { ExporterComponent } from './services/exporter/exporter.component';
+import { ExporterService } from './services/exporter/exporter.service';
 
 
 @NgModule({
@@ -111,7 +114,8 @@ import { SellReportComponent } from './pages/sell-report/sell-report.component';
     BarcodeComponent,
     BarcodeInfoComponent,
     SignInEmployeeeComponent,
-    SellReportComponent
+    SellReportComponent,
+    ExporterComponent
   ],
   imports: [
     BrowserModule,
@@ -138,7 +142,8 @@ import { SellReportComponent } from './pages/sell-report/sell-report.component';
     MatCheckboxModule,
     MatSidenavModule,
     MatSnackBarModule,
-    ObserversModule
+    ObserversModule,
+    MatTabsModule
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
@@ -151,7 +156,8 @@ import { SellReportComponent } from './pages/sell-report/sell-report.component';
     CookieService,
     SessionGuard,
     RoleGuard,
-    AuthService
+    AuthService,
+    ExporterService
   ],
   bootstrap: [AppComponent]
 })

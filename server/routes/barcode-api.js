@@ -21,17 +21,31 @@ router.get('/', function(req, res, next){
 // Find Barcode Report
 router.get('/barcodes-graph', function(req, res, next) {
   Barcodes.aggregate([
-
     {
       "$group": {
-        "_id": {
-          "itemdescription": "$itemdescription",
-          "username": "$username",
-         // "totalWeight": {"$sum": "$barBoxNetWeight"}
-        },
+        "_id": "$itemdescription",
         "count": {"$sum": 1},
-      }
-    }, {"$sort": {"_id.itemdescription": 1}},
+        "totalprice": {"$sum": "$totalprice" },
+       "code": {"$first": "$barProductCode"},
+       "itemdescription": {"$first": "$itemdescription"},
+       "totalweight" : {"$sum": "$barBoxNetWeight"},
+       "username": {"$first": "$username"}
+      },
+
+
+
+    // {
+    //   "$group": {
+    //     "_id":  {
+    //       "code": "$barProductCode",
+    //       "itemdescription": "$itemdescription",
+    //       "username": "$username",
+    //       //"price": "$totalprice",
+    //      //"totalWeight": {"$sum": "$barBoxNetWeight"}
+    //     },
+    //     "count": {"$sum": 1},
+    //   }
+    }, {"$sort": {"totalprice": -1}},
   ], function(err, barcodeGraph) {
       if(err) {
         console.log(err);
