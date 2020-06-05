@@ -18,6 +18,35 @@ router.get('/', function(req, res, next){
   })
 })
 
+// Find Barcode Report
+router.get('/barcodes-graph', function(req, res, next) {
+  Barcodes.aggregate([
+
+    {
+      "$group": {
+        "_id": {
+          "itemdescription": "$itemdescription",
+          "username": "$username",
+         // "totalWeight": {"$sum": "$barBoxNetWeight"}
+        },
+        "count": {"$sum": 1},
+      }
+    }, {"$sort": {"_id.itemdescription": 1}},
+  ], function(err, barcodeGraph) {
+      if(err) {
+        console.log(err);
+        return next(err);
+      } else {
+        console.log("--PurchaseGraph data structure--");
+        console.log(barcodeGraph);
+        res.json(barcodeGraph);
+      }
+  });
+});
+
+
+
+
 //Post Barcode
 router.post('/', function(req, res, next){
 
@@ -121,27 +150,6 @@ router.get('/', function(req, res, next){
   });
 });
 
-// Find Barcode Report
-router.get('/barcodes-graph', function(req, res, next) {
-  Barcodes.aggregate([
-    [
-      {
-        '$count': 'barcode'
-      }
-    ]
-
-  ], function(err, barcodeGraph){
-     console.log(barcodeGraph)
-      if(err) {
-        console.log(err);
-        return next(err);
-      } else {
-        console.log("--PurchaseGraph data structure--");
-        console.log(barcodeGraph);
-        res.json(barcodeGraph);
-      }
-  });
-});
 
 
 

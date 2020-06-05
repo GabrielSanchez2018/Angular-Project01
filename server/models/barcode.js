@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+
 
 let barcodeSchema = mongoose.Schema({
   username: {type: String},

@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+}
+
+.mat-card-content {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+.ng-container, th, td, .mat-header-cell {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.insert{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1%;
+
+
+}
