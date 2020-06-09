@@ -23,13 +23,15 @@ router.get('/barcodes-graph', function(req, res, next) {
   Barcodes.aggregate([
     {
       "$group": {
+        "code": {"$first": "$barProductCode"},
         "_id": "$itemdescription",
+        //"itemdescription": {"$first": "$itemdescription"},
         "count": {"$sum": 1},
         "totalprice": {"$sum": "$totalprice" },
-       "code": {"$first": "$barProductCode"},
-       "itemdescription": {"$first": "$itemdescription"},
+
+
        "totalweight" : {"$sum": "$barBoxNetWeight"},
-       "username": {"$first": "$username"},
+       //"username": {"$first": "$username"},
       },
 
 
