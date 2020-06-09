@@ -29,7 +29,7 @@ router.get('/barcodes-graph', function(req, res, next) {
        "code": {"$first": "$barProductCode"},
        "itemdescription": {"$first": "$itemdescription"},
        "totalweight" : {"$sum": "$barBoxNetWeight"},
-       "username": {"$first": "$username"}
+       "username": {"$first": "$username"},
       },
 
 
@@ -141,7 +141,7 @@ router.post('/', function(req, res, next){
 
  //Find barcode by Id
 router.get('/:usernameId', function(req, res, next){
-  Barcodes.findOne({'username' : req.params.usernameId}, " username barcode", function(err, barcodes){
+  Barcodes.findOne({'username' : req.params.usernameId}, function(err, barcodes){
     if(err){
       console.log(err);
       return next(err);

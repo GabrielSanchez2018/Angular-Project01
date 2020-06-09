@@ -16,19 +16,19 @@ router.get('/', (req, res) => {
 });
 
 //GetEmployeebyId API
-router.get('/:EmployeeId', function (req, res, next) {
-  Employee.findOne({'EmployeeId': req.body.EmployeeId}, function(err, employee){
+router.get('/:EmployeeID', function (req, res, next) {
+  Employee.findOne({'EmployeeID': req.params.EmployeeID}, function(err, employee){
     if(err){
     console.log(err);
     return next (err);
   } else {
-    console.log(employee);
+    console.log('this is the employee',employee);
     res.json(employee);
-    res.status(200).send({
-      type: 'success',
-      auth: true,
-      time_stamp: new Date()
-    })
+    // res.status(200).send({
+    //   type: 'success',
+    //   auth: true,
+    //   time_stamp: new Date()
+   // })
   }
 })
 });

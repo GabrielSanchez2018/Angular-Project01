@@ -33,7 +33,7 @@ export class BarcodeInfoComponent implements OnInit {
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
-    this.username = this.cookieService.get('sessionuser');
+    this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' ).subscribe(res =>{
       this.invoices = res;
     }, err => {

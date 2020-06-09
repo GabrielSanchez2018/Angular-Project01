@@ -91,6 +91,13 @@
           <span style="color: red;">&nbsp;&nbsp;Sell Items</span>
       </a>
 
+      <a mat-list-item *ngIf='show' [routerLink]="'/find-employee'">
+        <span class="material-icons">
+          store
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;Employee</span>
+      </a>
+
       <a mat-list-item *ngIf='show' [routerLink]="'/all-orders'">
         <span class="material-icons">
           ballot

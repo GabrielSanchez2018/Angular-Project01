@@ -154,17 +154,17 @@ router.get('/:username/role', function(req, res, next) {
     })
 });
 
-router.get('/:EmployeeId/role', function(req, res, next) {
-  Employee.findOne({EmployeeId : req.body.EmployeeId}, 'role', function(err, employee) {
-    if (err) {
-      console.log(err);
-      return next(err);
-    } else {
-      console.log(employee.role);
-      res.json(employee.role);
-    };
-  });
-});
+// router.get('/:EmployeeId/role', function(req, res, next) {
+//   Employee.findOne({EmployeeId : req.body.EmployeeId}, 'role', function(err, employee) {
+//     if (err) {
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log(employee.role);
+//       res.json(employee.role);
+//     };
+//   });
+// });
 
 module.exports = router;
 

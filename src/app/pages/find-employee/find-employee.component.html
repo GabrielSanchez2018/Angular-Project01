@@ -1,0 +1,102 @@
+
+
+<div fxLayout="column">
+  <mat-card fxFlex class="signin-container mat-elevation-z8">
+    <mat-card-title class="signin-title mat-headline">Employee Sign-in</mat-card-title><br />
+    <mat-card-subtitle class="signin-subtitle mat-headline">You must enter a valid employee id to proceed
+    </mat-card-subtitle>
+    <mat-card-content>
+      <mat-card class="mat-elevation-z0" fxLayout="column" fxLayoutGap="10px">
+        <form [formGroup]="form" (ngSubmit)="login(); form.reset()" #loginForm="ngForm">
+
+          <mat-card-content>
+
+            <mat-form-field fxFlex>
+              <input matInput [formControl]="form.controls ['EmployeeId']" placeholder="Employee ID" />
+              <mat-error *ngIf="form.controls['EmployeeId'].hasError('required') && form.controls['EmployeeId'].touched">
+                Employee ID is a required field.
+              </mat-error>
+              <mat-error *ngIf="form.controls['EmployeeId'].hasError('pattern') && form.controls['EmployeeId'].touched">
+                Employee ID must be a numerical value.
+              </mat-error>
+            </mat-form-field>
+
+          </mat-card-content>
+
+          <mat-card-actions>
+            <button type="submit" fxFlex mat-raised-button [disabled]="!form.valid" color="primary">Submit</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+  <!-- <mat-card class="insert">
+    <mat-card-title>Find Employee's Order</mat-card-title>
+    <br/>
+    <form [formGroup]="form" (ngSubmit)="findEmployee();" #barcodeForm= "ngForm">
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="15px">
+          <mat-form-field>
+            <input matInput
+                   [formControl]="form.controls['EmployeeID']"
+                   placeholder="Employee Id"/>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+
+      <br/>
+      <mat-card-actions align="end">
+        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+        <button mat-raised-button (click)="testSnackbar()" color="warn">Test Snakbar</button>
+        <button mat-raised-button color="accent">Submit</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+
+<br>
+
+<mat-card-content class="totaltable" *ngIf='employees'>
+
+  <table mat-table [dataSource]="employees" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Employee Id </th>
+      <td mat-cell *matCellDef="let element">{{element.EmployeeID}}  </td>
+      <td mat-footer-cell *matFooterCellDef> Total </td>
+      </ng-container>
+
+  <ng-container matColumnDef="lastname">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef="let element">{{element.LastName}}  </td>
+    <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+
+
+
+  <ng-container matColumnDef="firstname">
+  <th mat-header-cell *matHeaderCellDef> First Name</th>
+  <td mat-cell *matCellDef="let element">{{element.FirstName}} </td>
+  <td mat-footer-cell *matFooterCellDef> </td>
+  </ng-container>
+
+
+
+
+  <ng-container matColumnDef="department">
+    <th mat-header-cell *matHeaderCellDef> Department</th>
+    <td mat-cell *matCellDef="let element">{{element.Department}} </td>
+    <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+
+
+
+  </table>
+  </mat-card-content> -->

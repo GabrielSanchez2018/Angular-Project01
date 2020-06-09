@@ -2,7 +2,12 @@ table {
   width: 100%;
 }
 
-.mat-card-content {
+.mat-card-content{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+.container{
   width: 90%;
   margin: 0 auto;
   margin-top: 1%;

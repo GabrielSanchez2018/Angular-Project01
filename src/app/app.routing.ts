@@ -32,6 +32,7 @@ import { SellComponent } from './pages/sell/sell.component';
 import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
 import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-employeee.component';
 import { SellReportComponent } from './pages/sell-report/sell-report.component';
+import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
 
 
 export const AppRoutes: Routes = [
@@ -62,6 +63,11 @@ export const AppRoutes: Routes = [
       {
         path: 'barcode-info',
         component: BarcodeInfoComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'find-employee',
+        component: FindEmployeeComponent,
         canActivate: [RoleGuard]
       },
       {

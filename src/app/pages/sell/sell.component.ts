@@ -10,6 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { MatSnackBar } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
+import { toArray } from 'rxjs/operators';
 
 
 
@@ -27,6 +28,7 @@ export class SellComponent implements OnInit {
   invoices: Object;
   services: Object;
   barcodes: Object;
+  displayedColumnsOne = ['id','lineitems', 'partsamount','laboramount','linetotal','total','date', 'functions'];
   displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
@@ -38,6 +40,8 @@ export class SellComponent implements OnInit {
   user: string;
   userId: string;
   find: object;
+  showbarcodes: Object;
+  payuser: string;
 
 
 
@@ -47,26 +51,30 @@ export class SellComponent implements OnInit {
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
-    this.username = this.cookieService.get('sessionuser');
-    this.http.get('api/invoices/' ).subscribe(res =>{
+     this.username = this.cookieService.get('paysession');
+    this.http.get('api/invoices/' + this.username).subscribe(res =>{
       this.invoices = res;
+      console.log('this ivocices', this.invoices)
     }, err => {
       console.log(err);
     })
 
+
+// Kepp worknig on this api from json object to array, we need an array.
+    this.http.get('api/barcodes/').subscribe(res =>{
+      this.barcodes = res;
+      console.log('this barcodes', this.barcodes)
+
+
+    }), err =>{
+      console.log(err)
+    }
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
       console.log('yest',this.services);
       console.log(res)
     }), err => {
       console.log(err);
-    }
-    this.http.get('api/barcodes/').subscribe(res =>{
-      this.barcodes = res;
-
-      this.changeDetectorRefs.detectChanges();
-    }), err =>{
-      console.log(err)
     }
   }
   //Snackbar success message
@@ -80,6 +88,18 @@ successSnackbar(){
     }
   );
 }
+myOrders(){
+  this.username = this.cookieService.get('paysession');
+  this.http.get('api/barcodes/' + this.username).subscribe(res =>{
+    this.barcodes = res;
+
+    this.changeDetectorRefs.detectChanges();
+  }), err =>{
+    console.log(err)
+  }
+
+}
+
 
 rerender(){
   this.barcodes

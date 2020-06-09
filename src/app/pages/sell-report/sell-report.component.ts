@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataSource } from '@angular/cdk/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material';
 import * as XLSX from "xlsx";
 import {ExporterService} from '../../services/exporter/exporter.service';
@@ -80,6 +81,18 @@ export class SellReportComponent implements OnInit {
     }
     exportAsXLSX(): void{
       this.exportService.exportToExcel(this.ventas , 'Total_Items');
+    }
+
+    getTotalCost() {
+      return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    }
+
+    getTotalWeight(){
+      return this.ventas.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+    }
+
+    getTotalBoxes(){
+      return this.ventas.map(t => t.count).reduce((acc, value) => acc + value, 0);
     }
 
 }

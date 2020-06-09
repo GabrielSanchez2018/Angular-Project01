@@ -31,7 +31,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {ObserversModule} from '@angular/cdk/observers';
 import {MatTabsModule} from '@angular/material/tabs';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -69,12 +69,13 @@ import { AuthService } from './shared/guards/auth.service';
 import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
 import { SellComponent } from './pages/sell/sell.component';
 import { AllOrdersComponent } from './pages/all-orders/all-orders.component';
-import { BarcodeComponent } from './pages/barcode/barcode.component';
 import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.component';
 import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-employeee.component';
 import { SellReportComponent } from './pages/sell-report/sell-report.component';
 import { ExporterComponent } from './services/exporter/exporter.component';
 import { ExporterService } from './services/exporter/exporter.service';
+import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
+import { PaySessionGuard } from './shared/guards/paysession';
 
 
 @NgModule({
@@ -111,11 +112,11 @@ import { ExporterService } from './services/exporter/exporter.service';
     MyOrdersComponent,
     SellComponent,
     AllOrdersComponent,
-    BarcodeComponent,
     BarcodeInfoComponent,
     SignInEmployeeeComponent,
     SellReportComponent,
-    ExporterComponent
+    ExporterComponent,
+    FindEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -143,7 +144,8 @@ import { ExporterService } from './services/exporter/exporter.service';
     MatSidenavModule,
     MatSnackBarModule,
     ObserversModule,
-    MatTabsModule
+    MatTabsModule,
+    MatPaginatorModule
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
@@ -157,7 +159,8 @@ import { ExporterService } from './services/exporter/exporter.service';
     SessionGuard,
     RoleGuard,
     AuthService,
-    ExporterService
+    ExporterService,
+    PaySessionGuard
   ],
   bootstrap: [AppComponent]
 })
