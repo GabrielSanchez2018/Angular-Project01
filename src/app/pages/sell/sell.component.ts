@@ -64,11 +64,10 @@ export class SellComponent implements OnInit {
     this.http.get('api/barcodes/').subscribe(res =>{
       this.barcodes = res;
       console.log('this barcodes', this.barcodes)
-
-
     }), err =>{
       console.log(err)
     }
+    
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
       console.log('yest',this.services);
@@ -76,6 +75,10 @@ export class SellComponent implements OnInit {
     }), err => {
       console.log(err);
     }
+  }
+
+  getTotalCost() {
+    return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
   }
   //Snackbar success message
 successSnackbar(){
@@ -87,17 +90,6 @@ successSnackbar(){
       verticalPosition: "top"
     }
   );
-}
-myOrders(){
-  this.username = this.cookieService.get('paysession');
-  this.http.get('api/barcodes/' + this.username).subscribe(res =>{
-    this.barcodes = res;
-
-    this.changeDetectorRefs.detectChanges();
-  }), err =>{
-    console.log(err)
-  }
-
 }
 
 

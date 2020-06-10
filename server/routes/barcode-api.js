@@ -28,8 +28,6 @@ router.get('/barcodes-graph', function(req, res, next) {
         //"itemdescription": {"$first": "$itemdescription"},
         "count": {"$sum": 1},
         "totalprice": {"$sum": "$totalprice" },
-
-
        "totalweight" : {"$sum": "$barBoxNetWeight"},
        //"username": {"$first": "$username"},
       },

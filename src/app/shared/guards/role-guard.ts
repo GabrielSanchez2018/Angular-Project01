@@ -22,9 +22,6 @@ export class RoleGuard implements CanActivate {
     }
 
     getRole() {
-      var emp =  this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role');
-      var emp1 = this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role');
-
-    return emp || emp1
-}
+        return this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role');
+    }
 }

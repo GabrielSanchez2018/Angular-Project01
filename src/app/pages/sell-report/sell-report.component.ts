@@ -12,7 +12,8 @@ import {ExporterService} from '../../services/exporter/exporter.service';
   styleUrls: ['./sell-report.component.css']
 })
 export class SellReportComponent implements OnInit {
-  displayedColumns = ['code','itemdescription', 'totalboxes','totalweight', 'totalprice']
+  displayedColumns = ['code','itemdescription', 'totalboxes','totalweight', 'totalprice'];
+  displayedColumnsOne = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   ventas: any;
     data: any;
     itemCount = [];
@@ -38,7 +39,7 @@ export class SellReportComponent implements OnInit {
             console.log(this.ventas)
             // Loop over the purchases to split out the services and item count
             for (const item of this.ventas) {
-                this.labels.push(item.itemdescription);
+                this.labels.push(item._id);
                 this.itemCount.push(item.count);
             }
 

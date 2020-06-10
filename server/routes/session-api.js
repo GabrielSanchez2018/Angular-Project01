@@ -22,10 +22,8 @@ router.post('/signin', function(req, res, next) {
       return next(err);
     } else {
       console.log('this is the user',user);
-
       if(user) {
         let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
-
         if (passwordIsValid) {
           res.status(200).send({
             type: 'success',
@@ -51,14 +49,11 @@ router.post('/signin', function(req, res, next) {
 router.post('/signin-employee', function(req, res, next) {
   console.log("found you",req.body);
   Employee.findOne({'EmployeeID' : req.body.EmployeeID}, function(err, employee) {
-
     if (err){
       console.log(err);
       return next(err);
     } else {
       console.log('employee here mf', employee.EmployeeID)
-
-
       // let employeeIsValied = compareSync(req.body.EmployeeID, employee.EmployeeID)
       // console.log('here is the comparation', employeeIsValied)
       if(req.body.EmployeeID !== employee){
