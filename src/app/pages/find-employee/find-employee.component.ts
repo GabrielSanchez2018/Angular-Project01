@@ -17,10 +17,15 @@ export class FindEmployeeComponent implements OnInit {
   form: FormGroup;
   employees: Object;
   EmployeeID: string;
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  stepper: any;
+  matStepperNext: any;
 
 
 
-  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
+  constructor(private _formBuilder: FormBuilder ,private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
     this.http.get('api/employees/' ).subscribe(res =>{
       this.employees = res;
@@ -35,6 +40,16 @@ export class FindEmployeeComponent implements OnInit {
       EmployeeId: [null, Validators.compose([Validators.required])]
 
     });
+
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+
+
+
     }
 
 // findEmployee(){
@@ -51,7 +66,10 @@ export class FindEmployeeComponent implements OnInit {
     this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
       if (res) {
         this.cookieService.set('paysession', EmployeeId, 1);
-        this.router.navigate(["/sell"]);
+
+        //this.stepper
+       this.router.navigate(["/sell"]);
+
 
       } else {
         this.snackBar.open(

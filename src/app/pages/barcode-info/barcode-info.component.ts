@@ -19,7 +19,8 @@ export class BarcodeInfoComponent implements OnInit {
   invoices: Object;
   services: Object;
   barcodes: Object;
-  displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
+  displayedColumns = ['username'];
+  //'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
   id: number;
@@ -30,6 +31,7 @@ export class BarcodeInfoComponent implements OnInit {
   user: string;
   userId: string;
   find: object;
+  bar: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -47,14 +49,24 @@ export class BarcodeInfoComponent implements OnInit {
     }), err => {
       console.log(err);
     }
-    this.http.get('api/barcodes/').subscribe(res =>{
+    this.http.get('api/barcodes/' + this.username).subscribe(res =>{
       this.barcodes = res;
 
-      this.changeDetectorRefs.detectChanges();
     }), err =>{
       console.log(err)
     }
   }
+
+  getTotalCost() {
+    return this.barcodes.map(t => t.barcode).reduce((acc, value) => acc + value, 0);
+
+  }
+
+
+
+
+
+
   //Snackbar success message
 successSnackbar(){
   this.snackBar.open(
@@ -414,6 +426,7 @@ this.changeDetectorRefs.detectChanges();
     })
   })
   }
+
 
 
 

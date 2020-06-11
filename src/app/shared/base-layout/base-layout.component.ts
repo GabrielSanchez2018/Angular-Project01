@@ -28,14 +28,14 @@ export class BaseLayoutComponent implements OnInit {
           }
     });
 
-    this.username = this.cookieService.get('paysession');
-    this.http.get('/api/employees/' + this.cookieService.get('paysession') + '/role' ).subscribe(res => {
-      if (res === "standard") {
-          this.show = true;
-      } else {
-        this.show = false
-          }
-    });
+    // this.username = this.cookieService.get('paysession');
+    // this.http.get('/api/employees/' + this.cookieService.get('paysession') + '/role' ).subscribe(res => {
+    //   if (res === "standard") {
+    //       this.show = true;
+    //   } else {
+    //     this.show = false
+    //       }
+    // });
   }
 
 
