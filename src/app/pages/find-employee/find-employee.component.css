@@ -10,3 +10,16 @@
   margin: 0 auto;
   margin-top: 15px;
 }
+.mat-horizontal-stepper{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}

@@ -6,6 +6,8 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import {MatTableDataSource} from '@angular/material/table';
+
 
 @Component({
   selector: 'app-barcode-info',
@@ -14,12 +16,14 @@ import { Router } from '@angular/router';
 })
 export class BarcodeInfoComponent implements OnInit {
 
+
   form: FormGroup;
   username: string;
   invoices: Object;
   services: Object;
   barcodes: Object;
-  displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
+  displayedColumns = ['username',
+  'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
   id: number;
@@ -30,12 +34,15 @@ export class BarcodeInfoComponent implements OnInit {
   user: string;
   userId: string;
   find: object;
+  bar: any;
+  map: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
     this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' ).subscribe(res =>{
       this.invoices = res;
+      console.log('invoces', this.invoices)
     }, err => {
       console.log(err);
     })
@@ -47,25 +54,45 @@ export class BarcodeInfoComponent implements OnInit {
     }), err => {
       console.log(err);
     }
-    this.http.get('api/barcodes/').subscribe(res =>{
-      this.barcodes = res;
-
-      this.changeDetectorRefs.detectChanges();
+    this.username = this.cookieService.get('paysession');
+    this.http.get('api/barcodes/' ).subscribe(res =>{
+        //THIS FUNCTION WILL FILTHER THE USERNAME
+      this.barcodes = res.filter(q => q.username === this.username);;
+      console.log('noiniewnfis', this.barcodes)
     }), err =>{
       console.log(err)
     }
+
+
   }
+
+  getTotalCost() {
+    return this.barcodes.map(t => t.barcode).reduce((acc, value) => acc + value, 0);
+
+  }
+
+
+
+
+
+
+
+
   //Snackbar success message
 successSnackbar(){
+
   this.snackBar.open(
-    "Item Scaned.",
+     'Item has been Scanned',
     "SUCCESS",
     {
-      duration: 2000,
+      duration: 3000,
       verticalPosition: "top"
     }
   );
 }
+  test(test: any, arg1: string, arg2: { duration: number; verticalPosition: "top"; }) {
+    throw new Error("Method not implemented.");
+  }
 
 rerender(){
   this.barcodes
@@ -414,6 +441,7 @@ this.changeDetectorRefs.detectChanges();
     })
   })
   }
+
 
 
 
