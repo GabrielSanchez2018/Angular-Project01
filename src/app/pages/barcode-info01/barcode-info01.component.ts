@@ -6,16 +6,13 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import {MatTableDataSource} from '@angular/material/table';
-
 
 @Component({
-  selector: 'app-barcode-info',
-  templateUrl: './barcode-info.component.html',
-  styleUrls: ['./barcode-info.component.css']
+  selector: 'app-barcode-info01',
+  templateUrl: './barcode-info01.component.html',
+  styleUrls: ['./barcode-info01.component.css']
 })
-export class BarcodeInfoComponent implements OnInit {
-
+export class BarcodeInfo01Component implements OnInit {
 
   form: FormGroup;
   username: string;
@@ -430,7 +427,7 @@ this.changeDetectorRefs.detectChanges();
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
-      this.router.navigate(['/barcode-info01']);
+      this.router.navigate(['/find-employee']);
       // this will reset the form
 
       this.successSnackbar();

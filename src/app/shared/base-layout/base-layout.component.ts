@@ -28,9 +28,9 @@ export class BaseLayoutComponent implements OnInit {
           }
     });
 
-    // this.username = this.cookieService.get('paysession');
-    // this.http.get('/api/employees/' + this.cookieService.get('paysession') + '/role' ).subscribe(res => {
-    //   if (res === "standard") {
+    // this.username = this.cookieService.get('sessionuser');
+    // this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
+    //   if (res === "admin") {
     //       this.show = true;
     //   } else {
     //     this.show = false

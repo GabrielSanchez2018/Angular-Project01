@@ -45,32 +45,109 @@ router.post('/signin', function(req, res, next) {
   })
 });
 
+
+// router.post('/sign-in-employee', function(req, res, next){
+//   console.log(req.body)
+//   Employee.findOne({'EmployeeId': req.body.EmployeeId}, function(err, employee){
+//     if(err){
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log('this is the Employee', employee);
+//       if(user === req.body){
+//         res.status(200).send({
+//           type: 'success',
+//           auth: true,
+//           username: user.username,
+//           time_stamp: new Date()
+//         })
+//       } else{
+//         console.log(`The password for username: ${req.body.username} is invalid.`);
+//         res.status(401).send({
+//           type: 'error',
+//           text: 'Invalid username/password, please try again.',
+//           auth: false,
+//           time_stamp: new Date()
+//         })
+//       }
+//     }
+//   })
+// })
+router.get('/sign-in-employee', (req, res) => {
+  Employee.find({}, (err, employees) =>{
+    if(err)
+    return res.status(500).send({message: 'Error: ${err}'})
+    if(!employees)
+    return res.status(404).send({message: 'The Employee Does not Exist'})
+
+    res.status(200).send({ employees })
+  })
+
+});
+
+
+
+// router.post('/signin-employee', (req, res) => {
+//   console.log('here', req.body)
+//   Employee.find({}, (err, employees) =>{
+//     if (err){
+//       console.log(err);
+//       return res.status(500).send({message: 'Error: ${err}'})
+//     } else {
+//       //console.log('employee here mf', employees)
+//       // let employeeIsValied = compareSync(req.body.EmployeeID, employee.EmployeeID)
+//       // console.log('here is the comparation', employeeIsValied)
+//       console.log('request bo0dy', req.body.EmployeeID)
+//       if(req.body.EmployeeID !== employees){
+//         res.status(200).send({
+//           type: 'sucess',
+//           auth: true,
+//         })
+//     } else {
+//       console.log(`The password for username:  is invalid.`);
+//           res.status(401).send({
+//             type: 'error',
+//             text: 'Invalid username/password, please try again.',
+//             auth: false,
+//             time_stamp: new Date()
+//           })
+//     }
+//     // if(err) return res.status(500).send({message: 'Error: ${err}'})
+//     // if(!employees) return res.status(404).send({message: 'The Employee Does not Exist'})
+//   }
+//     // res.status(200).send({ employees })
+//   })
+  
+// });
+
+
+
 //Employee Sign in
-router.post('/signin-employee', function(req, res, next) {
-  console.log("found you",req.body);
-  Employee.findOne({'EmployeeID' : req.body.EmployeeID}, function(err, employee) {
-    if (err){
-      console.log(err);
-      return next(err);
-    } else {
-      console.log('employee here mf', employee.EmployeeID)
-      // let employeeIsValied = compareSync(req.body.EmployeeID, employee.EmployeeID)
-      // console.log('here is the comparation', employeeIsValied)
-      if(req.body.EmployeeID !== employee){
-        res.status(200).send({
-          type: 'sucess',
-          auth: true,
-        })
-      } else {
-        console.log(`The password for username:  is invalid.`);
-          res.status(401).send({
-            type: 'error',
-            text: 'Invalid username/password, please try again.',
-            auth: false,
-            time_stamp: new Date()
-          })
-      }
-    }
+// router.post('/signin-employee', function(req, res, next) {
+//   console.log("found you",req.body);
+//   Employee.findOne({'EmployeeID' : req.body.EmployeeID}, function(err, employee) {
+//     if (err){
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log('employee here mf', employee.EmployeeID)
+//       // let employeeIsValied = compareSync(req.body.EmployeeID, employee.EmployeeID)
+//       // console.log('here is the comparation', employeeIsValied)
+//       if(req.body.EmployeeID !== employee){
+//         res.status(200).send({
+//           type: 'sucess',
+//           auth: true,
+//         })
+//       } else {
+//         console.log(`The password for username:  is invalid.`);
+//           res.status(401).send({
+//             type: 'error',
+//             text: 'Invalid username/password, please try again.',
+//             auth: false,
+//             time_stamp: new Date()
+//           })
+//       }
+//     }
 
   //   if('here is the emply',employee){
   //     let employeeIsValied = bcrypt.compareSync(req.body.EmployeeId, employee.EmployeeId)
@@ -93,8 +170,8 @@ router.post('/signin-employee', function(req, res, next) {
   //     }
   //   }
 
-  })
-});
+//   })
+// });
 
 
 // Register User

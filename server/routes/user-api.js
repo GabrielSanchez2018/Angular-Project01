@@ -25,6 +25,20 @@ router.get('/', function(req, res, next) {
     });
 });
 
+// Find User Role
+router.get('/:username/role', function(req, res, next) {
+    User.findOne({'username': req.params.username}, 'role', function(err, user) {
+      if (err) {
+        console.log(err);
+        return next(err);
+      } else {
+        //console.log(user.role);
+        res.json(user.role);
+      }
+      })
+  });
+  
+
 // Find by Id
 router.get('/:id', function( req, res, next) {
     User.findOne({'_id': req.params.id}, function(err, user) {
@@ -141,30 +155,20 @@ router.get('/:username/security-questions', function (req, res, next) {
   })
 });
 
-// Find User Role
-router.get('/:username/role', function(req, res, next) {
-  User.findOne({'username': req.params.username}, 'role', function(err, user) {
-    if (err) {
-      console.log(err);
-      return next(err);
-    } else {
-      console.log(user.role);
-      res.json(user.role);
-    }
-    })
-});
-
 // router.get('/:EmployeeId/role', function(req, res, next) {
-//   Employee.findOne({EmployeeId : req.body.EmployeeId}, 'role', function(err, employee) {
-//     if (err) {
-//       console.log(err);
-//       return next(err);
-//     } else {
-//       console.log(employee.role);
-//       res.json(employee.role);
-//     };
+//     Employee.findOne({EmployeeId : req.body.EmployeeId}, 'role', function(err, employee) {
+//       if (err) {
+//         console.log(err);
+//         return next(err);
+//       } else {
+//         console.log(employee.role);
+//         res.json(employee.role);
+//       };
+//     });
 //   });
-// });
+
+
+
 
 module.exports = router;
 

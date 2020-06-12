@@ -104,26 +104,25 @@ rerender(){
     });
   }
 
-  delete(barcodeId) {
+  delete(invoiceId) {
     const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
       data: {
-        barcodeId
+        invoiceId
       },
       disableClose: true,
       width: '800px'
     });
-
+  
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/barcodes/' + barcodeId).subscribe(res => {
-          console.log('Barcode deleted');
-          this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
-          console.log(this.barcodes);
+        this.http.delete('/api/invoices/' + invoiceId).subscribe(res => {
+          console.log('Invoice deleted');
+          this.invoices = this.invoices.filter(q => q._id !== invoiceId);
+          console.log(this.invoices);
         });
       }
     });
-   }
-
+  }
 
 
   create(){

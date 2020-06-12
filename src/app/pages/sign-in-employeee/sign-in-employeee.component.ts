@@ -27,14 +27,14 @@ export class SignInEmployeeeComponent implements OnInit {
     private http: HttpClient,
     private snackBar: MatSnackBar
   ) {
-    this.username = this.cookieService.get('paysession');
-    this.http.get('/api/employees/' + this.username + '/role' ).subscribe(res =>{
-      if (res === "standard"){
-        this.show = true
-      } else {
-        this.show = false
-      }
-    })
+    // this.username = this.cookieService.get('paysession');
+    // this.http.get('/api/employees/' + this.username + '/role' ).subscribe(res =>{
+    //   if (res === "standard"){
+    //     this.show = true
+    //   } else {
+    //     this.show = false
+    //   }
+    // })
 
   }
 
@@ -50,59 +50,60 @@ export class SignInEmployeeeComponent implements OnInit {
     });
   }
 
-  // login() {
-  //   const EmployeeId = this.form.controls["EmployeeId"].value;
-  //   console.log(EmployeeId);
-  //   this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
-  //     if (res) {
-  //       this.cookieService.set('sessionuser', EmployeeId, 1);
-  //       this.router.navigate(["/"]);
+  login() {
+    const EmployeeId = this.form.controls["EmployeeId"].value;
+    console.log(EmployeeId);
+    this.http.get("/api/employees/" + EmployeeId + '/role').subscribe(res => {
+      if (res  ) {
+       console.log(res)
 
-  //     } else {
-  //       this.snackBar.open(
-  //         "The employee ID you entered is invalid, please try again.",
-  //         "ERROR",
-  //         {
-  //           duration: 3000,
-  //           verticalPosition: "top"
-  //         }
-  //       );
+        this.cookieService.set('paysession', EmployeeId, 1);
+        this.router.navigate(["/"]);
 
-  //     }
-  //   });
+      } else {
+        this.snackBar.open(
+          "The employee ID you entered is invalid, please try again.",
+          "ERROR",
+          {
+            duration: 3000,
+            verticalPosition: "top"
+          }
+        );
+
+      }
+    });
 
 
     // get all info
-    signinemp(){
-      this.username = this.cookieService.get('paysession');
-      this.http.get('/api/employee/' + this.cookieService.get('paysession') + '/role' ).subscribe(res => {
-        if (res === "standard") {
-            this.show = true;
-        } else {
-          this.show = false
-            }
-      });
-    }
+//     signinemp(){
+//       this.username = this.cookieService.get('paysession');
+//       this.http.get('/api/employees/' + this.cookieService.get('paysession') + '/role' ).subscribe(res => {
+//         if (res === "standard") {
+//             this.show = true;
+//         } else {
+//           this.show = false
+//             }
+//       });
+//     }
+// //}
+//   login() {
+//     //this.signinemp();
+//     const EmployeeId = this.form.controls.EmployeeId.value;
+//     //const password = this.form.controls.password.value;
 
-//}
-  login() {
-    this.signinemp();
-    const EmployeeId = this.form.controls.EmployeeId.value;
-    //const password = this.form.controls.password.value;
+//     this.http.post('/api/session/signin-employee', {
+//       EmployeeId,
+//       //password
+//     }).subscribe(res => {
+//       if (res['auth']) {
+//         this.cookieService.set('paysession', EmployeeId, 1);
+//         this.router.navigate(['/']);
 
-    this.http.post('/api/session/signin-employee', {
-      EmployeeId,
-      //password
-    }).subscribe(res => {
-      if (res['auth']) {
-        this.cookieService.set('paysession', EmployeeId, 1);
-        this.router.navigate(['/']);
-
-      } else {
-        this.errorMessage = res['text'];
-      }
-    });
-  }
+//       } else {
+//         this.errorMessage = res['text'];
+//       }
+//     });
+   }
 
 
 

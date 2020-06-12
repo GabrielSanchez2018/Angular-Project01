@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SessionGuard } from './shared/guards/session.guard';
+import {RoleEmpGuard} from './shared/guards/role-emp-gurd'
 import { RoleGuard } from './shared/guards/role-guard';
 import { SecurityQuestionCreateComponent } from './pages/security-question-create/security-question-create.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
@@ -33,6 +34,7 @@ import { BarcodeInfoComponent } from './pages/barcode-info/barcode-info.componen
 import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-employeee.component';
 import { SellReportComponent } from './pages/sell-report/sell-report.component';
 import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
+import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.component';
 
 
 export const AppRoutes: Routes = [
@@ -63,6 +65,11 @@ export const AppRoutes: Routes = [
       {
         path: 'barcode-info',
         component: BarcodeInfoComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'barcode-info01',
+        component: BarcodeInfo01Component,
         canActivate: [RoleGuard]
       },
       {

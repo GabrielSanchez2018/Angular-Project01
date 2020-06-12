@@ -76,7 +76,8 @@ import { ExporterComponent } from './services/exporter/exporter.component';
 import { ExporterService } from './services/exporter/exporter.service';
 import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
 import { PaySessionGuard } from './shared/guards/paysession';
-//import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
+import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.component';
+import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
 
 
 @NgModule({
@@ -117,7 +118,8 @@ import { PaySessionGuard } from './shared/guards/paysession';
     SignInEmployeeeComponent,
     SellReportComponent,
     ExporterComponent,
-    FindEmployeeComponent
+    FindEmployeeComponent,
+    BarcodeInfo01Component
   ],
   imports: [
     BrowserModule,
@@ -162,7 +164,7 @@ import { PaySessionGuard } from './shared/guards/paysession';
     AuthService,
     ExporterService,
     PaySessionGuard,
-   // RoleEmpGuard
+    RoleEmpGuard
   ],
   bootstrap: [AppComponent]
 })
