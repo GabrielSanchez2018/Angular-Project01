@@ -67,7 +67,7 @@ export class SellComponent implements OnInit {
     }), err =>{
       console.log(err)
     }
-    
+
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
       console.log('yest',this.services);
