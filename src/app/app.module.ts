@@ -76,7 +76,7 @@ import { ExporterComponent } from './services/exporter/exporter.component';
 import { ExporterService } from './services/exporter/exporter.service';
 import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
 import { PaySessionGuard } from './shared/guards/paysession';
-import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
+//import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
 
 
 @NgModule({
@@ -162,7 +162,7 @@ import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
     AuthService,
     ExporterService,
     PaySessionGuard,
-    RoleEmpGuard
+   // RoleEmpGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -27,8 +27,8 @@ export class SignInEmployeeeComponent implements OnInit {
     private http: HttpClient,
     private snackBar: MatSnackBar
   ) {
-    this.username = this.cookieService.get('sessionuser');
-    this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res =>{
+    this.username = this.cookieService.get('paysession');
+    this.http.get('/api/employees/' + this.username + '/role' ).subscribe(res =>{
       if (res === "standard"){
         this.show = true
       } else {
@@ -74,9 +74,9 @@ export class SignInEmployeeeComponent implements OnInit {
 
     // get all info
     signinemp(){
-      this.username = this.cookieService.get('sessionuser');
-      this.http.get('/api/employee/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
-        if (res === "admin") {
+      this.username = this.cookieService.get('paysession');
+      this.http.get('/api/employee/' + this.cookieService.get('paysession') + '/role' ).subscribe(res => {
+        if (res === "standard") {
             this.show = true;
         } else {
           this.show = false
@@ -95,7 +95,7 @@ export class SignInEmployeeeComponent implements OnInit {
       //password
     }).subscribe(res => {
       if (res['auth']) {
-        this.cookieService.set('sessionuser', EmployeeId, 1);
+        this.cookieService.set('paysession', EmployeeId, 1);
         this.router.navigate(['/']);
 
       } else {
