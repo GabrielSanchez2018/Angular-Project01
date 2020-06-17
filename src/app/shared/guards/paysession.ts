@@ -21,7 +21,7 @@ export class PaySessionGuard implements CanActivate {
         if (isAuthenticated) {
             return true;
         } else {
-            this.router.navigate(['/barcode-info']);
+            this.router.navigate(['/session/signin']);
             return false;
         }
     }

@@ -22,17 +22,18 @@ export class FindEmployeeComponent implements OnInit {
   secondFormGroup: FormGroup;
   stepper: any;
   matStepperNext: any;
+  errorMessage: any;
 
 
 
   constructor(private _formBuilder: FormBuilder ,private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
-    this.http.get('api/employees/' ).subscribe(res =>{
-      this.employees = res;
-      //console.log(this.employees)
-    }, err => {
-      console.log(err);
-    })
+    // this.http.get('api/employees/' ).subscribe(res =>{
+    //   this.employees = res;
+    //   //console.log(this.employees)
+    // }, err => {
+    //   console.log(err);
+    // })
    }
 
   ngOnInit() {
@@ -60,29 +61,48 @@ export class FindEmployeeComponent implements OnInit {
 //     })
 // }
 
+  // login() {
+  //   const EmployeeId = this.form.controls["EmployeeId"].value;
+  //   console.log(EmployeeId);
+  //   this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
+  //     if (res) {
+  //       this.cookieService.set('paysession', EmployeeId, 1);
+
+  //       //this.stepper
+  //      this.router.navigate(["/sell"]);
+
+
+  //     } else {
+  //       this.snackBar.open(
+  //         "The employee ID you entered is invalid, please try again.",
+  //         "ERROR",
+  //         {
+  //           duration: 3000,
+  //           verticalPosition: "top"
+  //         }
+  //       );
+
+  //     }
+  //   });
+  // }
+
   login() {
-    const EmployeeId = this.form.controls["EmployeeId"].value;
-    console.log(EmployeeId);
-    this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
-      if (res) {
-        this.cookieService.set('paysession', EmployeeId, 1);
+    const username = this.form.controls["EmployeeId"].value;
 
-        //this.stepper
-       this.router.navigate(["/sell"]);
+    this.http.post('/api/session/signin', {
+      username,
 
-
+    }).subscribe(res => {
+      if (res['auth']) {
+        this.cookieService.set('paysession', username, 1);
+        this.router.navigate(['/']);
       } else {
-        this.snackBar.open(
-          "The employee ID you entered is invalid, please try again.",
-          "ERROR",
-          {
-            duration: 3000,
-            verticalPosition: "top"
-          }
-        );
-
+        this.errorMessage = res['text'];
       }
     });
   }
+
+
+
 
 }

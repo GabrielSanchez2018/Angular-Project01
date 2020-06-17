@@ -90,9 +90,6 @@ successSnackbar(){
     }
   );
 }
-  test(test: any, arg1: string, arg2: { duration: number; verticalPosition: "top"; }) {
-    throw new Error("Method not implemented.");
-  }
 
 rerender(){
   this.barcodes
