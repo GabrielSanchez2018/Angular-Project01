@@ -83,6 +83,16 @@
 
 <br><br><br>
 
+
+<div class="export-container">
+<button mat-raised-button (click)="exportAsXLSXThird()" color="primary" >
+  <span class="material-icons">
+    save_alt
+    </span> Excel Download
+</button>
+</div>
+<br>
+
     <mat-card-content *ngIf='barcodes'>
 
     <table mat-table  [dataSource]="barcodes" class="mat-elevation-z8">

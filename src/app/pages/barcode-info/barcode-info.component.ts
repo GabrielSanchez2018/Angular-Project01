@@ -56,7 +56,7 @@ export class BarcodeInfoComponent implements OnInit {
     }
     this.username = this.cookieService.get('paysession');
     this.http.get('api/barcodes/' ).subscribe(res =>{
-        //THIS FUNCTION WILL FILTHER THE USERNAME
+        //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map. 
       this.barcodes = res.filter(q => q.username === this.username);;
       console.log('noiniewnfis', this.barcodes)
     }), err =>{
@@ -137,6 +137,9 @@ rerender(){
    //Box Weight
    var boxWeight = Array.from(enteredProductcode.slice(20,26));
     var labelWeight = boxWeight.join('')/10;
+
+    console.log('this is the boxWeith', labelWeight)
+
 
    console.log('hre is ', labelproductCode)
    console.log('weight', labelWeight)
