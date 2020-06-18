@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SessionGuard } from './shared/guards/session.guard';
-import {SessionempGuard} from './shared/guards/sessionemp.guard'
+import {RoleEmpGuard} from './shared/guards/role-emp-gurd'
 import { RoleGuard } from './shared/guards/role-guard';
 import { SecurityQuestionCreateComponent } from './pages/security-question-create/security-question-create.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
@@ -161,7 +161,7 @@ export const AppRoutes: Routes = [
       {
         path: 'service-create',
         component: ServiceCreateComponent,
-        canActivate: [RoleGuard]
+        canActivate: [SessionGuard]
       },
       {
         path: 'admin',

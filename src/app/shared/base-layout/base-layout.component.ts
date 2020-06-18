@@ -19,23 +19,55 @@ export class BaseLayoutComponent implements OnInit {
 
   constructor(private http: HttpClient, private cookieService: CookieService, private auth: AuthService)  {
 
+    // this.username = this.cookieService.get('sessionuser');
+    // this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
+    //   if (res === 'admin'){
+    //     this.show = true
+    //   } else {
+    //     this.username = this.cookieService.get('sessionuser');
+    //     this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role').subscribe(res =>{
+    //       if(res === 'standard'){
+    //         this.show = true
+    //       } else {
+    //         this.show = false
+    //       }
+    //     })
+    //   }
+
+
+
+      // if(res === 'admin'){
+      //   this.show = true
+      // } else {
+      //   this.show = false
+      // } if( res === 'standard'){
+      //   this.username = this.cookieService.get('sessionuser');
+      //   this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role').subscribe(res =>{
+      //     if(res === 'standard'){
+      //       this.show = true
+      //     } else {
+      //       this.show = false
+      //     }
+      //   })
+      //   }
+
+
+
+      // if (res === "admin") {
+      //     this.show = true;
+      // } else {
+      //   this.show = false
+      //     }
+   // });
+
     this.username = this.cookieService.get('sessionuser');
-    this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
-      if (res === "admin") {
+    this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
+      if (res === "standard") {
           this.show = true;
       } else {
         this.show = false
           }
     });
-
-    // this.username = this.cookieService.get('sessionuser');
-    // this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
-    //   if (res === "admin") {
-    //       this.show = true;
-    //   } else {
-    //     this.show = false
-    //       }
-    // });
   }
 
 

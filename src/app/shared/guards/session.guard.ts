@@ -22,7 +22,7 @@ export class SessionGuard implements CanActivate {
         if (isAuthenticated) {
             return true;
         } else {
-            this.router.navigate(['/session/signin']);
+            this.router.navigate(['/session/sign-in-employee']);
             return false;
         }
     }

@@ -46,56 +46,56 @@ router.post('/signin', function(req, res, next) {
 });
 
 
-router.post('/sign-in-employee', function(req, res, next){
-  console.log(req.body)
-  Employee.findOne({'EmployeeId': req.body.EmployeeId}, function(err, employee){
-    if(err){
-      console.log(err);
-      return next(err);
-    } else {
-      console.log('this is the Employee', employee)
-      console.log('this is the reqbody', req.body)
-      if( req.body){
-        res.status(200).send({
-          type: 'success',
-          auth: true,
-          username: req.body.EmployeeId,
-          time_stamp: new Date()
-        })
-      } else{
-        console.log(`The password for username: ${req.body.username} is invalid.`);
-        res.status(401).send({
-          type: 'error',
-          text: 'Invalid username/password, please try again.',
-          auth: false,
-          time_stamp: new Date()
-        })
-      }
-    }
-  })
-})
-
-
-
-// router.get('/sign-in-employee', (req, res) => {
-//   Employee.find({}, (err, employees) =>{
-//     if(err)
-//     return res.status(500).send({message: 'Error: ${err}'})
-//     if(!employees)
-//     return  res.status(404).send({message: 'The Employee Does not Exist'})
-
-
-//     //res.status(200).send({ employees })
-//     res.status(200).send({
-//       employees,
-//       type: 'success',
-//       auth: true,
-//       time_stamp: new Date()
-
-//     })
+// router.post('/sign-in-employee', function(req, res, next){
+//   console.log(req.body)
+//   Employee.findOne({'EmployeeId': req.body.EmployeeId}, function(err, employee){
+//     if(err){
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log('this is the Employee', employee)
+//       console.log('this is the reqbody', req.body)
+//       if( req.body){
+//         res.status(200).send({
+//           type: 'success',
+//           auth: true,
+//           username: req.body.EmployeeId,
+//           time_stamp: new Date()
+//         })
+//       } else{
+//         console.log(`The password for username: ${req.body.username} is invalid.`);
+//         res.status(401).send({
+//           type: 'error',
+//           text: 'Invalid username/password, please try again.',
+//           auth: false,
+//           time_stamp: new Date()
+//         })
+//       }
+//     }
 //   })
+// })
 
-// });
+
+
+router.get('/sign-in-employee', (req, res) => {
+  Employee.find({}, (err, employees) =>{
+    if(err)
+    return res.status(500).send({message: 'Error: ${err}'})
+    if(!employees)
+    return  res.status(404).send({message: 'The Employee Does not Exist'})
+
+
+    res.status(200).send({ employees })
+    // res.status(200).send({
+    //   employees,
+    //   type: 'success',
+    //   auth: true,
+    //   time_stamp: new Date()
+
+    // })
+  })
+
+});
 
 
 
