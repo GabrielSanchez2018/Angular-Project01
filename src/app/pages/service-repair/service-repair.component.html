@@ -16,13 +16,14 @@
 
 </mat-card> -->
 
-<h1 style="font-weight: lighter; text-align: center;">Welcome to the Service Repair Page</h1>
+<h1 style="font-weight: lighter; text-align: center;">Welcome</h1>
 <mat-card class="mat-elevation-z0" style="width: 65%; margin: 0 auto;">
   <form #serviceRepairForm="ngForm" (ngSubmit)="submit(serviceRepairForm.value); serviceRepairForm.reset();">
     <mat-card-content>
       <!-- service repair -->
       <div fxLayout="column">
-        <h4 fxFlex>Services</h4>
+        <h4 fxFlex>Items</h4>
+        <h5>Please select 2 items</h5>
 
         <div ngModelGroup="checkGroup" *ngFor="let service of services">
           <mat-checkbox name="{{service.id}}" ngModel>

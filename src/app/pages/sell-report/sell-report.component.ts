@@ -19,7 +19,7 @@ export class SellReportComponent implements OnInit {
     itemCount = [];
     labels = [];
   dataSource: any;
-  barcodes: Object;
+  barcodes: any;
 
 
 
@@ -82,6 +82,10 @@ export class SellReportComponent implements OnInit {
     }
     exportAsXLSX(): void{
       this.exportService.exportToExcel(this.ventas , 'Total_Items');
+    }
+
+    exportAsXLSXThird(): void{
+      this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
     }
 
     getTotalCost() {
