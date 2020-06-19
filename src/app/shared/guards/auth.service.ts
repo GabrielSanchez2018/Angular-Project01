@@ -23,22 +23,15 @@ export class AuthService {
 
   logout() {
     console.log("You have logout")
-    this.cookie.deleteAll();
+    this.cookie.delete;
     this.cookie.delete('isAuthenticated');
     this.token = false;
     this.isAuthenticated = false;
-    this.clearAuthData();
+
     this.username = false;
     this.sessionuser = false;
     this.router.navigate(['/session/signin']);
-  }
 
-  private clearAuthData() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('expiration');
-    localStorage.removeItem('username');
-    localStorage.removeItem('role');
-    localStorage.removeItem('sessionuser');
   }
 }
 
