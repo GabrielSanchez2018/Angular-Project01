@@ -1,5 +1,6 @@
-.mat-card{
+ .signin-container{
   width: 40%;
+  min-width: 30%;
   margin: 0 auto;
   margin-top: 10%;
 }
