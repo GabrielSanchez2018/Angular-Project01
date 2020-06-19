@@ -32,8 +32,8 @@ export class SigninComponent implements OnInit {
   }
 
   signin() {
-    const username = this.form.controls.username.value;
-    const password = this.form.controls.password.value;
+    const username = this.form.controls.username.value
+    const password = this.form.controls.password.value
 
     this.http.post('/api/session/signin', {
       username,

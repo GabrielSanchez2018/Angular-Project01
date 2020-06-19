@@ -6,7 +6,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import {MatTableDataSource} from '@angular/material/table';
+
 
 
 @Component({
@@ -136,7 +136,7 @@ rerender(){
    var labelproductCode = productCode.join('');
    //Box Weight
    var boxWeight = Array.from(enteredProductcode.slice(20,26));
-    var labelWeight = boxWeight.join('')/10;
+  var labelWeight = boxWeight.join('')/10;
 
    console.log('hre is ', labelproductCode)
    console.log('weight', labelWeight)
