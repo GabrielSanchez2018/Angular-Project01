@@ -57,6 +57,10 @@ export class SellReportComponent implements OnInit {
                             '#6B3FA0',
                             '#AF593E',
                             '#6CDAE7',
+                            '#00FFFF',
+                            '#FF00FF',
+                            '#FAEBD7',
+                            '#CD853F'
                         ],
                         hoverBackgroundColor: [
                             '#ED0A3F',
@@ -66,6 +70,9 @@ export class SellReportComponent implements OnInit {
                             '#6B3FA0',
                             '#AF593E',
                             '#6CDAE7',
+                            '#FF00FF',
+                            '#FAEBD7',
+                            '#CD853F'
                         ],
                         data: this.itemCount
                     },

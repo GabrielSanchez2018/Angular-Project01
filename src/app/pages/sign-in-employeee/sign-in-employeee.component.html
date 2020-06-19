@@ -2,7 +2,7 @@
 
 <div fxLayout="column">
   <mat-card fxFlex class="signin-container mat-elevation-z8">
-    <mat-card-title class="signin-title mat-headline">Employee Sign-in</mat-card-title><br />
+    <mat-card-title class="signin-title mat-headline">Employee Sign in</mat-card-title><br />
     <mat-card-subtitle class="signin-subtitle mat-headline">You must enter a valid employee id to proceed
     </mat-card-subtitle>
     <mat-card-content>
@@ -11,8 +11,9 @@
 
           <mat-card-content>
 
-            <mat-form-field fxFlex>
-              <input matInput [formControl]="form.controls ['EmployeeId']" placeholder="Employee ID" />
+            <mat-form-field appearance="outline">
+              <mat-label>Employee Id</mat-label>
+              <input matInput [formControl]="form.controls ['EmployeeId']" placeholder="Employee Id" />
               <mat-error *ngIf="form.controls['EmployeeId'].hasError('required') && form.controls['EmployeeId'].touched">
                 Employee ID is a required field.
               </mat-error>

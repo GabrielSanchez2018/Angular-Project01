@@ -1,5 +1,16 @@
 .mat-card{
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 10%;
+}
+
+.signin-title{
+  color: lightseagreen;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.signin-subtitle{
+  text-align: center;
+  color: black;
 }
