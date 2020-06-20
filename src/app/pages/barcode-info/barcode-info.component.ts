@@ -56,8 +56,12 @@ export class BarcodeInfoComponent implements OnInit {
     }
     this.username = this.cookieService.get('paysession');
     this.http.get('api/barcodes/' ).subscribe(res =>{
-        //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map. 
-      this.barcodes = res.filter(q => q.username === this.username);;
+        //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
+
+        if(Array.isArray(res)){
+          this.barcodes = res.filter(q => q.username === this.username);
+       }
+      //this.barcodes = res.filter(q => q.username === this.username);;
       console.log('noiniewnfis', this.barcodes)
     }), err =>{
       console.log(err)
@@ -67,7 +71,10 @@ export class BarcodeInfoComponent implements OnInit {
   }
 
   getTotalCost() {
-    return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    if(Array.isArray(this.barcodes)){
+     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    }
 
   }
 
@@ -115,7 +122,10 @@ rerender(){
       if (result === 'confirm'){
         this.http.delete('/api/barcodes/' + barcodeId).subscribe(res => {
           console.log('Barcode deleted');
-          this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          if(Array.isArray(this.barcodes)){
+            this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          }
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           console.log(this.barcodes);
         });
       }

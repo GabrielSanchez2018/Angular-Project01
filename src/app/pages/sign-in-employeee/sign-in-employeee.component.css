@@ -1,6 +1,7 @@
  .signin-container{
   width: 40%;
-  min-width: 30%;
+  min-width: 40%;
+  max-width: 40%;
   margin: 0 auto;
   margin-top: 10%;
 }

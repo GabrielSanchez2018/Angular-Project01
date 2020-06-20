@@ -42,6 +42,7 @@ export class SellComponent implements OnInit {
   find: object;
   showbarcodes: Object;
   payuser: string;
+  labelWeight: number;
 
 
 
@@ -78,7 +79,9 @@ export class SellComponent implements OnInit {
   }
 
   getTotalCost() {
+    if(Array.isArray(this.barcodes)){
     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    }
   }
   //Snackbar success message
 successSnackbar(){
@@ -112,12 +115,16 @@ rerender(){
       disableClose: true,
       width: '800px'
     });
-  
+
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
         this.http.delete('/api/invoices/' + invoiceId).subscribe(res => {
           console.log('Invoice deleted');
-          this.invoices = this.invoices.filter(q => q._id !== invoiceId);
+          if(Array.isArray(this.invoices)){
+            this.invoices = this.invoices.filter(q => q._id !== invoiceId);
+
+          }
+
           console.log(this.invoices);
         });
       }
@@ -137,7 +144,9 @@ rerender(){
    var labelproductCode = productCode.join('');
    //Box Weight
    var boxWeight = Array.from(enteredProductcode.slice(20,26));
-    var labelWeight = boxWeight.join('')/10;
+    const labelWeight = boxWeight.join('')/10;
+
+
 
    console.log('hre is ', labelproductCode)
    console.log('weight', labelWeight)
