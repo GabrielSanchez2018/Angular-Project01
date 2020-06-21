@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataSource } from '@angular/cdk/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material';
+import {MatTableDataSource, MatDialog} from '@angular/material';
 import * as XLSX from "xlsx";
 import {ExporterService} from '../../services/exporter/exporter.service';
+import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 
 @Component({
   selector: 'app-sell-report',
@@ -25,7 +26,7 @@ export class SellReportComponent implements OnInit {
 
 
 
-    constructor(private http: HttpClient, private exportService: ExporterService  ) {
+    constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog  ) {
 
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;
@@ -106,5 +107,31 @@ export class SellReportComponent implements OnInit {
     getTotalBoxes(){
       return this.ventas.map(t => t.count).reduce((acc, value) => acc + value, 0);
     }
+
+
+    //Delete function
+    delete(barcodeId) {
+      const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+        data: {
+          barcodeId
+        },
+        disableClose: true,
+        width: '800px'
+      });
+
+      dialogRef.afterClosed().subscribe(result =>{
+        if (result === 'confirm'){
+          this.http.delete('/api/barcodes/' + barcodeId).subscribe(res => {
+            console.log('Barcode deleted');
+            if(Array.isArray(this.barcodes)){
+              this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+            }
+            //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+            console.log(this.barcodes);
+          });
+        }
+      });
+     }
+
 
 }

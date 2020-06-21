@@ -141,7 +141,7 @@ export class SignInEmployeeeComponent implements OnInit {
           "The employee ID you entered is invalid, please try again.",
           "ERROR",
           {
-            duration: 3000,
+            duration: 4000,
             verticalPosition: "top"
           }
         );
