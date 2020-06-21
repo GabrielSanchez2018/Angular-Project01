@@ -142,7 +142,12 @@ rerender(){
    var labelproductCode = productCode.join('');
    //Box Weight
    var boxWeight = Array.from(enteredProductcode.slice(20,26));
-    var labelWeight = boxWeight.join('')/10;
+    var labelWeight = boxWeight.join('');
+
+    // Passing the labelWeight variable to a function so we get rid of the anoying error
+  function mult(x) {
+    return x ;
+}
 
    console.log('hre is ', labelproductCode)
    console.log('weight', labelWeight)
@@ -243,97 +248,97 @@ function myFunction(){
 // this function returns the total prices
   function totalPrice(){
     if (labelproductCode == dataservices[0].id){
-      return dataservices[0].price * labelWeight
+      return dataservices[0].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[1].id) {
-      return dataservices[1].price * labelWeight
+      return dataservices[1].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[2].id){
-      return dataservices[2].price * labelWeight
+      return dataservices[2].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[3].id){
-      return dataservices[3].price * labelWeight
+      return dataservices[3].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[4].id){
-      return dataservices[4].price * labelWeight
+      return dataservices[4].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[5].id){
-      return dataservices[5].price * labelWeight
+      return dataservices[5].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[6].id) {
-      return dataservices[6].price * labelWeight
+      return dataservices[6].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[7].id){
-      return dataservices[7].price * labelWeight
+      return dataservices[7].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[8].id){
-      return dataservices[8].price * labelWeight
+      return dataservices[8].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[9].id){
-      return dataservices[9].price * labelWeight
+      return dataservices[9].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[10].id){
-      return dataservices[10].price * labelWeight
+      return dataservices[10].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[11].id) {
-      return dataservices[11].price * labelWeight
+      return dataservices[11].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[12].id){
-      return dataservices[12].price * labelWeight
+      return dataservices[12].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[13].id){
-      return dataservices[13].price * labelWeight
+      return dataservices[13].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[14].id){
-      return dataservices[14].price * labelWeight
+      return dataservices[14].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[15].id){
-      return dataservices[15].price * labelWeight
+      return dataservices[15].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[16].id) {
-      return dataservices[16].price * labelWeight
+      return dataservices[16].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[17].id){
-      return dataservices[17].price * labelWeight
+      return dataservices[17].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[18].id){
-      return dataservices[18].price * labelWeight
+      return dataservices[18].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[19].id){
-      return dataservices[19].price * labelWeight
+      return dataservices[19].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[20].id){
-      return dataservices[20].price * labelWeight
+      return dataservices[20].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[21].id) {
-      return dataservices[21].price * labelWeight
+      return dataservices[21].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[22].id){
-      return dataservices[22].price * labelWeight
+      return dataservices[22].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[23].id){
-      return dataservices[23].price * labelWeight
+      return dataservices[23].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[24].id){
-      return dataservices[24].price * labelWeight
+      return dataservices[24].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[25].id){
-      return dataservices[25].price * labelWeight
+      return dataservices[25].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[26].id) {
-      return dataservices[26].price * labelWeight
+      return dataservices[26].price * mult(labelWeight)/10
 
     } else if(labelproductCode == dataservices[27].id){
-      return dataservices[27].price * labelWeight
+      return dataservices[27].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[28].id){
-      return dataservices[28].price * labelWeight
+      return dataservices[28].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[29].id){
-      return dataservices[29].price * labelWeight
+      return dataservices[29].price * mult(labelWeight)/10
 
     } else if (labelproductCode == dataservices[30].id){
-      return dataservices[30].price * labelWeight
+      return dataservices[30].price * mult(labelWeight)/10
     }
 
   }
