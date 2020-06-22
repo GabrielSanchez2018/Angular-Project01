@@ -17,7 +17,7 @@
                 Employee ID is a required field.
               </mat-error>
               <mat-error *ngIf="form.controls['EmployeeId'].hasError('pattern') && form.controls['EmployeeId'].touched">
-                Employee ID must be a numerical value.
+                Employee ID must be capital letters.
               </mat-error>
             </mat-form-field>
 

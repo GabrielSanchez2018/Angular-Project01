@@ -51,7 +51,7 @@ export class SignInEmployeeeComponent implements OnInit {
         null,
         Validators.compose([
           Validators.required,
-          Validators.pattern("^[A-Z]*$")
+          Validators.pattern("^[A-Z a-z]*$")
         ])
       ]
     });
@@ -120,22 +120,17 @@ export class SignInEmployeeeComponent implements OnInit {
 
 
 
-
    login() {
     const EmployeeId = this.form.controls["EmployeeId"].value;
-    console.log(EmployeeId);
-    this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
+   
+    this.http.get("/api/employees/" + EmployeeId.toUpperCase()).subscribe(res => {
       if (res) {
-
         console.log('this is the employee id', res)
         console.log('empid', EmployeeId);
-
         this.cookieService.set('sessionuser', EmployeeId, 1);
-
+     
         //this.stepper
        this.router.navigate(["/"]);
-
-
       } else {
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",
@@ -150,6 +145,7 @@ export class SignInEmployeeeComponent implements OnInit {
     });
    }
 
+ 
 
 
   // new cookie inside the component
