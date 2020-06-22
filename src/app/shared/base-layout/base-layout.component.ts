@@ -77,9 +77,6 @@ export class BaseLayoutComponent implements OnInit {
   onLogout() {
     localStorage.clear();
     localStorage.removeItem(this.sessionuser);
-
-
-
     this.cookieService.delete('sessionuser')
     this.router.navigate(['/session/sign-in-employee']);
     //the follogin function will reload the browser when you sign out
