@@ -12,6 +12,7 @@ const mongoose = require('mongoose');
 let serviceSchema = mongoose.Schema({
     title: {type: String},
     price: {type: Number},
+    extimate: {type: Number},
     id: {type: Number },
     isDisabled: {type: Boolean, default: false}
 });

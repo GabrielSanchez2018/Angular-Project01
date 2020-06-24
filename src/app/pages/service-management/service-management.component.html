@@ -74,6 +74,11 @@ Description: SQ list html build
       <td mat-cell *matCellDef="let element"> {{element.price}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="extimate">
+      <th mat-header-cell *matHeaderCellDef> Extimate </th>
+      <td mat-cell *matCellDef="let element"> {{element.extimate}} </td>
+    </ng-container>
+
     <ng-container matColumnDef="functions">
         <th mat-header-cell *matHeaderCellDef>Functions</th>
 

@@ -20,6 +20,7 @@ export class ServiceCreateComponent implements OnInit {
     this.form = this.fb.group({
       title: [null, Validators.compose([Validators.required])],
       price: [null, Validators.compose([Validators.required])],
+      extimate: [null, Validators.compose([Validators.required])],
       id: [null, Validators.compose([Validators.required])]
     });
   }
@@ -30,12 +31,14 @@ export class ServiceCreateComponent implements OnInit {
     // I add services because in the Services API i have it set up as services
     const title = this.form.controls['title'].value;
     const price = this.form.controls['price'].value;
+    const extimate = this.form.controls['extimate'].value;
     const id = this.form.controls['id'].value;
 
 
     this.http.post('/api/services', {
       title: title,
       price: price,
+      extimate: extimate,
       id: id,
     }).subscribe(res =>{
       this.router.navigate(['/service-management']);

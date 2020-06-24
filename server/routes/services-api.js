@@ -40,6 +40,7 @@ router.post('/', function(req, res, next){
   let newService = {
     title: req.body.title,
     price : req.body.price,
+    extimate: req.body.extimate,
     id : req.body.id
   };
 
@@ -66,6 +67,7 @@ router.put('/:serviceId', function(req, res, next){
       services.set({
         title: req.body.title,
         price : req.body.price,
+        extimate: req.body.extimate,
         id : req.body.id
       });
 

@@ -27,6 +27,16 @@
         <div fxLayout="column" fxLayoutGap="10px">
           <mat-form-field>
             <input matInput
+                   [formControl]="form.controls['extimate']"
+                   placeholder="Extimate"/>
+          </mat-form-field>
+
+        </div>
+      </mat-card-content>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <input matInput
                    [formControl]="form.controls['id']"
                    placeholder="Id"/>
           </mat-form-field>

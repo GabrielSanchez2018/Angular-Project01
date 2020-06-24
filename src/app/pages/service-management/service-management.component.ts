@@ -16,7 +16,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 })
 export class ServiceManagementComponent implements OnInit {
   services: any;
-  displayedColumns = ['id','title', 'price','functions'];
+  displayedColumns = ['id','title', 'price','extimate','functions'];
   name: string;
   id: number;
   title: string;

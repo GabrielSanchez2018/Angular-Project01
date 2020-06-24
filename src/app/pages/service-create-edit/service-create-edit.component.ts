@@ -23,6 +23,7 @@ export class ServiceCreateEditComponent implements OnInit {
     }, () => {
       this.form.controls.title.setValue(this.service.title);
       this.form.controls.price.setValue(this.service.price);
+      this.form.controls.extimate.setValue(this.service.extimate);
       this.form.controls.id.setValue(this.service.id)
     });
   }
@@ -31,6 +32,7 @@ export class ServiceCreateEditComponent implements OnInit {
     this.form = this.fb.group({
       title: [null, Validators.compose([Validators.required])],
       price: [null, Validators.compose([Validators.required])],
+      extimate: [null, Validators.compose([Validators.required])],
       id: [null, Validators.compose([Validators.required])],
     });
   }
@@ -39,6 +41,7 @@ export class ServiceCreateEditComponent implements OnInit {
     this.http.put('/api/services/' + this.serviceId, {
       title: this.form.controls.title.value,
       price: this.form.controls.price.value,
+      extimate: this.form.controls.extimate.value,
       id: this.form.controls.id.value,
     }).subscribe(res => {
       this.router.navigate(['/service-management']);
