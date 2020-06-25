@@ -90,10 +90,12 @@
   </ng-container>
 
   <!-- Position Column -->
+
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> id </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
   </ng-container>
+
 
   <ng-container matColumnDef="title">
     <th mat-header-cell *matHeaderCellDef> Description </th>
@@ -121,6 +123,45 @@
 </table>
 
 <mat-card>
+
+
+  <mat-form-field *ngIf="show" >
+    <mat-label>Quantity | Cantidad</mat-label>
+    <mat-select >
+      <mat-option value="1"> 1</mat-option>
+      <mat-option value="2"> 2</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- <button (click)="toggle()" id="bt">
+    {{buttonName}}
+</button>
+
+<ng-container *ngIf="show">
+    <div style="margin: 0 auto;text-align: left;">
+        <div>
+            <label>Name:</label>
+            <div><input id="tbname" name="yourname" /></div>
+        </div>
+        <div>
+            <label>Email Address:</label>
+            <div><input name="email" id="email" /></div></div>
+        <div>
+            <label>Additional Information (optional):</label>
+            <div><textarea rows="5" cols="46"></textarea></div>
+        </div>
+    </div>
+</ng-container> -->
+
+
+    <!-- <mat-form-field fxFlex style="width: 300px !important;">
+      <input matInput
+             name="parts"
+             ngModel="0"
+             placeholder="Parts"/>
+    </mat-form-field> -->
+
+
 <mat-card-actions align="end">
   <button mat-raised-button type="reset" color="warn">Cancel</button>
   <button mat-raised-button color="accent"  >Submit</button>

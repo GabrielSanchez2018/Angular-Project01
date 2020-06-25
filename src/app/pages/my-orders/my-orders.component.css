@@ -1,12 +1,10 @@
 table {
-  width: 100%;
-}
-
-.mat-card {
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
   margin-top: 5%;
 }
+
+
 .ng-container, th, td, .mat-header-cell {
   text-align: center;
 }
@@ -14,3 +12,6 @@ table {
 tr.mat-footer-row {
   font-weight: bold;
 }
+/* .mat-card-content{
+
+} */

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {InvoiceSummaryDialogComponent} from '../../dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
@@ -31,11 +31,13 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   position: number;
   dataSource: any;
   services: any;
+  show: boolean = true;
+
 
 
 
   constructor(private http: HttpClient, private cookieService: CookieService, private fb: FormBuilder,
-    private dialog: MatDialog, private router: Router, private snackBar: MatSnackBar) {
+    private dialog: MatDialog, private router: Router, private snackBar: MatSnackBar , private cd: ChangeDetectorRef) {
       this.username = this.cookieService.get('sessionuser');
     // this api wil get the services
     this.http.get('api/services').subscribe(res =>{
@@ -49,11 +51,19 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   }
   isAllSelected() {
 
-    const numSelected = this.selection.selected;
-    //console.log('numselected',numSelected)
+    const numSelected = this.selection.selected.length;
+    if(numSelected > 1){
+      this.show = false
+      
+    } else {
+      this.show = true
+      this.cd.detectChanges();
+    }
+
     const numRows = this.services;
     return numSelected === numRows;
   }
+
 
   masterToggle() {
     this.isAllSelected() ?
@@ -71,17 +81,21 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
   ngOnInit() {
     this.form = this.fb.group({
-      parts: [null, Validators.compose([Validators.required])],
-      labor: [null, Validators.compose([Validators.required])],
-      alternator: [null, null]
+      value: [null, Validators.compose([Validators.required])],
+      //labor: [null, Validators.compose([Validators.required])],
+      //alternator: [null, null]
+
     });
 
   }
-  getId(x) {
+  verdad() {
 
-    var sopas = this.selection.selected
+    var sopas = this.selection.selected.length
+    if(sopas > 2)
+    console.log('number of selected ids', sopas)
 
-    return sopas
+
+    return true
     //return this.selection.selected.map(t => t.id).reduce((acc, value) => acc + value, 0);
   }
 
@@ -117,6 +131,12 @@ console.log('selectedservises', selectedServiceIds)
           }
         );
       }
+// show the Quantity field
+      if(selectedItems <2 ){
+        this.show = true
+        console.log('this is this.show', this.show)
+      }
+
 
     /**
      * Build the invoice object
@@ -186,6 +206,7 @@ console.log('selectedservises', selectedServiceIds)
       }
     });
   }
+
 
 }
 
