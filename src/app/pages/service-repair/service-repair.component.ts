@@ -59,6 +59,13 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
       this.show = true
 
     }
+    // const stops = this.selection.selected.length;
+    // if(stops > 2){
+    //   this.selection.selected;
+
+
+    // }
+
 
     const numRows = this.services;
     return numSelected === numRows;
@@ -75,7 +82,7 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+     `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
 
   }
 
@@ -130,6 +137,7 @@ console.log('selectedservises', selectedServiceIds)
             verticalPosition: "top"
           }
         );
+
       }
 // show the Quantity field
       if(selectedItems <2 ){

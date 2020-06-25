@@ -4,7 +4,7 @@
     <h3>Order date: {{ invoice.orderDate | date }}</h3>
     <mat-divider></mat-divider>
 
-    <h4>Services</h4>
+    <h4>Meat Order</h4>
     <div *ngFor="let lineItem of invoice.lineItems">
         <mat-list>
             <mat-list-item>
@@ -16,7 +16,7 @@
     </div>
     <mat-divider></mat-divider>
 
-    <h4>Standard Fees</h4>
+    <h4>Number of Items | Boxes</h4>
     <mat-list>
         <mat-list-item>
             Parts:

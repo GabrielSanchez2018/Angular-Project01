@@ -14,6 +14,7 @@ export class BaseLayoutComponent implements OnInit {
   year: number = Date.now();
   authService: any;
   sessionuser: any;
+  paysession: any;
   username: string;
   isAuthenticated: boolean;
   EmployeeId: string;
@@ -77,12 +78,15 @@ export class BaseLayoutComponent implements OnInit {
   onLogout() {
     localStorage.clear();
     localStorage.removeItem(this.sessionuser);
+    localStorage.removeItem(this.paysession);
     this.cookieService.delete('sessionuser')
+    this.cookieService.delete('paysession')
     this.router.navigate(['/session/sign-in-employee']);
     //the follogin function will reload the browser when you sign out
     //This clears the cookie
    // window.location.reload();
   }
+
 
   ngOnInit() {
 
