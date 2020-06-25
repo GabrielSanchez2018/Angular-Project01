@@ -15,12 +15,14 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 export class SellReportComponent implements OnInit {
   displayedColumns = ['code','itemdescription', 'totalboxes','totalweight', 'totalprice'];
   displayedColumnsOne = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
+  displayedColumnsTwo = ['username','total', 'functions'];
   ventas: any;
     data: any;
     itemCount = [];
     labels = [];
   dataSource: any;
   barcodes: any;
+  orderssum: Object;
 
 
 
@@ -30,6 +32,13 @@ export class SellReportComponent implements OnInit {
 
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;
+      }), err =>{
+        console.log(err)
+      }
+
+      this.http.get('api/barcodes/order-sum').subscribe(res =>{
+        this.orderssum = res;
+        console.log('here are the hr', this.orderssum)
       }), err =>{
         console.log(err)
       }
@@ -132,6 +141,8 @@ export class SellReportComponent implements OnInit {
         }
       });
      }
+
+
 
 
 }

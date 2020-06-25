@@ -21,6 +21,7 @@ router.get('/', function(req, res, next){
 // Find Barcode Report
 router.get('/barcodes-graph', function(req, res, next) {
   Barcodes.aggregate([
+    //First function is to get rid of an error
     {
       "$group": {
         "code": {"$first": "$barProductCode"},
@@ -58,6 +59,23 @@ router.get('/barcodes-graph', function(req, res, next) {
   });
 });
 
+// Api Item total by employee when they select two items
+router.get('/order-sum', function(req, res, next){
+  Barcodes.aggregate([
+  {"$match":{} },
+  {"$group": {"_id": "$username", "total":{"$sum": "$totalprice"}}},
+
+  ], function(err, ordergraph){
+    if(err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log("--PurchaseGraph data structure--");
+      console.log(ordergraph);
+      res.json(ordergraph);
+    }
+  });
+});
 
 
 
