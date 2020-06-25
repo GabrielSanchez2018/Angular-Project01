@@ -54,10 +54,10 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     const numSelected = this.selection.selected.length;
     if(numSelected > 1){
       this.show = false
-      
+
     } else {
       this.show = true
-      this.cd.detectChanges();
+
     }
 
     const numRows = this.services;
