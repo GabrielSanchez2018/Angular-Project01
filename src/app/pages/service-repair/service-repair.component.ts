@@ -32,6 +32,7 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   dataSource: any;
   services: any;
   show: boolean = true;
+  mySelections: string[];
 
 
 
@@ -106,8 +107,19 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     //return this.selection.selected.map(t => t.id).reduce((acc, value) => acc + value, 0);
   }
 
+  
+
+  // changed() {
+  //   if (this.toppings.value.length < 3) {
+  //     this.mySelections = this.toppings.value;
+  //   } else {
+  //     this.toppings.setValue(this.mySelections);
+  //   }
+  // }
+
 
   submit(form) {
+    console.log('this is the form value', form.value)
   console.log('esto', this.selection.selected)
   console.log('esto',)
     const selectedServiceIds = [];
@@ -115,7 +127,8 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
       if (value) {
         console.log('this value', value.id)
         selectedServiceIds.push({
-          id: value.id
+          id: value.id,
+          amount: form.value
         });
       }
     }
@@ -129,6 +142,7 @@ console.log('selectedservises', selectedServiceIds)
     // This will prevent the user to select more than 2 items
       var selectedItems = selectedServiceIds.length
       if(selectedItems > 2){
+        this.selection.clear();
         return this.snackBar.open(
           "Please Select Only Two Items | Por favor solo selecciona dos.",
           "ERROR",
@@ -136,8 +150,9 @@ console.log('selectedservises', selectedServiceIds)
             duration: 7000,
             verticalPosition: "top"
           }
+        
         );
-
+        
       }
 // show the Quantity field
       if(selectedItems <2 ){
@@ -171,15 +186,16 @@ console.log('selectedservises', selectedServiceIds)
      */
 
     console.log("here we are again in line items two", lineItems);
-    const partsAmount = parseFloat(form.parts);
-    const laborAmount = form.labor * 50;
-    const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.price, 0);
-    const total = partsAmount + laborAmount + lineItemTotal;
+
+    //const partsAmount = parseFloat(form.parts);
+    //const laborAmount = form.labor * 50;
+    const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.extimate, 0);
+    const total = lineItemTotal;
 
     const invoice = {
       lineItems: lineItems,
-      partsAmount: partsAmount,
-      laborAmount: laborAmount,
+      // partsAmount: partsAmount,
+      // laborAmount: laborAmount,
       lineItemTotal: lineItemTotal,
       total: total,
       username: this.username,
@@ -201,8 +217,8 @@ console.log('selectedservises', selectedServiceIds)
 
         this.http.post('/api/invoices/' + invoice.username, {
           lineItems: invoice.lineItems,
-          partsAmount: invoice.partsAmount,
-          laborAmount: invoice.laborAmount,
+          // partsAmount: invoice.partsAmount,
+          // laborAmount: invoice.laborAmount,
           lineItemTotal: invoice.lineItemTotal,
           total: invoice.total,
           orderDate: invoice.orderDate

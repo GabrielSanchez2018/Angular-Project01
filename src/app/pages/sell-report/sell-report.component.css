@@ -31,4 +31,9 @@ tr.mat-footer-row {
   font-weight: bold;
 }
 
+.chart{
+  width: 70%;
+  margin: 0 auto;
+  background-color: lemonchiffon;
+}
 
