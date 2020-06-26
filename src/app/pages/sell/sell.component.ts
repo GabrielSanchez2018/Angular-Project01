@@ -176,7 +176,7 @@ function myFunction(){
     } else if (labelproductCode == dataservices[4].id){
       return dataservices[4].price
 
-    } else if (labelproductCode == dataservices[5].id){
+    }else if (labelproductCode == dataservices[5].id){
       return dataservices[5].price
 
     } else if (labelproductCode == dataservices[6].id){
@@ -238,7 +238,6 @@ function myFunction(){
 
     } else if (labelproductCode == dataservices[26].id){
       return dataservices[26].price
-
 
   }
 
