@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataSource } from '@angular/cdk/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -6,6 +6,8 @@ import {MatTableDataSource, MatDialog} from '@angular/material';
 import * as XLSX from "xlsx";
 import {ExporterService} from '../../services/exporter/exporter.service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
 
 @Component({
   selector: 'app-sell-report',
@@ -20,15 +22,28 @@ export class SellReportComponent implements OnInit {
     data: any;
     itemCount = [];
     labels = [];
-  dataSource: any;
   barcodes: any;
   orderssum: Object;
+  
+  dataSource = new MatTableDataSource(this.barcodes);
 
 
+   applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    console.log('filter', this.dataSource.filter)
+  }
 
+  
 
+ 
 
     constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog  ) {
+      
+      
+     
+    
+      
 
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;
@@ -94,7 +109,10 @@ export class SellReportComponent implements OnInit {
         });
     }
     ngOnInit() {
+     
     }
+
+  
     exportAsXLSX(): void{
       this.exportService.exportToExcel(this.ventas , 'Total_Items');
     }
@@ -114,6 +132,8 @@ export class SellReportComponent implements OnInit {
     getTotalBoxes(){
       return this.ventas.map(t => t.count).reduce((acc, value) => acc + value, 0);
     }
+
+
 
 
     //Delete function
@@ -139,7 +159,6 @@ export class SellReportComponent implements OnInit {
         }
       });
      }
-
 
 
 
