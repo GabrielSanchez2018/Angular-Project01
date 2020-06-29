@@ -13,7 +13,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class MyOrdersComponent implements OnInit {
 
   services: any;
-  displayedColumns = ['id','lineitems', 'partsamount','laboramount','linetotal','total','date', 'functions'];
+  displayedColumns = ['id','lineitems','total','date', 'functions'];
   name: string;
   id: number;
   title: string;

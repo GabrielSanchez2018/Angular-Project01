@@ -1,3 +1,48 @@
 .content {
   margin-bottom: 100px;
 }
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+table {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+.export-container{
+  width: 50%;
+  margin: 0 auto;
+}
+/* .mat-card-content {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1%;
+} */
+.ng-container, th, td, .mat-header-cell {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.chart{
+  width: 70%;
+  margin: 0 auto;
+  background-color: lemonchiffon;
+}
+
+.sort{
+width: 20%;
+margin: 0 auto;
+margin-left: 20%;
+}

@@ -55,29 +55,29 @@
 </ng-container>
 
 <!-- Weight Column -->
-<ng-container matColumnDef="partsamount">
+<!-- <ng-container matColumnDef="partsamount">
 <th mat-header-cell *matHeaderCellDef> Parts $ </th>
 <td mat-cell *matCellDef="let element"> {{element.partsAmount}} </td>
-</ng-container>
+</ng-container> -->
 
 <!-- Weight Column -->
-<ng-container matColumnDef="laboramount">
+<!-- <ng-container matColumnDef="laboramount">
   <th mat-header-cell *matHeaderCellDef> Labor $ </th>
   <td mat-cell *matCellDef="let element"> {{element.laborAmount}} </td>
-  </ng-container>
+  </ng-container> -->
 
 <!-- Weight Column -->
-<ng-container matColumnDef="linetotal">
+<!-- <ng-container matColumnDef="linetotal">
   <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Items $ </th>
   <td mat-cell *matCellDef="let element"> {{element.lineItemTotal}} </td>
-  </ng-container>
+  </ng-container> -->
 
 
 
 <!-- Weight Column -->
 <ng-container matColumnDef="total">
   <th mat-header-cell *matHeaderCellDef> Total </th>
-  <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+  <td mat-cell *matCellDef="let element"> {{element.total | currency}} </td>
   </ng-container>
 
 <!-- Weight Column -->

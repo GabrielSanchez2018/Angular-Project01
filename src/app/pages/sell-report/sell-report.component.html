@@ -163,9 +163,22 @@
     </span> Excel Download
 </button>
 </div>
+
 <br>
+<!-- Sorting function -->
+
+<mat-card class="sort">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+</mat-card>
+
+
+<br><br>
 
     <mat-card-content *ngIf='barcodes'>
+
 
     <table mat-table  [dataSource]="barcodes" class="mat-elevation-z8">
 

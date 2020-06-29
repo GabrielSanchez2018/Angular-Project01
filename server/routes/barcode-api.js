@@ -198,6 +198,11 @@ router.delete('/:barcodeId', function(req, res, next){
 })
 
 
+// Delete all records
+router.delete('/:deleteAll', function(req, res, next){
+  Barcodes.remove()
+})
+
 // router.post('/barcodes', function(req, res, next){
 //   Barcodes.find({}, function(err, barcodes){
 
