@@ -7,7 +7,7 @@
     <form [formGroup]="form" (ngSubmit)="create();" #barcodeForm= "ngForm">
       <mat-card-content>
         <div fxLayout="column" fxLayoutGap="15px">
-          <mat-form-field>
+          <mat-form-field autofocus>
             <input matInput
                    [formControl]="form.controls['barcode']"
                    placeholder="Barcode"/>
