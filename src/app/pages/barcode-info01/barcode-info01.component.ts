@@ -438,7 +438,7 @@ this.changeDetectorRefs.detectChanges();
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
-      this.router.navigate(['/find-employee']);
+      this.router.navigate(['/barcode-info']);
       // this will reset the form
 
       this.successSnackbar();

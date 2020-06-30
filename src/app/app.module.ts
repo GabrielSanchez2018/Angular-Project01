@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CookieService } from 'ngx-cookie-service';
 import { SessionGuard } from './shared/guards/session.guard';
 import { RoleGuard } from './shared/guards/role-guard';
+import { AutofocusModule } from 'angular-autofocus-fix';
 
 // Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -148,7 +149,8 @@ import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
     MatSnackBarModule,
     ObserversModule,
     MatTabsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    AutofocusModule,
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,

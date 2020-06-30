@@ -12,7 +12,7 @@
           <mat-card-content>
 
             <mat-form-field fxFlex>
-              <input matInput [formControl]="form.controls ['EmployeeId']" placeholder="Employee ID" />
+              <input matInput [formControl]="form.controls ['EmployeeId']" placeholder="Employee ID" autofocus/>
               <mat-error *ngIf="form.controls['EmployeeId'].hasError('required') && form.controls['EmployeeId'].touched">
                 Employee ID is a required field.
               </mat-error>
