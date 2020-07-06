@@ -24,7 +24,7 @@ export class SellReportComponent implements OnInit {
     labels = [];
   barcodes: any;
   orderssum: Object;
-  
+
   dataSource = new MatTableDataSource(this.barcodes);
 
 
@@ -34,16 +34,16 @@ export class SellReportComponent implements OnInit {
     console.log('filter', this.dataSource.filter)
   }
 
-  
 
- 
+
+
 
     constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog  ) {
-      
-      
-     
-    
-      
+
+
+
+
+
 
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;
@@ -109,10 +109,10 @@ export class SellReportComponent implements OnInit {
         });
     }
     ngOnInit() {
-     
+
     }
 
-  
+
     exportAsXLSX(): void{
       this.exportService.exportToExcel(this.ventas , 'Total_Items');
     }

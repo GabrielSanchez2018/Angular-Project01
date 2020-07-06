@@ -36,6 +36,8 @@ export class BarcodeInfoComponent implements OnInit {
   find: object;
   bar: any;
   map: any;
+  matInput: any;
+
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -77,13 +79,6 @@ export class BarcodeInfoComponent implements OnInit {
     }
 
   }
-
-
-
-
-
-
-
 
   //Snackbar success message
 successSnackbar(){
@@ -441,23 +436,16 @@ this.changeDetectorRefs.detectChanges();
       itemdescription: itemdescription,
       username: this.username,
       barcode: this.form.controls.barcode.value,
-
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
       this.router.navigate(['/barcode-info01']);
       // this will reset the form
-
       this.successSnackbar();
-
       this.form.reset();
       this.rerender();
-
-    })
-  })
+    });
+  });
   }
-
-
-
 
 }

@@ -199,9 +199,16 @@ router.delete('/:barcodeId', function(req, res, next){
 
 
 // Delete all records
-router.delete('/:deleteAll', function(req, res, next){
-  Barcodes.remove()
-})
+router.delete('/collection', function(err, db){
+  if(err) throw err;
+
+  var dbo = db.db('mydb');
+  dbo.collection("Barcodes").drop(function(err, de10K){
+    if(err) throw err;
+    if(de10K) console.log("Collection Deleted");
+    Barcodes.collection.close();
+  });
+});
 
 // router.post('/barcodes', function(req, res, next){
 //   Barcodes.find({}, function(err, barcodes){

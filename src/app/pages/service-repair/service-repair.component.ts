@@ -107,7 +107,7 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     //return this.selection.selected.map(t => t.id).reduce((acc, value) => acc + value, 0);
   }
 
-  
+
 
   // changed() {
   //   if (this.toppings.value.length < 3) {
@@ -150,9 +150,9 @@ console.log('selectedservises', selectedServiceIds)
             duration: 7000,
             verticalPosition: "top"
           }
-        
+
         );
-        
+
       }
 // show the Quantity field
       if(selectedItems <2 ){

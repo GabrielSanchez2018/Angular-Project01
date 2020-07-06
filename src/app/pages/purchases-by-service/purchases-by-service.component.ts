@@ -11,6 +11,7 @@ export class PurchasesByServiceComponent implements OnInit {
     data: any;
     itemCount = [];
     labels = [];
+    displayedColumns = ['title','count'];
 
     constructor(private http: HttpClient) {
         // Call the purchases-graph API
@@ -26,6 +27,7 @@ export class PurchasesByServiceComponent implements OnInit {
             }
 
             // Build the object literal for the primeNG bar graph
+
             this.data = {
                 labels: this.labels, // label for services
                 datasets: [
@@ -56,12 +58,13 @@ export class PurchasesByServiceComponent implements OnInit {
                             '#CD853F'
                         ],
                         data: this.itemCount
+
                     },
                 ]
             };
             // Verify the data objects structure matches primeNG's expected format
             console.log('Date object');
-            console.log(this.data);
+            console.log('this data',this.data);
         }, err => {
             console.log(err);
         });
