@@ -133,6 +133,11 @@ export class SellReportComponent implements OnInit {
       return this.ventas.map(t => t.count).reduce((acc, value) => acc + value, 0);
     }
 
+    regularNumber(){
+      var x = x.lenght();
+      return x
+    }
+
 
 
 

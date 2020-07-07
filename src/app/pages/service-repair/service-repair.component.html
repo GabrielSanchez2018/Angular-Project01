@@ -125,13 +125,26 @@
 <mat-card>
 
 
-  <mat-form-field *ngIf="show" >
+  <!-- <mat-form-field *ngIf="show" >
     <mat-label>Quantity | Cantidad</mat-label>
-    <mat-select>
+    <mat-select >
       <mat-option > </mat-option>
       <mat-option [value]="2"> 2</mat-option>
     </mat-select>
-  </mat-form-field>
+  </mat-form-field> -->
+
+  <!-- <mat-form-field *ngIf="show" >
+    <mat-label>Select game</mat-label>
+    <select matNativeControl [(ngModel)]="Quantity">
+      <option value=""></option>
+      <option value="2">2</option>
+
+    </select>
+  </mat-form-field> -->
+
+  <mat-checkbox *ngIf="show" value="checked" (click)="changeValue(checked)" color="primary">
+    some Label
+ </mat-checkbox>
 
   <!-- <button (click)="toggle()" id="bt">
     {{buttonName}}
