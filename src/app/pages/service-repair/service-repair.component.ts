@@ -7,6 +7,7 @@ import {CookieService} from 'ngx-cookie-service';
 import {HttpClient} from '@angular/common/http';
 import {SelectionModel} from '@angular/cdk/collections';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 
 
@@ -33,6 +34,12 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   services: any;
   show: boolean = true;
   mySelections: string[];
+  checked: any;
+
+
+  Quantity = [
+    2
+  ];
 
 
 
@@ -50,6 +57,23 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
 
   }
+
+  // Quantity selected
+  selectedQuantity = this.Quantity.selected;
+
+
+  changeValue(value) {
+    this.checked = !value;
+}
+
+
+
+
+
+
+
+
+
   isAllSelected() {
 
     const numSelected = this.selection.selected.length;
@@ -89,11 +113,11 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
   ngOnInit() {
     this.form = this.fb.group({
-      amount: [null, Validators.compose([Validators.required])],
+      value: [null, Validators.compose([Validators.required])],
       //labor: [null, Validators.compose([Validators.required])],
-      //alternator: [null, null]
+      alternator: [null, null]
     });
-
+    console.log('this is the test here',this.selectedQuantity)
   }
   verdad() {
 
@@ -120,15 +144,18 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   submit(form) {
 
     console.log('this is the form value', form.value)
-  //console.log('esto', this.selection.selected)
+  console.log('esto', this.checked)
   //console.log('esto',)
     const selectedServiceIds = [];
     for (const [key, value] of Object.entries(this.selection.selected)) {
+
       if (value) {
-        //console.log('this value', value.id)
+
+        console.log('this value', value.id)
         selectedServiceIds.push({
           id: value.id,
-          amount: form.value
+          amount: form.value,
+
         });
       }
     }
@@ -171,13 +198,33 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
        // console.log("here is the savedService.id",savedService.id)
 
         if (savedService.id == selectedService.id) {
-          lineItems.push({
+          var quantity = 2
+          console.log('tiene que jalar esta madre', quantity)
+          if (quantity == 2){
+            lineItems.push({
             title: savedService.title,
             price: savedService.price,
             extimate: savedService.extimate,
-            id: savedService.id
+            id: savedService.id,
+            });
+            lineItems.push({
+              title: savedService.title,
+              price: savedService.price,
+              extimate: savedService.extimate,
+              id: savedService.id,
+              })
 
-          });
+          } else {
+            lineItems.push({
+              title: savedService.title,
+              price: savedService.price,
+              extimate: savedService.extimate,
+              id: savedService.id,
+            });
+          }
+
+
+
         }
       }
     }
@@ -214,9 +261,15 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirm') {
         console.log('Invoice saved');
+      //   var quantity = this.selectedQuantity
+      //  if(quantity === 2){
+      //    var clone = invoice.lineItems
+      //  }
 
         this.http.post('/api/invoices/' + invoice.username, {
+
           lineItems: invoice.lineItems,
+          //lineItems1: clone,
           // partsAmount: invoice.partsAmount,
           // laborAmount: invoice.laborAmount,
           lineItemTotal: invoice.lineItemTotal,
