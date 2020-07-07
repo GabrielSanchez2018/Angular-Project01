@@ -35,6 +35,7 @@ import { SignInEmployeeeComponent } from './pages/sign-in-employeee/sign-in-empl
 import { SellReportComponent } from './pages/sell-report/sell-report.component';
 import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
 import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.component';
+import { InvoiceComponent } from './pages/invoice/invoice.component';
 
 
 export const AppRoutes: Routes = [
@@ -76,6 +77,11 @@ export const AppRoutes: Routes = [
         path: 'find-employee',
         component: FindEmployeeComponent,
         canActivate: [RoleGuard]
+      },
+      {
+        path: 'invoice',
+        component: InvoiceComponent,
+        canActivate: [SessionGuard]
       },
       {
         path: 'all-orders',

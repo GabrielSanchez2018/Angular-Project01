@@ -89,10 +89,9 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
   ngOnInit() {
     this.form = this.fb.group({
-      value: [null, Validators.compose([Validators.required])],
+      amount: [null, Validators.compose([Validators.required])],
       //labor: [null, Validators.compose([Validators.required])],
       //alternator: [null, null]
-
     });
 
   }
@@ -119,25 +118,26 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
 
   submit(form) {
+
     console.log('this is the form value', form.value)
-  console.log('esto', this.selection.selected)
-  console.log('esto',)
+  //console.log('esto', this.selection.selected)
+  //console.log('esto',)
     const selectedServiceIds = [];
     for (const [key, value] of Object.entries(this.selection.selected)) {
       if (value) {
-        console.log('this value', value.id)
+        //console.log('this value', value.id)
         selectedServiceIds.push({
           id: value.id,
           amount: form.value
         });
       }
     }
-console.log('selectedservises', selectedServiceIds)
+//console.log('selectedservises', selectedServiceIds)
     const lineItems = [];
 
-    console.log("We are here in items", lineItems)
+    //console.log("We are here in items", lineItems)
 
-    console.log('number of selected ids',selectedServiceIds.length)
+    //console.log('number of selected ids',selectedServiceIds.length)
 
     // This will prevent the user to select more than 2 items
       var selectedItems = selectedServiceIds.length
@@ -165,10 +165,10 @@ console.log('selectedservises', selectedServiceIds)
      * Build the invoice object
      */
     for (const savedService of this.services) {
-      console.log("here is the savedService.id",savedService)
+      //console.log("here is the savedService.id",savedService)
       for (const selectedService of selectedServiceIds) {
-        console.log("here is the selectedservicesisisisid",selectedService.id)
-        console.log("here is the savedService.id",savedService.id)
+       // console.log("here is the selectedservicesisisisid",selectedService.id)
+       // console.log("here is the savedService.id",savedService.id)
 
         if (savedService.id == selectedService.id) {
           lineItems.push({
