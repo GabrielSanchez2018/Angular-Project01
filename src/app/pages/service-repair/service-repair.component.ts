@@ -6,9 +6,11 @@ import {MatDialog} from '@angular/material/dialog';
 import {CookieService} from 'ngx-cookie-service';
 import {HttpClient} from '@angular/common/http';
 import {SelectionModel} from '@angular/cdk/collections';
-import { MatTableDataSource, MatSnackBar } from '@angular/material';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-
+import { MatTableDataSource, MatSnackBar, MAT_CHECKBOX_CLICK_ACTION } from '@angular/material';
+interface Food {
+  value: string;
+  viewValue: string;
+}
 
 
 @Component({
@@ -19,7 +21,7 @@ import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 export class ServiceRepairComponent implements OnInit {
 //services = new MatTableDataSource<ServiceRepairComponent>(this.services);
 selection = new SelectionModel<ServiceRepairComponent>(true, []);
-
+selectedValue: string;
   displayedColumns = ['select','id', 'title', 'price', 'extimate'];
   username: string;
   form: FormGroup;
@@ -34,12 +36,23 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   services: any;
   show: boolean = true;
   mySelections: string[];
-  checked: any;
+  //checked: boolean = true;
 
+  items = [{selected: true, label: '2 boxes'}];
+  test: boolean;
 
-  Quantity = [
-    2
+  foods: Food[] = [
+    {value: "", viewValue: ''},
+    {value: "Two", viewValue: 'Two Items'},
+    
   ];
+
+  
+  
+
+  // Quantity = [
+  //   2
+  // ];
 
 
 
@@ -55,18 +68,38 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
     })
 
+    
 
+    
   }
 
+
+  
   // Quantity selected
-  selectedQuantity = this.Quantity.selected;
+  //selectedQuantity = this.Quantity.selected;
 
 
-  changeValue(value) {
-    this.checked = !value;
-}
+//   changeValue(value) {
+//     this.checked = value;
+  
+//     console.log('this is the checked value',this.checked)
+//     console.log('this is the matcheckbox',)
+// }
 
 
+// onChange(t) {
+//   console.log(t.checked) ;
+//   if(t.checked === true){
+//     console.log(1)
+//     return 1
+//   } else {
+//     console.log(0)
+//     return 0
+//   }
+  
+//  }
+
+ 
 
 
 
@@ -75,7 +108,6 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
 
   isAllSelected() {
-
     const numSelected = this.selection.selected.length;
     if(numSelected > 1){
       this.show = false
@@ -114,10 +146,10 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   ngOnInit() {
     this.form = this.fb.group({
       value: [null, Validators.compose([Validators.required])],
-      //labor: [null, Validators.compose([Validators.required])],
+      //selectedValue: [null, Validators.compose([Validators.required])],
       alternator: [null, null]
     });
-    console.log('this is the test here',this.selectedQuantity)
+    console.log('this is the test here',)
   }
   verdad() {
 
@@ -143,8 +175,8 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
   submit(form) {
 
-    console.log('this is the form value', form.value)
-  console.log('esto', this.checked)
+    console.log('this is the form value', form.checkGroup)
+console.log('esto', this.selectedValue)
   //console.log('esto',)
     const selectedServiceIds = [];
     for (const [key, value] of Object.entries(this.selection.selected)) {
@@ -161,6 +193,22 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     }
 //console.log('selectedservises', selectedServiceIds)
     const lineItems = [];
+
+  //    var sue = function onChange(t){
+  //     console.log(t.checked) ;
+  // if(t.checked === true){
+  //   console.log(1)
+  //   return 1
+  // } else {
+  //   console.log(0)
+  //   return 0
+  // }
+  //   }
+
+  //   console.log(sue)
+    
+
+    
 
     //console.log("We are here in items", lineItems)
 
@@ -181,6 +229,8 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
         );
 
       }
+     
+      
 // show the Quantity field
       if(selectedItems <2 ){
         this.show = true
@@ -198,9 +248,12 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
        // console.log("here is the savedService.id",savedService.id)
 
         if (savedService.id == selectedService.id) {
-          var quantity = 2
-          console.log('tiene que jalar esta madre', quantity)
-          if (quantity == 2){
+          var shit = this.selectedValue;
+          
+          console.log('itemselected',)
+          console.log('tiene que jalar esta madre', shit)
+
+          if ( shit == "Two"){
             lineItems.push({
             title: savedService.title,
             price: savedService.price,

@@ -141,10 +141,22 @@
 
     </select>
   </mat-form-field> -->
-
-  <mat-checkbox *ngIf="show" value="checked" (click)="changeValue(checked)" color="primary">
-    some Label
- </mat-checkbox>
+  <!-- <section class="example-section" *ngFor="let item of items">
+    <mat-checkbox  class="example-margin"  (change)="onChange($event)">{{item.label}}</mat-checkbox>
+  </section> -->
+  <mat-form-field *ngIf="show" appearance="fill">
+    <mat-label>Amount of Boxes</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let item of items" [value]="item.value">
+        {{item.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Amount of Boxes: {{selectedValue}} </p>
+ 
+  <!-- <mat-checkbox *ngIf="show" value="true" (click)="changeValue(true)" color="primary">
+      I want 2 boxes
+ </mat-checkbox> -->
 
   <!-- <button (click)="toggle()" id="bt">
     {{buttonName}}
