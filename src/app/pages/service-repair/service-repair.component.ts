@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {InvoiceSummaryDialogComponent} from '../../dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators, CheckboxControlValueAccessor} from '@angular/forms';
 import {Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {CookieService} from 'ngx-cookie-service';
@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 import {SelectionModel} from '@angular/cdk/collections';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -35,7 +35,12 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
   show: boolean = true;
   mySelections: string[];
   checked: any;
+  // items = [
+  //   {title: 'Password Reset', id: true},
+  // ];
 
+
+  items = [{selected: true, label: 'First Item'}];
 
   Quantity = [
     2
@@ -56,7 +61,20 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
     })
 
 
+
   }
+
+  onChange($event) {
+    const puto = []
+    console.log('this is the event',$event.checked);
+    var putito = $event.checked
+    puto.push.('putito')
+
+    console.log('hthis puto', puto)
+
+  }
+
+
 
   // Quantity selected
   selectedQuantity = this.Quantity.selected;
@@ -64,6 +82,8 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
   changeValue(value) {
     this.checked = !value;
+
+    console.log(this.checked)
 }
 
 
@@ -143,8 +163,9 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
 
   submit(form) {
 
-    console.log('this is the form value', form.value)
-  console.log('esto', this.checked)
+
+    console.log('this is the form value', form.checked)
+  console.log('esto', this.puto)
   //console.log('esto',)
     const selectedServiceIds = [];
     for (const [key, value] of Object.entries(this.selection.selected)) {
@@ -154,11 +175,12 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
         console.log('this value', value.id)
         selectedServiceIds.push({
           id: value.id,
-          amount: form.value,
+          amount: form.checkGroup
 
         });
       }
     }
+
 //console.log('selectedservises', selectedServiceIds)
     const lineItems = [];
 
@@ -181,6 +203,7 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
         );
 
       }
+
 // show the Quantity field
       if(selectedItems <2 ){
         this.show = true
@@ -198,9 +221,9 @@ selection = new SelectionModel<ServiceRepairComponent>(true, []);
        // console.log("here is the savedService.id",savedService.id)
 
         if (savedService.id == selectedService.id) {
-          var quantity = 2
-          console.log('tiene que jalar esta madre', quantity)
-          if (quantity == 2){
+
+          console.log('tiene que jalar esta madre',)
+          if ( true == true){
             lineItems.push({
             title: savedService.title,
             price: savedService.price,

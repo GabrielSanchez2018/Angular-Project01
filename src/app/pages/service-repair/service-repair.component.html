@@ -141,11 +141,24 @@
 
     </select>
   </mat-form-field> -->
+  <h2 class="example-h2">Checkbox configuration</h2>
 
+  <section class="example-section" *ngFor="let item of items">
+    <mat-checkbox class="example-margin" (change)="onChange($event)">{{item.label}}</mat-checkbox>
+  </section>
+
+
+<!--
   <mat-checkbox *ngIf="show" value="checked" (click)="changeValue(checked)" color="primary">
     some Label
- </mat-checkbox>
+ </mat-checkbox> -->
 
+ <!-- <div ngModelGroup="checkGroup" *ngFor="let item of items">
+  <mat-checkbox name="{{item.id}}" ngModel>
+    {{item.title}}
+  </mat-checkbox>
+  <br/>
+ </div> -->
   <!-- <button (click)="toggle()" id="bt">
     {{buttonName}}
 </button>
