@@ -206,7 +206,8 @@ router.get('/purchases-graph', function(req, res, next) {
       "$group": {
         "_id": {
           "title": "$lineItems.title",
-          "price": "$lineItems.price"
+          "price": "$lineItems.price",
+          "code": "$lineItems.id"
         },
         "count": {"$sum": 1},
       }
