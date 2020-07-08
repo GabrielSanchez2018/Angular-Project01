@@ -11,7 +11,8 @@ export class PurchasesByServiceComponent implements OnInit {
     data: any;
     itemCount = [];
     labels = [];
-    displayedColumns = ['title','count'];
+    code = [];
+    displayedColumns = ['code','description','count'];
 
     constructor(private http: HttpClient) {
         // Call the purchases-graph API
@@ -24,6 +25,7 @@ export class PurchasesByServiceComponent implements OnInit {
             for (const item of this.purchases) {
                 this.labels.push(item._id.title);
                 this.itemCount.push(item.count);
+                this.code.push(item._id.code)
             }
 
             // Build the object literal for the primeNG bar graph
