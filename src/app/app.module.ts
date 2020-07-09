@@ -80,6 +80,7 @@ import { PaySessionGuard } from './shared/guards/paysession';
 import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.component';
 import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
 import { InvoiceComponent } from './pages/invoice/invoice.component';
+import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
 
 
 @NgModule({
@@ -122,7 +123,8 @@ import { InvoiceComponent } from './pages/invoice/invoice.component';
     ExporterComponent,
     FindEmployeeComponent,
     BarcodeInfo01Component,
-    InvoiceComponent
+    InvoiceComponent,
+    DatabaseManagementComponent
   ],
   imports: [
     BrowserModule,

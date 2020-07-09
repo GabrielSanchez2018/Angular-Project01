@@ -84,18 +84,18 @@
           <span style="color: red;">&nbsp;&nbsp;Purchase Reports</span>
       </a>
 
-      <a mat-list-item *ngIf='show' [routerLink]="'/sell'">
+      <!-- <a mat-list-item *ngIf='show' [routerLink]="'/sell'">
         <span class="material-icons">
           store
           </span>
           <span style="color: red;">&nbsp;&nbsp;Sell Items</span>
-      </a>
+      </a> -->
 
       <a mat-list-item *ngIf='show' [routerLink]="'/find-employee'">
         <span class="material-icons">
           store
           </span>
-          <span style="color: red;">&nbsp;&nbsp;Employee</span>
+          <span style="color: red;">&nbsp;&nbsp;Employee Sale</span>
       </a>
 
       <a mat-list-item *ngIf='show' [routerLink]="'/all-orders'">
@@ -104,7 +104,12 @@
           </span>
           <span style="color: red;">&nbsp;&nbsp;All Items</span>
       </a>
-
+      <a mat-list-item *ngIf='show' [routerLink]="'/database-management'">
+        <span class="material-icons">
+          warning
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;Database Management</span>
+      </a>
 
       <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
 

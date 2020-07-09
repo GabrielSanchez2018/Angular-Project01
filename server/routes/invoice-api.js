@@ -4,7 +4,7 @@ Date: April 20, 2020
 Assignment: Invoice API's
 Description: all API's used for the Invoices.
 ==========================*/
-
+var mongoose = require('mongoose');
 const express = require('express');
 const Invoice = require('../models/invoice');
 
@@ -161,6 +161,22 @@ router.get('/:usernameId/barcode', function(req, res, next){
 //     }
 //   });
 // });
+router.delete('/alldelete', function () {
+  console.log("db connect");
+  var db = mongoose.connection;
+  db.dropCollection("invoices", function (err, result) {
+      if (err) {
+          console.log("error delete collection");
+      } else {
+
+          console.log("delete collection success");
+
+      }
+
+  });
+
+
+})
 
 //Delete Barcode
 router.delete('/:usernameId/barcode/:barcodeId', function(req, res, next){

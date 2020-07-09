@@ -36,6 +36,7 @@ import { SellReportComponent } from './pages/sell-report/sell-report.component';
 import { FindEmployeeComponent } from './pages/find-employee/find-employee.component';
 import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.component';
 import { InvoiceComponent } from './pages/invoice/invoice.component';
+import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
 
 
 export const AppRoutes: Routes = [
@@ -56,6 +57,11 @@ export const AppRoutes: Routes = [
       {
         path: 'users/:userId',
         component: UserDetailsComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'database-management',
+        component: DatabaseManagementComponent,
         canActivate: [RoleGuard]
       },
       {

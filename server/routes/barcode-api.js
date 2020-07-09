@@ -1,8 +1,9 @@
-
+var mongoose = require('mongoose');
 const express = require('express');
 const Barcodes = require('../models/barcode');
 
 const router = express.Router();
+
 
 
 // Get Barcodes
@@ -181,6 +182,22 @@ router.get('/', function(req, res, next){
     }
   });
 });
+router.delete('/alldelete', function () {
+  console.log("db connect");
+  var db = mongoose.connection;
+  db.dropCollection("barcodes", function (err, result) {
+      if (err) {
+          console.log("error delete collection");
+      } else {
+
+          console.log("delete collection success");
+
+      }
+
+  });
+
+
+})
 
 
 
@@ -199,16 +216,7 @@ router.delete('/:barcodeId', function(req, res, next){
 
 
 // Delete all records
-router.delete('/collection', function(err, db){
-  if(err) throw err;
 
-  var dbo = db.db('mydb');
-  dbo.collection("Barcodes").drop(function(err, de10K){
-    if(err) throw err;
-    if(de10K) console.log("Collection Deleted");
-    Barcodes.collection.close();
-  });
-});
 
 // router.post('/barcodes', function(req, res, next){
 //   Barcodes.find({}, function(err, barcodes){
