@@ -42,6 +42,7 @@ export class SigninComponent implements OnInit {
 
       console.log('here',res)
       if (res['auth']) {
+
         this.cookieService.set('sessionuser', username, 1);
         this.router.navigate(['/']);
       } else {

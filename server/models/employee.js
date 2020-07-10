@@ -7,7 +7,7 @@ let employeeSchema = mongoose.Schema({
   FirstName: {type: String},
   Department: {type: Number},
   StartDate: {type: Number},
-  role: {type: String, default: 'standard'}
+  role: {type: String, default: 'standard'},
 
 
 })

@@ -3,6 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
 import {AuthService} from '../guards/auth.service';
 import { Router } from '@angular/router';
+import { ElementFinder } from 'protractor';
 
 @Component({
   selector: 'app-base-layout',
@@ -26,7 +27,7 @@ export class BaseLayoutComponent implements OnInit {
     // this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
     //   if (res === 'admin'){
     //     this.show = true
-    //   } else {
+    //   } else if(res === false) {
     //     this.username = this.cookieService.get('sessionuser');
     //     this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role').subscribe(res =>{
     //       if(res === 'standard'){
@@ -36,7 +37,7 @@ export class BaseLayoutComponent implements OnInit {
     //       }
     //     })
     //   }
-
+    // })
 
 
       // if(res === 'admin'){
@@ -64,14 +65,29 @@ export class BaseLayoutComponent implements OnInit {
    // });
 
     this.username = this.cookieService.get('sessionuser');
+    console.log('this is the employees', this.username)
+
+
     this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
-      if (res === "standard") {
+     var compare = res + this.username
+
+
+     /**
+      * test account is the only admin account
+      */
+
+    console.log('this is res', compare)
+
+
+      if (compare == 'standardtest') {
           this.show = true;
+          console.log('false')
       } else {
         this.show = false
+        console.log('false')
           }
     });
-  }
+   }
 
 
 // this function will logout the user
