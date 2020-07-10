@@ -43,3 +43,23 @@
 .bu-link:hover {
   text-decoration: underline;
 }
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+.container-fluid{
+  margin-top: 40%;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+}
+.gopLogo{
+  width: 90%;
+  float: right;
+}
+
+.col-md-8{
+  background-color: #005640;
+  border: 2px solid white;
+}

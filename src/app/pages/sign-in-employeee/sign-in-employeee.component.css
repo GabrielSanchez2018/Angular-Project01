@@ -1,13 +1,13 @@
  .signin-container{
-  width: 40%;
-  min-width: 40%;
-  max-width: 40%;
-  margin: 0 auto;
+  width: 100%;
+  min-width: 80%;
+  max-width: 80%;
   margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .signin-title{
-  color: lightseagreen;
+  color: #005640;
   font-size: xx-large;
   text-align: center;
 }
@@ -15,4 +15,8 @@
 .signin-subtitle{
   text-align: center;
   color: black;
+}
+.buttonSubmit{
+  background-color: #005640;
+  color: white;
 }

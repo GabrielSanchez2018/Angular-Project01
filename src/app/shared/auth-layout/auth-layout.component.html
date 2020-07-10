@@ -7,7 +7,7 @@
       <div class="navbar-container">
         <!-- logo -->
 
-
+        <img src="../../../assets/images/gop.png" alt="Britanny" style="width: 200px;" >
 
 
       </div>
@@ -16,11 +16,42 @@
   </nav>
 
   <!-- main content -->
-  <div fxFlex>
-    <main class="main-content" fxFlex="100%;">
-      <router-outlet></router-outlet>
-    </main>
+  <!-- <mat-card style="width: 90%; margin: 0 auto;">
+  <mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile>
+      <mat-card>
+        <img src="../../../assets/images/gop.png" alt="Britanny" style="width: 200px;" >
+      </mat-card>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div fxFlex>
+        <main class="main-content" fxFlex="100%;">
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</mat-card> -->
+<br><br>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+      <img src="../../../assets/images/verticalgop.png" alt="gop" class="gopLogo" >
+		</div>
+		<div class="col-md-8">
+
+
+        <main class="main-content" fxFlex="100%;">
+          <router-outlet></router-outlet>
+        </main>
+
+</div>
   </div>
+</div>
 
   <!-- footer -->
   <div fxFlex>
