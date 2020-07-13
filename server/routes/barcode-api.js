@@ -138,7 +138,8 @@ router.post('/', function(req, res, next){
              barDateOfProduction : labeldateindentifier,
              barDateOfProductionyymmdd : labeldateofproduction,
              barSerialNumberIndentifier: labelserialnumber,
-             barTenDigitSerial : labelserialidentifier
+             barTenDigitSerial : labelserialidentifier,
+             orderDate: req.body.orderDate
 
 
    };

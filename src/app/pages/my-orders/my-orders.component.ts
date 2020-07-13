@@ -30,7 +30,7 @@ export class MyOrdersComponent implements OnInit {
   constructor(private http: HttpClient, private dialog: MatDialog, private cookieService: CookieService) {
 
     this.username = this.cookieService.get('sessionuser');
-    this.http.get('api/invoices/' + this.username ).subscribe(res =>{
+    this.http.get('api/invoices/' + this.username.toUpperCase() ).subscribe(res =>{
       this.invoices = res;
     }, err => {
       console.log(err);

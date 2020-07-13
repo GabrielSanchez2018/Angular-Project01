@@ -19,6 +19,7 @@ let barcodeSchema = mongoose.Schema({
   barDateOfProductionyymmdd:{type: Number},
   barSerialNumberIndentifier:{type: Number},
   barTenDigitSerial:{type: Number, unique: true, dropDups: true},
+  orderDate: {type: Date}
 });
 
 

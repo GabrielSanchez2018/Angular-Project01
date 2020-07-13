@@ -1,13 +1,20 @@
-<h2 style="text-align: center;" mat-dialog-title>{{invoice.username}} Please confirm your order</h2>
+<img src="../../../assets/images/gop.png" alt="Britanny" style="width: 200px;" >
+<h3 style="text-align: right; color: red;"> {{ invoice.orderDate | date }}</h3>
+<br>
+<mat-divider></mat-divider>
+<br>
+<h2 style="text-align: center;" mat-dialog-title>{{invoice.username}} Confirm your order</h2>
 
 <div mat-dialog-content>
-    <h3>Order date: {{ invoice.orderDate | date }}</h3>
+
     <mat-divider></mat-divider>
 
     <h4>Meat Order</h4>
-    <div *ngFor="let lineItem of invoice.lineItems">
-        <mat-list>
-            <mat-list-item>
+    <div *ngFor="let lineItem of invoice.lineItems" >
+        <mat-list >
+            <mat-list-item style="color: green;">
+              {{lineItem.id}}
+              <div fxFlex></div>
                 {{lineItem.title}}:
                 <div fxFlex></div>
                 {{lineItem.extimate | currency}}
@@ -16,7 +23,7 @@
     </div>
     <mat-divider></mat-divider>
 
-    <h4>Number of Items | Boxes</h4>
+    <!-- <h4>Number of Items | Boxes</h4> -->
     <!-- <mat-list>
         <mat-list-item>
             Parts:

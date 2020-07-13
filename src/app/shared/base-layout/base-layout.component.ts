@@ -19,10 +19,17 @@ export class BaseLayoutComponent implements OnInit {
   username: string;
   isAuthenticated: boolean;
   EmployeeId: string;
+  empinfo: Object;
 
 
   constructor(private http: HttpClient, private cookieService: CookieService, private auth: AuthService, private router: Router)  {
+    this.http.get('api/employees').subscribe(res =>{
+      this.empinfo = res;
+    }, err => {
+      console.log(err);
+      console.log('from here',this.empinfo)
 
+    })
     // this.username = this.cookieService.get('sessionuser');
     // this.http.get('/api/users/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
     //   if (res === 'admin'){
@@ -65,10 +72,10 @@ export class BaseLayoutComponent implements OnInit {
    // });
 
     this.username = this.cookieService.get('sessionuser');
-    console.log('this is the employees', this.username)
+    console.log('this is the employees', this.username.toUpperCase())
 
 
-    this.http.get('/api/employees/' + this.cookieService.get('sessionuser') + '/role' ).subscribe(res => {
+    this.http.get('/api/employees/' + this.username.toUpperCase + '/role' ).subscribe(res => {
      var compare = res + this.username
 
 

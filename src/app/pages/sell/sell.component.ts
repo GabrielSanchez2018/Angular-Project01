@@ -11,6 +11,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
 import { toArray } from 'rxjs/operators';
+import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 
 
 
@@ -439,6 +440,7 @@ this.changeDetectorRefs.detectChanges();
       itemdescription: itemdescription,
       username: this.username,
       barcode: this.form.controls.barcode.value,
+      orderDate: new Date()
 
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
@@ -454,6 +456,29 @@ this.changeDetectorRefs.detectChanges();
     })
   })
   }
+
+  // print(){
+  //   this.http.get('api/barcodes/').subscribe(res =>{
+  //     this.barcodes = res;
+  //     console.log('this barcodes', this.barcodes)
+  //   }), err =>{
+  //     console.log(err)
+  //   }
+  //   const barcode = {
+
+  //   }
+  //   const dialogRef = this.dialog.open(PrintDialogComponent,{
+  //     data: {
+  //       barcode: barcode
+  //     },
+  //     disableClose: true,
+  //     width: '800'
+  //   });
+  //   dialogRef.afterClosed().subscribe(result =>{
+
+  //   })
+
+  // }
 
 
 

@@ -81,6 +81,7 @@ import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.co
 import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
 import { InvoiceComponent } from './pages/invoice/invoice.component';
 import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
+import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 
 
 @NgModule({
@@ -124,7 +125,8 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
     FindEmployeeComponent,
     BarcodeInfo01Component,
     InvoiceComponent,
-    DatabaseManagementComponent
+    DatabaseManagementComponent,
+    PrintDialogComponent
   ],
   imports: [
     BrowserModule,

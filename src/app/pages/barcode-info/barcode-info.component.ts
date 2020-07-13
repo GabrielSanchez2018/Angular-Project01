@@ -6,6 +6,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 
 
 
@@ -70,6 +71,29 @@ export class BarcodeInfoComponent implements OnInit {
     }
 
 
+  }
+  print(){
+    this.http.get('api/barcodes/').subscribe(res =>{
+      this.barcodes = res;
+      console.log('this barcodes', this.barcodes)
+    }), err =>{
+      console.log(err)
+    }
+    const barcode = {
+
+    }
+    const dialogRef = this.dialog.open(PrintDialogComponent,{
+      data: {
+        barcode: barcode
+      },
+      disableClose: true,
+      width: '800px'
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+      window.print();
+      
+
+    })
   }
 
   getTotalCost() {
@@ -436,6 +460,7 @@ this.changeDetectorRefs.detectChanges();
       itemdescription: itemdescription,
       username: this.username,
       barcode: this.form.controls.barcode.value,
+      orderDate: new Date()
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
@@ -447,5 +472,6 @@ this.changeDetectorRefs.detectChanges();
     });
   });
   }
+
 
 }

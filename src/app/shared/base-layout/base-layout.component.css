@@ -49,5 +49,9 @@
   flex: 1 1 auto;
 }
 
+.matToolbar {
+  background-color: #005640;
+  color: white;
+}
 
 

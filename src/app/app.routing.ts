@@ -37,6 +37,7 @@ import { FindEmployeeComponent } from './pages/find-employee/find-employee.compo
 import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.component';
 import { InvoiceComponent } from './pages/invoice/invoice.component';
 import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
+import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 
 
 export const AppRoutes: Routes = [
@@ -173,6 +174,11 @@ export const AppRoutes: Routes = [
       {
         path: 'service-create',
         component: ServiceCreateComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'print-dialog',
+        component: PrintDialogComponent,
         canActivate: [SessionGuard]
       },
       {

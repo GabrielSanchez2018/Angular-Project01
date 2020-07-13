@@ -247,12 +247,13 @@ console.log('esto', this.selectedValue)
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirm') {
         console.log('Invoice saved');
-        this.http.post('/api/invoices/' + invoice.username, {
+        this.http.post('/api/invoices/' + invoice.username.toUpperCase(), {
           lineItems: invoice.lineItems,
           lineItemTotal: invoice.lineItemTotal,
           total: invoice.total,
           orderDate: invoice.orderDate
         }).subscribe(res => {
+
           this.router.navigate(['/']);
         }, err => {
           console.log(err);
