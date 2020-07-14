@@ -1,9 +1,12 @@
 
 const mongoose = require('mongoose');
 
+//This will make sure that require functions works
+var uniqueValidator = require('mongoose-unique-validator')
+
 
 let barcodeSchema = mongoose.Schema({
-  orderDate: {type: Date},
+  barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
   username: {type: String},
   barcode: {type: Number },
   price: {type: Number},
@@ -19,11 +22,10 @@ let barcodeSchema = mongoose.Schema({
   barDateOfProduction:{type: Number},
   barDateOfProductionyymmdd:{type: Number},
   barSerialNumberIndentifier:{type: Number},
-  barTenDigitSerial:{type: Number, unique: true, dropDups: true},
-  
+  orderDate: {type: Date}
 });
 
 
-
+barcodeSchema.plugin(uniqueValidator)
 // export for public use
 module.exports = mongoose.model('Barcode', barcodeSchema);
