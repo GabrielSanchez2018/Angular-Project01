@@ -82,11 +82,19 @@
           </span>
           <span style="color: red;">&nbsp;&nbsp;Submited Orders</span>
       </a>
+
       <a mat-list-item *ngIf='show' [routerLink]="'/sell-report'">
         <span class="material-icons">
           pie_chart
           </span>
           <span style="color: red;">&nbsp;&nbsp;Purchase Reports</span>
+      </a>
+
+      <a mat-list-item *ngIf='show' [routerLink]="'/order-verify'">
+        <span class="material-icons">
+          pie_chart
+          </span>
+          <span style="color: red;">&nbsp;&nbsp;Inventory Check in</span>
       </a>
 
       <!-- <a mat-list-item *ngIf='show' [routerLink]="'/sell'">

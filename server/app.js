@@ -24,7 +24,7 @@ const InvoiceApi = require('./routes/invoice-api');
 const ServicesApi = require('./routes/services-api');
 const BarcodesApi = require('./routes/barcode-api');
 const EmployeeApi = require('./routes/employee-api');
-
+const Orderverify = require('./routes/order-verify-api');
 
 /**
  * App configurations
@@ -69,6 +69,7 @@ app.use('/api/invoices', InvoiceApi);
 app.use('/api/services', ServicesApi); //This is to create more service items
 app.use('/api/barcodes', BarcodesApi);
 app.use('/api/employees', EmployeeApi);
+app.use('/api/orderverify',Orderverify);
 
 /**
  * Create and start server
