@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 
 //This will make sure that require functions works
+//Use this extentionn to resolve duplicate issues
 var uniqueValidator = require('mongoose-unique-validator')
 
 
