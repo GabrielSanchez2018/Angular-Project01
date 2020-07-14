@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
@@ -6,14 +7,17 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
+
 
 @Component({
-  selector: 'app-barcode-info01',
-  templateUrl: './barcode-info01.component.html',
-  styleUrls: ['./barcode-info01.component.css']
+  selector: 'app-order-verify',
+  templateUrl: './order-verify.component.html',
+  styleUrls: ['./order-verify.component.css']
 })
-export class BarcodeInfo01Component implements OnInit {
+export class OrderVerifyComponent implements OnInit {
 
+  
   form: FormGroup;
   username: string;
   invoices: Object;
@@ -33,6 +37,8 @@ export class BarcodeInfo01Component implements OnInit {
   find: object;
   bar: any;
   map: any;
+  matInput: any;
+
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -52,11 +58,13 @@ export class BarcodeInfo01Component implements OnInit {
       console.log(err);
     }
     this.username = this.cookieService.get('paysession');
-    this.http.get('api/barcodes/' ).subscribe(res =>{
-        //THIS FUNCTION WILL FILTHER THE USERNAME
-      if(Array.isArray(res)){
-        this.barcodes = res.filter(q => q.username === this.username);;
-      }
+    this.http.get('api/order-verify/' ).subscribe(res =>{
+        //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
+
+        if(Array.isArray(res)){
+          this.barcodes = res.filter(q => q.username === this.username);
+       }
+      //this.barcodes = res.filter(q => q.username === this.username);;
       console.log('noiniewnfis', this.barcodes)
     }), err =>{
       console.log(err)
@@ -64,19 +72,37 @@ export class BarcodeInfo01Component implements OnInit {
 
 
   }
-
-  getTotalCost() {
-    if(Array.isArray(this.barcodes)){
-    return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+  print(){
+    this.http.get('api/order-verify/').subscribe(res =>{
+      this.barcodes = res;
+      console.log('this barcodes', this.barcodes)
+    }), err =>{
+      console.log(err)
     }
+    const barcode = {
+
+    }
+    const dialogRef = this.dialog.open(PrintDialogComponent,{
+      data: {
+        barcode: barcode
+      },
+      disableClose: true,
+      width: '800px'
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+      window.print();
+      
+
+    })
   }
 
+  getTotalCost() {
+    //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    if(Array.isArray(this.barcodes)){
+     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    }
 
-
-
-
-
-
+  }
 
   //Snackbar success message
 successSnackbar(){
@@ -85,14 +111,11 @@ successSnackbar(){
      'Item has been Scanned',
     "SUCCESS",
     {
-      duration: 1000,
+      duration: 3000,
       verticalPosition: "top"
     }
   );
 }
-  test(test: any, arg1: string, arg2: { duration: number; verticalPosition: "top"; }) {
-    throw new Error("Method not implemented.");
-  }
 
 rerender(){
   this.barcodes
@@ -116,12 +139,12 @@ rerender(){
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/barcodes/' + barcodeId).subscribe(res => {
+        this.http.delete('/api/order-vefiry/' + barcodeId).subscribe(res => {
           console.log('Barcode deleted');
           if(Array.isArray(this.barcodes)){
             this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           }
-
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           console.log(this.barcodes);
         });
       }
@@ -142,12 +165,15 @@ rerender(){
    var labelproductCode = productCode.join('');
    //Box Weight
    var boxWeight = Array.from(enteredProductcode.slice(20,26));
-    var labelWeight = boxWeight.join('');
+  var labelWeight = boxWeight.join('');
 
-    // Passing the labelWeight variable to a function so we get rid of the anoying error
+  // Passing the labelWeight variable to a function so we get rid of the anoying error
   function mult(x) {
     return x ;
 }
+
+    console.log('this is the boxWeith', labelWeight)
+
 
    console.log('hre is ', labelproductCode)
    console.log('weight', labelWeight)
@@ -428,29 +454,24 @@ this.changeDetectorRefs.detectChanges();
 
 
 
-    this.http.post('/api/barcodes/', {
+    this.http.post('/api/order-verify/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,
       username: this.username,
       barcode: this.form.controls.barcode.value,
-
+      orderDate: new Date()
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
-      this.router.navigate(['/barcode-info']);
+      this.router.navigate(['/barcode-info01']);
       // this will reset the form
-
       this.successSnackbar();
-
       this.form.reset();
       this.rerender();
-
-    })
-  })
+    });
+  });
   }
-
-
 
 
 }

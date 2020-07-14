@@ -82,6 +82,7 @@ import { RoleEmpGuard } from './shared/guards/role-emp-gurd';
 import { InvoiceComponent } from './pages/invoice/invoice.component';
 import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
+import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 
 
 @NgModule({
@@ -126,7 +127,8 @@ import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.compon
     BarcodeInfo01Component,
     InvoiceComponent,
     DatabaseManagementComponent,
-    PrintDialogComponent
+    PrintDialogComponent,
+    OrderVerifyComponent
   ],
   imports: [
     BrowserModule,

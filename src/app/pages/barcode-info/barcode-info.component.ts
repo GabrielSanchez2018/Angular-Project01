@@ -111,7 +111,7 @@ successSnackbar(){
      'Item has been Scanned',
     "SUCCESS",
     {
-      duration: 3000,
+      duration: 1000,
       verticalPosition: "top"
     }
   );

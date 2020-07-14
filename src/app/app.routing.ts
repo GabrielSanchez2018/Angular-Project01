@@ -38,6 +38,7 @@ import { BarcodeInfo01Component } from './pages/barcode-info01/barcode-info01.co
 import { InvoiceComponent } from './pages/invoice/invoice.component';
 import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
+import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 
 
 export const AppRoutes: Routes = [
@@ -89,6 +90,11 @@ export const AppRoutes: Routes = [
         path: 'invoice',
         component: InvoiceComponent,
         canActivate: [SessionGuard]
+      },
+      {
+        path: 'order-verify',
+        component: OrderVerifyComponent,
+        canActivate: [RoleGuard]
       },
       {
         path: 'all-orders',

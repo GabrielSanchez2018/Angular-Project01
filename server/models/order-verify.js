@@ -1,11 +1,15 @@
-
+/*=========================
+Name: Gabriel Sanchez
+Date: April 5, 2020
+Assignment: barcode.js
+Description: user model for user data fields
+==========================*/
 const mongoose = require('mongoose');
 
 
-let barcodeSchema = mongoose.Schema({
-  orderDate: {type: Date},
+let orderverifySchema = mongoose.Schema({
   username: {type: String},
-  barcode: {type: Number },
+  barcode: {type: String },
   price: {type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},
@@ -20,10 +24,10 @@ let barcodeSchema = mongoose.Schema({
   barDateOfProductionyymmdd:{type: Number},
   barSerialNumberIndentifier:{type: Number},
   barTenDigitSerial:{type: Number, unique: true, dropDups: true},
-  
+  orderDate: {type: Date}
 });
 
 
 
 // export for public use
-module.exports = mongoose.model('Barcode', barcodeSchema);
+module.exports = mongoose.model('Orderverify', orderverifySchema);
