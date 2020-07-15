@@ -105,21 +105,22 @@ export class OrderVerifyComponent implements OnInit {
   }
 
   //Snackbar success message
-successSnackbar(){
+// successSnackbar(){
 
-  this.snackBar.open(
-     'Item has been Scanned',
-    "SUCCESS",
-    {
-      duration: 3000,
-      verticalPosition: "top"
-    }
-  );
-}
+//   this.snackBar.open(
+//      'Item has been Scanned',
+//     "SUCCESS",
+//     {
+//       duration: 5,
+//       verticalPosition: "top"
+//     }
+//   );
+// }
 
 rerender(){
   this.barcodes
   this.changeDetectorRefs.detectChanges();
+  
 }
 
   ngOnInit() {
@@ -466,7 +467,7 @@ var counts = "BoxCounts"
       console.log(this.barcodes);
 
       // this will reset the form
-      this.successSnackbar();
+      //this.successSnackbar();
       this.form.reset();
       this.rerender();
     });

@@ -9,7 +9,7 @@ var uniqueValidator = require('mongoose-unique-validator')
 let barcodeSchema = mongoose.Schema({
   barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
   username: {type: String},
-  barcode: {type: Number },
+  barcode: {type: String },
   price: {type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},

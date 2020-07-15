@@ -90,7 +90,10 @@ export class BarcodeInfoComponent implements OnInit {
       width: '800px'
     });
     dialogRef.afterClosed().subscribe(result =>{
-      window.print();
+      if(result === 'confirm'){
+        window.print();
+      }
+      
       
 
     })

@@ -2,7 +2,7 @@
 
 
   <mat-card class="insert">
-    <mat-card-title>Barcode Scann</mat-card-title>
+    <mat-card-title>Barcode Scan</mat-card-title>
     <br/>
     <form [formGroup]="form" (ngSubmit)="create();" #barcodeForm= "ngForm" autofocus>
       <mat-card-content>
@@ -11,10 +11,16 @@
             <input matInput
                    [formControl]="form.controls['barcode']"
                    placeholder="Barcode"
+                   ng-minlength="46" 
+                   ng-maxlength="46" 
                    autofocus
+                   min="0" 
+                   max="46"
                    />
+                   
           </mat-form-field>
         </div>
+        
       </mat-card-content>
 
       <br/>

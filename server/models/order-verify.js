@@ -23,7 +23,7 @@ let orderverifySchema = mongoose.Schema({
   barDateOfProduction:{type: Number},
   barDateOfProductionyymmdd:{type: Number},
   barSerialNumberIndentifier:{type: Number},
-  barTenDigitSerial:{type: Number, unique: true, dropDups: true},
+  barTenDigitSerial:{type: Number},
   orderDate: {type: Date}
 });
 
