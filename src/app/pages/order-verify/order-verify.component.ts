@@ -17,7 +17,7 @@ import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.
 })
 export class OrderVerifyComponent implements OnInit {
 
-  
+
   form: FormGroup;
   username: string;
   invoices: Object;
@@ -58,7 +58,7 @@ export class OrderVerifyComponent implements OnInit {
       console.log(err);
     }
     this.username = this.cookieService.get('paysession');
-    this.http.get('api/order-verify/' ).subscribe(res =>{
+    this.http.get('api/orderverify/' ).subscribe(res =>{
         //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
 
         if(Array.isArray(res)){
@@ -73,7 +73,7 @@ export class OrderVerifyComponent implements OnInit {
 
   }
   print(){
-    this.http.get('api/order-verify/').subscribe(res =>{
+    this.http.get('api/orderverify/').subscribe(res =>{
       this.barcodes = res;
       console.log('this barcodes', this.barcodes)
     }), err =>{
@@ -91,7 +91,7 @@ export class OrderVerifyComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result =>{
       window.print();
-      
+
 
     })
   }
@@ -139,7 +139,7 @@ rerender(){
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/order-vefiry/' + barcodeId).subscribe(res => {
+        this.http.delete('/api/ordervefiry/' + barcodeId).subscribe(res => {
           console.log('Barcode deleted');
           if(Array.isArray(this.barcodes)){
             this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
@@ -452,19 +452,19 @@ console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
 
+var counts = "BoxCounts"
 
-
-    this.http.post('/api/order-verify/', {
+    this.http.post('/api/orderverify/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,
-      username: this.username,
+      username: counts,
       barcode: this.form.controls.barcode.value,
       orderDate: new Date()
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
-      this.router.navigate(['/barcode-info01']);
+
       // this will reset the form
       this.successSnackbar();
       this.form.reset();

@@ -8,13 +8,13 @@ const router = express.Router();
 
 // Get Barcodes
 router.get('/', function(req, res, next){
-  Barcodes.find({}, function(err, barcodes){
+  Orderverify.find({}, function(err, orderverify){
     if(err){
       console.log(err);
       return next(err);
     } else {
-      console.log(barcodes);
-      res.json(barcodes);
+      console.log(orderverify);
+      res.json(orderverify);
     }
   })
 })
@@ -82,8 +82,6 @@ router.get('/order-sum', function(req, res, next){
 
 //Post Barcode
 router.post('/', function(req, res, next){
-
-
   // get the request's form data
    const barcode = req.body.barcode
    console.log('this is the barcode input from the console.', barcode)
