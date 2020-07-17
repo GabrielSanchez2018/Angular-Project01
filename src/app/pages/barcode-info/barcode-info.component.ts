@@ -85,25 +85,27 @@ export class BarcodeInfoComponent implements OnInit {
 
     }
     const dialogRef = this.dialog.open(PrintDialogComponent,{
-    
+
       data: {
         barcode: barcode
       },
       disableClose: true,
-      width: '700px'
-      
-      
-     
+      width: '1200px',
+
+
+
+
     });
     dialogRef.afterClosed().subscribe(result =>{
       // if(result === 'confirm'){
       //   window.print();
       // }
-      
-      
+      var div = document.getElementById("invoice-box");
+      div.innerHTML = '<iframe src="mypage.aspx" onload="this.contentWindow.print();"></iframe>';
+
 
     })
-    
+
   }
 
   getTotalCost() {

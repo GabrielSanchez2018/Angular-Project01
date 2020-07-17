@@ -1,11 +1,16 @@
 .invoice-box {
-  max-width: 900px;
+  max-width: 1000px;
+  width: 900px;
   margin: 0 auto;
   padding: 30px;
   border: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
   font-size: 16px;
   line-height: 24px;
+  font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+.signature {
   font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
   color: #555;
 }
@@ -79,19 +84,26 @@
 
 @media print {
 
-  
+
   .invoice-box {
-    margin-top: none;
-    width: auto;
+    margin-top: -50%;
+    width: 700px;
     margin: 0 auto;
-    
-    padding-left:-500%;
+    margin-bottom: 1000px;
     font-size: 16px;
     line-height: 24px;
     font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
     color: #555;
+
   }
-  
+  .signature{
+    display: block;
+  }
+  .submitButtons{
+    display: none;
+  }
+  .invoice-box { page-break-after: always; }
+
 }
 
 

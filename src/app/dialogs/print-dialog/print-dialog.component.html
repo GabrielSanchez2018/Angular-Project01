@@ -1,6 +1,6 @@
 
-<body>
-    
+
+
 
 <h3 style="text-align: right; color: red;"> {{ barcode.orderDate | date }}</h3>
 <br>
@@ -201,11 +201,33 @@
           </tr>
       </table>
       <br>
+      <br>
 
-      <div mat-dialog-actions align="end">
+      <div class="signature">
+        <p>
+          I authorize Greater Omaha Packing to make a deduction from my net pay and I agree that my net pay will be reduced
+          by the amount shown on this Sales Receipt.
+        </p>
+        <br>
+        <p>
+          Yo autorizo a Greater Omaha Pakcking hacer una deduccion de mi pago neto y estoy de acuerdo que mi pago neto va
+          a ser reducido por la cantidad de este recibo.
+        </p>
+        <br>
+
+
+<hr style="width:50%;text-align:left;margin-left:0">
+      </div>
+
+      <div mat-dialog-actions class="submitButtons" align="end">
     <button mat-raised-button matDialogClose="cancel" color="primary">Cancel</button>
     <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial onclick="window.print()" >Print</button>
 </div>
   </div>
 
-</body>
+
+
+  <br>
+<br><br>
+
+
