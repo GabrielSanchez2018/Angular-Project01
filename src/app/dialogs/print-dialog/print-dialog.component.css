@@ -83,17 +83,19 @@
 
 
 @media print {
-
+.table{
+  width: 900px;
+}
 
   .invoice-box {
     margin-top: -50%;
-    width: 700px;
+    width: 830px;
     margin: 0 auto;
     margin-bottom: 1000px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
     font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-    color: #555;
+    color: black;
+    border: none;
 
   }
   .signature{
@@ -103,7 +105,9 @@
     display: none;
   }
   .invoice-box { page-break-after: always; }
-
+  .line{
+    background-color: black;
+  }
 }
 
 

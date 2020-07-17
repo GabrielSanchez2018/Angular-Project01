@@ -6,6 +6,7 @@ import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-crea
 import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 
 @Component({
   selector: 'app-barcode-info01',
@@ -33,6 +34,7 @@ export class BarcodeInfo01Component implements OnInit {
   find: object;
   bar: any;
   map: any;
+  cookie: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -72,7 +74,38 @@ export class BarcodeInfo01Component implements OnInit {
   }
 
 
+  print(){
+    this.http.get('api/barcodes/').subscribe(res =>{
+      this.barcodes = res;
+      console.log('this barcodes', this.barcodes)
+    }), err =>{
+      console.log(err)
+    }
+    const barcode = {
 
+    }
+    const dialogRef = this.dialog.open(PrintDialogComponent,{
+
+      data: {
+        barcode: barcode
+      },
+      disableClose: true,
+      width: '1200px',
+
+
+
+
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+      // if(result === 'confirm'){
+      //   window.print();
+      // }
+      this.cookieService.delete('paysession')
+      this.router.navigate(['/find-employee']);
+
+    })
+
+  }
 
 
 

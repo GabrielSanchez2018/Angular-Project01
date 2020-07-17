@@ -96,6 +96,38 @@ successSnackbar(){
   );
 }
 
+print(){
+  this.http.get('api/barcodes/').subscribe(res =>{
+    this.barcodes = res;
+    console.log('this barcodes', this.barcodes)
+  }), err =>{
+    console.log(err)
+  }
+  const barcode = {
+
+  }
+  const dialogRef = this.dialog.open(PrintDialogComponent,{
+
+    data: {
+      barcode: barcode
+    },
+    disableClose: true,
+    width: '1200px',
+
+
+
+
+  });
+  dialogRef.afterClosed().subscribe(result =>{
+    // if(result === 'confirm'){
+    //   window.print();
+    // }
+    this.cookieService.delete('paysession')
+    this.router.navigate(['/find-employee']);
+
+  })
+
+}
 
 rerender(){
   this.barcodes

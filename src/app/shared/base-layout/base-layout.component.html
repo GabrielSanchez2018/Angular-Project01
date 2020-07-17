@@ -1,3 +1,4 @@
+<body>
 <!-- navigation -->
 <mat-toolbar class="matToolbar">
   <mat-toolbar-row >
@@ -61,40 +62,40 @@
         <span class="material-icons">
           settings
           </span>
-          <span style="color: white;"> &nbsp;&nbsp; Admin</span>
+          <span style="color: #ffd740;"> &nbsp;&nbsp; Admin</span>
       </a>
       <a mat-list-item [routerLink]="'/'">
         <span class="material-icons">
           dashboard
           </span>
-          <span style="color: red;">&nbsp;&nbsp;Services</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;Services</span>
       </a>
       <a mat-list-item [routerLink]="'/my-orders'">
         <span class="material-icons">
           shopping_cart
           </span>
-          <span style="color: red;">&nbsp;&nbsp;My Orders</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;My Orders</span>
       </a>
 
       <a mat-list-item *ngIf='show' [routerLink]="'/purchases-by-service'">
         <span class="material-icons">
           assignment_turned_in
           </span>
-          <span style="color: red;">&nbsp;&nbsp;Submited Orders</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;Submited Orders</span>
       </a>
 
       <a mat-list-item *ngIf='show' [routerLink]="'/sell-report'">
         <span class="material-icons">
           pie_chart
           </span>
-          <span style="color: red;">&nbsp;&nbsp;Purchase Reports</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;Purchase Reports</span>
       </a>
 
       <a mat-list-item *ngIf='show' [routerLink]="'/order-verify'">
         <span class="material-icons">
           pie_chart
           </span>
-          <span style="color: red;">&nbsp;&nbsp;Inventory Check in</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;Inventory Check in</span>
       </a>
 
       <!-- <a mat-list-item *ngIf='show' [routerLink]="'/sell'">
@@ -108,14 +109,14 @@
         <span class="material-icons">
           store
           </span>
-          <span style="color: red;">&nbsp;&nbsp;Employee Sale</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;Employee Sale</span>
       </a>
 
       <a mat-list-item *ngIf='show' [routerLink]="'/all-orders'">
-        <span class="material-icons">
+        <span class="material-icons" style="size: 20px;">
           ballot
           </span>
-          <span style="color: red;">&nbsp;&nbsp;All Items</span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;All Items</span>
       </a>
       <a mat-list-item *ngIf='show' [routerLink]="'/database-management'">
         <span class="material-icons">
@@ -136,8 +137,8 @@
   </mat-sidenav-content>
 
   <div fxFlex style="background-color:aqua;">
-    <footer class="footer">
-      <mat-toolbar class="footer-content">
+    <footer class="footer" style="background-color: black;">
+      <mat-toolbar class="footer-content" style="background-color: blue;">
         <p>
           &copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>
         </p>
@@ -151,7 +152,7 @@
 </mat-sidenav-container>
 
 
-
+</body>
 
 
 

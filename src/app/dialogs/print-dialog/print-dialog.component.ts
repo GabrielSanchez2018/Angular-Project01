@@ -11,6 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./print-dialog.component.css']
 })
 export class PrintDialogComponent implements OnInit {
+  public now: Date = new Date();
   invoice: any;
   barcode: any;
   //form: FormGroup;
@@ -33,6 +34,7 @@ export class PrintDialogComponent implements OnInit {
   map: any;
   matInput: any;
   time: any;
+  test: string;
 
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar ,private dialogRef: MatDialogRef<PrintDialogComponent>,@Inject(MAT_DIALOG_DATA) data) {
@@ -51,9 +53,14 @@ export class PrintDialogComponent implements OnInit {
     }), err =>{
       console.log(err)
     }
-
+    
+    setInterval(() => {
+      this.now = new Date();
+    }, 1);
 
   }
+
+
   getTotalCost() {
     //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     if(Array.isArray(this.barcodes)){
@@ -68,6 +75,7 @@ export class PrintDialogComponent implements OnInit {
     }
 
   }
+
 
 
 

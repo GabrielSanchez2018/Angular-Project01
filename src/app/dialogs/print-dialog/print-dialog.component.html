@@ -136,9 +136,10 @@
                               <img src="../../../assets/images/gop.png" alt="GOP" style="width: 200px;" >
                             </td>
 
-                            <td *ngFor="let barcode of barcodes" style="text-align: right;">
+                            <td style="text-align: right;">
 
-                                 {{ barcode.orderDate | date}}<br>
+                             {{now |  date:'MM-dd-yyyy'}} <br>
+                             {{now |  date:'HH:mm a'}}
 
                             </td>
                         </tr>
@@ -158,8 +159,8 @@
 
                           <td>
                               {{username}}<br>
-                              John Doe<br>
-                              john@example.com
+                              <br>
+                             
                           </td>
                       </tr>
                   </table>
@@ -216,7 +217,7 @@
         <br>
 
 
-<hr style="width:50%;text-align:left;margin-left:0">
+        <hr class="line" style="width:50%;text-align:left;margin-left:0; background-color: black; border-width: 5px ;">
       </div>
 
       <div mat-dialog-actions class="submitButtons" align="end">

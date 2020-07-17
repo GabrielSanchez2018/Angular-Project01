@@ -39,6 +39,7 @@ export class BarcodeInfoComponent implements OnInit {
   bar: any;
   map: any;
   matInput: any;
+  cookie: any;
 
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
@@ -100,8 +101,11 @@ export class BarcodeInfoComponent implements OnInit {
       // if(result === 'confirm'){
       //   window.print();
       // }
-      var div = document.getElementById("invoice-box");
-      div.innerHTML = '<iframe src="mypage.aspx" onload="this.contentWindow.print();"></iframe>';
+      this.cookieService.delete('paysession')
+      this.router.navigate(['/find-employee']);
+      // this.cookie.delete('isAuthenticated');
+      // var div = document.getElementById("invoice-box");
+      // div.innerHTML = '<iframe src="mypage.aspx" onload="this.contentWindow.print();"></iframe>';
 
 
     })
