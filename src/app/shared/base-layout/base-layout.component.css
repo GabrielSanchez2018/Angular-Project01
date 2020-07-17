@@ -6,6 +6,8 @@
 
 .navbar-container {
   padding: 5px;
+  display: flex;
+  background-color: transparent;
 }
 
 .toolbar {
@@ -15,7 +17,7 @@
 .navbar-link {
   font-size: 24px;
   font-weight: lighter;
-  background-color: white;
+  background-color: none;
 }
 
 .main-content {
@@ -26,6 +28,7 @@
   bottom: 0;
   position: fixed;
   width: 100%;
+  background-color: lightgreen;
 }
 
 .footer-content {
@@ -33,7 +36,8 @@
   font-weight: lighter;
   padding-left: 100px;
   letter-spacing: 3px;
-  background: green;
+  background: none;
+  color: black;
 
 }
 
@@ -50,8 +54,10 @@
 }
 
 .matToolbar {
- background-color: #92AA83;
-  color: white;
+ background-color: #005640;
+  color: #ffd740;
+
+  
 }
 
 

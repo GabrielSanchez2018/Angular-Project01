@@ -19,9 +19,18 @@ tr.mat-footer-row {
 }
 
 .insert{
-  width: 50%;
+  width: 30%;
   margin: 0 auto;
   margin-top: 1%;
 
-
 }
+
+@media print{
+  .insert{
+    display: none;
+  }
+  .matToolbar{
+    display: none;
+  }
+}
+

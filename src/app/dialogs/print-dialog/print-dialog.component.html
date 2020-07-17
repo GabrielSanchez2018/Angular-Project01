@@ -1,4 +1,7 @@
 
+<body>
+    
+
 <h3 style="text-align: right; color: red;"> {{ barcode.orderDate | date }}</h3>
 <br>
 <mat-divider></mat-divider>
@@ -201,7 +204,8 @@
 
       <div mat-dialog-actions align="end">
     <button mat-raised-button matDialogClose="cancel" color="primary">Cancel</button>
-    <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial>Confirm Order</button>
+    <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial onclick="window.print()" >Print</button>
 </div>
   </div>
 
+</body>

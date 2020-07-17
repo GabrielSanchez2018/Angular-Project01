@@ -7,6 +7,7 @@ import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
+import { reduce } from 'rxjs/operators';
 
 
 
@@ -68,6 +69,7 @@ export class BarcodeInfoComponent implements OnInit {
       console.log('noiniewnfis', this.barcodes)
     }), err =>{
       console.log(err)
+
     }
 
 
@@ -83,20 +85,25 @@ export class BarcodeInfoComponent implements OnInit {
 
     }
     const dialogRef = this.dialog.open(PrintDialogComponent,{
+    
       data: {
         barcode: barcode
       },
       disableClose: true,
-      width: '800px'
+      width: '700px'
+      
+      
+     
     });
     dialogRef.afterClosed().subscribe(result =>{
-      if(result === 'confirm'){
-        window.print();
-      }
+      // if(result === 'confirm'){
+      //   window.print();
+      // }
       
       
 
     })
+    
   }
 
   getTotalCost() {

@@ -1,6 +1,6 @@
 <!-- navigation -->
 <mat-toolbar class="matToolbar">
-  <mat-toolbar-row>
+  <mat-toolbar-row >
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
@@ -53,7 +53,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="over">
+  <mat-sidenav #sidenav mode="over" style="background-color: #92AA83; width: 30%;">
     <mat-nav-list>
 
 
@@ -61,7 +61,7 @@
         <span class="material-icons">
           settings
           </span>
-          <span style="color: red;"> &nbsp;&nbsp; Admin</span>
+          <span style="color: white;"> &nbsp;&nbsp; Admin</span>
       </a>
       <a mat-list-item [routerLink]="'/'">
         <span class="material-icons">
@@ -134,6 +134,20 @@
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
+
+  <div fxFlex style="background-color:aqua;">
+    <footer class="footer">
+      <mat-toolbar class="footer-content">
+        <p>
+          &copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>
+        </p>
+      </mat-toolbar>
+    </footer>
+  </div>
+  
+
+
+
 </mat-sidenav-container>
 
 
