@@ -5,13 +5,15 @@
 .title {
   text-align: center;
   font-weight: lighter;
-  text-align: justify;
+  text-align: center;
+
 
 }
 
 .subtitle {
   text-align: center;
   font-size: 18px;
+  margin: 0 auto;
 
 }
 .outsideContainer{
@@ -30,6 +32,7 @@
   margin-top: 25%;
   width: 50%;
   margin: 0 auto;
+  text-align: center;
 
   color: white;
 
@@ -37,7 +40,25 @@
 body{
   z-index: 1;
   height: 80%;
-  
+
+}
+
+.order{
+  -webkit-animation: bounce .3s infinite alternate;
+  -moz-animation: bounce .3s infinite alternate;
+  animation: bounce .3s infinite alternate;
+  -webkit-animation-iteration-count: 15;
+  -moz-animation-iteration-count: 15;
+  animation-iteration-count: 15;
+}
+@-webkit-keyframes bounce {
+  to { -webkit-transform: scale(1.2); }
+}
+@-moz-keyframes bounce {
+  to { -moz-transform: scale(1.2); }
+}
+@keyframes bounce {
+  to { transform: scale(1.2); }
 }
 
 
