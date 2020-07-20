@@ -46,10 +46,10 @@ body{
 .order{
   -webkit-animation: bounce .3s infinite alternate;
   -moz-animation: bounce .3s infinite alternate;
-  animation: bounce .3s infinite alternate;
-  -webkit-animation-iteration-count: 15;
+  animation: bounce .8s infinite alternate;
+  /* -webkit-animation-iteration-count: 15;
   -moz-animation-iteration-count: 15;
-  animation-iteration-count: 15;
+  animation-iteration-count: 15; */
 }
 @-webkit-keyframes bounce {
   to { -webkit-transform: scale(1.2); }
