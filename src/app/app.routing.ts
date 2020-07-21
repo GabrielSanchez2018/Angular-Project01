@@ -72,6 +72,11 @@ export const AppRoutes: Routes = [
         canActivate: [RoleGuard]
       },
       {
+        path: 'print-dialog',
+        component: PrintDialogComponent,
+        canActivate: [RoleGuard]
+      },
+      {
         path: 'barcode-info',
         component: BarcodeInfoComponent,
         canActivate: [RoleGuard]

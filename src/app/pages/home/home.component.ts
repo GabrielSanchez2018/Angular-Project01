@@ -13,7 +13,12 @@ export class HomeComponent implements OnInit {
   username: any;
   user: any;
   invoice: any;
-  // show: boolean;
+  hidden = false;
+   
+  // toggleBadgeVisibility() {
+  //   this.hidden = !this.hidden;
+  // }
+  show: boolean = true;
 
 
   constructor(private http: HttpClient, private cookieService: CookieService) {
@@ -35,22 +40,25 @@ export class HomeComponent implements OnInit {
 
       console.log( 'invoce',this.invoice)
       console.log( 'invoce',this.invoice.length)
+      var invoiceCounter = this.invoice.length
+    console.log('This counts the invoice length',invoiceCounter)
+     /**
+      * If the invoice is bigger than 1, the user would not be able to imput another order. 
+      * 
+      */
+    if(invoiceCounter > 0){
+      console.log('true')
+      this.show = false
+    } else {
+      console.log('false')
+      this.show = true
+    }
     }, err => {
       console.log(err)
     })
-
+    
   }
 
-  // orderShow(){
-  //   var invoiceCounter = this.invoice.length
-  //   if(invoiceCounter === 0){
-  //     console.log('truewww')
-  //     this.show = false
-  //   } else {
-  //     console.log('falsewwww')
-  //     this.show = true
-  //   }
-  // }
 
 
   ngOnInit() {

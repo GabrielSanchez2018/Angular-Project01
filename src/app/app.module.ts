@@ -33,6 +33,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {ObserversModule} from '@angular/cdk/observers';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -159,6 +160,7 @@ import { OrderVerifyComponent } from './pages/order-verify/order-verify.componen
     MatTabsModule,
     MatPaginatorModule,
     AutofocusModule,
+    MatBadgeModule
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
