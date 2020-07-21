@@ -44,6 +44,10 @@
 <div class="outsideContainer">
 
   <div class="insideContainer">
+    <h1>
+      {{user?.FirstName}}
+      {{user?.LastName}}
+    </h1>
 
 
   <h1 class="title">
@@ -58,7 +62,7 @@
 
 
 
-<div fxLayout="column" class="main-welcome">
+<div fxLayout="column" class="main-welcome" >
 
 
   <button
@@ -70,15 +74,27 @@
 
 <br>
 <br>
-<button
+<!-- <button
     class='order2'
     style='margin: 0 auto; text-align: center;'
     routerLink='/my-orders/{{username}}'
     mat-raised-button
     color='accent'>Check my Order | Vee tu Order Aqui
 
-  </button>
+  </button> -->
 
+</div >
+
+
+<div fxLayout="column" class="main-welcome">
+  <button
+  class='order2'
+  style='margin: 0 auto; text-align: center;'
+  routerLink='/my-orders/{{username}}'
+  mat-raised-button
+  color='accent'>Check my Order | Vee tu Order Aqui
+
+</button>
 </div>
 </div>
 

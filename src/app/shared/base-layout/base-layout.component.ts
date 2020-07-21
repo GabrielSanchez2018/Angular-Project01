@@ -97,6 +97,7 @@ export class BaseLayoutComponent implements OnInit {
    }
 
 
+
 // this function will logout the user
   onLogout() {
     localStorage.clear();
