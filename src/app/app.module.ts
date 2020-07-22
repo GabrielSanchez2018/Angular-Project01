@@ -84,6 +84,7 @@ import { InvoiceComponent } from './pages/invoice/invoice.component';
 import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
+import { PrintComponent } from './dialogs/print/print.component';
 
 
 @NgModule({
@@ -129,7 +130,8 @@ import { OrderVerifyComponent } from './pages/order-verify/order-verify.componen
     InvoiceComponent,
     DatabaseManagementComponent,
     PrintDialogComponent,
-    OrderVerifyComponent
+    OrderVerifyComponent,
+    PrintComponent
   ],
   imports: [
     BrowserModule,

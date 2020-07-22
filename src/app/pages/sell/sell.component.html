@@ -17,17 +17,17 @@
       <br/>
       <mat-card-actions align="end">
         <!-- <button mat-raised-button (click)="cancel()" color="warn">Cancel</button> -->
-      
+
         <button mat-raised-button color="accent">Submit</button>
         <button mat-raised-button (click)="print()" style="background-color:#005640 ; color: white">Print</button>
       </mat-card-actions>
     </form>
   </mat-card>
 <!-- THIS IS THE LINE  -->
+<br>
 
-  <mat-card-title style="text-align: center;">My Orders</mat-card-title>
 
-<mat-card-content *ngIf='invoices'>
+<mat-card-content *ngIf='show'>
 
 
 <table mat-table  [dataSource]="invoices" class="mat-elevation-z8">
@@ -82,30 +82,13 @@
 </td>
 </ng-container>
 
-<!-- Weight Column -->
-<ng-container matColumnDef="partsamount">
-<th mat-header-cell *matHeaderCellDef> Parts $ </th>
-<td mat-cell *matCellDef="let element"> {{element.partsAmount}} </td>
-</ng-container>
-
-<!-- Weight Column -->
-<ng-container matColumnDef="laboramount">
-  <th mat-header-cell *matHeaderCellDef> Labor $ </th>
-  <td mat-cell *matCellDef="let element"> {{element.laborAmount}} </td>
-  </ng-container>
-
-<!-- Weight Column -->
-<ng-container matColumnDef="linetotal">
-  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Items $ </th>
-  <td mat-cell *matCellDef="let element"> {{element.lineItemTotal}} </td>
-  </ng-container>
 
 
 
 <!-- Weight Column -->
 <ng-container matColumnDef="total">
-  <th mat-header-cell *matHeaderCellDef> Total </th>
-  <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+  <th mat-header-cell *matHeaderCellDef> Extimate </th>
+  <td mat-cell *matCellDef="let element"> {{element.total | currency}} </td>
   </ng-container>
 
 <!-- Weight Column -->
@@ -132,6 +115,14 @@
 <tr mat-row *matRowDef="let row; columns: displayedColumnsOne;"></tr>
 </table>
 
+</mat-card-content>
+
+
+
+<mat-card-content class="card" *ngIf="!show">
+  <h1 class="title" >
+    No Order Found <br />
+  </h1>
 </mat-card-content>
 
 

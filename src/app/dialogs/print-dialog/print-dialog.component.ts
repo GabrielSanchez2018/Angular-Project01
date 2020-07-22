@@ -18,7 +18,7 @@ export class PrintDialogComponent implements OnInit {
   username: string;
   invoices: Object;
   services: Object;
-  barcodes: Object;
+  barcodes: any;
   displayedColumns = ['username', 'productcode','itemdescription', 'boxweight','priceperpound','total'];
   barcodeId: Object;
   name: string;
@@ -53,7 +53,7 @@ export class PrintDialogComponent implements OnInit {
     }), err =>{
       console.log(err)
     }
-    
+
     setInterval(() => {
       this.now = new Date();
     }, 1);

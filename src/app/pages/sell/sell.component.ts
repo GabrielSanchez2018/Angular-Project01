@@ -26,10 +26,10 @@ export class SellComponent implements OnInit {
 
   form: FormGroup;
   username: string;
-  invoices: Object;
+  invoices: any;
   services: Object;
   barcodes: Object;
-  displayedColumnsOne = ['id','lineitems', 'partsamount','laboramount','linetotal','total','date', 'functions'];
+  displayedColumnsOne = ['id','lineitems','total','date', 'functions'];
   displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
@@ -44,6 +44,7 @@ export class SellComponent implements OnInit {
   showbarcodes: Object;
   payuser: string;
   labelWeight: any;
+  show: boolean = true;
 
 
 
@@ -57,6 +58,19 @@ export class SellComponent implements OnInit {
     this.http.get('api/invoices/' + this.username).subscribe(res =>{
       this.invoices = res;
       console.log('this ivocices', this.invoices)
+      var invoiceCounter = this.invoices.length
+    console.log('This counts the invoice length',invoiceCounter)
+     /**
+      * If the invoice is bigger than 1, the user would not be able to imput another order.
+      *
+      */
+    if(invoiceCounter > 0){
+      console.log('true')
+      this.show = true
+    } else {
+      console.log('false')
+      this.show = false
+    }
     }, err => {
       console.log(err);
     })

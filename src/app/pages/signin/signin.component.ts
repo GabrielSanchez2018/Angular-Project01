@@ -20,6 +20,8 @@ import { Router } from '@angular/router';
 export class SigninComponent implements OnInit {
   form: FormGroup;
   errorMessage: string;
+  expires: number;
+  date: number
 
   constructor(private router: Router, private cookieService: CookieService, private fb: FormBuilder, private http: HttpClient ) {
   }
@@ -42,8 +44,12 @@ export class SigninComponent implements OnInit {
 
       console.log('here',res)
       if (res['auth']) {
+        var date = new Date();
+         var exp = date.setTime(date.getTime() + (30 * 1000));
+        console.log('var date', date)
+        console.log('var dte', exp)
 
-        this.cookieService.set('sessionuser', username, 1);
+        this.cookieService.set('sessionuser', username, 1   );
         this.router.navigate(['/']);
       } else {
         this.errorMessage = res['text'];

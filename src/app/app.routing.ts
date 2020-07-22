@@ -39,6 +39,7 @@ import { InvoiceComponent } from './pages/invoice/invoice.component';
 import { DatabaseManagementComponent } from './pages/database-management/database-management.component';
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
+import { Role } from './shared/guards/role';
 
 
 export const AppRoutes: Routes = [
@@ -155,6 +156,11 @@ export const AppRoutes: Routes = [
         path: 'service-repair',
         component: ServiceRepairComponent,
         canActivate: [SessionGuard]
+      },
+      {
+        path: 'print',
+        component: PrintDialogComponent,
+        canActivate: [Role]
       },
       {
         path: 'my-orders',

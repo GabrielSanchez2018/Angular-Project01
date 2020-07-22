@@ -24,6 +24,7 @@ export class MyOrdersComponent implements OnInit {
   usernameId: string;
   user: string;
   userId: string;
+  show: boolean = true;
 
 
 
@@ -32,6 +33,20 @@ export class MyOrdersComponent implements OnInit {
     this.username = this.cookieService.get('sessionuser');
     this.http.get('api/invoices/' + this.username.toUpperCase() ).subscribe(res =>{
       this.invoices = res;
+
+      var invoiceCounter = this.invoices.length
+      console.log('This counts the invoice length',invoiceCounter)
+     /**
+      * If the invoice is bigger than 1, the user would not be able to imput another order.
+      *
+      */
+    if(invoiceCounter > 0){
+      console.log('true')
+      this.show = true
+    } else {
+      console.log('false')
+      this.show = false
+    }
     }, err => {
       console.log(err);
     })
