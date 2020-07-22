@@ -35,9 +35,6 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
 
-
-
-
 // Components
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
@@ -131,7 +128,8 @@ import { PrintComponent } from './dialogs/print/print.component';
     DatabaseManagementComponent,
     PrintDialogComponent,
     OrderVerifyComponent,
-    PrintComponent
+    PrintComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -162,7 +160,9 @@ import { PrintComponent } from './dialogs/print/print.component';
     MatTabsModule,
     MatPaginatorModule,
     AutofocusModule,
-    MatBadgeModule
+    MatBadgeModule,
+    
+   
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
@@ -178,7 +178,8 @@ import { PrintComponent } from './dialogs/print/print.component';
     AuthService,
     ExporterService,
     PaySessionGuard,
-    RoleEmpGuard
+    RoleEmpGuard,
+    
   ],
   bootstrap: [AppComponent]
 })

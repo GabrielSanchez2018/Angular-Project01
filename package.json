@@ -43,10 +43,12 @@
     "mongoose": "^5.7.8",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0",
+    "ng-virtual-keyboard": "^0.4.0",
     "ngx-cookie-service": "^2.2.0",
     "primeicons": "^2.0.0",
     "primeng": "^8.0.0",
     "rxjs": "^6.4.0",
+    "simple-keyboard": "^2.29.72",
     "tslib": "^1.9.0",
     "xlsx": "^0.16.2",
     "zone.js": "~0.9.1"

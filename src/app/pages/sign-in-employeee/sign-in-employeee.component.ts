@@ -1,19 +1,29 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ControlContainer } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatInput } from '@angular/material';
+import Keyboard from "simple-keyboard";
+import { style } from '@angular/animations';
 
 
 @Component({
+  
   selector: 'app-sign-in-employeee',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './sign-in-employeee.component.html',
-  styleUrls: ['./sign-in-employeee.component.css']
+  styleUrls: ['./sign-in-employeee.component.css',
+
+  "../../../../node_modules/simple-keyboard/build/css/index.css",
+  ]
 })
 export class SignInEmployeeeComponent implements OnInit {
+  value = "";
+  keyboard: Keyboard;
 
+  
 
   form: FormGroup;
   errorMessage: any;
@@ -45,8 +55,42 @@ export class SignInEmployeeeComponent implements OnInit {
 
   }
 
+  ngAfterViewInit() {
+    this.keyboard = new Keyboard({
+      onChange: input => this.onChange(input),
+      onKeyPress: button => this.onKeyPress(button)
+    });
+  }
+
+  onChange = (input: string) => {
+    this.value = input;
+    console.log("Input changed", input);
+  };
+
+  onKeyPress = (button: string) => {
+    console.log("Button pressed", button);
+/**
+     * If you want to handle the shift and caps lock buttons
+     */
+    if (button === "{shift}" || button === "{lock}") this.handleShift();
+  };
+
+  onInputChange = (event: any) => {
+    this.keyboard.setInput(event.target.form.value);
+  };
+
+  handleShift = () => {
+    let currentLayout = this.keyboard.options.layoutName;
+    let shiftToggle = currentLayout === "default" ? "shift" : "default";
+
+    this.keyboard.setOptions({
+      layoutName: shiftToggle
+    });
+  };
+
   ngOnInit() {
     this.form = this.fb.group({
+      value: [this.value],
       EmployeeId: [
         null,
         Validators.compose([
@@ -55,6 +99,7 @@ export class SignInEmployeeeComponent implements OnInit {
         ])
       ]
     });
+    console.log('this is the value from the keyboard', this.value)
   }
 
 
@@ -121,7 +166,8 @@ export class SignInEmployeeeComponent implements OnInit {
 
 
    login() {
-    const EmployeeId = this.form.controls["EmployeeId"].value;
+     //REPLACED THE NG FORM BY THE VALUE THE KEYBOARD INPUTS
+    const EmployeeId = this.value;
 
     this.http.get("/api/employees/" + EmployeeId.toUpperCase()).subscribe(res => {
       if (res) {

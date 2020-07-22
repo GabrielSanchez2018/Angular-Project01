@@ -13,7 +13,7 @@
 
             <mat-form-field appearance="outline">
               <mat-label>Employee Id</mat-label>
-              <input matInput [formControl]="form.controls ['EmployeeId']" placeholder="Employee Id" autofocus/>
+              <input (input)="onInputChange($event)" value={{value}} matInput [formControl]="value" placeholder="Employee Id" autofocus/>
               <mat-error *ngIf="form.controls['EmployeeId'].hasError('required') && form.controls['EmployeeId'].touched">
                 Employee ID is a required field.
               </mat-error>
@@ -21,14 +21,21 @@
                 Employee ID must be letters.
               </mat-error>
             </mat-form-field>
-
+            
           </mat-card-content>
-
+          <div class="simple-keyboard"></div>
           <mat-card-actions>
-            <button type="submit" fxFlex mat-raised-button [disabled]="!form.valid" class="buttonSubmit">Submit</button>
+            
+            <button type="submit" fxFlex mat-raised-button  class="buttonSubmit">Submit</button>
           </mat-card-actions>
         </form>
       </mat-card>
     </mat-card-content>
   </mat-card>
+
+  <!-- <div style="text-align:center">
+    <input (input)="onInputChange($event)" class="input" value={{value}} placeholder="Tap on the virtual keyboard to start" />
+   
+  </div> -->
+  
 
