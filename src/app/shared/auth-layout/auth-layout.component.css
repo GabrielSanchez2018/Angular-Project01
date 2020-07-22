@@ -60,6 +60,6 @@ mat-grid-tile {
 }
 
 .col-md-8{
-  background-color: #005640;
+  background-color: none;
   border: 2px solid white;
 }
