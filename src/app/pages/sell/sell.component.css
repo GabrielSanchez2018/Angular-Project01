@@ -54,3 +54,6 @@ tr.mat-footer-row {
   margin: 0 auto;
 
 }
+.ng-hide.ng-hide-animate{
+  display: none !important;
+}
