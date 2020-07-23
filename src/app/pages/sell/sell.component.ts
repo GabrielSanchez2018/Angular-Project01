@@ -29,7 +29,7 @@ export class SellComponent implements OnInit {
   invoices: any;
   services: Object;
   barcodes: Object;
-  displayedColumnsOne = ['id','lineitems','total','date', 'functions'];
+  displayedColumnsOne = ['id','code','lineitems','total','date', 'functions'];
   displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
@@ -185,6 +185,21 @@ rerender(){
 
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
+
+      console.log('this is the barcode', enteredProductcode)
+
+      // if (enteredProductcode > 47){
+      //   this.snackBar.open(
+      //     "Item Scaned has more than 46 digits.",
+      //     "error",
+      //     {
+      //       duration: 2000,
+      //       verticalPosition: "top"
+      //     }
+      //   );
+      // } else{
+
+      
 
   //Product Code label
    var productCode = Array.from(enteredProductcode.slice(10,15));
@@ -462,7 +477,7 @@ function descriptionFunction(){
 
 
   }
-
+    
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
 var totalprice = totalpriceResult.toFixed(1);
@@ -501,6 +516,7 @@ this.changeDetectorRefs.detectChanges();
 
     })
   })
+
   }
 
   // print(){
