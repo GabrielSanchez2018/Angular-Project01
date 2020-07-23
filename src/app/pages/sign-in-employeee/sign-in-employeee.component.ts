@@ -8,9 +8,15 @@ import { MatSnackBar, MatInput } from '@angular/material';
 import Keyboard from "simple-keyboard";
 import { style } from '@angular/animations';
 
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
 
 @Component({
-  
+
   selector: 'app-sign-in-employeee',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './sign-in-employeee.component.html',
@@ -23,7 +29,7 @@ export class SignInEmployeeeComponent implements OnInit {
   value = "";
   keyboard: Keyboard;
 
-  
+
 
   form: FormGroup;
   errorMessage: any;
@@ -31,6 +37,7 @@ export class SignInEmployeeeComponent implements OnInit {
   show: boolean;
   employees: Object;
 
+  
   constructor(
     private router: Router,
     private cookieService: CookieService,
@@ -58,7 +65,8 @@ export class SignInEmployeeeComponent implements OnInit {
   ngAfterViewInit() {
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
-      onKeyPress: button => this.onKeyPress(button)
+      onKeyPress: button => this.onKeyPress(button),
+       //theme: "hg-theme-default myTheme1"
     });
   }
 
@@ -178,13 +186,16 @@ export class SignInEmployeeeComponent implements OnInit {
         //this.stepper
        this.router.navigate(["/"]);
       } else {
+
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",
           "ERROR",
+
           {
             duration: 4000,
             verticalPosition: "top"
           }
+
         );
 
       }

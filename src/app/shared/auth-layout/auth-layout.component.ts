@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-auth-layout',
   templateUrl: './auth-layout.component.html',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthLayoutComponent implements OnInit {
   year: number = Date.now();
+
 
   constructor() { }
 

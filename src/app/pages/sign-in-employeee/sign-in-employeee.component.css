@@ -1,6 +1,6 @@
  .signin-container{
   width: 100%;
-  min-width: 100%;
+  min-width: 70%;
   max-width: 100%;
   margin-top: 20%;
   margin-bottom: 0;
@@ -23,7 +23,50 @@
   color: white;
 }
 
-.simple-keyboard{
-  width: 50%;
-  margin: 0 auto;
+ul {
+  text-align: center;
 }
+
+input {
+
+  width: 0 auto;
+
+  font-size: 20px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.simple-keyboard {
+  max-width: 850px;
+}
+
+
+/*
+  Theme: myTheme1
+*/
+.simple-keyboard.myTheme1 {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-radius: 1px solid red;
+}
+
+.simple-keyboard.myTheme1 .hg-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: #1c4995;
+  color: white;
+}
+
+#root .simple-keyboard.myTheme1 + .simple-keyboard-preview {
+  background: #1c4995;
+}
+

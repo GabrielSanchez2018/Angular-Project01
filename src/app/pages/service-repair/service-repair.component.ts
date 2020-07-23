@@ -83,15 +83,17 @@ selectedValue: string;
     const numSelected = this.selection.selected.length;
     if(numSelected > 1){
       this.show = false
-      
+
     } else {
       this.show = true
-     
+      
+
 
     }
 
     const numRows = this.services;
     return numSelected === numRows;
+
   }
 
 
@@ -99,7 +101,7 @@ selectedValue: string;
     this.isAllSelected() ?
         this.selection.clear():
         this.services.forEach(row => this.selection.select(row));
-        
+
   }
 
   checkboxLabel(row?: ServiceRepairComponent): string {
@@ -107,7 +109,7 @@ selectedValue: string;
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
      `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
-    
+
   }
 
 

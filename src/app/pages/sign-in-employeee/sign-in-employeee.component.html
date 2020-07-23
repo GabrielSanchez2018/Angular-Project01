@@ -2,16 +2,17 @@
 
 
   <mat-card class="signin-container">
-    <mat-card-title class="signin-title mat-headline">Employee Sign in</mat-card-title><br />
+    <img src="../../../assets/images/gop.png" alt="gop" style="float: center;">
+<br>
     <mat-card-subtitle class="signin-subtitle mat-headline">You must enter a valid employee id to proceed
     </mat-card-subtitle>
-    <mat-card-content>
-      <mat-card class="mat-elevation-z0" fxLayout="column" fxLayoutGap="10px">
+    <mat-card-content >
+      <mat-card class="mat-elevation-z0"fxLayout="column" fxLayoutGap="10px">
         <form [formGroup]="form" (ngSubmit)="login(); form.reset()" #loginForm="ngForm">
 
-          <mat-card-content>
+          <mat-card-content style="background-color: white;">
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" style=" width: 50%; margin:0">
               <mat-label>Employee Id</mat-label>
               <input (input)="onInputChange($event)" value={{value}} matInput [formControl]="value" placeholder="Employee Id" autofocus/>
               <mat-error *ngIf="form.controls['EmployeeId'].hasError('required') && form.controls['EmployeeId'].touched">
@@ -21,11 +22,11 @@
                 Employee ID must be letters.
               </mat-error>
             </mat-form-field>
-            
+            <div class="simple-keyboard"></div>
           </mat-card-content>
-          <div class="simple-keyboard"></div>
+
           <mat-card-actions>
-            
+
             <button type="submit" fxFlex mat-raised-button  class="buttonSubmit">Submit</button>
           </mat-card-actions>
         </form>
@@ -35,7 +36,7 @@
 
   <!-- <div style="text-align:center">
     <input (input)="onInputChange($event)" class="input" value={{value}} placeholder="Tap on the virtual keyboard to start" />
-   
+
   </div> -->
-  
+
 

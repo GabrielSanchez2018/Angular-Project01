@@ -63,3 +63,10 @@ mat-grid-tile {
   background-color: none;
   border: 2px solid white;
 }
+.newForm{
+  width: 100%;
+  max-width: 48%;
+  min-width: 48%;
+  margin: 0 auto;
+
+}

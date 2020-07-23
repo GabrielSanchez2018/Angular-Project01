@@ -9,6 +9,7 @@ import { SessionGuard } from './shared/guards/session.guard';
 import { RoleGuard } from './shared/guards/role-guard';
 import { AutofocusModule } from 'angular-autofocus-fix';
 
+
 // Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -129,7 +130,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     PrintDialogComponent,
     OrderVerifyComponent,
     PrintComponent,
-   
+
   ],
   imports: [
     BrowserModule,
@@ -161,8 +162,8 @@ import { PrintComponent } from './dialogs/print/print.component';
     MatPaginatorModule,
     AutofocusModule,
     MatBadgeModule,
-    
-   
+
+
   ],
   entryComponents: [
     SecurityQuestionDeleteDialogComponent,
@@ -179,7 +180,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     ExporterService,
     PaySessionGuard,
     RoleEmpGuard,
-    
+
   ],
   bootstrap: [AppComponent]
 })
