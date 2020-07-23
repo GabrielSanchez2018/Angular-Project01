@@ -40,7 +40,21 @@
   </mat-step>
 </mat-horizontal-stepper>
  -->
+ 
+ <div class="logOut" fxLayout="column" style="float: right; padding-right: 15%; margin-top: 14%; height: 50px;">
+  <!-- <p id="demo">{{timeExpire()}}</p> -->
+  <button
+  class='order2'
+  style='margin: 0 auto; text-align: center;'
+  mat-raised-button
+  (click)="onLogout()"
+  color='warn'> <span class="material-icons">
+    exit_to_app
+    </span> Logout | Salir
+    
+</button>
 
+</div>
 <div class="outsideContainer">
 
   <div class="insideContainer">
@@ -59,7 +73,11 @@
 
   <h1 class="title" *ngIf="!show">
     Thank you for your order! <br />
+
   </h1>
+
+  
+
 
 
 
@@ -75,6 +93,7 @@
     routerLink='/service-repair'
     mat-raised-button
     color='accent'
+
 
     >Order Meat Now! | Ordena Carne Aqui!</button>
 
@@ -104,10 +123,13 @@
   color='accent'>Check my Order | Vee tu Order Aqui
 
 </button>
+
 </div>
 </div>
 
 </div>
+
+
 
 
 </body>
