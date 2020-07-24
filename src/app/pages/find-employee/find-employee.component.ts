@@ -66,6 +66,7 @@ export class FindEmployeeComponent implements OnInit {
     console.log(EmployeeId);
     this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
       if (res) {
+        console.log('this is res', res)
         this.cookieService.set('paysession', EmployeeId, 1);
 
         //this.stepper

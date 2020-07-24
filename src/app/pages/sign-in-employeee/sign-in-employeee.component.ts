@@ -175,7 +175,9 @@ export class SignInEmployeeeComponent implements OnInit {
 
    login() {
      //REPLACED THE NG FORM BY THE VALUE THE KEYBOARD INPUTS
-    const EmployeeId = this.value;
+    const EmployeeId = this.value ||  this.form.controls["EmployeeId"].value;
+
+   // const EmployeeId = this.form.controls["EmployeeId"].value;
 
     this.http.get("/api/employees/" + EmployeeId.toUpperCase()).subscribe(res => {
       if (res) {

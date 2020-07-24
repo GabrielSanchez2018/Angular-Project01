@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
+import { error } from 'util';
 
 
 @Component({
@@ -38,6 +39,7 @@ export class OrderVerifyComponent implements OnInit {
   bar: any;
   map: any;
   matInput: any;
+  orderVerify: Object;
 
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
@@ -59,13 +61,14 @@ export class OrderVerifyComponent implements OnInit {
     }
     this.username = this.cookieService.get('paysession');
     this.http.get('api/orderverify/' ).subscribe(res =>{
+      this.orderVerify = res
         //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
 
-        if(Array.isArray(res)){
-          this.barcodes = res.filter(q => q.username === this.username);
-       }
+      //   if(Array.isArray(res)){
+      //     this.barcodes = res.filter(q => q.username === this.username);
+      //  }
       //this.barcodes = res.filter(q => q.username === this.username);;
-      console.log('noiniewnfis', this.barcodes)
+      console.log('this is orderverify', this.orderVerify)
     }), err =>{
       console.log(err)
     }
@@ -161,6 +164,33 @@ rerender(){
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
 
+       /***
+       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
+       */
+      console.log('this is the barcode', enteredProductcode.length)
+
+      if (enteredProductcode.length > 46){
+        this.snackBar.open(
+          "Item Scaned has more than 46 digits.",
+          "error",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          } 
+        ) 
+        throw error;
+      } else if(enteredProductcode.length < 46){
+        this.snackBar.open(
+          "Item Scaned has Less than 46 digits.",
+          "error",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          } 
+        ) 
+        throw error;
+      }
+
   //Product Code label
    var productCode = Array.from(enteredProductcode.slice(10,15));
    var labelproductCode = productCode.join('');
@@ -188,7 +218,7 @@ function myFunction(){
       return dataservices[0].price
 
     } else if(labelproductCode == dataservices[1].id){
-      return dataservices[1].price
+      return dataservices[1].price 
 
 
     } else if(labelproductCode == dataservices[2].id){
@@ -463,14 +493,30 @@ var counts = "BoxCounts"
       barcode: this.form.controls.barcode.value,
       orderDate: new Date()
     }).subscribe(res =>{
-      this.changeDetectorRefs.detectChanges();
+      if (res){
+
+        this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
 
       // this will reset the form
       //this.successSnackbar();
       this.form.reset();
       this.rerender();
+      } else {
+        this.snackBar.open(
+          "The employee ID you entered is invalid, please try again.",
+          "ERROR",
+
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          }
+
+        );
+      }
+      
     });
+    
   });
   }
 
