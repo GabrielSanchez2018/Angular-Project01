@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatSnackBar, MatInput } from '@angular/material';
 import Keyboard from "simple-keyboard";
 import { style } from '@angular/animations';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 export interface Tile {
   color: string;
@@ -37,7 +38,7 @@ export class SignInEmployeeeComponent implements OnInit {
   show: boolean;
   employees: Object;
 
-  
+
   constructor(
     private router: Router,
     private cookieService: CookieService,

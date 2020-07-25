@@ -35,6 +35,7 @@ import {ObserversModule} from '@angular/cdk/observers';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 // Components
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
@@ -162,6 +163,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     MatPaginatorModule,
     AutofocusModule,
     MatBadgeModule,
+    MatExpansionModule
 
 
   ],

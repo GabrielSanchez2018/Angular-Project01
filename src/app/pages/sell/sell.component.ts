@@ -186,6 +186,18 @@ rerender(){
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
 
+      console.log('barcode', enteredProductcode.length)
+      if(enteredProductcode.length > 46){
+        this.snackBar.open(
+          "Barcode has more than 46 digits.",
+          "ERROR",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          }
+        );
+      }
+
   //Product Code label
    var productCode = Array.from(enteredProductcode.slice(10,15));
    var labelproductCode = productCode.join('');
