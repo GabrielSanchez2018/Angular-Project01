@@ -12,6 +12,7 @@ import { MatSnackBar } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
 import { toArray } from 'rxjs/operators';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
+import { error } from 'util';
 
 
 
@@ -29,7 +30,7 @@ export class SellComponent implements OnInit {
   invoices: any;
   services: Object;
   barcodes: Object;
-  displayedColumnsOne = ['id','lineitems','total','date', 'functions'];
+  displayedColumnsOne = ['id','code','lineitems','total','date', 'functions'];
   displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
@@ -185,6 +186,40 @@ rerender(){
 
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
+      
+      /***
+       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
+       */
+      console.log('this is the barcode', enteredProductcode.length)
+
+      if (enteredProductcode.length > 46){
+        this.snackBar.open(
+          "Item Scaned has more than 46 digits.",
+          "error",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          } 
+        ) 
+        throw error
+      } else if(enteredProductcode.length < 46){
+        
+        this.snackBar.open(
+          "Item Scaned has Less than 46 digits.",
+          "error",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          } 
+         
+          
+        ) 
+        throw error
+        
+        
+      }
+
+      
 
       console.log('barcode', enteredProductcode.length)
       if(enteredProductcode.length > 46){
@@ -474,7 +509,7 @@ function descriptionFunction(){
 
 
   }
-
+    
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
 var totalprice = totalpriceResult.toFixed(1);
@@ -501,18 +536,35 @@ this.changeDetectorRefs.detectChanges();
       orderDate: new Date()
 
     }).subscribe(res =>{
-      this.changeDetectorRefs.detectChanges();
-      console.log(this.barcodes);
-      this.router.navigate(['/barcode-info']);
-      // this will reset the form
+      
+      if (res){
+        console.log('this is res inthe sell component', res)
+        this.changeDetectorRefs.detectChanges();
+        console.log(this.barcodes);
+        this.router.navigate(['/barcode-info']);
+        // this will reset the form
+  
+        this.successSnackbar();
+  
+        this.form.reset();
+        this.rerender();
+      } else {
+        this.snackBar.open(
+          "The employee ID you entered is invalid, please try again.",
+          "ERROR",
 
-      this.successSnackbar();
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          }
 
-      this.form.reset();
-      this.rerender();
+        );
+      }
+     
 
     })
   })
+
   }
 
   // print(){

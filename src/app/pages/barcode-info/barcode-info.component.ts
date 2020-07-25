@@ -8,6 +8,7 @@ import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 import { reduce } from 'rxjs/operators';
+import { error } from 'util';
 
 
 
@@ -175,6 +176,38 @@ rerender(){
 
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
+
+       /***
+       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
+       */
+      console.log('this is the barcode', enteredProductcode.length)
+
+      if (enteredProductcode.length > 46){
+        this.snackBar.open(
+          "Item Scaned has more than 46 digits.",
+          "error",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          } 
+        ) 
+        throw error
+      } else if(enteredProductcode.length < 46){
+        
+        this.snackBar.open(
+          "Item Scaned has Less than 46 digits.",
+          "error",
+          {
+            duration: 4000,
+            verticalPosition: "top"
+          } 
+         
+          
+        ) 
+        throw error
+        
+        
+      }
 
   //Product Code label
    var productCode = Array.from(enteredProductcode.slice(10,15));
