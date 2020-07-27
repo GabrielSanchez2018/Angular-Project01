@@ -36,6 +36,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+
 
 // Components
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
@@ -84,6 +87,7 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { PrintComponent } from './dialogs/print/print.component';
+import { TimerComponent } from './pages/timer/timer.component';
 
 
 @NgModule({
@@ -131,6 +135,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     PrintDialogComponent,
     OrderVerifyComponent,
     PrintComponent,
+    TimerComponent,
 
   ],
   imports: [
@@ -163,7 +168,10 @@ import { PrintComponent } from './dialogs/print/print.component';
     MatPaginatorModule,
     AutofocusModule,
     MatBadgeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    
 
 
   ],

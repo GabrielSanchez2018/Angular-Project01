@@ -71,4 +71,8 @@ export class PurchasesByServiceComponent implements OnInit {
     }
     ngOnInit() {
     }
+
+    getTotalBoxes(){
+      return this.purchases.map(t => t.count).reduce((acc, value) => acc + value, 0 );
+    }
 }
