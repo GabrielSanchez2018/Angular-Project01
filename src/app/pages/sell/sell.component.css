@@ -32,12 +32,7 @@ tr.mat-footer-row {
 
 }
 
-.card{
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 5%;
 
-}
 
 .title {
   font-size: 30px;
@@ -56,4 +51,19 @@ tr.mat-footer-row {
 }
 .ng-hide.ng-hide-animate{
   display: none !important;
+}
+
+.col-md-4{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5%;
+
+
+}
+
+.col-md-8{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5%;
+
 }

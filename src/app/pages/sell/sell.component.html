@@ -1,6 +1,16 @@
 
+
+
+
   <mat-card class="insert">
-    <mat-card-title>Barcode Scann</mat-card-title>
+
+
+
+
+    <mat-card-title>{{employees?.FirstName}} {{employees?.LastName}} {{employees?.Department}}</mat-card-title>
+
+
+
     <br/>
     <form [formGroup]="form" (ngSubmit)="create();" #barcodeForm= "ngForm">
       <mat-card-content>
@@ -13,6 +23,11 @@
           </mat-form-field>
         </div>
       </mat-card-content>
+      <mat-divider></mat-divider>
+      <br>
+
+     <p> Employee ID:<span style="color: green;"> {{employees?.EmployeeID}}</span>
+     </p>
 
       <br/>
       <mat-card-actions align="end">
@@ -51,7 +66,7 @@
         element?.lineItems[0]?.id
       }}
     </li>
-  
+
   <li>
     {{
       element?.lineItems[1]?.id
@@ -67,7 +82,7 @@
       element?.lineItems[4]?.id
     }}
   </li>
-  
+
   <li>
   {{
     element?.lineItems[5]?.id
@@ -81,7 +96,7 @@
   </ul>
   </td>
   </ng-container>
-  
+
 
 <!-- Name Column -->
 <ng-container matColumnDef="lineitems">
@@ -161,9 +176,9 @@
 
 
 
-<mat-card-content class="card" *ngIf="!show">
+<mat-card-content class="card" *ngIf="!show" style="background-color: red;">
   <h1 class="title" >
-    No Order Found <br />
+    No Order Found for {{employees?.FirstName}} {{employees?.LastName}}<br />
   </h1>
 </mat-card-content>
 

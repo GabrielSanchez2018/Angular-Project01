@@ -8,6 +8,7 @@ import {ExporterService} from '../../services/exporter/exporter.service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-sell-report',
@@ -26,6 +27,8 @@ export class SellReportComponent implements OnInit {
   orderssum: Object;
 
   dataSource = new MatTableDataSource(this.barcodes);
+  username: string;
+  employees: Object;
 
 
    applyFilter(event: Event) {
@@ -38,12 +41,16 @@ export class SellReportComponent implements OnInit {
 
 
 
-    constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog  ) {
+    constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog , private cookieService: CookieService ) {
 
+      this.username = this.cookieService.get('paysession');
+      this.http.get('/api/employees/' + this.username).subscribe(res =>{
+        this.employees = res
+        console.log('employees', this.employees)
+      }), err =>{
+        console.log(err)
 
-
-
-
+      }
 
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;

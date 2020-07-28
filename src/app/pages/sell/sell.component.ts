@@ -46,6 +46,8 @@ export class SellComponent implements OnInit {
   payuser: string;
   labelWeight: any;
   show: boolean = true;
+  employeeUser: string;
+  employees: Object;
 
 
 
@@ -54,7 +56,14 @@ export class SellComponent implements OnInit {
 
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
+    this.employeeUser = this.cookieService.get('paysession');
+    this.http.get('/api/employees/' + this.employeeUser).subscribe(res =>{
+      this.employees = res
+      console.log('employees', this.employees)
+    }), err =>{
+      console.log(err)
 
+    }
      this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' + this.username).subscribe(res =>{
       this.invoices = res;
@@ -186,9 +195,9 @@ rerender(){
 
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
-      
+
       /***
-       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
+       * This Function will throw an error when the barcode is less than and longer than 46 digits.
        */
       console.log('this is the barcode', enteredProductcode.length)
 
@@ -199,27 +208,27 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          } 
-        ) 
+          }
+        )
         throw error
       } else if(enteredProductcode.length < 46){
-        
+
         this.snackBar.open(
           "Item Scaned has Less than 46 digits.",
           "error",
           {
             duration: 4000,
             verticalPosition: "top"
-          } 
-         
-          
-        ) 
+          }
+
+
+        )
         throw error
-        
-        
+
+
       }
 
-      
+
 
       console.log('barcode', enteredProductcode.length)
       if(enteredProductcode.length > 46){
@@ -509,7 +518,7 @@ function descriptionFunction(){
 
 
   }
-    
+
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
 var totalprice = totalpriceResult.toFixed(1);
@@ -536,16 +545,16 @@ this.changeDetectorRefs.detectChanges();
       orderDate: new Date()
 
     }).subscribe(res =>{
-      
+
       if (res){
         console.log('this is res inthe sell component', res)
         this.changeDetectorRefs.detectChanges();
         console.log(this.barcodes);
         this.router.navigate(['/barcode-info']);
         // this will reset the form
-  
+
         this.successSnackbar();
-  
+
         this.form.reset();
         this.rerender();
       } else {
@@ -560,7 +569,7 @@ this.changeDetectorRefs.detectChanges();
 
         );
       }
-     
+
 
     })
   })

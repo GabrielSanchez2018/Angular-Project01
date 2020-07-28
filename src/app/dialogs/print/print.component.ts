@@ -36,9 +36,24 @@ export class PrintComponent implements OnInit {
   matInput: any;
   time: any;
   test: string;
+  employeeUser: string;
+  employees: Object;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog) {
-  //this.barcode = data.barcode;
+    /**
+     * This api provides information about the user
+     */
+
+    this.employeeUser = this.cookieService.get('paysession');
+    this.http.get('/api/employees/' + this.employeeUser).subscribe(res =>{
+      this.employees = res
+      console.log('employees', this.employees)
+    }), err =>{
+      console.log(err)
+
+    }
+
+    //this.barcode = data.barcode;
   console.log('this is datadata', this.barcode)
 
   this.username = this.cookieService.get('paysession');

@@ -24,7 +24,7 @@ export class BarcodeInfoComponent implements OnInit {
   username: string;
   invoices: Object;
   services: Object;
-  barcodes: Object;
+  barcodes: any;
   displayedColumns = ['username',
   'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
@@ -41,9 +41,19 @@ export class BarcodeInfoComponent implements OnInit {
   map: any;
   matInput: any;
   cookie: any;
+  employeeUser: string;
+  employees: Object;
 
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
+    this.employeeUser = this.cookieService.get('paysession');
+    this.http.get('/api/employees/' + this.employeeUser).subscribe(res =>{
+      this.employees = res
+      console.log('employees', this.employees)
+    }), err =>{
+      console.log(err)
+
+    }
 
     this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' ).subscribe(res =>{
@@ -178,7 +188,7 @@ rerender(){
       const enteredProductcode = this.form.controls.barcode.value;
 
        /***
-       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
+       * This Function will throw an error when the barcode is less than and longer than 46 digits.
        */
       console.log('this is the barcode', enteredProductcode.length)
 
@@ -189,24 +199,24 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          } 
-        ) 
+          }
+        )
         throw error
       } else if(enteredProductcode.length < 46){
-        
+
         this.snackBar.open(
           "Item Scaned has Less than 46 digits.",
           "error",
           {
             duration: 4000,
             verticalPosition: "top"
-          } 
-         
-          
-        ) 
+          }
+
+
+        )
         throw error
-        
-        
+
+
       }
 
   //Product Code label
