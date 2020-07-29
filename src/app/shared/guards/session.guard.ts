@@ -18,7 +18,7 @@ export class SessionGuard implements CanActivate {
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
         const isAuthenticated = this.cookieService.get('sessionuser');
-
+        document.cookie = "tagname = test;secure";
         if (isAuthenticated) {
             return true;
         } else {

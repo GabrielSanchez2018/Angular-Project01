@@ -87,7 +87,7 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { PrintComponent } from './dialogs/print/print.component';
-import { TimerComponent } from './pages/timer/timer.component';
+// import { TimerComponent } from './pages/timer/timer.component';
 
 
 @NgModule({
@@ -135,7 +135,7 @@ import { TimerComponent } from './pages/timer/timer.component';
     PrintDialogComponent,
     OrderVerifyComponent,
     PrintComponent,
-    TimerComponent,
+    // TimerComponent,
 
   ],
   imports: [

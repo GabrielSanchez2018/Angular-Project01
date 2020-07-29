@@ -40,7 +40,7 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { Role } from './shared/guards/role';
-import { TimerComponent } from './pages/timer/timer.component';
+// import { TimerComponent } from './pages/timer/timer.component';
 
 
 export const AppRoutes: Routes = [
@@ -183,11 +183,11 @@ export const AppRoutes: Routes = [
         component: RoleCreateComponent,
         canActivate: [RoleGuard]
       },
-      {
-        path: 'timer',
-        component: TimerComponent,
-        canActivate: [RoleGuard]
-      },
+      //{
+      //   path: 'timer',
+      //   component: TimerComponent,
+      //   canActivate: [RoleGuard]
+      // }
       {
         path: 'service-management',
         component: ServiceManagementComponent,
