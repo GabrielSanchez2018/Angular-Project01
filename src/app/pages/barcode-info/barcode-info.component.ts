@@ -7,7 +7,7 @@ import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
-import { reduce } from 'rxjs/operators';
+import { reduce, first } from 'rxjs/operators';
 import { error } from 'util';
 
 
@@ -38,18 +38,26 @@ export class BarcodeInfoComponent implements OnInit {
   userId: string;
   find: object;
   bar: any;
-  map: any;
   matInput: any;
   cookie: any;
   employeeUser: string;
   employees: Object;
+  firstame: any;
+  FirstName: Object;
 
+  filter: Object;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
     this.employeeUser = this.cookieService.get('paysession');
     this.http.get('/api/employees/' + this.employeeUser).subscribe(res =>{
       this.employees = res
       console.log('employees', this.employees)
+      /**
+       * Employee info
+       */
+
+
+
     }), err =>{
       console.log(err)
 
@@ -70,6 +78,7 @@ export class BarcodeInfoComponent implements OnInit {
     }), err => {
       console.log(err);
     }
+
     this.username = this.cookieService.get('paysession');
     this.http.get('api/barcodes/' ).subscribe(res =>{
         //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
@@ -81,10 +90,7 @@ export class BarcodeInfoComponent implements OnInit {
       console.log('noiniewnfis', this.barcodes)
     }), err =>{
       console.log(err)
-
     }
-
-
   }
   print(){
     this.http.get('api/barcodes/').subscribe(res =>{
@@ -130,6 +136,21 @@ export class BarcodeInfoComponent implements OnInit {
     }
 
   }
+
+  getFirstName() {
+    //this.employees.map(t => t.FirstName).reduce((acc, value) => acc + value, 0);
+    // if(Array.isArray(this.employees)){
+    //  return this.employees.map(t => t.EmployeeID).reduce((acc, value) => acc + value, 0);
+
+
+  }
+
+  // getFirstName() {
+  //   //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+  //   if(Array.isArray(this.employees)){
+  //    return this.employees.map(t => t.FirstName).reduce((acc, value) => acc + value, 0);
+  //   }
+  // }
 
   //Snackbar success message
 successSnackbar(){
@@ -211,12 +232,8 @@ rerender(){
             duration: 4000,
             verticalPosition: "top"
           }
-
-
         )
         throw error
-
-
       }
 
   //Product Code label
@@ -496,6 +513,7 @@ function myFunction(){
 
   }
 
+
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
 var totalprice = totalpriceResult.toFixed(1);
@@ -505,11 +523,14 @@ var itemdescription = descriptionFunction();
 var price = myFunction();
 
 
+
+console.log('asdfrniovnoirevnirnvornevrnvininreoivneionevir', this.getFirstName())
 console.log('here is the price', price);
 console.log('here is the total price', totalprice);
 console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
+
 
 
 
@@ -519,7 +540,8 @@ this.changeDetectorRefs.detectChanges();
       itemdescription: itemdescription,
       username: this.username,
       barcode: this.form.controls.barcode.value,
-      orderDate: new Date()
+      orderDate: new Date(),
+
     }).subscribe(res =>{
       this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
