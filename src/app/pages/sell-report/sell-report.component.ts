@@ -24,7 +24,7 @@ export class SellReportComponent implements OnInit {
     itemCount = [];
     labels = [];
   barcodes: any;
-  orderssum: Object;
+  orderssum: any;
 
   dataSource = new MatTableDataSource(this.barcodes);
   username: string;
@@ -121,10 +121,14 @@ export class SellReportComponent implements OnInit {
 
 
     exportAsXLSX(): void{
-      this.exportService.exportToExcel(this.ventas , 'Total_Items');
+      this.exportService.exportToExcel(this.ventas , 'Credit_Report');
     }
 
     exportAsXLSXThird(): void{
+      this.exportService.exportToExcel(this.orderssum , 'Scanned_Items');
+    }
+    
+    exportAsXLSXTAll(): void{
       this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
     }
 

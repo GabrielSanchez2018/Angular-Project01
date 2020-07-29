@@ -483,7 +483,7 @@ console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
 
-var counts = "BoxCounts"
+var counts = "Leftover"
 
     this.http.post('/api/orderverify/', {
       price: price,
