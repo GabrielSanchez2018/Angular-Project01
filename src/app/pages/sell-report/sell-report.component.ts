@@ -128,7 +128,7 @@ export class SellReportComponent implements OnInit {
       this.exportService.exportToExcel(this.orderssum , 'Scanned_Items');
     }
     
-    exportAsXLSXTAll(): void{
+    exportAsXLSXAll(): void{
       this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
     }
 

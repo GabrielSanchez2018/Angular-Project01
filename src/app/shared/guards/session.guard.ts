@@ -1,5 +1,5 @@
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name:  Gabriel Sanchez
 Date: April 19, 2020
 Assignment: session guard
 Description: prevents access to users that are not signed in

@@ -7,22 +7,22 @@ var uniqueValidator = require('mongoose-unique-validator')
 
 
 let barcodeSchema = mongoose.Schema({
-  barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
+  //barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
   username: {type: String},
-  barcode: {type: String },
+  barcode: {type: String, unique: true, required: true, dropDups: true},
   price: {type: Number},
+  barBoxNetWeight:{type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},
-  barShippingContainerCode:{type: Number},
-  barPackagingIndicator:{type: Number},
-  barManufacturerNumber:{type: Number},
+  //barShippingContainerCode:{type: Number},
+  //barPackagingIndicator:{type: Number},
+  //barManufacturerNumber:{type: Number},
   barProductCode:{type: Number},
-  barShippingContainerCS:{type: Number},
-  barBoxNetWeightIdentifier:{type: Number},
-  barBoxNetWeight:{type: Number},
-  barDateOfProduction:{type: Number},
-  barDateOfProductionyymmdd:{type: Number},
-  barSerialNumberIndentifier:{type: Number},
+  //barShippingContainerCS:{type: Number},
+  //barBoxNetWeightIdentifier:{type: Number},
+  //barDateOfProduction:{type: Number},
+  //barDateOfProductionyymmdd:{type: Number},
+  //barSerialNumberIndentifier:{type: Number},
   orderDate: {type: Date}
 });
 

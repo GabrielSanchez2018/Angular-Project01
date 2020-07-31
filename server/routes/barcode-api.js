@@ -29,8 +29,8 @@ router.get('/barcodes-graph', function(req, res, next) {
         "_id": "$itemdescription",
         //"itemdescription": {"$first": "$itemdescription"},
         "count": {"$sum": 1},
-        "totalprice": {"$sum": "$totalprice" },
        "totalweight" : {"$sum": "$barBoxNetWeight"},
+       "totalprice": {"$sum": "$totalprice" },
        //"username": {"$first": "$username"},
       },
 
@@ -80,6 +80,8 @@ router.get('/order-sum', function(req, res, next){
 
 
 
+
+
 //Post Barcode
 router.post('/', function(req, res, next){
 
@@ -126,19 +128,19 @@ router.post('/', function(req, res, next){
             username: req.body.username,
              barcode: req.body.barcode,
              price: req.body.price,
+             barBoxNetWeight : labelWeight,
              totalprice: req.body.totalprice,
              itemdescription: req.body.itemdescription,
-             barShippingContainerCode : labelShippingContainer,
-             barPackagingIndicator : labelpackagingIndicator,
-             barManufacturerNumber : labelpackagingManufacturerNumber,
+            // barShippingContainerCode : labelShippingContainer,
+             //barPackagingIndicator : labelpackagingIndicator,
+             //barManufacturerNumber : labelpackagingManufacturerNumber,
              barProductCode : labelproductCode,
-             barShippingContainerCS : labelshippingContainercs,
-             barBoxNetWeightIdentifier: labelnetWeight,
-             barBoxNetWeight : labelWeight,
-             barDateOfProduction : labeldateindentifier,
-             barDateOfProductionyymmdd : labeldateofproduction,
-             barSerialNumberIndentifier: labelserialnumber,
-             barTenDigitSerial : labelserialidentifier,
+             //barShippingContainerCS : labelshippingContainercs,
+            // barBoxNetWeightIdentifier: labelnetWeight,
+             //barDateOfProduction : labeldateindentifier,
+             //barDateOfProductionyymmdd : labeldateofproduction,
+             //barSerialNumberIndentifier: labelserialnumber,
+             //barTenDigitSerial : labelserialidentifier,
              orderDate: req.body.orderDate
 
 
@@ -171,13 +173,29 @@ router.get('/:usernameId', function(req, res, next){
     }
   })
 })
+
+//Get some items from barcodes
+// Get all Barcodes
+// router.get('/barcodeRo', function(req, res, next){
+//   Barcodes.find({}, 'barcode', function(err, barcodes){
+//     if(err){
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log(barcodes);
+//       res.json(barcodes)
+//     }
+//   });
+// });
+
 // Get all Barcodes
 router.get('/', function(req, res, next){
-  Barcodes.find({}, function(err, barcodes){
+  Barcodes.find({}, "username", function(err, barcodes){
     if(err){
       console.log(err);
       return next(err);
     } else {
+      
       console.log(barcodes);
       res.json(barcodes)
     }

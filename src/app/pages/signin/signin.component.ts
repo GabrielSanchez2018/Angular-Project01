@@ -37,8 +37,10 @@ export class SigninComponent implements OnInit {
   signin() {
     const username = this.form.controls.username.value
     const password = this.form.controls.password.value
+    const cookie = "sessionuser=hussein; samesite=strict; secure"
 
     this.http.post('/api/session/signin', {
+      cookie,
       username,
       password
     }).subscribe(res => {
@@ -50,7 +52,8 @@ export class SigninComponent implements OnInit {
         console.log('var date', date)
         console.log('var dte', exp)
 
-        this.cookieService.set('sessionuser', username, 1 );
+        this.cookieService.set('sessionuser', username, 1,   );
+        
         this.router.navigate(['/']);
       } else {
         this.errorMessage = res['text'];

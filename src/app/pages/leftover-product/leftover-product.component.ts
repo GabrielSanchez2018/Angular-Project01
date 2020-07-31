@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 import { error } from 'util';
 
+
 @Component({
   selector: 'app-leftover-product',
   templateUrl: './leftover-product.component.html',
@@ -37,6 +38,7 @@ export class LeftoverProductComponent implements OnInit {
   map: any;
   matInput: any;
   orderVerify: Object;
+  leftover: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -56,15 +58,15 @@ export class LeftoverProductComponent implements OnInit {
       console.log(err);
     }
     this.username = this.cookieService.get('paysession');
-    this.http.get('api/orderverify/' ).subscribe(res =>{
-      this.orderVerify = res
+    this.http.get('api/leftover/' ).subscribe(res =>{
+      this.leftover = res
         //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
 
       //   if(Array.isArray(res)){
       //     this.barcodes = res.filter(q => q.username === this.username);
       //  }
       //this.barcodes = res.filter(q => q.username === this.username);;
-      console.log('this is orderverify', this.orderVerify)
+      console.log('this is orderverify', this.leftover)
     }), err =>{
       console.log(err)
     }
@@ -139,13 +141,13 @@ rerender(){
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/ordervefiry/' + barcodeId).subscribe(res => {
+        this.http.delete('/api/leftover/' + barcodeId).subscribe(res => {
           console.log('Barcode deleted');
-          if(Array.isArray(this.barcodes)){
-            this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          if(Array.isArray(this.leftover)){
+            this.leftover = this.leftover.filter(q => q._id !== barcodeId);
           }
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
-          console.log(this.barcodes);
+          console.log(this.leftover);
         });
       }
     });
@@ -481,7 +483,7 @@ this.changeDetectorRefs.detectChanges();
 
 var counts = "Leftover"
 
-    this.http.post('/api/orderverify/', {
+    this.http.post('/api/leftover/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,
@@ -498,6 +500,7 @@ var counts = "Leftover"
       //this.successSnackbar();
       this.form.reset();
       this.rerender();
+      this.router.navigate(['/leftover-product01']);
       } else {
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",

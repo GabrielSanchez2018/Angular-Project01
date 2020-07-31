@@ -41,6 +41,7 @@ import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.compon
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { Role } from './shared/guards/role';
 import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
+import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-product01.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -208,6 +209,11 @@ export const AppRoutes: Routes = [
       {
         path: 'leftover-product',
         component: LeftoverProductComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'leftover-product01',
+        component: LeftoverProduct01Component,
         canActivate: [RoleGuard]
       },
       {
