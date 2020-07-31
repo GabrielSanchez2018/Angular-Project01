@@ -38,6 +38,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
+import {NgxPrintModule} from 'ngx-print';
 
 
 // Components
@@ -87,6 +88,7 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { PrintComponent } from './dialogs/print/print.component';
+import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -135,6 +137,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     PrintDialogComponent,
     OrderVerifyComponent,
     PrintComponent,
+    LeftoverProductComponent,
     // TimerComponent,
 
   ],
@@ -171,7 +174,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    
+    NgxPrintModule
 
 
   ],

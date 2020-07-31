@@ -39,8 +39,8 @@ selectedValue: string;
   //checked: boolean = true;
 
   items: Item[] = [
-    {value: "", viewValue: ''},
-    {value: "Two", viewValue: 'Two Items'},
+    {value: "", viewValue: '1 Box'},
+    {value: "Two", viewValue: '2 Boxes'},
 
   ];
 
@@ -86,7 +86,7 @@ selectedValue: string;
 
     } else {
       this.show = true
-      
+
 
 
     }
@@ -109,6 +109,7 @@ selectedValue: string;
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
      `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+
 
   }
 

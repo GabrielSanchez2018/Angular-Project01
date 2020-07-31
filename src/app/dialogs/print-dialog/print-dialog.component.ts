@@ -65,7 +65,7 @@ export class PrintDialogComponent implements OnInit {
           this.barcodes = res.filter(q => q.username === this.username);
        }
       //this.barcodes = res.filter(q => q.username === this.username);;
-      console.log('noiniewnfis', this.barcodes)
+
     }), err =>{
       console.log(err)
     }

@@ -12,25 +12,35 @@ const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 
 const router = express.Router();
+// document.cookie = "tagname = test;secure";
+// const cookie = "sessionuser=hussein; samesite=strict; secure"
+
 
 //User Sign-in
 router.post('/signin', function(req, res, next) {
   console.log(req.body);
+
+
   User.findOne({'username': req.body.username}, function(err, user) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
+
       console.log('this is the user',user);
       if(user) {
+
         let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
         if (passwordIsValid) {
+          // res.setHeader('set-cookie', [cookie])
           res.status(200).send({
             type: 'success',
             auth: true,
             username: user.username,
-            time_stamp: new Date()
+            time_stamp: new Date(),
+
           })
+
         } else {
           console.log(`The password for username: ${req.body.username} is invalid.`);
           res.status(401).send({

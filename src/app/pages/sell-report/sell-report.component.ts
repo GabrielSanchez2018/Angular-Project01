@@ -133,11 +133,15 @@ export class SellReportComponent implements OnInit {
     }
 
     getTotalCost() {
+      
       return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
 
     getTotalWeight(){
-      return this.ventas.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+      var weight =  this.ventas.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+      return weight.toFixed(2)
+      
+
     }
 
     getTotalBoxes(){

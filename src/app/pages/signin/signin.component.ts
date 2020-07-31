@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
+import { FnParam } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-signin',
@@ -49,7 +50,7 @@ export class SigninComponent implements OnInit {
         console.log('var date', date)
         console.log('var dte', exp)
 
-        this.cookieService.set('sessionuser', username, 1   );
+        this.cookieService.set('sessionuser', username, 1 );
         this.router.navigate(['/']);
       } else {
         this.errorMessage = res['text'];
