@@ -40,6 +40,7 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { Role } from './shared/guards/role';
+import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -203,6 +204,11 @@ export const AppRoutes: Routes = [
         path: 'print-dialog',
         component: PrintDialogComponent,
         canActivate: [SessionGuard]
+      },
+      {
+        path: 'leftover-product',
+        component: LeftoverProductComponent,
+        canActivate: [RoleGuard]
       },
       {
         path: 'admin',

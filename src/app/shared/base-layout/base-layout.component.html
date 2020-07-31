@@ -92,12 +92,23 @@
           <span style="color: #ffd740;">&nbsp;&nbsp;Purchase Reports</span>
       </a>
 
+      <a mat-list-item *ngIf='show' [routerLink]="'/leftover-product'">
+        <span class="material-icons">
+          rule_folder
+          </span>
+          <span style="color: #ffd740;">&nbsp;&nbsp;Left Over Product Check</span>
+        </a>
+
       <a mat-list-item *ngIf='show' [routerLink]="'/order-verify'">
         <span class="material-icons">
           list_alt
           </span>
           <span style="color: #ffd740;">&nbsp;&nbsp;Inventory Check in</span>
       </a>
+
+      
+
+      
 
       <!-- <a mat-list-item *ngIf='show' [routerLink]="'/sell'">
         <span class="material-icons">

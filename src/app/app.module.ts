@@ -87,6 +87,7 @@ import { DatabaseManagementComponent } from './pages/database-management/databas
 import { PrintDialogComponent } from './dialogs/print-dialog/print-dialog.component';
 import { OrderVerifyComponent } from './pages/order-verify/order-verify.component';
 import { PrintComponent } from './dialogs/print/print.component';
+import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -135,6 +136,7 @@ import { PrintComponent } from './dialogs/print/print.component';
     PrintDialogComponent,
     OrderVerifyComponent,
     PrintComponent,
+    LeftoverProductComponent,
     // TimerComponent,
 
   ],

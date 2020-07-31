@@ -1,37 +1,28 @@
-import { ViewChild, Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Validators, FormGroup, FormBuilder } from '@angular/forms';
-import { MatDialog } from '@angular/material';
-
-import { MatTableDataSource, MatTable, MatTableModule } from '@angular/material/table';
-import {ObserversModule} from '@angular/cdk/observers';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { MatSnackBar } from '@angular/material';
-import { DataSource } from '@angular/cdk/table';
-import { toArray } from 'rxjs/operators';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 import { error } from 'util';
 
-
-
-
 @Component({
-  selector: 'app-sell',
-  templateUrl: './sell.component.html',
-  styleUrls: ['./sell.component.css']
+  selector: 'app-leftover-product',
+  templateUrl: './leftover-product.component.html',
+  styleUrls: ['./leftover-product.component.css']
 })
-export class SellComponent implements OnInit {
-
+export class LeftoverProductComponent implements OnInit {
 
   form: FormGroup;
   username: string;
-  invoices: any;
+  invoices: Object;
   services: Object;
   barcodes: Object;
-  displayedColumnsOne = ['id','code','lineitems','total','date', 'functions'];
-  displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
+  displayedColumns = ['username',
+  'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
   id: number;
@@ -42,59 +33,20 @@ export class SellComponent implements OnInit {
   user: string;
   userId: string;
   find: object;
-  showbarcodes: Object;
-  payuser: string;
-  labelWeight: any;
-  show: boolean = true;
-  employeeUser: string;
-  employees: Object;
-  length: Object;
-  
-
-
-
-
-
-
+  bar: any;
+  map: any;
+  matInput: any;
+  orderVerify: Object;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
-    this.employeeUser = this.cookieService.get('paysession');
-    this.http.get('/api/employees/' + this.employeeUser).subscribe(res =>{
-      this.employees = res
-      console.log('employees', this.employees)
-    }), err =>{
-      console.log(err)
 
-    }
-     this.username = this.cookieService.get('paysession');
-    this.http.get('api/invoices/' + this.username).subscribe(res =>{
+    this.username = this.cookieService.get('paysession');
+    this.http.get('api/invoices/' ).subscribe(res =>{
       this.invoices = res;
-      console.log('this ivocices', this.invoices)
-      var invoiceCounter = this.invoices.length
-    console.log('This counts the invoice length',invoiceCounter)
-     /**
-      * If the invoice is bigger than 1, the user would not be able to imput another order.
-      *
-      */
-    if(invoiceCounter > 0){
-      console.log('true')
-      this.show = true
-    } else {
-      console.log('false')
-      this.show = false
-    }
+      console.log('invoces', this.invoices)
     }, err => {
       console.log(err);
     })
-
-
-// Kepp worknig on this api from json object to array, we need an array.
-    this.http.get('api/barcodes/').subscribe(res =>{
-      this.barcodes = res;
-      console.log('this barcodes', this.barcodes)
-    }), err =>{
-      console.log(err)
-    }
 
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
@@ -103,68 +55,71 @@ export class SellComponent implements OnInit {
     }), err => {
       console.log(err);
     }
+    this.username = this.cookieService.get('paysession');
+    this.http.get('api/orderverify/' ).subscribe(res =>{
+      this.orderVerify = res
+        //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
+
+      //   if(Array.isArray(res)){
+      //     this.barcodes = res.filter(q => q.username === this.username);
+      //  }
+      //this.barcodes = res.filter(q => q.username === this.username);;
+      console.log('this is orderverify', this.orderVerify)
+    }), err =>{
+      console.log(err)
+    }
+
+
+  }
+  print(){
+    this.http.get('api/orderverify/').subscribe(res =>{
+      this.barcodes = res;
+      console.log('this barcodes', this.barcodes)
+    }), err =>{
+      console.log(err)
+    }
+    const barcode = {
+
+    }
+    const dialogRef = this.dialog.open(PrintDialogComponent,{
+      data: {
+        barcode: barcode
+      },
+      disableClose: true,
+      width: '800px'
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+      window.print();
+
+
+    })
   }
 
   getTotalCost() {
+    //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     if(Array.isArray(this.barcodes)){
-    return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
+
   }
 
-  getName() {
-   
-   var employees = this.employees
-   console.log('get name ', employees)
-   
-  }
   //Snackbar success message
-successSnackbar(){
-  this.snackBar.open(
-    "Item Scaned.",
-    "SUCCESS",
-    {
-      duration: 2000,
-      verticalPosition: "top"
-    }
-  );
-}
+// successSnackbar(){
 
-print(){
-  this.http.get('api/barcodes/').subscribe(res =>{
-    this.barcodes = res;
-    console.log('this barcodes', this.barcodes)
-  }), err =>{
-    console.log(err)
-  }
-  const barcode = {
-
-  }
-  const dialogRef = this.dialog.open(PrintDialogComponent,{
-
-    data: {
-      barcode: barcode
-    },
-    disableClose: true,
-    width: '1200px',
-
-
-
-
-  });
-  dialogRef.afterClosed().subscribe(result =>{
-    // if(result === 'confirm'){
-    //   window.print();
-    // }
-    this.cookieService.delete('paysession')
-    this.router.navigate(['/find-employee']);
-
-  })
-
-}
+//   this.snackBar.open(
+//      'Item has been Scanned',
+//     "SUCCESS",
+//     {
+//       duration: 5,
+//       verticalPosition: "top"
+//     }
+//   );
+// }
 
 rerender(){
   this.barcodes
   this.changeDetectorRefs.detectChanges();
+  
 }
 
   ngOnInit() {
@@ -173,10 +128,10 @@ rerender(){
     });
   }
 
-  delete(invoiceId) {
+  delete(barcodeId) {
     const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
       data: {
-        invoiceId
+        barcodeId
       },
       disableClose: true,
       width: '800px'
@@ -184,18 +139,18 @@ rerender(){
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/invoices/' + invoiceId).subscribe(res => {
-          console.log('Invoice deleted');
-          if(Array.isArray(this.invoices)){
-            this.invoices = this.invoices.filter(q => q._id !== invoiceId);
-
+        this.http.delete('/api/ordervefiry/' + barcodeId).subscribe(res => {
+          console.log('Barcode deleted');
+          if(Array.isArray(this.barcodes)){
+            this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           }
-
-          console.log(this.invoices);
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          console.log(this.barcodes);
         });
       }
     });
-  }
+   }
+
 
 
   create(){
@@ -205,8 +160,8 @@ rerender(){
       const dataservices = this.services;
       const enteredProductcode = this.form.controls.barcode.value;
 
-      /***
-       * This Function will throw an error when the barcode is less than and longer than 46 digits.
+       /***
+       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
        */
       console.log('this is the barcode', enteredProductcode.length)
 
@@ -217,38 +172,19 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          }
-        )
-        throw error
+          } 
+        ) 
+        throw error;
       } else if(enteredProductcode.length < 46){
-
         this.snackBar.open(
           "Item Scaned has Less than 46 digits.",
           "error",
           {
             duration: 4000,
             verticalPosition: "top"
-          }
-
-
-        )
-        throw error
-
-
-      }
-
-
-
-      console.log('barcode', enteredProductcode.length)
-      if(enteredProductcode.length > 46){
-        this.snackBar.open(
-          "Barcode has more than 46 digits.",
-          "ERROR",
-          {
-            duration: 4000,
-            verticalPosition: "top"
-          }
-        );
+          } 
+        ) 
+        throw error;
       }
 
   //Product Code label
@@ -258,14 +194,16 @@ rerender(){
    var boxWeight = Array.from(enteredProductcode.slice(20,26));
   var labelWeight = boxWeight.join('');
 
-// Passing the labelWeight variable to a function so we get rid of the anoying error
-  function mult(x, ) {
+  // Passing the labelWeight variable to a function so we get rid of the anoying error
+  function mult(x) {
     return x ;
 }
 
+    console.log('this is the boxWeith', labelWeight)
+
 
    console.log('hre is ', labelproductCode)
-   console.log('weight test',mult(labelWeight)/10 )
+   console.log('weight', labelWeight)
    console.log('1', dataservices[0].id)
    console.log('price', dataservices[0].price)
 
@@ -276,7 +214,7 @@ function myFunction(){
       return dataservices[0].price
 
     } else if(labelproductCode == dataservices[1].id){
-      return dataservices[1].price
+      return dataservices[1].price 
 
 
     } else if(labelproductCode == dataservices[2].id){
@@ -288,7 +226,7 @@ function myFunction(){
     } else if (labelproductCode == dataservices[4].id){
       return dataservices[4].price
 
-    }else if (labelproductCode == dataservices[5].id){
+    } else if (labelproductCode == dataservices[5].id){
       return dataservices[5].price
 
     } else if (labelproductCode == dataservices[6].id){
@@ -350,6 +288,7 @@ function myFunction(){
 
     } else if (labelproductCode == dataservices[26].id){
       return dataservices[26].price
+
 
   }
 
@@ -457,10 +396,7 @@ function myFunction(){
 
   }
 // this function get the description of the barcode
-
-
-
-function descriptionFunction(){
+  function descriptionFunction(){
     if (labelproductCode == dataservices[0].id){
       return dataservices[0].title
 
@@ -540,32 +476,28 @@ var price = myFunction();
 console.log('here is the price', price);
 console.log('here is the total price', totalprice);
 console.log('here is the total description', itemdescription);
-console.log('get name', this.getName())
+
 this.changeDetectorRefs.detectChanges();
 
+var counts = "Leftover"
 
-
-    this.http.post('/api/barcodes/', {
+    this.http.post('/api/orderverify/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,
-      username: this.username,
+      username: counts,
       barcode: this.form.controls.barcode.value,
       orderDate: new Date()
-
     }).subscribe(res =>{
-
       if (res){
-        console.log('this is res inthe sell component', res)
+
         this.changeDetectorRefs.detectChanges();
-        console.log(this.barcodes);
-        this.router.navigate(['/barcode-info']);
-        // this will reset the form
+      console.log(this.barcodes);
 
-        this.successSnackbar();
-
-        this.form.reset();
-        this.rerender();
+      // this will reset the form
+      //this.successSnackbar();
+      this.form.reset();
+      this.rerender();
       } else {
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",
@@ -578,36 +510,12 @@ this.changeDetectorRefs.detectChanges();
 
         );
       }
-
-
-    })
-  })
-
+      
+    });
+    
+  });
   }
-
-  // print(){
-  //   this.http.get('api/barcodes/').subscribe(res =>{
-  //     this.barcodes = res;
-  //     console.log('this barcodes', this.barcodes)
-  //   }), err =>{
-  //     console.log(err)
-  //   }
-  //   const barcode = {
-
-  //   }
-  //   const dialogRef = this.dialog.open(PrintDialogComponent,{
-  //     data: {
-  //       barcode: barcode
-  //     },
-  //     disableClose: true,
-  //     width: '800'
-  //   });
-  //   dialogRef.afterClosed().subscribe(result =>{
-
-  //   })
-
-  // }
-
 
 
 }
+
