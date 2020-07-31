@@ -63,11 +63,48 @@ export class SignInEmployeeeComponent implements OnInit {
 
   }
 
+
+
+
+
+
+
+
+
+
   ngAfterViewInit() {
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
       onKeyPress: button => this.onKeyPress(button),
-       //theme: "hg-theme-default myTheme1"
+      theme: "hg-theme-default hg-layout-default myTheme",
+  layout: {
+    default: [
+      "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
+      "{tab} q w e r t y u i o p [ ] \\",
+      "{lock} a s d f g h j k l ; ",
+      "{shift} z x c v b n m , . / {shift}",
+      ".com @ {space}"
+    ],
+    shift: [
+      "~ ! @ # $ % ^ & * ( ) _ + {bksp}",
+      "{tab} Q W E R T Y U I O P { } |",
+      '{lock} A S D F G H J K L : "',
+      "{shift} Z X C V B N M < > ? {shift}",
+      ".com @ {space}"
+    ]
+  },
+  buttonTheme: [
+    {
+      class: "hg-red",
+      buttons: "G O P g o p"
+    },
+    {
+      class: "hg-highlight",
+      buttons: "Q q"
+    }
+  ]
+
+
     });
   }
 
@@ -184,7 +221,7 @@ export class SignInEmployeeeComponent implements OnInit {
       if (res) {
         console.log('this is the employee id', res)
         console.log('empid', EmployeeId);
-        
+
         this.cookieService.set('sessionuser', EmployeeId, 1);
 
         //this.stepper

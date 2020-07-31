@@ -45,13 +45,12 @@ export class BarcodeInfoComponent implements OnInit {
   firstame: any;
   FirstName: Object;
 
-  filter: Object;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
     this.employeeUser = this.cookieService.get('paysession');
     this.http.get('/api/employees/' + this.employeeUser).subscribe(res =>{
       this.employees = res
-      console.log('employees', this.employees)
+      console.log('employees', this.employees[0].EmployeeID)
       /**
        * Employee info
        */
@@ -66,15 +65,15 @@ export class BarcodeInfoComponent implements OnInit {
     this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' ).subscribe(res =>{
       this.invoices = res;
-      console.log('invoces', this.invoices)
+      //console.log('invoces', this.invoices)
     }, err => {
       console.log(err);
     })
 
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
-      console.log('yest',this.services);
-      console.log(res)
+      //console.log('yest',this.services);
+
     }), err => {
       console.log(err);
     }
@@ -138,12 +137,14 @@ export class BarcodeInfoComponent implements OnInit {
   }
 
   getFirstName() {
-    //this.employees.map(t => t.FirstName).reduce((acc, value) => acc + value, 0);
-    // if(Array.isArray(this.employees)){
-    //  return this.employees.map(t => t.EmployeeID).reduce((acc, value) => acc + value, 0);
+    if(Array.isArray(this.employees)){
+      var test =  this.employees.map(t => t.FirstName).reduce((acc, value) => acc + value, 0);
+      console.log('this is the gettttt', test)
+     }
 
 
   }
+
 
   // getFirstName() {
   //   //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
@@ -193,7 +194,7 @@ rerender(){
             this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           }
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
-          console.log(this.barcodes);
+          //console.log(this.barcodes);
         });
       }
     });
@@ -248,13 +249,13 @@ rerender(){
     return x ;
 }
 
-    console.log('this is the boxWeith', labelWeight)
+    // console.log('this is the boxWeith', labelWeight)
 
 
-   console.log('hre is ', labelproductCode)
-   console.log('weight', labelWeight)
-   console.log('1', dataservices[0].id)
-   console.log('price', dataservices[0].price)
+  //  console.log('hre is ', labelproductCode)
+  //  console.log('weight', labelWeight)
+  //  console.log('1', dataservices[0].id)
+  //  console.log('price', dataservices[0].price)
 
    var newError = new Error('plaease check')
 // this function gets the price of the item
@@ -524,13 +525,16 @@ var price = myFunction();
 
 
 
-console.log('asdfrniovnoirevnirnvornevrnvininreoivneionevir', this.getFirstName())
-console.log('here is the price', price);
-console.log('here is the total price', totalprice);
-console.log('here is the total description', itemdescription);
+// console.log('asdfrniovnoirevnirnvornevrnvininreoivneionevir', )
+// console.log('here is the price', price);
+// console.log('here is the total price', totalprice);
+// console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
 
+//employee info variables
+// var name = this.employees.filter(t => t.FirstName).reduce((acc, value) => acc + value, 0);
+console.log('here is the name', this.getFirstName())
 
 
 
