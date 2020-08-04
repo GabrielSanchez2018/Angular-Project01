@@ -42,6 +42,7 @@ import { OrderVerifyComponent } from './pages/order-verify/order-verify.componen
 import { Role } from './shared/guards/role';
 import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
 import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-product01.component';
+import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -93,6 +94,11 @@ export const AppRoutes: Routes = [
       {
         path: 'find-employee',
         component: FindEmployeeComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'employee-create',
+        component: EmployeeCreateComponent,
         canActivate: [RoleGuard]
       },
       {

@@ -90,6 +90,7 @@ import { OrderVerifyComponent } from './pages/order-verify/order-verify.componen
 import { PrintComponent } from './dialogs/print/print.component';
 import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
 import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-product01.component';
+import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -140,6 +141,7 @@ import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-
     PrintComponent,
     LeftoverProductComponent,
     LeftoverProduct01Component,
+   EmployeeCreateComponent,
     // TimerComponent,
 
   ],

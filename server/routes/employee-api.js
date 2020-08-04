@@ -1,5 +1,6 @@
 const express = require('express');
 const Employee = require('../models/employee');
+const { rename } = require('fs');
 
 
 const router = express.Router();
@@ -39,9 +40,26 @@ router.get('/:EmployeeId/role', function(req, res, next) {
       console.log(err);
       return next(err);
     } else {
-      console.log(employee.role);
-      res.json(employee.role);
-    };
+      // console.log('this is the employee role',employee.role);
+      // res.json(employee.role)
+
+      /***
+       * When the user erases all employees, this employee api throws an error
+       * This if statements will help to get rid of the error 
+       * With no employee data in the employee collection, this API emits an error, the following 
+       * var employee array solves the problem.
+       */
+      console.log('this employee', employee)
+      if(employee === null){
+       var employee = [  
+          {role:'standard'}, 
+       ]
+        console.log('this is the employee array',employee[0].role)
+        return res.json(employee[0].role)
+      } else {
+        res.json(employee.role)
+      }
+    }
   });
 });
 
@@ -57,5 +75,19 @@ router.get('/:EmployeeId/role', function(req, res, next) {
 //     };
 //   });
 // });
+
+// Create User
+router.post('/myobj', function(req, res, next) {
+
+  Employee.insertMany({}), function(err, employee){
+    if(err){
+      console.log(err)
+      return next(err);
+    }else{
+      res.json(employee)
+    }
+  }
+});
+
 
 module.exports = router;
