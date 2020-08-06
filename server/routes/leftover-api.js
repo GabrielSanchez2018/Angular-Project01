@@ -19,6 +19,47 @@ router.get('/', function(req, res, next){
   })
 })
 
+// Find Barcode Report
+router.get('/leftover-report', function(req, res, next) {
+  Leftover.aggregate([
+    //First function is to get rid of an error
+    {
+      "$group": {
+        "code": {"$first": "$barProductCode"},
+        "_id": "$itemdescription",
+        //"itemdescription": {"$first": "$itemdescription"},
+        "count": {"$sum": 1},
+       "totalweight" : {"$sum": "$barBoxNetWeight"},
+       "totalprice": {"$sum": "$totalprice" },
+       //"username": {"$first": "$username"},
+      },
+
+
+
+    // {
+    //   "$group": {
+    //     "_id":  {
+    //       "code": "$barProductCode",
+    //       "itemdescription": "$itemdescription",
+    //       "username": "$username",
+    //       //"price": "$totalprice",
+    //      //"totalWeight": {"$sum": "$barBoxNetWeight"}
+    //     },
+    //     "count": {"$sum": 1},
+    //   }
+    }, {"$sort": {"totalprice": -1}},
+  ], function(err, barcodeGraph) {
+      if(err) {
+        console.log(err);
+        return next(err);
+      } else {
+        console.log("--PurchaseGraph data structure--");
+        console.log(barcodeGraph);
+        res.json(barcodeGraph);
+      }
+  });
+});
+
 //Post Barcode
 router.post('/', function(req, res, next){
     // get the request's form data

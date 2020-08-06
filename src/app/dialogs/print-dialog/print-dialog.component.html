@@ -129,12 +129,13 @@
     <div class="invoice-box">
         <table cellpadding="0" cellspacing="0" >
             <tr class="top">
-                <td colspan="2">
+                <td colspan="4">
                     <table >
                         <tr>
                             <td class="title">
                               <img src="../../../assets/images/gop.png" alt="GOP" style="width: 200px;" >
                             </td>
+                            
 
                             <td style="text-align: right;">
 
@@ -148,7 +149,7 @@
             </tr>
 
             <tr class="information">
-              <td colspan="2">
+              <td colspan="4">
                   <table>
                       <tr>
                           <td>
@@ -176,8 +177,14 @@
               <td style="text-align: justify;">
                   Description
               </td>
+              <td style="text-align: center;">
+                Weight
+              </td>
+              <td style="text-align: center;">
+                Price P/L
+              </td >
 
-              <td>
+              <td style="text-align: center;">
                   Price
               </td>
           </tr>
@@ -188,16 +195,24 @@
               <td style="text-align: justify;">
                   {{barcode.itemdescription}}
               </td>
+              <td style="text-align: center;">
+                {{barcode.barBoxNetWeight}}
+              </td>
+              <td style="text-align: center;">
+                {{barcode.price}}
+              </td>
 
-              <td>
+              <td style="text-align: center;">
                 {{barcode.totalprice}}
             </td>
           </tr>
 
           <tr class="total" >
               <td></td>
+              <td></td>
+              <td></td>
 
-              <td>
+              <td style="text-align: center; font-weight: bolder;">
                  {{getTotalCost() | currency}}
               </td>
           </tr>

@@ -14,8 +14,8 @@
 
             <mat-form-field appearance="outline" style=" width: 50%; margin:0">
               <mat-label>Employee Id</mat-label>
-              <input (input)="onInputChange($event)" value={{value}} matInput [formControl]="value" placeholder="Employee Id" autofocus/>
-              <!-- <input (input)="onInputChange($event)" value={{value}} matInput [formControl]="form.controls['EmployeeId']" placeholder="Employee Id" autofocus/> -->
+              <!-- <input (input)="onInputChange($event)" value={{value}} matInput [formControl]="value" placeholder="Employee Id" autofocus/> -->
+              <input (input)="onInputChange($event)" value={{value}} matInput [formControl]="form.controls['EmployeeId']" placeholder="Employee Id" autofocus/>
               <mat-error *ngIf="form.controls['EmployeeId'].hasError('required') && form.controls['EmployeeId'].touched">
                 Employee ID is a required field.
               </mat-error>

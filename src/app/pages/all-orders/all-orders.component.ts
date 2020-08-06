@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatTableDataSource } from '@angular/material';
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { CookieService } from 'ngx-cookie-service';
+import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-all-orders',
@@ -25,6 +26,11 @@ export class AllOrdersComponent implements OnInit {
   userId: string;
 
 
+  //dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+
+ 
+  
 
   constructor(private http: HttpClient, private dialog: MatDialog, private cookieService: CookieService) {
 
@@ -36,11 +42,12 @@ export class AllOrdersComponent implements OnInit {
     })
   }
 
-
+  
 
 ngOnInit(){
-
+  this.invoices.paginator = this.paginator;
 }
+
 
 delete(invoiceId) {
   const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
