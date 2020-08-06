@@ -9,6 +9,7 @@ const express = require('express');
 const User = require('../models/user');
 const Employee = require('../models/employee')
 const bcrypt = require('bcryptjs');
+const cp = require('cookie-parser');
 
 const saltRounds = 10;
 
@@ -21,7 +22,7 @@ const router = express.Router();
 //User Sign-in
 router.post('/signin', function(req, res, next) {
   console.log(req.body);
-  const cookie = "user=hussein; samesite=none; secure"
+  //const cookie = "user=hussein; samesite=none; secure"
 
 
   User.findOne({'username': req.body.username}, function(err, user) {
@@ -35,14 +36,17 @@ router.post('/signin', function(req, res, next) {
 
         let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
         if (passwordIsValid) {
-          res.setHeader('set-cookie',[cookie]) |
+          //res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
+
+         // res.cookie('3pcookie-legacy', 'value', { secure: true });
+          //res.setHeader('set-cookie',[cookie])
           res.status(200).send({
-        
+
             type: 'success',
             auth: true,
             username: user.username,
             time_stamp: new Date(),
-           
+
 
           })
 

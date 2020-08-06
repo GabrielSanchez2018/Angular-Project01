@@ -11,6 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FnParam } from '@angular/compiler/src/output/output_ast';
+import { ɵparseCookieValue } from '@angular/common';
+import { SSL_OP_COOKIE_EXCHANGE, SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } from 'constants';
+import { strictEqual } from 'assert';
 
 @Component({
   selector: 'app-signin',
@@ -51,9 +54,9 @@ export class SigninComponent implements OnInit {
          var exp = date.setTime(date.getTime() + (30 * 1000));
         console.log('var date', date)
         console.log('var dte', exp)
-
-        this.cookieService.set('sessionuser', username, 1,   );
         
+        this.cookieService.set('sessionuser', username, 1  );
+
         this.router.navigate(['/']);
       } else {
         this.errorMessage = res['text'];
