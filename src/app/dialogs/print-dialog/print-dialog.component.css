@@ -1,6 +1,6 @@
 .invoice-box {
-  max-width: 1000px;
-  width: 900px;
+  max-width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 30px;
   border: 1px solid #eee;
@@ -84,18 +84,18 @@
 
 @media print {
 .table{
-  width: 900px;
+  width: 1200px;
 }
 
   .invoice-box {
     margin-top: -50%;
-    width: 830px;
+    width: 1500px;
     margin: 0 auto;
     margin-bottom: 1000px;
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
     color: black;
-    border: none;
+    border: 3px solid;
 
   }
   .signature{
@@ -127,6 +127,6 @@
 
 .md-dialog-container {
   background-color: #000;
-  width: 250px;
-  height: 250px
+  width: 1250px;
+  height: 1250px
 }

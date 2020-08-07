@@ -107,7 +107,10 @@ export class BarcodeInfoComponent implements OnInit {
         barcode: barcode
       },
       disableClose: true,
-      width: '1200px',
+      maxWidth: '100vw',
+      maxHeight: '90vh',
+      height: '100%',
+      width: '100%'
 
 
 

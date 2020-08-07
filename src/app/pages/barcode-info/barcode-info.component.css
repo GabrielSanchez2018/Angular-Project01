@@ -34,3 +34,13 @@ tr.mat-footer-row {
   }
 }
 
+.md-dialog-content{
+  width: 1200px;
+  height: 1200px;
+}
+
+.full-screen-modal .mat-dialog-container {
+  max-width: none;
+  width: 2000px;
+}
+

@@ -6,10 +6,14 @@ Description: this is the leftover products
 ==========================*/
 const mongoose = require('mongoose');
 
+//Use this extentionn to resolve duplicate issues
+var uniqueValidator = require('mongoose-unique-validator')
+
+
 
 let leftoverSchema = mongoose.Schema({
   username: {type: String},
-  barcode: {type: String },
+  barcode: {type: String, unique: true, required: true, dropDups: true},
   price: {type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},
@@ -28,6 +32,7 @@ let leftoverSchema = mongoose.Schema({
 });
 
 
+leftoverSchema.plugin(uniqueValidator)
 
 // export for public use
 module.exports = mongoose.model('Leftover', leftoverSchema);

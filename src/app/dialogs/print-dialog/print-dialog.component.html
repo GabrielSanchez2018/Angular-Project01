@@ -129,12 +129,13 @@
     <div class="invoice-box">
         <table cellpadding="0" cellspacing="0" >
             <tr class="top">
-                <td colspan="2">
+                <td colspan="4">
                     <table >
                         <tr>
                             <td class="title">
                               <img src="../../../assets/images/gop.png" alt="GOP" style="width: 200px;" >
                             </td>
+
 
                             <td style="text-align: right;">
 
@@ -148,19 +149,19 @@
             </tr>
 
             <tr class="information">
-              <td colspan="2">
+              <td colspan="4">
                   <table>
                       <tr>
                           <td>
-                              Greater Omaha Packiging, Inc.<br>
+                              Greater Omaha Packing, Inc.<br>
                               3001 L St<br>
-                              Omaha, NE 68117
+                              Omaha, NE 68117 <br>
                           </td>
 
                           <td>
                             {{employees?.EmployeeID}} <br>
                             {{employees?.FirstName}} <br>
-                            {{employees?.LastName}}
+                            {{employees?.LastName}} <br>
 
                           </td>
                       </tr>
@@ -176,8 +177,15 @@
               <td style="text-align: justify;">
                   Description
               </td>
+              <td style="text-align: center;">
+                Weight
+              </td>
+              <td style="text-align: center;">
+                Price P/L
+              </td >
 
-              <td>
+
+              <td style="text-align: center;">
                   Price
               </td>
           </tr>
@@ -188,16 +196,24 @@
               <td style="text-align: justify;">
                   {{barcode.itemdescription}}
               </td>
+              <td style="text-align: center;">
+                {{barcode.barBoxNetWeight.toFixed(2)}}
+              </td>
+              <td style="text-align: center;">
+                {{barcode.price | currency}}
+              </td>
 
-              <td>
-                {{barcode.totalprice}}
+              <td style="text-align: center;">
+                {{barcode.totalprice | currency}}
             </td>
           </tr>
 
           <tr class="total" >
               <td></td>
+              <td></td>
+              <td></td>
 
-              <td>
+              <td style="text-align: center; font-weight: bolder;">
                  {{getTotalCost() | currency}}
               </td>
           </tr>
@@ -224,7 +240,7 @@
       <div mat-dialog-actions class="submitButtons" align="end">
     <button mat-raised-button matDialogClose="cancel" color="primary">Cancel</button>
     <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial onclick="window.print()" >Print</button>
-</div>
+      </div>
   </div>
 
 

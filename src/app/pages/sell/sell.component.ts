@@ -49,7 +49,7 @@ export class SellComponent implements OnInit {
   employeeUser: string;
   employees: Object;
   length: Object;
-  
+
 
 
 
@@ -112,10 +112,10 @@ export class SellComponent implements OnInit {
   }
 
   getName() {
-   
+
    var employees = this.employees
    console.log('get name ', employees)
-   
+
   }
   //Snackbar success message
 successSnackbar(){
@@ -145,10 +145,10 @@ print(){
       barcode: barcode
     },
     disableClose: true,
-    width: '1200px',
-
-
-
+    maxWidth: '100vw',
+    maxHeight: '90vh',
+    height: '100%',
+    width: '100%'
 
   });
   dialogRef.afterClosed().subscribe(result =>{

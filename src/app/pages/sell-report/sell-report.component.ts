@@ -29,6 +29,7 @@ export class SellReportComponent implements OnInit {
   dataSource = new MatTableDataSource(this.barcodes);
   username: string;
   employees: Object;
+  leftover: any;
 
 
    applyFilter(event: Event) {
@@ -47,6 +48,16 @@ export class SellReportComponent implements OnInit {
       this.http.get('/api/employees/' + this.username).subscribe(res =>{
         this.employees = res
         console.log('employees', this.employees)
+      }), err =>{
+        console.log(err)
+
+      }
+/***
+ * Left Over report
+ */
+      this.http.get('/api/leftover/leftover-report' ).subscribe(res =>{
+        this.leftover = res
+        console.log('leftover', this.leftover)
       }), err =>{
         console.log(err)
 
@@ -127,20 +138,25 @@ export class SellReportComponent implements OnInit {
     exportAsXLSXThird(): void{
       this.exportService.exportToExcel(this.orderssum , 'Scanned_Items');
     }
-    
+
     exportAsXLSXAll(): void{
       this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
     }
 
+
+    /***
+     * Filter Functions
+     */
+
     getTotalCost() {
-      
+
       return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
 
     getTotalWeight(){
       var weight =  this.ventas.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
       return weight.toFixed(2)
-      
+
 
     }
 
@@ -152,8 +168,23 @@ export class SellReportComponent implements OnInit {
       var x = x.lenght();
       return x
     }
+/***
+ * Filter Funtions for the leftover data table
+ */
+    getLeftoverTotalBoxes(){
+          return this.leftover.map(t => t.count).reduce((acc, value) => acc + value, 0);
+        }
+
+    getLeftoverTotalWeight(){
+      var weight =  this.leftover.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+      return weight.toFixed(2)
+    }
+    getLeftoverTotalCost(){
+      var weight =  this.leftover.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
+      return weight.toFixed(2)
 
 
+    }
 
 
     //Delete function
