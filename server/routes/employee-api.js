@@ -1,6 +1,13 @@
 const express = require('express');
 const Employee = require('../models/employee');
 const { rename } = require('fs');
+const bodyParser = require('body-parser');
+
+let app = express();
+app.use(bodyParser.json({limit: '200mb'}));
+app.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
+
+
 
 
 const router = express.Router();
@@ -77,17 +84,43 @@ router.get('/:EmployeeId/role', function(req, res, next) {
 // });
 
 // Create User
-router.post('/myobj', function(req, res, next) {
+router.post('/', function(req, res, next) {
+ 
 
-  Employee.insertMany({}), function(err, employee){
-    if(err){
-      console.log(err)
+  let e = {
+      text: req.body.text,
+      // LastName: req.body.LastName,
+      // FirstName: req.body.FirstName,
+      // Department: req.body.Department,
+      // StartDate: req.body.StartDate,
+      // role: req.body.role,
+     
+  };
+
+  Employee.create(e, function(err, employees) {
+    if (err) {
+      console.log(err);
       return next(err);
-    }else{
-      res.json(employee)
+    } else {
+      console.log(employees);
+      res.json(employees);
     }
-  }
+ 
+  })
 });
+
+// // Create User
+// router.post('/myobj', function(req, res, next) {
+
+//   Employee.insertMany({}), function(err, employee){
+//     if(err){
+//       console.log(err)
+//       return next(err);
+//     }else{
+//       res.json(employee)
+//     }
+//   }
+// });
 
 
 module.exports = router;

@@ -221,8 +221,11 @@ export class SignInEmployeeeComponent implements OnInit {
       if (res) {
         console.log('this is the employee id', res)
         console.log('empid', EmployeeId);
+        
 
-        this.cookieService.set('sessionuser', EmployeeId, 1);
+        this.cookieService.set('sessionuser', EmployeeId, 1  , '/', 'localhost', false, "Lax");
+        // var timeout = this.cookieService.set('sessionuser', EmployeeId, 1  , '/', 'localhost', false, "Lax");
+        // console.log('this is the cookie timeout',timeout)
 
         //this.stepper
        this.router.navigate(["/"]);

@@ -20,10 +20,12 @@ export class EmployeeCreateComponent implements OnInit {
   }
 
   create() {
-    const employee = this.form.controls['text'].value;
+    const texts = this.form.controls['text'].value;
+
+    console.log('Employee Create page: ',texts)
 
     this.http.post('/api/employees', {
-      employee: employee
+      text: texts
     }).subscribe(res => {
       //this.router.navigate(['/admin']);
     }, err => {

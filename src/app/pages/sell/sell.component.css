@@ -27,9 +27,6 @@ tr.mat-footer-row {
   width: 50%;
   margin: 0 auto;
   margin-top: 1%;
-
-
-
 }
 
 
@@ -76,4 +73,9 @@ tr.mat-footer-row {
 .full-screen-modal .mat-dialog-container {
   max-width: none;
   width: 2000px;
+}
+
+.order2{
+  margin: 0 auto;
+ 
 }

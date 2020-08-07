@@ -3,13 +3,15 @@
       
         <form [formGroup]="form" (ngSubmit)="create()" #roleForm>
             <mat-card-content>
-              <div fxLayout="column" fxLayoutGap="10px">
-                <mat-form-field>
-                  <textarea class="formClass" matInput
-                         [formControl]="form.controls['myobj']"
-                         placeholder="Employee Input"></textarea>
-                </mat-form-field>
-              </div>
+              <mat-card-content>
+                <div fxLayout="column" fxLayoutGap="10px">
+                  <mat-form-field>
+                    <textarea matInput
+                           [formControl]="form.controls['text']"
+                           placeholder="Role"/> </textarea>
+                  </mat-form-field>
+                </div>
+              </mat-card-content>
             </mat-card-content>
       
             <br/>

@@ -176,10 +176,24 @@
 
 
 
-<mat-card-content class="card" *ngIf="!show" style="background-color: red;">
+<mat-card-content class="card" *ngIf="!show" style="background-color: gray; color: white; width: 50%;">
   <h1 class="title" >
     No Order Found for {{employees?.FirstName}} {{employees?.LastName}}<br />
   </h1>
+  <div style="margin: 0 auto; width: 15%; background-color: gray;">
+
+ 
+  <button
+  class='order2'
+  
+  routerLink='/find-employee'
+  mat-raised-button
+  matBadgeColor="warn"
+  color='accent'> Return
+
+</button>
+  </div>
+  <br>
 </mat-card-content>
 
 

@@ -149,14 +149,14 @@ export class SellReportComponent implements OnInit {
      */
 
     getTotalCost() {
-
+      
       return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
 
     getTotalWeight(){
       var weight =  this.ventas.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
       return weight.toFixed(2)
-
+      
 
     }
 
@@ -168,23 +168,24 @@ export class SellReportComponent implements OnInit {
       var x = x.lenght();
       return x
     }
+
 /***
  * Filter Funtions for the leftover data table
  */
-    getLeftoverTotalBoxes(){
-          return this.leftover.map(t => t.count).reduce((acc, value) => acc + value, 0);
-        }
+getLeftoverTotalBoxes(){
+  return this.leftover.map(t => t.count).reduce((acc, value) => acc + value, 0);
+}
 
-    getLeftoverTotalWeight(){
-      var weight =  this.leftover.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
-      return weight.toFixed(2)
-    }
-    getLeftoverTotalCost(){
-      var weight =  this.leftover.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
-      return weight.toFixed(2)
+getLeftoverTotalWeight(){
+var weight =  this.leftover.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+return weight.toFixed(2)
+}
+getLeftoverTotalCost(){
+var weight =  this.leftover.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
+return weight.toFixed(2)
 
 
-    }
+}
 
 
     //Delete function

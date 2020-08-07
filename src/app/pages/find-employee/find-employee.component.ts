@@ -67,7 +67,7 @@ export class FindEmployeeComponent implements OnInit {
     this.http.get("/api/employees/" + EmployeeId).subscribe(res => {
       if (res) {
         console.log('this is res', res)
-        this.cookieService.set('paysession', EmployeeId, 1);
+        this.cookieService.set('paysession', EmployeeId, 1, '/', 'localhost', false, "Strict");
 
         //this.stepper
        this.router.navigate(["/sell"]);
