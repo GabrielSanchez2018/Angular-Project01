@@ -1,4 +1,3 @@
-
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
@@ -10,14 +9,12 @@ import { Router } from '@angular/router';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 import { error } from 'util';
 
-
 @Component({
-  selector: 'app-order-verify',
-  templateUrl: './order-verify.component.html',
-  styleUrls: ['./order-verify.component.css']
+  selector: 'app-order-verify01',
+  templateUrl: './order-verify01.component.html',
+  styleUrls: ['./order-verify01.component.css']
 })
-export class OrderVerifyComponent implements OnInit {
-
+export class OrderVerify01Component implements OnInit {
 
   form: FormGroup;
   username: string;
@@ -40,7 +37,6 @@ export class OrderVerifyComponent implements OnInit {
   map: any;
   matInput: any;
   orderVerify: Object;
-
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -497,12 +493,13 @@ var counts = "products"
 
         this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
-
+      this.router.navigate(['/order-verify']);
       // this will reset the form
       //this.successSnackbar();
       this.form.reset();
       this.rerender();
-      this.router.navigate(['/order-verify01']);
+
+
       } else {
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",

@@ -30,6 +30,7 @@ export class SellReportComponent implements OnInit {
   username: string;
   employees: Object;
   leftover: any;
+  orderVerify: any;
 
 
    applyFilter(event: Event) {
@@ -65,6 +66,13 @@ export class SellReportComponent implements OnInit {
 
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;
+      }), err =>{
+        console.log(err)
+      }
+
+      this.http.get('api/orderVerify/orderverify-graph').subscribe(res =>{
+        this.orderVerify = res;
+        console.log('orderverify', this.orderVerify)
       }), err =>{
         console.log(err)
       }
@@ -186,6 +194,25 @@ return weight.toFixed(2)
 
 
 }
+
+/***
+ * Filter Funtions for the Order Verify data table
+ */
+getOrderVerifyTotalBoxes(){
+  return this.orderVerify.map(t => t.count).reduce((acc, value) => acc + value, 0);
+}
+
+getOrderVerifyTotalWeight(){
+var weight =  this.orderVerify.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+return weight.toFixed(2)
+}
+getOrderVerifyTotalCost(){
+var cost =  this.orderVerify.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
+return cost.toFixed(2)
+
+
+}
+
 
 
     //Delete function

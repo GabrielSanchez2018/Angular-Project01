@@ -201,6 +201,8 @@ router.delete('/alldelete', function () {
 
 
 
+
+
 router.delete('/:barcodeId', function(req, res, next){
   Orderverify.findOneAndDelete({'_id': req.params.barcodeId}, function(err, barcodes){
     if(err) {
