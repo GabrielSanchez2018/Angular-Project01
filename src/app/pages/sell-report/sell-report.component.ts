@@ -16,11 +16,12 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./sell-report.component.css']
 })
 export class SellReportComponent implements OnInit {
-  displayedColumns = ['code','itemdescription', 'totalboxes','totalweight', 'totalprice'];
+  displayedColumns = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
   displayedColumnsOne = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   displayedColumnsTwo = ['username','total', 'functions'];
   displayedColumnsFour = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
-  
+  displayedColumnsThree = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
+  displayedColumnsTen = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
   ventas: any;
     data: any;
     itemCount = [];

@@ -28,7 +28,9 @@ router.get('/leftover-report', function(req, res, next) {
         "code": {"$first": "$barProductCode"},
         "_id": "$itemdescription",
         //"itemdescription": {"$first": "$itemdescription"},
+        "price": {"$first":"$price"},
         "count": {"$sum": 1},
+
        "totalweight" : {"$sum": "$barBoxNetWeight"},
        "totalprice": {"$sum": "$totalprice" },
        //"username": {"$first": "$username"},
