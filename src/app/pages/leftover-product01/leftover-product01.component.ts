@@ -467,7 +467,7 @@ function myFunction(){
 
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
-var totalprice = totalpriceResult.toFixed(1);
+var totalprice = totalpriceResult.toFixed(2);
 var itemdescription = descriptionFunction();
 
 
@@ -482,7 +482,7 @@ this.changeDetectorRefs.detectChanges();
 
 var counts = "Leftover"
 
-    this.http.post('/api/leftover/', {
+    this.http.post('/api/barcodes/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,

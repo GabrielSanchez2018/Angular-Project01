@@ -19,6 +19,8 @@ export class SellReportComponent implements OnInit {
   displayedColumns = ['code','itemdescription', 'totalboxes','totalweight', 'totalprice'];
   displayedColumnsOne = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   displayedColumnsTwo = ['username','total', 'functions'];
+  displayedColumnsFour = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
+  
   ventas: any;
     data: any;
     itemCount = [];
@@ -31,6 +33,7 @@ export class SellReportComponent implements OnInit {
   employees: Object;
   leftover: any;
   orderVerify: any;
+  leftoverTable: any;
 
 
    applyFilter(event: Event) {
@@ -59,6 +62,14 @@ export class SellReportComponent implements OnInit {
       this.http.get('/api/leftover/leftover-report' ).subscribe(res =>{
         this.leftover = res
         console.log('leftover', this.leftover)
+      }), err =>{
+        console.log(err)
+
+      }
+
+      this.http.get('/api/leftover' ).subscribe(res =>{
+        this.leftoverTable = res
+        console.log('leftovertable', this.leftoverTable)
       }), err =>{
         console.log(err)
 
@@ -149,6 +160,13 @@ export class SellReportComponent implements OnInit {
 
     exportAsXLSXAll(): void{
       this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
+    }
+
+    exportAsXLSXLeftOverItems(): void{
+      this.exportService.exportToExcel(this.leftoverTable , 'Leftover-Items');
+    }
+    exportAsXLSXProductReturnedTable(): void{
+      this.exportService.exportToExcel(this.leftover , 'Leftover-table');
     }
 
 
