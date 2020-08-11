@@ -37,7 +37,7 @@ router.get('/:username/role', function(req, res, next) {
       }
       })
   });
-  
+
 
 // Find by Id
 router.get('/:id', function( req, res, next) {

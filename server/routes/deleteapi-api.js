@@ -1,3 +1,9 @@
+/*=========================
+Name: Gabriel Sanchez
+Date: April 20, 2020
+Description: Delete API
+==========================*/
+
 var mongoose = require('mongoose');
 
 var db = mongoose.connection;

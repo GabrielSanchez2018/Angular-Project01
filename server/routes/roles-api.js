@@ -1,8 +1,7 @@
 
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name: Gabriel Sanchez
 Date: April 20, 2020
-Assignment: roles API's
 Description: all API's used for roles
 ==========================*/
 

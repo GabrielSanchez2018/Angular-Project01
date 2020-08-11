@@ -1,3 +1,10 @@
+/*=========================
+Name: Gabriel Sanchez
+Date: April 20, 2020
+Description: Leftover API's 
+==========================*/
+
+
 var mongoose = require('mongoose');
 const express = require('express');
 const Leftover = require('../models/leftover');
@@ -65,7 +72,7 @@ router.post('/', function(req, res, next){
     // get the request's form data
      const barcode = req.body.barcode
      console.log('this is the barcode input from the console.', barcode)
-  
+
      const shippingContainer = Array.from(barcode.slice(0,2));
      labelShippingContainer = shippingContainer.join('');
      //Packaging Indicator
@@ -83,7 +90,7 @@ router.post('/', function(req, res, next){
      //Net Weight
      var BoxNetWeightIdentifier = Array.from(barcode.slice(16,20));
      labelnetWeight = BoxNetWeightIdentifier.join('');
-  
+
      //Box Weight
      var boxWeight = Array.from(barcode.slice(20,26));
      labelWeight = boxWeight.join('')/10;
@@ -99,7 +106,7 @@ router.post('/', function(req, res, next){
      //10 Digit Serial
      var serialIdenfier = Array.from(barcode.slice(34,46));
      labelserialidentifier = serialIdenfier.join('');
-  
+
      let barcodeInsert = {
               username: req.body.username,
                barcode: req.body.barcode,
@@ -118,11 +125,11 @@ router.post('/', function(req, res, next){
                barSerialNumberIndentifier: labelserialnumber,
                barTenDigitSerial : labelserialidentifier,
                orderDate: req.body.orderDate
-  
-  
+
+
      };
-  
-  
+
+
      Leftover.create(barcodeInsert, function(err, barcodes){
        console.log(barcodeInsert)
        console.log('here it is', barcodes)
@@ -134,7 +141,7 @@ router.post('/', function(req, res, next){
          res.json(barcodes)
        }
      });
-  
+
    });
 
    //delete api
@@ -149,7 +156,7 @@ router.post('/', function(req, res, next){
       }
     })
   })
-  
 
-   
+
+
 module.exports = router;

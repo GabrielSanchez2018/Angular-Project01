@@ -1,7 +1,6 @@
 /*=========================
 Name: Gabriel Sanchez
 Date: April 5, 2020
-Assignment: user.js
 Description: user model for user data fields
 ==========================*/
 

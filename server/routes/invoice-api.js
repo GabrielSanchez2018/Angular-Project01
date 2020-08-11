@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name:  Gabriel Sanchez
 Date: April 20, 2020
-Assignment: Invoice API's
 Description: all API's used for the Invoices.
 ==========================*/
 var mongoose = require('mongoose');

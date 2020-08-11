@@ -1,7 +1,6 @@
 /*=========================
 Name: Gabriel Sanchez
 Date: June 31 2020
-Assignment: leftover.js
 Description: this is the leftover products
 ==========================*/
 const mongoose = require('mongoose');

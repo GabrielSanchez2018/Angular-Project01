@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter
-Date: March 31, 2020
-Assignment: rele create
+Name: Gabriel Sanchez
+Date: August, 2020
 Description: create new services
 question schema for user security
 ==========================*/

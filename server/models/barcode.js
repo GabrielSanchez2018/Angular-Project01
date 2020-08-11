@@ -1,3 +1,9 @@
+/*=========================
+Name: Gabriel Sanchez
+Date: April 20, 2020
+Description: Barcode Schema
+==========================*/
+
 
 const mongoose = require('mongoose');
 

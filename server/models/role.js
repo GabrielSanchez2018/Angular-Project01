@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter
+Name: Gabriel Sanchez
 Date: April 20, 2020
-Assignment: role.js
 Description: create a roleSchema for user roles
 ==========================*/
 

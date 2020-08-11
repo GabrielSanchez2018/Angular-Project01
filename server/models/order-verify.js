@@ -1,8 +1,7 @@
 /*=========================
 Name: Gabriel Sanchez
 Date: April 5, 2020
-Assignment: barcode.js
-Description: user model for user data fields
+Description: Order Verify
 ==========================*/
 const mongoose = require('mongoose');
 

@@ -1,3 +1,9 @@
+/*=========================
+Name: Gabriel Sanchez
+Date: April 20, 2020
+Description: Barcode API
+==========================*/
+
 var mongoose = require('mongoose');
 const express = require('express');
 const Barcodes = require('../models/barcode');
@@ -195,7 +201,7 @@ router.get('/', function(req, res, next){
       console.log(err);
       return next(err);
     } else {
-      
+
       console.log(barcodes);
       res.json(barcodes)
     }

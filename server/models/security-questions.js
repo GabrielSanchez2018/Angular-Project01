@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter
-Date: March 31, 2020
-Assignment: securityQuestions.js
+Name: Gabriel Sanchez
+Date: August, 2020
 Description: create a security
 question schema for user security
 ==========================*/

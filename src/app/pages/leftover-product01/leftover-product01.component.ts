@@ -16,7 +16,7 @@ import { error } from 'util';
 })
 export class LeftoverProduct01Component implements OnInit {
 
- 
+
   form: FormGroup;
   username: string;
   invoices: Object;
@@ -99,8 +99,8 @@ export class LeftoverProduct01Component implements OnInit {
 
   getTotalCost() {
     //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
-    if(Array.isArray(this.barcodes)){
-     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    if(Array.isArray(this.leftover)){
+     return this.leftover.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
 
   }
@@ -121,7 +121,7 @@ export class LeftoverProduct01Component implements OnInit {
 rerender(){
   this.barcodes
   this.changeDetectorRefs.detectChanges();
-  
+
 }
 
   ngOnInit() {
@@ -162,7 +162,7 @@ rerender(){
       const enteredProductcode = this.form.controls.barcode.value;
 
        /***
-       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
+       * This Function will throw an error when the barcode is less than and longer than 46 digits.
        */
       console.log('this is the barcode', enteredProductcode.length)
 
@@ -173,8 +173,8 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          } 
-        ) 
+          }
+        )
         throw error;
       } else if(enteredProductcode.length < 46){
         this.snackBar.open(
@@ -183,8 +183,8 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          } 
-        ) 
+          }
+        )
         throw error;
       }
 
@@ -215,7 +215,7 @@ function myFunction(){
       return dataservices[0].price
 
     } else if(labelproductCode == dataservices[1].id){
-      return dataservices[1].price 
+      return dataservices[1].price
 
 
     } else if(labelproductCode == dataservices[2].id){
@@ -512,9 +512,9 @@ var counts = "Leftover"
 
         );
       }
-      
+
     });
-    
+
   });
   }
 

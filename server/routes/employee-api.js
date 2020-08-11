@@ -1,3 +1,9 @@
+/*=========================
+Name: Gabriel Sanchez
+Date: April 20, 2020
+Description: Employee API
+==========================*/
+
 const express = require('express');
 const Employee = require('../models/employee');
 const { rename } = require('fs');
@@ -52,14 +58,14 @@ router.get('/:EmployeeId/role', function(req, res, next) {
 
       /***
        * When the user erases all employees, this employee api throws an error
-       * This if statements will help to get rid of the error 
-       * With no employee data in the employee collection, this API emits an error, the following 
+       * This if statements will help to get rid of the error
+       * With no employee data in the employee collection, this API emits an error, the following
        * var employee array solves the problem.
        */
       console.log('this employee', employee)
       if(employee === null){
-       var employee = [  
-          {role:'standard'}, 
+       var employee = [
+          {role:'standard'},
        ]
         console.log('this is the employee array',employee[0].role)
         return res.json(employee[0].role)
@@ -85,7 +91,7 @@ router.get('/:EmployeeId/role', function(req, res, next) {
 
 // Create User
 router.post('/', function(req, res, next) {
- 
+
 
   let e = {
       text: req.body.text,
@@ -94,7 +100,7 @@ router.post('/', function(req, res, next) {
       // Department: req.body.Department,
       // StartDate: req.body.StartDate,
       // role: req.body.role,
-     
+
   };
 
   Employee.create(e, function(err, employees) {
@@ -105,7 +111,7 @@ router.post('/', function(req, res, next) {
       console.log(employees);
       res.json(employees);
     }
- 
+
   })
 });
 

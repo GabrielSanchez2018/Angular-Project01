@@ -1,8 +1,7 @@
 /*=========================
-Name: Brittany Dockter
+Name: Gabriel Sanchez
 Date: April 20, 2020
-Assignment: invoice.js
-Description: create an invoiceSchema for orders
+Description: Invoice Schema
 ==========================*/
 const mongoose = require('mongoose');
 
