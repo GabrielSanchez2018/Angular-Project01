@@ -153,7 +153,7 @@ export class SellReportComponent implements OnInit {
 
     exportAsXLSX(): void{
       this.exportService.exportToExcel(
-        this.ventas, this.barcodes, 'Credit_Report',
+        this.barcodes, this.leftoverTable, this.orderVerify, this.leftover, 'Credit_Report',
 
 
 

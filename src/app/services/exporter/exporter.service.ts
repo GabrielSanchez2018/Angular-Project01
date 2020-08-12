@@ -17,15 +17,20 @@ export class ExporterService{
 
   constructor(){}
 
-  exportToExcel(json: any[], test: any[], excelFileName: string): void{
-    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
-    const worksheets: XLSX.WorkSheet = XLSX.utils.json_to_sheet(test);
+  exportToExcel(scanneditems: any[], leftoveritems: any[], allreport: any[], leftoverreport: any[], excelFileName: string): void{
+    const worksheetscanneditems: XLSX.WorkSheet = XLSX.utils.json_to_sheet(scanneditems);
+    const worksheetsleftoveritems: XLSX.WorkSheet = XLSX.utils.json_to_sheet(leftoveritems);
+    const worksheetallreport: XLSX.WorkSheet = XLSX.utils.json_to_sheet(allreport);
+    const worksheetleftoverreport: XLSX.WorkSheet = XLSX.utils.json_to_sheet(leftoverreport);
     const workbook: XLSX.WorkBook = {
       Sheets: {
-        'data': worksheet,
-        'test': worksheets
+        'GOP ITEMS': worksheetscanneditems,
+        'LEFTOVER ITEMS': worksheetsleftoveritems,
+        "GOP REPORT" :  worksheetallreport,
+        "LEFTOVER REPORT": worksheetleftoverreport
+
       },
-      SheetNames: ['data', 'test']
+      SheetNames: ['GOP ITEMS', 'LEFTOVER ITEMS', 'GOP REPORT', 'LEFTOVER REPORT']
     };
     const excelBuffer: any = XLSX.write(workbook, {bookType: 'xlsx', type: 'array'});
     //call method buffer and file Name
