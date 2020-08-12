@@ -143,10 +143,10 @@ rerender(){
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/ordervefiry/' + barcodeId).subscribe(res => {
+        this.http.delete('/api/orderverify/' + barcodeId).subscribe(res => {
           console.log('Barcode deleted');
-          if(Array.isArray(this.barcodes)){
-            this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          if(Array.isArray(this.orderVerify)){
+            this.orderVerify = this.orderVerify.filter(q => q._id !== barcodeId);
           }
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           console.log(this.barcodes);
@@ -470,7 +470,7 @@ function myFunction(){
 
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
-var totalprice = totalpriceResult.toFixed(1);
+var totalprice = totalpriceResult.toFixed(2);
 var itemdescription = descriptionFunction();
 
 
@@ -483,7 +483,7 @@ console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
 
-var counts = "Leftover"
+var counts = "products"
 
     this.http.post('/api/orderverify/', {
       price: price,
@@ -502,6 +502,7 @@ var counts = "Leftover"
       //this.successSnackbar();
       this.form.reset();
       this.rerender();
+      this.router.navigate(['/order-verify01']);
       } else {
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",

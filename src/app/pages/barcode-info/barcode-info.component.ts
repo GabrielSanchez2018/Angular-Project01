@@ -520,7 +520,7 @@ function myFunction(){
 
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
-var totalprice = totalpriceResult.toFixed(1);
+var totalprice = totalpriceResult.toFixed(2);
 var itemdescription = descriptionFunction();
 
 
@@ -529,9 +529,9 @@ var price = myFunction();
 
 
 // console.log('asdfrniovnoirevnirnvornevrnvininreoivneionevir', )
-// console.log('here is the price', price);
-// console.log('here is the total price', totalprice);
-// console.log('here is the total description', itemdescription);
+console.log('here is the price', price);
+console.log('here is the total price', totalprice);
+console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
 

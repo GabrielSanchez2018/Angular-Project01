@@ -34,6 +34,7 @@ router.get('/orderverify-graph', function(req, res, next) {
       "$group": {
         "code": {"$first": "$barProductCode"},
         "_id": "$itemdescription",
+        "price": {"$first":"$price"},
         //"itemdescription": {"$first": "$itemdescription"},
         "count": {"$sum": 1},
         "totalprice": {"$sum": "$totalprice" },
@@ -204,6 +205,8 @@ router.delete('/alldelete', function () {
 
 
 })
+
+
 
 
 

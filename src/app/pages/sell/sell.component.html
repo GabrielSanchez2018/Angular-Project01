@@ -39,6 +39,15 @@
     </form>
   </mat-card>
 <!-- THIS IS THE LINE  -->
+<button
+
+    class='order'
+    style='margin-right: 5%; text-align: center; float:right;'
+    routerLink='/barcode-info'
+    mat-raised-button
+    color='accent'>Nexts</button>
+
+<br>
 <br>
 
 
@@ -176,16 +185,25 @@
 
 
 
+<br>
+<br>
+
+
+
+
+
+
+
 <mat-card-content class="card" *ngIf="!show" style="background-color: gray; color: white; width: 50%;">
   <h1 class="title" >
     No Order Found for {{employees?.FirstName}} {{employees?.LastName}}<br />
   </h1>
   <div style="margin: 0 auto; width: 15%; background-color: gray;">
 
- 
+
   <button
   class='order2'
-  
+
   routerLink='/find-employee'
   mat-raised-button
   matBadgeColor="warn"

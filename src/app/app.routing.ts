@@ -43,6 +43,7 @@ import { Role } from './shared/guards/role';
 import { LeftoverProductComponent } from './pages/leftover-product/leftover-product.component';
 import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-product01.component';
 import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
+import { OrderVerify01Component } from './pages/order-verify01/order-verify01.component';
 // import { TimerComponent } from './pages/timer/timer.component';
 
 
@@ -109,6 +110,11 @@ export const AppRoutes: Routes = [
       {
         path: 'order-verify',
         component: OrderVerifyComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'order-verify01',
+        component: OrderVerify01Component,
         canActivate: [RoleGuard]
       },
       {

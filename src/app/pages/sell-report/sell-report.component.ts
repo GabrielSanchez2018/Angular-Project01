@@ -16,9 +16,12 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./sell-report.component.css']
 })
 export class SellReportComponent implements OnInit {
-  displayedColumns = ['code','itemdescription', 'totalboxes','totalweight', 'totalprice'];
+  displayedColumns = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
   displayedColumnsOne = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   displayedColumnsTwo = ['username','total', 'functions'];
+  displayedColumnsFour = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
+  displayedColumnsThree = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
+  displayedColumnsTen = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
   ventas: any;
     data: any;
     itemCount = [];
@@ -30,6 +33,8 @@ export class SellReportComponent implements OnInit {
   username: string;
   employees: Object;
   leftover: any;
+  orderVerify: any;
+  leftoverTable: any;
 
 
    applyFilter(event: Event) {
@@ -63,8 +68,23 @@ export class SellReportComponent implements OnInit {
 
       }
 
+      this.http.get('/api/leftover' ).subscribe(res =>{
+        this.leftoverTable = res
+        console.log('leftovertable', this.leftoverTable)
+      }), err =>{
+        console.log(err)
+
+      }
+
       this.http.get('api/barcodes/').subscribe(res =>{
         this.barcodes = res;
+      }), err =>{
+        console.log(err)
+      }
+
+      this.http.get('api/orderVerify/orderverify-graph').subscribe(res =>{
+        this.orderVerify = res;
+        console.log('orderverify', this.orderVerify)
       }), err =>{
         console.log(err)
       }
@@ -132,16 +152,31 @@ export class SellReportComponent implements OnInit {
 
 
     exportAsXLSX(): void{
-      this.exportService.exportToExcel(this.ventas , 'Credit_Report');
-    }
+      this.exportService.exportToExcel(
+        this.ventas, this.barcodes, 'Credit_Report',
 
-    exportAsXLSXThird(): void{
-      this.exportService.exportToExcel(this.orderssum , 'Scanned_Items');
-    }
 
-    exportAsXLSXAll(): void{
-      this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
+
+        );
     }
+/***
+ * I will have to make another excel exporter for the following data.
+ */
+    // exportAsXLSXThird(): void{
+    //   this.exportService.exportToExcel(this.orderssum , 'Scanned_Items');
+    // }
+
+    // exportAsXLSXAll(): void{
+    //   this.exportService.exportToExcel(this.barcodes , 'Scanned_Items');
+    // }
+
+    // exportAsXLSXLeftOverItems(): void{
+    //   this.exportService.exportToExcel(this.leftoverTable , 'Leftover-Items');
+
+    // }
+    // exportAsXLSXProductReturnedTable(): void{
+    //   this.exportService.exportToExcel(this.leftover , 'Leftover-table');
+    // }
 
 
     /***
@@ -149,14 +184,14 @@ export class SellReportComponent implements OnInit {
      */
 
     getTotalCost() {
-      
+
       return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
 
     getTotalWeight(){
       var weight =  this.ventas.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
       return weight.toFixed(2)
-      
+
 
     }
 
@@ -183,9 +218,34 @@ return weight.toFixed(2)
 getLeftoverTotalCost(){
 var weight =  this.leftover.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
 return weight.toFixed(2)
+}
+/***
+ * Filter Funtions for the leftoverTable data table
+ */
+getLeftoverTableTotalCost(){
+  var weight =  this.leftoverTable.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
+  return weight.toFixed(2)
+  }
+
+
+/***
+ * Filter Funtions for the Order Verify data table
+ */
+getOrderVerifyTotalBoxes(){
+  return this.orderVerify.map(t => t.count).reduce((acc, value) => acc + value, 0);
+}
+
+getOrderVerifyTotalWeight(){
+var weight =  this.orderVerify.map(t => t.totalweight).reduce((acc, value) => acc + value, 0 );
+return weight.toFixed(2)
+}
+getOrderVerifyTotalCost(){
+var cost =  this.orderVerify.map(t => t.totalprice).reduce((acc, value) => acc + value, 0 );
+return cost.toFixed(2)
 
 
 }
+
 
 
     //Delete function

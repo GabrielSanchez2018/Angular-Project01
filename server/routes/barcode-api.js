@@ -33,8 +33,10 @@ router.get('/barcodes-graph', function(req, res, next) {
       "$group": {
         "code": {"$first": "$barProductCode"},
         "_id": "$itemdescription",
+       "price": {"$first":"$price"},
         //"itemdescription": {"$first": "$itemdescription"},
         "count": {"$sum": 1},
+        
        "totalweight" : {"$sum": "$barBoxNetWeight"},
        "totalprice": {"$sum": "$totalprice" },
        //"username": {"$first": "$username"},

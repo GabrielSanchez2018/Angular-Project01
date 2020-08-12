@@ -17,11 +17,15 @@ export class ExporterService{
 
   constructor(){}
 
-  exportToExcel(json: any[], excelFileName: string): void{
+  exportToExcel(json: any[], test: any[], excelFileName: string): void{
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
+    const worksheets: XLSX.WorkSheet = XLSX.utils.json_to_sheet(test);
     const workbook: XLSX.WorkBook = {
-      Sheets: {'data': worksheet},
-      SheetNames: ['data']
+      Sheets: {
+        'data': worksheet,
+        'test': worksheets
+      },
+      SheetNames: ['data', 'test']
     };
     const excelBuffer: any = XLSX.write(workbook, {bookType: 'xlsx', type: 'array'});
     //call method buffer and file Name

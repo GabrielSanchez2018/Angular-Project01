@@ -10,12 +10,11 @@ import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.
 import { error } from 'util';
 
 @Component({
-  selector: 'app-leftover-product01',
-  templateUrl: './leftover-product01.component.html',
-  styleUrls: ['./leftover-product01.component.css']
+  selector: 'app-order-verify01',
+  templateUrl: './order-verify01.component.html',
+  styleUrls: ['./order-verify01.component.css']
 })
-export class LeftoverProduct01Component implements OnInit {
-
+export class OrderVerify01Component implements OnInit {
 
   form: FormGroup;
   username: string;
@@ -38,7 +37,6 @@ export class LeftoverProduct01Component implements OnInit {
   map: any;
   matInput: any;
   orderVerify: Object;
-  leftover: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router, private cookieService: CookieService, private changeDetectorRefs: ChangeDetectorRef, private dialog: MatDialog, private snackBar: MatSnackBar) {
 
@@ -58,15 +56,15 @@ export class LeftoverProduct01Component implements OnInit {
       console.log(err);
     }
     this.username = this.cookieService.get('paysession');
-    this.http.get('api/leftover/' ).subscribe(res =>{
-      this.leftover = res
+    this.http.get('api/orderverify/' ).subscribe(res =>{
+      this.orderVerify = res
         //THIS FUNCTION WILL FILTHER THE USERNAME | I replaced the filter for map.
 
       //   if(Array.isArray(res)){
       //     this.barcodes = res.filter(q => q.username === this.username);
       //  }
       //this.barcodes = res.filter(q => q.username === this.username);;
-      console.log('this is orderverify', this.leftover)
+      console.log('this is orderverify', this.orderVerify)
     }), err =>{
       console.log(err)
     }
@@ -99,8 +97,8 @@ export class LeftoverProduct01Component implements OnInit {
 
   getTotalCost() {
     //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
-    if(Array.isArray(this.leftover)){
-     return this.leftover.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    if(Array.isArray(this.barcodes)){
+     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
     }
 
   }
@@ -121,7 +119,7 @@ export class LeftoverProduct01Component implements OnInit {
 rerender(){
   this.barcodes
   this.changeDetectorRefs.detectChanges();
-
+  
 }
 
   ngOnInit() {
@@ -141,17 +139,18 @@ rerender(){
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/leftover/' + barcodeId).subscribe(res => {
+        this.http.delete('/api/orderverify/' + barcodeId).subscribe(res => {
           console.log('Barcode deleted');
-          if(Array.isArray(this.leftover)){
-            this.leftover = this.leftover.filter(q => q._id !== barcodeId);
+          if(Array.isArray(this.orderVerify)){
+            this.orderVerify = this.orderVerify.filter(q => q._id !== barcodeId);
           }
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
-          console.log(this.leftover);
+          console.log(this.barcodes);
         });
       }
     });
    }
+
 
 
   create(){
@@ -162,7 +161,7 @@ rerender(){
       const enteredProductcode = this.form.controls.barcode.value;
 
        /***
-       * This Function will throw an error when the barcode is less than and longer than 46 digits.
+       * This Function will throw an error when the barcode is less than and longer than 46 digits. 
        */
       console.log('this is the barcode', enteredProductcode.length)
 
@@ -173,8 +172,8 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          }
-        )
+          } 
+        ) 
         throw error;
       } else if(enteredProductcode.length < 46){
         this.snackBar.open(
@@ -183,8 +182,8 @@ rerender(){
           {
             duration: 4000,
             verticalPosition: "top"
-          }
-        )
+          } 
+        ) 
         throw error;
       }
 
@@ -215,7 +214,7 @@ function myFunction(){
       return dataservices[0].price
 
     } else if(labelproductCode == dataservices[1].id){
-      return dataservices[1].price
+      return dataservices[1].price 
 
 
     } else if(labelproductCode == dataservices[2].id){
@@ -480,9 +479,9 @@ console.log('here is the total description', itemdescription);
 
 this.changeDetectorRefs.detectChanges();
 
-var counts = "Leftover"
+var counts = "products"
 
-    this.http.post('/api/barcodes/', {
+    this.http.post('/api/orderverify/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,
@@ -494,12 +493,13 @@ var counts = "Leftover"
 
         this.changeDetectorRefs.detectChanges();
       console.log(this.barcodes);
-
+      this.router.navigate(['/order-verify']);
       // this will reset the form
       //this.successSnackbar();
       this.form.reset();
       this.rerender();
-      this.router.navigate(['/leftover-product']);
+
+
       } else {
         this.snackBar.open(
           "The employee ID you entered is invalid, please try again.",
@@ -512,13 +512,11 @@ var counts = "Leftover"
 
         );
       }
-
+      
     });
-
+    
   });
   }
 
 
 }
-
-
