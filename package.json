@@ -44,6 +44,7 @@
     "mongoose": "^5.7.8",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0",
+    "mssql": "^6.2.1",
     "ng-virtual-keyboard": "^0.4.0",
     "ngx-cookie-service": "^2.2.0",
     "ngx-print": "^1.2.0-beta.5",

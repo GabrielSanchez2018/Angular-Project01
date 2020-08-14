@@ -13,6 +13,10 @@ const router = express.Router();
 
 
 
+
+
+
+
 // Get Barcodes
 router.get('/', function(req, res, next){
   Leftover.find({}, function(err, orderverify){
@@ -25,6 +29,27 @@ router.get('/', function(req, res, next){
     }
   })
 })
+
+  /***
+   * THIS FUNCTION WILL DROP THE LEFTOVER COLLECTION
+   * 
+   */
+  router.delete('/alldelete', function () {
+    console.log("db connect");
+    var db = mongoose.connection;
+    db.dropCollection("leftovers", function (err, result) {
+        if (err) {
+            console.log("error delete collection");
+        } else {
+  
+            console.log("delete collection success");
+  
+        }
+  
+    });
+  
+  
+  })
 
 // Find Barcode Report
 router.get('/leftover-report', function(req, res, next) {

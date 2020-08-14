@@ -13,6 +13,7 @@ export class DatabaseManagementComponent implements OnInit {
 
   barcodes: any;
   invoices: any;
+  leftover: any;
 
 
   constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog ) {
@@ -23,6 +24,13 @@ export class DatabaseManagementComponent implements OnInit {
     }
     this.http.get('api/invoices/').subscribe(res =>{
       this.invoices = res;
+    }), err =>{
+      console.log(err)
+    }
+
+    this.http.get('api/leftover/').subscribe(res =>{
+      this.leftover = res;
+      console.log('leftover', this.leftover)
     }), err =>{
       console.log(err)
     }
@@ -68,7 +76,7 @@ export class DatabaseManagementComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/invoices/alldelete' ).subscribe(res => {
+        this.http.delete('/api/invoice/alldelete' ).subscribe(res => {
           console.log('Barcode deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
@@ -76,8 +84,34 @@ export class DatabaseManagementComponent implements OnInit {
         });
       }
     });
+
+    
    }
 
+   deleteleftover(alldelete) {
+    const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+      data: {
+        alldelete
+      },
+      disableClose: true,
+      width: '800px'
+    });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      if (result === 'confirm'){
+        this.http.delete('/api/leftover/alldelete' ).subscribe(res => {
+          console.log('leftover deleted');
+
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+         
+        });
+      }
+    });
+
+    
+   }
+  
+   
 
 
 }

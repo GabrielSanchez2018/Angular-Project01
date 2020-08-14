@@ -25,7 +25,8 @@ const ServicesApi = require('./routes/services-api');
 const BarcodesApi = require('./routes/barcode-api');
 const EmployeeApi = require('./routes/employee-api');
 const Orderverify = require('./routes/order-verify-api');
-const Leftover = require('./routes/leftover-api')
+const Leftover = require('./routes/leftover-api');
+//const SQLEmp = require('./routes/sql-employee-api');
 
 /**
  * App configurations
@@ -74,7 +75,8 @@ app.use('/api/services', ServicesApi); //This is to create more service items
 app.use('/api/barcodes', BarcodesApi);
 app.use('/api/employees', EmployeeApi);
 app.use('/api/orderverify',Orderverify);
-app.use('/api/leftover', Leftover)
+app.use('/api/leftover', Leftover);
+//app.use('/api/sqlemp', SQLEmp);
 
 /**
  * Create and start server
