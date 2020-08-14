@@ -92,7 +92,7 @@ import { LeftoverProductComponent } from './pages/leftover-product/leftover-prod
 import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-product01.component';
 import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 import { OrderVerify01Component } from './pages/order-verify01/order-verify01.component';
-// import { TimerComponent } from './pages/timer/timer.component';
+import { TimerComponent } from './pages/timer/timer.component';
 
 
 @NgModule({
@@ -144,7 +144,7 @@ import { OrderVerify01Component } from './pages/order-verify01/order-verify01.co
     LeftoverProduct01Component,
    EmployeeCreateComponent,
    OrderVerify01Component,
-    // TimerComponent,
+   TimerComponent,
 
   ],
   imports: [

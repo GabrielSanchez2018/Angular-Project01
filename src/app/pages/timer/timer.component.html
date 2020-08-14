@@ -1,5 +1,6 @@
-<!-- <mat-card >
+<mat-card >
 
+  <form [formGroup]="form" (ngSubmit)="login(); form.reset()" #loginForm="ngForm">
   <mat-form-field appearance="fill">
     <mat-label>Input & change events</mat-label>
     <input matInput [matDatepicker]="picker"
@@ -8,11 +9,15 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
+  <mat-card-actions>
 
+    <button type="submit" fxFlex mat-raised-button  class="buttonSubmit">Submit</button>
+  </mat-card-actions>
 
   <br>
   <span>
     {{now |  date:'MM-dd-yyyy'}} <br>
      {{now |  date:'HH:mm:ss a'}}
   </span>
-</mat-card> -->
+  </form>
+</mat-card>
