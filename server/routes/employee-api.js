@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
 
 });
 
+
 //GetEmployeebyId API
 router.get('/:EmployeeID', function (req, res, next) {
   Employee.findOne({'EmployeeID': req.params.EmployeeID}, function(err, employee){
@@ -89,31 +90,59 @@ router.get('/:EmployeeId/role', function(req, res, next) {
 //   });
 // });
 
+router.post('/', function(req, res, next){
+  var docs = req.body.data; // ur json data is now in node end
+  //var docs = JSON.parse(data)
+   console.log('this is the data', docs)
+  var i=0;
+  var bulk = Employee.collection.initializeUnorderedBulkOp();  // test is the        model name. I used mongoose
+  // now using loop insert all json data inside bulk variable
+  for (i = 0; i < docs.length; i += 1) {
+     bulk.insert(docs[i]);
+  }
+
+  //after insertion finished u might need node-async module, to insert first
+  //then asynchronously execute bulk
+   bulk.execute(function (errx) {
+         if (errx) { return next(errx); }
+                     console.log('Success');
+            });
+ })
+
 // Create User
-router.post('/', function(req, res, next) {
+// router.post('/2', function(req, res) {
+// var doc = req.body.data;
+// var i = 0;
+// var bulk = Employee.collection.initializeOrderedBulkOp();
+// for (i = 0 < docs.length; i += 1 ){
+//   bulk.insert(docs[i])
+// }
+// bulk.execute(function(errx){
+//   if (errx){ return next(errx);}
+//   console.log('Success')
+// })
 
+  // let e = {
+  //     text: req.body.text,
+  //     // LastName: req.body.LastName,
+  //     // FirstName: req.body.FirstName,
+  //     // Department: req.body.Department,
+  //     // StartDate: req.body.StartDate,
+  //     // role: req.body.role,
 
-  let e = {
-      text: req.body.text,
-      // LastName: req.body.LastName,
-      // FirstName: req.body.FirstName,
-      // Department: req.body.Department,
-      // StartDate: req.body.StartDate,
-      // role: req.body.role,
+  // };
 
-  };
+  // Employee.create(e, function(err, employees) {
+  //   if (err) {
+  //     console.log(err);
+  //     return next(err);
+  //   } else {
+  //     console.log(employees);
+  //     res.json(employees);
+  //   }
 
-  Employee.create(e, function(err, employees) {
-    if (err) {
-      console.log(err);
-      return next(err);
-    } else {
-      console.log(employees);
-      res.json(employees);
-    }
-
-  })
-});
+  // })
+// });
 
 // // Create User
 // router.post('/myobj', function(req, res, next) {

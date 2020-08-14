@@ -15,17 +15,17 @@ export class EmployeeCreateComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      text: [null, Validators.compose([Validators.required])]
+      data: [null, Validators.compose([Validators.required])]
     });
   }
 
   create() {
-    const texts = this.form.controls['text'].value;
+    const texts = this.form.controls['data'].value;
 
     console.log('Employee Create page: ',texts)
 
     this.http.post('/api/employees', {
-      text: texts
+    data: texts
     }).subscribe(res => {
       //this.router.navigate(['/admin']);
     }, err => {
