@@ -483,7 +483,7 @@ this.changeDetectorRefs.detectChanges();
 
 var counts = "Leftover"
 
-    this.http.post('/api/barcodes/', {
+    this.http.post('/api/leftover/', {
       price: price,
       totalprice: totalprice,
       itemdescription: itemdescription,

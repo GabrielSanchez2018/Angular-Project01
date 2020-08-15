@@ -215,15 +215,21 @@ export class SignInEmployeeeComponent implements OnInit {
      //REPLACED THE NG FORM BY THE VALUE THE KEYBOARD INPUTS
     //const EmployeeId = this.value ||  this.form.controls["EmployeeId"].value;
 
-      const EmployeeId = this.form.controls["EmployeeId"].value;
+      var EmployeeId = this.form.controls["EmployeeId"].value;
+      console.log('EmployeeId', EmployeeId)
+      if (EmployeeId === null){
+         EmployeeId = this.value
+      }
 
     this.http.get("/api/employees/" + EmployeeId.toUpperCase()).subscribe(res => {
       if (res) {
         console.log('this is the employee id', res)
         console.log('empid', EmployeeId);
         
+        
 
-        this.cookieService.set('sessionuser', EmployeeId, 1  , '/', 'localhost', false, "Lax");
+
+        this.cookieService.set('sessionuser', EmployeeId, 1 , '/', 'localhost', false, "Lax");
         // var timeout = this.cookieService.set('sessionuser', EmployeeId, 1  , '/', 'localhost', false, "Lax");
         // console.log('this is the cookie timeout',timeout)
 
@@ -246,6 +252,7 @@ export class SignInEmployeeeComponent implements OnInit {
     });
    }
 
+   
 
 
 

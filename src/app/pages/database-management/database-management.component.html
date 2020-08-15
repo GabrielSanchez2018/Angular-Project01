@@ -1,7 +1,7 @@
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="Inputed Orders Erase">
+  <mat-tab label="Meat Sale Report Delete">
 <mat-card>
-  <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all sell information</p>
+  <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all sell information, Becarefull this cannot be undone.</p>
 
 <br>
 
@@ -9,7 +9,7 @@
         <span class="material-icons">
           delete_forever
           </span>
-          Delete All Orders
+          Delete Sell Report
       </button>
 
   </mat-card>
@@ -26,11 +26,28 @@
     </mat-tab>
     <mat-tab label="Orders by the Employees">
       <mat-card>
-        <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all sell information</p>
+        <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all the orders inputed by the Employees, becareful this cannot be undone</p>
 
       <br>
 
             <button class="button" mat-raised-button (click)="deleteInvoice(_id)" color="warn" >
+              <span class="material-icons">
+                delete_forever
+                </span>
+                Delete All Orders
+            </button>
+
+        </mat-card>
+
+    </mat-tab>
+
+    <mat-tab label="Left Over Data">
+      <mat-card>
+        <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all the leftover data, becareful this cannot be undone</p>
+
+      <br>
+
+            <button class="button" mat-raised-button (click)="deleteleftover(_id)" color="warn" >
               <span class="material-icons">
                 delete_forever
                 </span>

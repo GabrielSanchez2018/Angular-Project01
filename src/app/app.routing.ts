@@ -44,7 +44,7 @@ import { LeftoverProductComponent } from './pages/leftover-product/leftover-prod
 import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-product01.component';
 import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 import { OrderVerify01Component } from './pages/order-verify01/order-verify01.component';
-// import { TimerComponent } from './pages/timer/timer.component';
+import { TimerComponent } from './pages/timer/timer.component';
 
 
 export const AppRoutes: Routes = [
@@ -197,11 +197,11 @@ export const AppRoutes: Routes = [
         component: RoleCreateComponent,
         canActivate: [RoleGuard]
       },
-      //{
-      //   path: 'timer',
-      //   component: TimerComponent,
-      //   canActivate: [RoleGuard]
-      // }
+      {
+        path: 'timer',
+        component: TimerComponent,
+        canActivate: [RoleGuard]
+      },
       {
         path: 'service-management',
         component: ServiceManagementComponent,

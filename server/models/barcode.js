@@ -9,11 +9,12 @@ const mongoose = require('mongoose');
 
 //This will make sure that require functions works
 //Use this extentionn to resolve duplicate issues
+//barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
 var uniqueValidator = require('mongoose-unique-validator')
 
 
 let barcodeSchema = mongoose.Schema({
-  //barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
+  
   username: {type: String},
   barcode: {type: String, unique: true, required: true, dropDups: true},
   price: {type: Number},
