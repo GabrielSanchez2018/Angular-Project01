@@ -37,7 +37,8 @@ export class SignInEmployeeeComponent implements OnInit {
   username: string;
   show: boolean;
   employees: Object;
-
+  time: Object;
+  appear: boolean = true;
 
   constructor(
     private router: Router,
@@ -61,8 +62,45 @@ export class SignInEmployeeeComponent implements OnInit {
       console.log(err);
     })
 
+
+
+    /***
+     * Get the time to hide the fuction after a time
+     */
+   
+    this.http.get('api/time/' ).subscribe(res =>{
+      this.time = res;
+      console.log('time set up',this.time)
+
+      const timenow = new Date()
+
+      const day = timenow.getUTCDate()
+      const year = timenow.getUTCFullYear()
+      const month = timenow.getMonth()
+      
+      console.log('this is the time now', day + year + month)
+      console.log('last day', this.time[0].time)
+
+      var timerightnow = day + year + month
+
+      if( this.time[0].time){
+        console.log('true')
+        this.show = true
+
+      } else {
+        console.log('false')
+        this.show = false
+      }
+
+    }, err => {
+      console.log(err);
+    })
+    
+  
+
   }
 
+  
 
 
 

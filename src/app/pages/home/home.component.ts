@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { truncate } from 'fs';
 import { Router } from '@angular/router';
+import { getLocaleTimeFormat } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,8 @@ export class HomeComponent implements OnInit {
   //   this.hidden = !this.hidden;
   // }
   show: boolean = true;
+  appear: boolean = true;
+  time: Object;
 
 
   constructor(private http: HttpClient, private cookieService: CookieService,private router: Router) {
@@ -34,6 +37,7 @@ export class HomeComponent implements OnInit {
     }, err => {
       console.log(err);
     })
+
 
     this.user = this.cookieService.get('sessionuser');
     this.http.get('/api/invoices/' + this.user.toUpperCase()).subscribe(res =>{
@@ -56,6 +60,38 @@ export class HomeComponent implements OnInit {
     }
     }, err => {
       console.log(err)
+    })
+
+    /***
+     * Get the time to hide the fuction after a time
+     */
+   
+    this.http.get('api/time/' ).subscribe(res =>{
+      this.time = res;
+      console.log('time set up',this.time)
+
+      var timenow = new Date()
+
+      const day = timenow.getUTCDate()
+      const year = timenow.getUTCFullYear()
+      const month = timenow.getMonth()
+      
+      console.log('this is the time now', day + year + month)
+      console.log('this is the time now', this.time[0].time)
+
+      var timerightnow = day + year + month
+
+      if(timerightnow < this.time[0].time){
+        console.log('true')
+        this.show = true
+
+      } else {
+        console.log('false')
+        this.show = false
+      }
+
+    }, err => {
+      console.log(err);
     })
     
   }
@@ -107,5 +143,7 @@ console.log(this.timeExpire())
 
   ngOnInit() {
   }
+
+
 
 }

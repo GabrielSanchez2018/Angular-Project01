@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 // role schema
 let timeSchema = mongoose.Schema({
     text: {type: String},
-   // time: {type: Date}
+    time: {type: String}
 });
 
 // export for public use

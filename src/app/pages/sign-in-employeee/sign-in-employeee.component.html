@@ -1,7 +1,7 @@
 
+<!-- <meta http-equiv="refresh" content="30" /> -->
 
-
-  <mat-card class="signin-container">
+  <mat-card class="signin-container" *ngIf="show">
     <img src="../../../assets/images/gop.png" alt="gop" style="float: center;">
 <br>
     <mat-card-subtitle class="signin-subtitle mat-headline">You must enter a valid employee id to proceed
@@ -40,4 +40,7 @@
 
   </div> -->
 
-
+<mat-card *ngIf="!appear">
+  <h1>Time is up</h1>
+  <h2>The meat sale is going to be at on Monday.</h2>
+</mat-card>
