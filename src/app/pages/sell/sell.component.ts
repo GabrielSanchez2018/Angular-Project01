@@ -49,6 +49,7 @@ export class SellComponent implements OnInit {
   employeeUser: string;
   employees: Object;
   length: Object;
+  bar: any;
 
 
 
@@ -89,12 +90,16 @@ export class SellComponent implements OnInit {
 
 
 // Kepp worknig on this api from json object to array, we need an array.
-    this.http.get('api/barcodes/').subscribe(res =>{
-      this.barcodes = res;
-      console.log('this barcodes', this.barcodes)
-    }), err =>{
-      console.log(err)
-    }
+this.username = this.cookieService.get('paysession');
+this.http.get('api/barcodes/' ).subscribe(res =>{
+    //THIS FUNCTION WILL FILTHER THE USERNAME
+  if(Array.isArray(res)){
+    this.barcodes = res.filter(q => q.username === this.username);;
+  }
+  console.log('noiniewnfis', this.barcodes)
+}), err =>{
+  console.log(err)
+}
 
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
@@ -196,6 +201,31 @@ rerender(){
       }
     });
   }
+
+  deleteBarcode(barcodeId) {
+    const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+      data: {
+        barcodeId
+      },
+      disableClose: true,
+      width: '800px'
+    });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      if (result === 'confirm'){
+        this.http.delete('/api/barcodes/' + barcodeId).subscribe(res => {
+          console.log('Barcode deleted');
+          if(Array.isArray(this.barcodes)){
+            this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          }
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          //console.log(this.barcodes);
+        });
+      }
+    });
+   }
+
+
 
 
   create(){
@@ -556,10 +586,13 @@ this.changeDetectorRefs.detectChanges();
     }).subscribe(res =>{
 
       if (res){
-        console.log('this is res inthe sell component', res)
-        this.changeDetectorRefs.detectChanges();
-        console.log(this.barcodes);
-        this.router.navigate(['/barcode-info']);
+
+        console.log('this is res', res)
+
+        this.barcodes = this.barcodes.concat([res]);
+
+        console.log('this barcode', this.bar)
+
         // this will reset the form
 
         this.successSnackbar();

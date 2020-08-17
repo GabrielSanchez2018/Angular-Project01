@@ -550,9 +550,11 @@ console.log('here is the name', this.getFirstName())
       orderDate: new Date(),
 
     }).subscribe(res =>{
-      this.changeDetectorRefs.detectChanges();
+
+      this.barcodes = this.barcodes.concat([res]);
+
       console.log(this.barcodes);
-      this.router.navigate(['/barcode-info01']);
+     // this.router.navigate(['/barcode-info01']);
       // this will reset the form
       this.successSnackbar();
       this.form.reset();
