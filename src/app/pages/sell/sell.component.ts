@@ -29,7 +29,7 @@ export class SellComponent implements OnInit {
   username: string;
   invoices: any;
   services: Object;
-  barcodes: Object;
+  barcodes: any;
   displayedColumnsOne = ['id','code','lineitems','total','date', 'functions'];
   displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
@@ -50,6 +50,7 @@ export class SellComponent implements OnInit {
   employees: Object;
   length: any[];
   join: string;
+  // public now: Date = new Date();
 
 
 
@@ -90,12 +91,16 @@ export class SellComponent implements OnInit {
 
 
 // Kepp worknig on this api from json object to array, we need an array.
-    this.http.get('api/barcodes/').subscribe(res =>{
-      this.barcodes = res;
-      console.log('this barcodes', this.barcodes)
-    }), err =>{
-      console.log(err)
-    }
+this.username = this.cookieService.get('paysession');
+this.http.get('api/barcodes/' ).subscribe(res =>{
+    //THIS FUNCTION WILL FILTHER THE USERNAME
+  if(Array.isArray(res)){
+    this.barcodes = res.filter(q => q.username === this.username);;
+  }
+  console.log('noiniewnfis', this.barcodes)
+}), err =>{
+  console.log(err)
+}
 
     this.http.get('api/services/').subscribe(res =>{
       this.services = res;
@@ -104,7 +109,15 @@ export class SellComponent implements OnInit {
     }), err => {
       console.log(err);
     }
+
+    // setInterval(() => {
+    //   this.now = new Date();
+    // }, 1);
+
+
   }
+
+
 
   getTotalCost() {
     if(Array.isArray(this.barcodes)){
@@ -163,6 +176,15 @@ print(){
 
 }
 
+// getTime() {
+//   //this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+//   if(Array.isArray(this.barcodes)){
+//    return this.barcodes.map(t => t.oderDate).reduce((acc, value) => acc + value, 0);
+//   }
+
+//}
+
+
 rerender(){
   this.barcodes
   this.changeDetectorRefs.detectChanges();
@@ -197,6 +219,31 @@ rerender(){
       }
     });
   }
+
+  deleteBarcode(barcodeId) {
+    const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+      data: {
+        barcodeId
+      },
+      disableClose: true,
+      width: '800px'
+    });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      if (result === 'confirm'){
+        this.http.delete('/api/barcodes/' + barcodeId).subscribe(res => {
+          console.log('Barcode deleted');
+          if(Array.isArray(this.barcodes)){
+            this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          }
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+          //console.log(this.barcodes);
+        });
+      }
+    });
+   }
+
+
 
 
   create(){
@@ -558,35 +605,19 @@ this.changeDetectorRefs.detectChanges();
 
     }).subscribe(res =>{
 
-      if (res){
-        console.log('this is res inthe sell component', res)
-        this.changeDetectorRefs.detectChanges();
-        console.log(this.barcodes);
-        this.router.navigate(['/barcode-info']);
-        // this will reset the form
+      this.barcodes = this.barcodes.concat([res]);
 
-        this.successSnackbar();
-
-        this.form.reset();
-        this.rerender();
-      } else {
-        this.snackBar.open(
-          "The employee ID you entered is invalid, please try again.",
-          "ERROR",
-
-          {
-            duration: 4000,
-            verticalPosition: "top"
-          }
-
-        );
-      }
-
-
-    })
-  })
-
+      console.log(this.barcodes);
+     // this.router.navigate(['/barcode-info01']);
+      // this will reset the form
+      this.successSnackbar();
+      this.form.reset();
+      this.rerender();
+    });
+  });
   }
+
+  
 
   // print(){
   //   this.http.get('api/barcodes/').subscribe(res =>{

@@ -29,9 +29,7 @@ let barcodeSchema = mongoose.Schema({
   barBoxNetWeight:{type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},
- 
   barProductCode:{type: Number},
-  
   orderDate: {type: Date}
 });
 

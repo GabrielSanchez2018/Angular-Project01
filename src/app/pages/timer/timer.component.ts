@@ -149,7 +149,8 @@ export class TimerComponent implements OnInit {
       time: day + year + month,
       time1: date
     }).subscribe(res => {
-      this.router.navigate(['/admin']);
+      this.time = this.time.concat([res]);
+
     }, err => {
       console.log(err);
     });

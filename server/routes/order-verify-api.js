@@ -129,23 +129,16 @@ router.post('/', function(req, res, next){
    labelserialidentifier = serialIdenfier.join('');
 
    let barcodeInsert = {
-            username: req.body.username,
-             barcode: req.body.barcode,
-             price: req.body.price,
-             totalprice: req.body.totalprice,
-             itemdescription: req.body.itemdescription,
-             barShippingContainerCode : labelShippingContainer,
-             barPackagingIndicator : labelpackagingIndicator,
-             barManufacturerNumber : labelpackagingManufacturerNumber,
-             barProductCode : labelproductCode,
-             barShippingContainerCS : labelshippingContainercs,
-             barBoxNetWeightIdentifier: labelnetWeight,
-             barBoxNetWeight : labelWeight,
-             barDateOfProduction : labeldateindentifier,
-             barDateOfProductionyymmdd : labeldateofproduction,
-             barSerialNumberIndentifier: labelserialnumber,
-             barTenDigitSerial : labelserialidentifier,
-             orderDate: req.body.orderDate
+    username: req.body.username,
+    barcode: req.body.barcode,
+    price: req.body.price,
+    barBoxNetWeight : labelWeight,
+    totalprice: req.body.totalprice,
+    itemdescription: req.body.itemdescription,
+   
+    barProductCode : labelproductCode,
+   
+    orderDate: req.body.orderDate
 
 
    };
