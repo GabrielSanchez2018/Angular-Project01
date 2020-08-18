@@ -48,7 +48,8 @@ export class SellComponent implements OnInit {
   show: boolean = true;
   employeeUser: string;
   employees: Object;
-  length: Object;
+  length: any[];
+  join: string;
 
 
 
@@ -530,7 +531,9 @@ function descriptionFunction(){
 
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
-var totalprice = totalpriceResult.toFixed(2);
+var totalprice = totalpriceResult.toFixed(2)
+
+
 var itemdescription = descriptionFunction();
 
 

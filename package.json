@@ -51,6 +51,7 @@
     "ngx-print": "^1.2.0-beta.5",
     "primeicons": "^2.0.0",
     "primeng": "^8.0.0",
+    "read-excel-file": "^4.0.7",
     "rxjs": "^6.4.0",
     "simple-keyboard": "^2.29.72",
     "tslib": "^1.9.0",

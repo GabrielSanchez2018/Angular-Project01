@@ -128,9 +128,7 @@ router.post('/', function(req, res, next){
    //Serial Number
    var serialNumberIndenfier = Array.from(barcode.slice(34,36));
    labelserialnumber = serialNumberIndenfier.join('');
-   //10 Digit Serial
-   var serialIdenfier = Array.from(barcode.slice(34,46));
-   labelserialidentifier = serialIdenfier.join('');
+  
 
    let barcodeInsert = {
             username: req.body.username,
@@ -139,16 +137,9 @@ router.post('/', function(req, res, next){
              barBoxNetWeight : labelWeight,
              totalprice: req.body.totalprice,
              itemdescription: req.body.itemdescription,
-            // barShippingContainerCode : labelShippingContainer,
-             //barPackagingIndicator : labelpackagingIndicator,
-             //barManufacturerNumber : labelpackagingManufacturerNumber,
+            
              barProductCode : labelproductCode,
-             //barShippingContainerCS : labelshippingContainercs,
-            // barBoxNetWeightIdentifier: labelnetWeight,
-             //barDateOfProduction : labeldateindentifier,
-             //barDateOfProductionyymmdd : labeldateofproduction,
-             //barSerialNumberIndentifier: labelserialnumber,
-             //barTenDigitSerial : labelserialidentifier,
+            
              orderDate: req.body.orderDate
 
 
@@ -333,3 +324,21 @@ router.delete('/:barcodeId', function(req, res, next){
 
 
 module.exports = router;
+
+
+//  //10 Digit Serial
+  //  var serialIdenfier = Array.from(barcode.slice(34,46));
+  //  labelserialidentifier = serialIdenfier.join('');
+
+
+              // barShippingContainerCode : labelShippingContainer,
+             //barPackagingIndicator : labelpackagingIndicator,
+             //barManufacturerNumber : labelpackagingManufacturerNumber,
+
+
+            //barShippingContainerCS : labelshippingContainercs,
+            // barBoxNetWeightIdentifier: labelnetWeight,
+             //barDateOfProduction : labeldateindentifier,
+             //barDateOfProductionyymmdd : labeldateofproduction,
+             //barSerialNumberIndentifier: labelserialnumber,
+             //barTenDigitSerial : labelserialidentifier,

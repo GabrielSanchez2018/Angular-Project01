@@ -10,6 +10,14 @@ const mongoose = require('mongoose');
 //This will make sure that require functions works
 //Use this extentionn to resolve duplicate issues
 //barTenDigitSerial:{type: Number, unique: true, required: true, dropDups: true},
+//barShippingContainerCS:{type: Number},
+  //barBoxNetWeightIdentifier:{type: Number},
+  //barDateOfProduction:{type: Number},
+  //barDateOfProductionyymmdd:{type: Number},
+  //barSerialNumberIndentifier:{type: Number},
+   //barShippingContainerCode:{type: Number},
+  //barPackagingIndicator:{type: Number},
+  //barManufacturerNumber:{type: Number},
 var uniqueValidator = require('mongoose-unique-validator')
 
 
@@ -21,15 +29,9 @@ let barcodeSchema = mongoose.Schema({
   barBoxNetWeight:{type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},
-  //barShippingContainerCode:{type: Number},
-  //barPackagingIndicator:{type: Number},
-  //barManufacturerNumber:{type: Number},
+ 
   barProductCode:{type: Number},
-  //barShippingContainerCS:{type: Number},
-  //barBoxNetWeightIdentifier:{type: Number},
-  //barDateOfProduction:{type: Number},
-  //barDateOfProductionyymmdd:{type: Number},
-  //barSerialNumberIndentifier:{type: Number},
+  
   orderDate: {type: Date}
 });
 

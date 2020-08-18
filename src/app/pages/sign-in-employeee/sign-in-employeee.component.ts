@@ -35,10 +35,10 @@ export class SignInEmployeeeComponent implements OnInit {
   form: FormGroup;
   errorMessage: any;
   username: string;
-  //show: boolean;
+  show: boolean;
   employees: Object;
   time: Object;
-  //appear: boolean = true;
+  appear: boolean = true;
 
   constructor(
     private router: Router,
@@ -67,41 +67,40 @@ export class SignInEmployeeeComponent implements OnInit {
     /***
      * Get the time to hide the fuction after a time
      */
+   
+    this.http.get('api/time/' ).subscribe(res =>{
+      this.time = res;
+      console.log('time set up',this.time)
 
-    // this.http.get('api/time/' ).subscribe(res =>{
-    //   this.time = res;
-    //   console.log('time set up',this.time)
+      const timenow = new Date()
 
-      // const timenow = new Date()
+      const day = timenow.getUTCDate()
+      const year = timenow.getUTCFullYear()
+      const month = timenow.getMonth()
+      
+      console.log('this is the time now', day + year + month)
+      console.log('last day', this.time[0].time)
 
-      // let day = timenow.getUTCDate()
-      // let year = timenow.getUTCFullYear()
-      // let month = timenow.getMonth()
+      var timerightnow = day + year + month
 
-      // console.log('this is the time now', day + year + month)
-      // console.log('last day', this.time[0].time)
+      if( timerightnow < this.time[0].time){
+        console.log('true')
+        this.show = true
 
-      // const timerightnow = day + year + month
-      // const lastday = this.time[0].time
+      } else {
+        console.log('false')
+        this.show = false
+      }
 
-      // if( timerightnow < lastday){
-      //   console.log('true')
-      //   this.appear = true
-
-      // } else {
-      //   console.log('false')
-      //   this.appear = false
-      // }
-
-    // }, err => {
-    //   console.log(err);
-    // })
-
-
+    }, err => {
+      console.log(err);
+    })
+    
+  
 
   }
 
-
+  
 
 
 
@@ -264,8 +263,8 @@ export class SignInEmployeeeComponent implements OnInit {
       if (res) {
         console.log('this is the employee id', res)
         console.log('empid', EmployeeId);
-
-
+        
+        
 
 
         this.cookieService.set('sessionuser', EmployeeId, 1 , '/', 'localhost', false, "Lax");
@@ -291,7 +290,7 @@ export class SignInEmployeeeComponent implements OnInit {
     });
    }
 
-
+   
 
 
 
