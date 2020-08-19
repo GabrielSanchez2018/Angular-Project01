@@ -78,7 +78,7 @@ router.put('/:roleId', function(req, res, next) {
 
 // Delete Role
 router.delete('/:roleId', function(req, res, next) {
-  Roles.findOne({'_id': req.params.roleId}, function(err, role) {
+  Roles.findOneAndDelete({'_id': req.params.roleId}, function(err, role) {
     if (err) {
       console.log(err);
       return next(err);

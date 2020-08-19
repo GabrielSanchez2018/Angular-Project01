@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   user: any;
   invoice: any;
   hidden = false;
-   
+
   // toggleBadgeVisibility() {
   //   this.hidden = !this.hidden;
   // }
@@ -48,8 +48,8 @@ export class HomeComponent implements OnInit {
       var invoiceCounter = this.invoice.length
     console.log('This counts the invoice length',invoiceCounter)
      /**
-      * If the invoice is bigger than 1, the user would not be able to imput another order. 
-      * 
+      * If the invoice is bigger than 1, the user would not be able to imput another order.
+      *
       */
     if(invoiceCounter > 0){
       console.log('true')
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
     /***
      * Get the time to hide the fuction after a time
      */
-   
+
     this.http.get('api/time/' ).subscribe(res =>{
       this.time = res;
       console.log('time set up',this.time)
@@ -75,25 +75,25 @@ export class HomeComponent implements OnInit {
       const day = timenow.getUTCDate()
       const year = timenow.getUTCFullYear()
       const month = timenow.getMonth()
-      
+
       console.log('this is the time now', day + year + month)
-      console.log('this is the time now', this.time[0].time)
+      console.log('this is set', this.time[0].time)
 
       var timerightnow = day + year + month
 
       if(timerightnow < this.time[0].time){
         console.log('true')
-        this.show = true
+        this.appear = true
 
       } else {
         console.log('false')
-        this.show = false
+        this.appear = false
       }
 
     }, err => {
       console.log(err);
     })
-    
+
   }
 
   timeExpire(){
@@ -104,21 +104,21 @@ var x = setInterval(function() {
 
   // Get today's date and time
   var now = new Date().getTime();
-    
+
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-    
+
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (100 * 60 * 60 * 24)) / (10000 * 60 * 60));
   var minutes = Math.floor((distance % (100 * 60 * 60)) / (700 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
   // Output the result in an element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
+
+  // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
@@ -129,7 +129,7 @@ console.log(this.timeExpire())
   }
 
   onLogout() {
-    
+
     localStorage.clear();
     localStorage.removeItem(this.user);
     this.cookieService.delete('sessionuser')

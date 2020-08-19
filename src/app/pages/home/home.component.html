@@ -40,13 +40,13 @@
   </mat-step>
 </mat-horizontal-stepper>
  -->
- 
+
  <!-- <mat-card>
   <p id="demo">{{timeExpire()}}</p>
  </mat-card> -->
- 
+
  <div class="logOut" fxLayout="column" style="float: right; padding-right: 15%; margin-top: 14%; height: 50px;">
-  
+
   <button
   class='order2'
   style='margin: 0 auto; text-align: center;'
@@ -55,13 +55,13 @@
   color='warn'> <span class="material-icons">
     exit_to_app
     </span> Logout | Salir
-    
+
 </button>
 
 </div>
 <div class="outsideContainer">
 
-  <div class="insideContainer">
+  <div class="insideContainer" *ngIf="appear">
     <h1>
       {{user?.FirstName}}
       {{user?.LastName}}
@@ -80,14 +80,14 @@
 
   </h1>
 
-  
 
 
 
 
 
 
-<div fxLayout="column" class="main-welcome" *ngIf="appear" >
+
+<div fxLayout="column" class="main-welcome" *ngIf="show" >
 
 
   <button
@@ -126,6 +126,25 @@
 </button>
 
 </div>
+</div>
+<div class="insideContainer" *ngIf= "!appear">
+
+  <h1>
+    {{user?.FirstName}}
+    {{user?.LastName}}
+  </h1>
+
+
+<h1 class="title">
+  No longer accepting more orders! <br />
+  <span class="subtitle" >
+    See you next time
+  </span><br>
+  <span class="subtitle" >
+    Thank you
+  </span>
+  </h1>
+
 </div>
 
 </div>

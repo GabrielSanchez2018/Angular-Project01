@@ -8,8 +8,10 @@ const mongoose = require('mongoose');
 
 // role schema
 let timeSchema = mongoose.Schema({
-    text: {type: String},
-    time: {type: String}
+
+    time: {type: String},
+    time1: {type: String},
+    orderDate: {type: Date}
 });
 
 // export for public use

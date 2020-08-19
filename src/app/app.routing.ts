@@ -45,6 +45,7 @@ import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-
 import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 import { OrderVerify01Component } from './pages/order-verify01/order-verify01.component';
 import { TimerComponent } from './pages/timer/timer.component';
+import { TimeEditComponent } from './pages/time-edit/time-edit.component';
 
 
 export const AppRoutes: Routes = [
@@ -200,6 +201,11 @@ export const AppRoutes: Routes = [
       {
         path: 'timer',
         component: TimerComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'time-edit/:timeId',
+        component: TimeEditComponent,
         canActivate: [RoleGuard]
       },
       {
