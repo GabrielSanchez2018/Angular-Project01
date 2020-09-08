@@ -39,6 +39,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
 import {NgxPrintModule} from 'ngx-print';
+//import { MatAnimatedIconComponent } from './mat-animated-icon/mat-animated-icon.component';
 
 
 // Components
@@ -182,7 +183,8 @@ import { TimerComponent } from './pages/timer/timer.component';
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgxPrintModule
+    NgxPrintModule,
+    //MatAnimatedIconComponent
 
 
   ],

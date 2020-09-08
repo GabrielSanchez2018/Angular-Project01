@@ -4,7 +4,7 @@
   </mat-card-title>
   <br />
 
-  <mat-card-content style='text-align: center;'>
+  <!-- <mat-card-content style='text-align: center;'>
     <button class="admin-link" routerLink="/users" mat-button>Users</button>
     <br />
     <button class="admin-link" routerLink="/security-questions" mat-button>Security Questions</button>
@@ -21,5 +21,78 @@
     <button class="admin-link" routerLink="/employee-create" mat-button>Add employees</button>
     <br />
     <button class="admin-link" routerLink="/timer" mat-button>Timer Set Up</button>
-  </mat-card-content>
+  </mat-card-content> -->
+
+  <mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>
+
+      <button class="admin-link" routerLink="/users" mat-button>
+        <span class="material-icons md-48">
+          account_circle
+          </span>
+          <br>
+          Users
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button class="admin-link" routerLink="/service-create" mat-button>
+        <span class="material-icons md-48">
+          assignment_turned_in
+          </span>
+          <br>
+          Add Products
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button class="admin-link" routerLink="/timer" mat-button>
+        <span class="material-icons md-48">
+          more_time
+          </span>
+          <br>
+        Timer Set Up</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button class="admin-link" routerLink="/purchases-by-service" mat-button>
+        <span class="material-icons md-48">
+          fact_check
+          </span>
+          <br>
+        Submitted Orders</button>
+    </mat-grid-tile>
+    <!-- <mat-grid-tile>
+      <button class="admin-link" routerLink="/security-questions" mat-button>Security Questions</button>
+    </mat-grid-tile> -->
+    <!-- <mat-grid-tile>
+      <button class="admin-link" routerLink="/purchases-by-service" mat-button>Purchases Graph</button>
+    </mat-grid-tile> -->
+    <!-- <mat-grid-tile>
+      <button class="admin-link" routerLink="/role-create" mat-button>Create New Roles</button>
+    </mat-grid-tile> -->
+  </mat-grid-list>
+
+  <mat-grid-list cols="4" rowHeight="2:1">
+
+    <mat-grid-tile>
+      <button class="admin-link" routerLink="/sell-report" mat-button>
+        <span class="material-icons md-48">
+          description
+          </span>
+          <br>
+
+        Sell Reports</button>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+
+
+
+
+
+
 </mat-card>

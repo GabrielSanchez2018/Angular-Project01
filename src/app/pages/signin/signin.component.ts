@@ -55,7 +55,7 @@ export class SigninComponent implements OnInit {
         console.log('var date', date)
         console.log('var dte', exp)
         //'/', 'localhost', false, "Strict" will secure the cookie
-        this.cookieService.set('sessionuser', username, 1 , '/', 'localhost', false, 'Strict' );
+        this.cookieService.set('sessionuser', username, 1 , '/', '', false, 'Strict' );
 
         this.router.navigate(['/']);
       } else {

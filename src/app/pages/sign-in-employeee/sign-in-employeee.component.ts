@@ -67,7 +67,7 @@ export class SignInEmployeeeComponent implements OnInit {
     /***
      * Get the time to hide the fuction after a time
      */
-   
+
     this.http.get('api/time/' ).subscribe(res =>{
       this.time = res;
       console.log('time set up',this.time)
@@ -77,7 +77,7 @@ export class SignInEmployeeeComponent implements OnInit {
       const day = timenow.getUTCDate()
       const year = timenow.getUTCFullYear()
       const month = timenow.getMonth()
-      
+
       console.log('this is the time now', day + year + month)
       console.log('last day', this.time[0].time)
 
@@ -95,12 +95,12 @@ export class SignInEmployeeeComponent implements OnInit {
     }, err => {
       console.log(err);
     })
-    
-  
+
+
 
   }
 
-  
+
 
 
 
@@ -263,11 +263,11 @@ export class SignInEmployeeeComponent implements OnInit {
       if (res) {
         console.log('this is the employee id', res)
         console.log('empid', EmployeeId);
-        
-        
 
 
-        this.cookieService.set('sessionuser', EmployeeId, 1 , '/', 'localhost', false, "Lax");
+
+
+        this.cookieService.set('sessionuser', EmployeeId, 1 , '/', '', false, "Lax");
         // var timeout = this.cookieService.set('sessionuser', EmployeeId, 1  , '/', 'localhost', false, "Lax");
         // console.log('this is the cookie timeout',timeout)
 
@@ -290,7 +290,7 @@ export class SignInEmployeeeComponent implements OnInit {
     });
    }
 
-   
+
 
 
 
