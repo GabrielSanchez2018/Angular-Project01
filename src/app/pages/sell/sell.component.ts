@@ -294,7 +294,9 @@ rerender(){
           "ERROR",
           {
             duration: 4000,
+            panelClass: ['blue-snackbar'],
             verticalPosition: "top"
+           
           }
         );
       }

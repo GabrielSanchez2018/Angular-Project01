@@ -24,7 +24,8 @@ tr.mat-footer-row {
 }
 
 .insert{
-  width: 50%;
+  width: 70%;
+  height: auto;
   margin: 0 auto;
   margin-top: 1%;
 }
@@ -94,3 +95,6 @@ tr.mat-footer-row {
 
 
 /****************************/
+.blue-snackbar {
+  background: #2196F3;
+}
