@@ -1,21 +1,21 @@
 <img src="../../../assets/images/gop.png" alt="Britanny" style="width: 200px;" >
-<h3 style="text-align: right; color: red;"> {{ invoice.orderDate | date }}</h3>
+<h3 style="text-align: right; "> {{ invoice.orderDate | date }}</h3>
 <br>
 <mat-divider></mat-divider>
 <br>
-<h2 style="text-align: center;" mat-dialog-title>{{invoice.username}} Confirm your order</h2>
+<h2 style="text-align: center;" mat-dialog-title> Employee Id: <span>{{invoice.username.toUpperCase()}}</span></h2>
 
 <div mat-dialog-content>
 
     <mat-divider></mat-divider>
 
-    <h4>Meat Order</h4>
+    <h4>Order Details</h4>
     <div *ngFor="let lineItem of invoice.lineItems" >
         <mat-list >
-            <mat-list-item style="color: green;">
+            <mat-list-item >
               {{lineItem.id}}
               <div fxFlex></div>
-                {{lineItem.title}}:
+                {{lineItem.title}}
                 <div fxFlex></div>
                 {{lineItem.extimate | currency}}
             </mat-list-item>
@@ -38,9 +38,8 @@
     </mat-list> -->
     <br />
 
-    <mat-divider></mat-divider>
     <p fxLayoutAlign="end">
-        Total charges: {{invoice.total | currency}}
+        Total Extimate: {{invoice.total | currency}}
     </p>
 </div>
 <br />
