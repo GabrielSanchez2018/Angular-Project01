@@ -27,6 +27,7 @@ const EmployeeApi = require('./routes/employee-api');
 const Orderverify = require('./routes/order-verify-api');
 const Leftover = require('./routes/leftover-api');
 const TimerAPI = require('./routes/time-api');
+const TimePickupAPI = require('./routes/timepickup-api');
 
 //const SQLEmp = require('./routes/sql-employee-api');
 
@@ -50,6 +51,7 @@ app.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
 const port = process.env.PORT || '3000' // server port
 
 const conn = 'mongodb+srv://Gabriel:Jairo500!@cluster0-djivq.gcp.mongodb.net/brcs?retryWrites=true&w=majority';
+//const conn = "mongodb://localhost:27017/meatsale"
 /**
  * Database connection
  */
@@ -79,6 +81,7 @@ app.use('/api/employees', EmployeeApi);
 app.use('/api/orderverify',Orderverify);
 app.use('/api/leftover', Leftover);
 app.use('/api/time', TimerAPI);
+app.use('/api/timepickup', TimePickupAPI);
 //app.use('/api/sqlemp', SQLEmp);
 
 /**

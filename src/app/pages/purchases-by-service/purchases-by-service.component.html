@@ -16,7 +16,7 @@
 
 
 <mat-tab label="Employee Orders">
-
+<br>
   <mat-card-content  *ngIf='purchases'>
 
     <table class="totaltable" mat-table [dataSource]="purchases" class="mat-elevation-z8">
@@ -50,6 +50,116 @@
 
     </table>
     </mat-card-content>
+
+
+</mat-tab>
+
+<mat-tab label="All">
+
+  <br>
+
+
+<mat-card-content *ngIf='invoices'>
+
+
+  <table mat-table  [dataSource]="invoices" class="mat-elevation-z8">
+  
+  <!--- Note that these columns can be defined in any order.
+      The actual rendered columns are set as a property on the row definition" -->
+  
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef> Username </th>
+  <td mat-cell *matCellDef="let element">{{element.username}}  </td>
+  </ng-container>
+  
+  
+  
+  <!-- Name Column -->
+  <ng-container matColumnDef="lineitems">
+  <th mat-header-cell *matHeaderCellDef> Description </th>
+  <td mat-cell *matCellDef="let element">
+    <ul style="list-style: none;" >
+    <li>
+      {{
+        element?.lineItems[0]?.title
+      }}
+    </li>
+  
+  <li>
+    {{
+      element?.lineItems[1]?.title
+    }}
+  </li>
+  <li>
+    {{
+      element?.lineItems[2]?.title
+    }}
+  </li>
+  <li>
+    {{
+      element?.lineItems[4]?.title
+    }}
+  </li>
+  
+  <li>
+  {{
+    element?.lineItems[5]?.title
+  }}
+  </li>
+  <li>
+  {{
+    element?.lineItems[6]?.title
+  }}
+  </li>
+  </ul>
+  </td>
+  </ng-container>
+  
+  
+  
+  
+  <!-- Weight Column -->
+  <ng-container matColumnDef="total">
+    <th mat-header-cell *matHeaderCellDef> Extimate </th>
+    <td mat-cell *matCellDef="let element"> {{element.total | currency}} </td>
+    </ng-container>
+  
+  <!-- Weight Column -->
+  <ng-container matColumnDef="date" style="text-align: center;" >
+    <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Date </th>
+    <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.orderDate | date}} </td>
+    </ng-container>
+  <!-- total cost Column -->
+  
+  
+  
+  <ng-container matColumnDef="functions">
+    <th mat-header-cell *matHeaderCellDef>Functions</th>
+  
+    <td mat-cell *matCellDef="let element">
+        <button mat-icon-button (click)="delete(element._id)">
+          <mat-icon color="accent">delete</mat-icon>
+        </button>
+    </td>
+  </ng-container>
+  
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns01"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns01;"></tr>
+  </table>
+  
+  
+  </mat-card-content>
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+
 
 
 </mat-tab>

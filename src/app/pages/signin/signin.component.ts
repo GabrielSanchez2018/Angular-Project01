@@ -57,7 +57,7 @@ export class SigninComponent implements OnInit {
         //'/', 'localhost', false, "Strict" will secure the cookie
         this.cookieService.set('sessionuser', username, 1 , '/', '', false, 'Strict' );
 
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin']);
       } else {
         this.errorMessage = res['text'];
       }
