@@ -51,11 +51,9 @@ export class SigninComponent implements OnInit {
       console.log('here',res)
       if (res['auth']) {
         var date = new Date();
-         var exp = date.setTime(date.getTime() + (30 * 1000));
-        console.log('var date', date)
-        console.log('var dte', exp)
+        date.setTime(date.getTime() + (60 * 1000));
         //'/', 'localhost', false, "Strict" will secure the cookie
-        this.cookieService.set('sessionuser', username, 1 , '/', '', false, 'Strict' );
+        this.cookieService.set('sessionuser', username, this.date , '/', '', false, 'Strict' );
 
         this.router.navigate(['/admin']);
       } else {
