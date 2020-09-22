@@ -110,6 +110,29 @@ export class DatabaseManagementComponent implements OnInit {
 
     
    }
+
+   deleteleCheckedinInventory(alldelete) {
+    const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+      data: {
+        alldelete
+      },
+      disableClose: true,
+      width: '800px'
+    });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      if (result === 'confirm'){
+        this.http.delete('/api/orderVerify/alldelete' ).subscribe(res => {
+          console.log('Checked In inventory deleted');
+
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+         
+        });
+      }
+    });
+
+    
+   }
   
    
 

@@ -123,5 +123,11 @@ export class BaseLayoutComponent implements OnInit {
   ngOnInit() {
 
   }
+  /***
+   * This will take the browser to the main menu
+   */
 
+  home(){
+    this.router.navigate(['/admin']);
+  }
 }
