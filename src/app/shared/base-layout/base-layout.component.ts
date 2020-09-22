@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import {AuthService} from '../guards/auth.service';
 import { Router } from '@angular/router';
 import { ElementFinder } from 'protractor';
+//import { MatAnimatedIconComponent } from './mat-animated-icon/mat-animated-icon.component';
 
 @Component({
   selector: 'app-base-layout',
@@ -20,6 +21,13 @@ export class BaseLayoutComponent implements OnInit {
   isAuthenticated: boolean;
   EmployeeId: string;
   empinfo: Object;
+
+  name = 'Angular Material Animated Icons';
+  animate = false;
+
+  toggleAnimate(){
+    this.animate = !this.animate;
+  }
 
 
   constructor(private http: HttpClient, private cookieService: CookieService, private auth: AuthService, private router: Router)  {
@@ -115,5 +123,11 @@ export class BaseLayoutComponent implements OnInit {
   ngOnInit() {
 
   }
+  /***
+   * This will take the browser to the main menu
+   */
 
+  home(){
+    this.router.navigate(['/admin']);
+  }
 }

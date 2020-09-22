@@ -35,6 +35,7 @@ export class SellReportComponent implements OnInit {
   leftover: any;
   orderVerify: any;
   leftoverTable: any;
+  time: Object;
 
 
    applyFilter(event: Event) {
@@ -95,6 +96,41 @@ export class SellReportComponent implements OnInit {
       }), err =>{
         console.log(err)
       }
+
+      //timer
+      this.http.get('api/time/' ).subscribe(res =>{
+        this.time = res;
+        console.log('time set up',this.time)
+  
+        var timenow = new Date()
+  
+        const day = timenow.getUTCDate()
+        const year = timenow.getUTCFullYear()
+        const month = timenow.getMonth()
+  
+        console.log('this is the time now', day + year + month)
+        console.log('this is set', this.time[0].time)
+  
+        var timerightnow = day + year + month
+  
+        if(timerightnow < this.time[0].time){
+          console.log('true')
+          
+        } else {
+          console.log('false')
+          this.exportAsXLSX()
+    
+          
+          
+  
+        }
+  
+      }, err => {
+        console.log(err);
+      })
+  
+    
+
         // Call the purchases-graph API
         this.http.get('api/barcodes/barcodes-graph').subscribe(res => {
             // map the response data to the purchases variable

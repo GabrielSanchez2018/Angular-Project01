@@ -261,6 +261,11 @@ console.log('esto', this.selectedValue)
         }).subscribe(res => {
 
           this.router.navigate(['/']);
+
+          setTimeout(function(){
+            window.location.href = "http://localhost:4200/#/session/sign-in-employee";
+            document.cookie = "sessionuser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+          },22000);
         }, err => {
           console.log(err);
         });

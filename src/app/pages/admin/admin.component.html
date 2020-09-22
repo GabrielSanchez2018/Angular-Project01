@@ -6,7 +6,7 @@
       background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
       ">
   <p>Meat Sale Report</p>
-  <span style="font-weight: lighter; font-size: 40px; color: blue;">{{getTotalCost() | currency }}</span>
+  <span style="font-weight: lighter; font-size: 40px; color: blue;">{{getTotalCost() | currency}}</span>
   <p>Total Boxes Sold <span style="color: blue;">{{getTotalBoxes()}}</span></p>
   <p>Total Weight <span style="color: blue;">{{ getTotalWeight()}}</span></p>
       </mat-card>
@@ -18,7 +18,7 @@
       ">
       <p>Left Over</p>
   <span style="font-weight: lighter; font-size: 40px; color: blue; text-align: center;">{{ getLeftoverTotalCost()| currency}}</span>
-  <p>Total Boxes Sold <span style="color: blue;">{{ getLeftoverTotalBoxes()}}</span></p>
+  <p>Total Boxes Returned <span style="color: blue;">{{getLeftoverTotalBoxes()}}</span></p>
       <p>Total Weight <span style="color: blue;">{{getLeftoverTotalWeight()}}</span></p>
       </mat-card>
       

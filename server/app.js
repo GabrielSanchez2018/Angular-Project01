@@ -26,6 +26,7 @@ const EmployeeApi = require('./routes/employee-api');
 const Orderverify = require('./routes/order-verify-api');
 const Leftover = require('./routes/leftover-api');
 const TimerAPI = require('./routes/time-api');
+const TimePickupAPI = require('./routes/timepickup-api');
 
 //const SQLEmp = require('./routes/sql-employee-api');
 
@@ -79,6 +80,7 @@ app.use('/api/employees', EmployeeApi);
 app.use('/api/orderverify',Orderverify);
 app.use('/api/leftover', Leftover);
 app.use('/api/time', TimerAPI);
+app.use('/api/timepickup', TimePickupAPI);
 //app.use('/api/sqlemp', SQLEmp);
 
 /**
