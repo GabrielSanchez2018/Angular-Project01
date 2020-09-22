@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name: Gabriel Sanchez
 Date: April 19, 2020
-Assignment: account registration backend
 Description: form functions for account reg page
 ==========================*/
 

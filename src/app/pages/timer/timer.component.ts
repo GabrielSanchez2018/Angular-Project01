@@ -83,7 +83,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
-import { time } from 'console';
+
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { MatDialog } from '@angular/material';
 
@@ -149,7 +149,8 @@ export class TimerComponent implements OnInit {
       time: day + year + month,
       time1: date
     }).subscribe(res => {
-      this.router.navigate(['/admin']);
+      this.time = this.time.concat([res]);
+
     }, err => {
       console.log(err);
     });

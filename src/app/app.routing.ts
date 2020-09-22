@@ -19,7 +19,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { AccountRegistrationComponent } from './pages/account-registration/account-registration.component';
 import { PurchasesByServiceComponent } from './pages/purchases-by-service/purchases-by-service.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { ServiceOrderComponent } from './pages/service-order/service-order.component';
 import { RoleCreateComponent } from './pages/role-create/role-create.component';
 import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 import { SecurityQuestionAskComponent } from './pages/security-question-ask/security-question-ask.component';
@@ -169,8 +169,8 @@ export const AppRoutes: Routes = [
         component: InternalServerComponent
       },
       {
-        path: 'service-repair',
-        component: ServiceRepairComponent,
+        path: 'service-order',
+        component: ServiceOrderComponent,
         canActivate: [SessionGuard]
       },
       {

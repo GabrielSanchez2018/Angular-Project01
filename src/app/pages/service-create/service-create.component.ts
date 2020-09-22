@@ -11,6 +11,7 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceCreateComponent implements OnInit {
   form: FormGroup;
   id: any;
+  slice: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
 
@@ -32,14 +33,19 @@ export class ServiceCreateComponent implements OnInit {
     const title = this.form.controls['title'].value;
     const price = this.form.controls['price'].value;
     const extimate = this.form.controls['extimate'].value;
-    const id = this.form.controls['id'].value;
+    var id = this.form.controls['id'].value;
+    var newid = id.toString()
 
+    if( newid.length > 5){
+     var newid = newid.slice(1,6)
+    }
+    
 
     this.http.post('/api/services', {
       title: title,
       price: price,
       extimate: extimate,
-      id: id,
+      id: newid,
     }).subscribe(res =>{
       this.router.navigate(['/service-management']);
     }, err => {

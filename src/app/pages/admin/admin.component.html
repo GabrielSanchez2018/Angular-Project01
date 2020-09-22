@@ -1,25 +1,151 @@
-<mat-card class='dashboard'>
-  <mat-card-title style="text-align: center; font-size: 25px; font-weight: lighter;"
-      class="mat-headline">Admin Dashboard
-  </mat-card-title>
-  <br />
+<mat-card style="width: 50%; margin: 0 auto; margin-top: 1%;">
 
-  <mat-card-content style='text-align: center;'>
-    <button class="admin-link" routerLink="/users" mat-button>Users</button>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile style="background-color: none; width: 20%;">
+      <mat-card style="background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+      ">
+  <p>Meat Sale Report</p>
+  <span style="font-weight: lighter; font-size: 40px; color: blue;">{{getTotalCost() | currency }}</span>
+  <p>Total Boxes Sold <span style="color: blue;">{{getTotalBoxes()}}</span></p>
+  <p>Total Weight <span style="color: blue;">{{ getTotalWeight()}}</span></p>
+      </mat-card>
+      
+      </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card style="background-color: #FBDA61;
+      background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+      ">
+      <p>Left Over</p>
+  <span style="font-weight: lighter; font-size: 40px; color: blue; text-align: center;">{{ getLeftoverTotalCost()| currency}}</span>
+  <p>Total Boxes Sold <span style="color: blue;">{{ getLeftoverTotalBoxes()}}</span></p>
+      <p>Total Weight <span style="color: blue;">{{getLeftoverTotalWeight()}}</span></p>
+      </mat-card>
+      
+  
+    </mat-grid-tile>
+    <!-- <mat-grid-tile>
+      
+      <mat-card style="background-color: #FBDA61;
+      background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+      ">
+  <span style="font-weight: lighter; font-size: 40px; color: blue; text-align: center;">{{getLeftoverTotalBoxes()}}</span>
+  <p>Left Over Boxes</p>
+      </mat-card>
+      
+      
+      
+      </mat-grid-tile> -->
+   
+  </mat-grid-list>
+  
+  </mat-card>
+  
+  
+  <mat-card class='dashboard'>
+    <mat-card-title style="text-align: center; font-size: 25px; font-weight: lighter;"
+        class="mat-headline">Admin Dashboard
+    </mat-card-title>
     <br />
-    <button class="admin-link" routerLink="/security-questions" mat-button>Security Questions</button>
-    <br />
-    <button class="admin-link" routerLink="/purchases-by-service" mat-button>Purchases Graph</button>
-    <br />
-    <button class="admin-link" routerLink="/role-create" mat-button>Create New Roles</button>
-    <br />
-    <button class="admin-link" routerLink="/service-create" mat-button>Create New Service</button>
-    <br />
-    <button class="admin-link" routerLink="/service-management" mat-button>Manage Services</button>
-    <br />
-    <br />
-    <button class="admin-link" routerLink="/employee-create" mat-button>Add employees</button>
-    <br />
-    <button class="admin-link" routerLink="/timer" mat-button>Timer Set Up</button>
-  </mat-card-content>
-</mat-card>
+  
+    <!-- <mat-card-content style='text-align: center;'>
+      <button class="admin-link" routerLink="/users" mat-button>Users</button>
+      <br />
+      <button class="admin-link" routerLink="/security-questions" mat-button>Security Questions</button>
+      <br />
+      <button class="admin-link" routerLink="/purchases-by-service" mat-button>Purchases Graph</button>
+      <br />
+      <button class="admin-link" routerLink="/role-create" mat-button>Create New Roles</button>
+      <br />
+      <button class="admin-link" routerLink="/service-create" mat-button>Create New Service</button>
+      <br />
+      <button class="admin-link" routerLink="/service-management" mat-button>Manage Services</button>
+      <br />
+      <br />
+      <button class="admin-link" routerLink="/employee-create" mat-button>Add employees</button>
+      <br />
+      <button class="admin-link" routerLink="/timer" mat-button>Timer Set Up</button>
+    </mat-card-content> -->
+  
+    <mat-grid-list cols="4" rowHeight="2:1">
+      <mat-grid-tile>
+  
+        <button class="admin-link" routerLink="/users" mat-button>
+          <span class="material-icons md-48">
+            account_circle
+            </span>
+            <br>
+            Users
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button class="admin-link" routerLink="/service-management" mat-button>
+          <span class="material-icons md-48">
+            assignment_turned_in
+            </span>
+            <br>
+            Add Products
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button class="admin-link" routerLink="/timer" mat-button>
+          <span class="material-icons md-48">
+            more_time
+            </span>
+            <br>
+          Timer Set Up</button>
+      </mat-grid-tile>
+      
+  
+  
+      <mat-grid-tile>
+        <button class="admin-link" routerLink="/purchases-by-service" mat-button>
+          <span class="material-icons md-48">
+            fact_check
+            </span>
+            <br>
+          Submitted Orders</button>
+      </mat-grid-tile>
+      <!-- <mat-grid-tile>
+        <button class="admin-link" routerLink="/security-questions" mat-button>Security Questions</button>
+      </mat-grid-tile> -->
+      <!-- <mat-grid-tile>
+        <button class="admin-link" routerLink="/purchases-by-service" mat-button>Purchases Graph</button>
+      </mat-grid-tile> -->
+      <!-- <mat-grid-tile>
+        <button class="admin-link" routerLink="/role-create" mat-button>Create New Roles</button>
+      </mat-grid-tile> -->
+    </mat-grid-list>
+  
+    <mat-grid-list cols="4" rowHeight="2:1">
+  
+      <mat-grid-tile>
+        <button class="admin-link" routerLink="/sell-report" mat-button>
+          <span class="material-icons md-48">
+            description
+            </span>
+            <br>
+  
+          Sell Reports</button>
+      </mat-grid-tile>
+  
+      <mat-grid-tile>
+        <button class="admin-link" routerLink="/database-management" mat-button>
+          <span class="material-icons md-48">
+            storage
+            </span>
+            <br>
+  
+          Database Management</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </mat-card>

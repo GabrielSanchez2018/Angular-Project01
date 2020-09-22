@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"PRDMEATAPPW01-4328-stderr-1600790275155.txt","computername":"PRDMEATAPPW01","pid":4328,"type":"stderr","created":1600790275155},{"file":"PRDMEATAPPW01-4328-stdout-1600790275152.txt","computername":"PRDMEATAPPW01","pid":4328,"type":"stdout","created":1600790275152},{"file":"PRDMEATAPPW01-4668-stderr-1600790160740.txt","computername":"PRDMEATAPPW01","pid":4668,"type":"stderr","created":1600790160740},{"file":"PRDMEATAPPW01-4668-stdout-1600790160738.txt","computername":"PRDMEATAPPW01","pid":4668,"type":"stdout","created":1600790160738},{"file":"PRDMEATAPPW01-5156-stderr-1600781680414.txt","computername":"PRDMEATAPPW01","pid":5156,"type":"stderr","created":1600781680414},{"file":"PRDMEATAPPW01-5156-stdout-1600781680412.txt","computername":"PRDMEATAPPW01","pid":5156,"type":"stdout","created":1600781680412},{"file":"PRDMEATAPPW01-5156-stdout-1600783472218.txt","computername":"PRDMEATAPPW01","pid":5156,"type":"stdout","created":1600783472218},{"file":"PRDMEATAPPW01-5176-stderr-1600794038674.txt","computername":"PRDMEATAPPW01","pid":5176,"type":"stderr","created":1600794038674},{"file":"PRDMEATAPPW01-5176-stdout-1600794038671.txt","computername":"PRDMEATAPPW01","pid":5176,"type":"stdout","created":1600794038671},{"file":"PRDMEATAPPW01-5828-stderr-1600790129124.txt","computername":"PRDMEATAPPW01","pid":5828,"type":"stderr","created":1600790129124},{"file":"PRDMEATAPPW01-5828-stdout-1600790129122.txt","computername":"PRDMEATAPPW01","pid":5828,"type":"stdout","created":1600790129122},{"file":"PRDMEATAPPW01-6180-stdout-1600736358202.txt","computername":"PRDMEATAPPW01","pid":6180,"type":"stdout","created":1600736358202},{"file":"PRDMEATAPPW01-6412-stderr-1600785324763.txt","computername":"PRDMEATAPPW01","pid":6412,"type":"stderr","created":1600785324763},{"file":"PRDMEATAPPW01-6412-stdout-1600785324761.txt","computername":"PRDMEATAPPW01","pid":6412,"type":"stdout","created":1600785324761},{"file":"PRDMEATAPPW01-6908-stderr-1600790478371.txt","computername":"PRDMEATAPPW01","pid":6908,"type":"stderr","created":1600790478371},{"file":"PRDMEATAPPW01-6908-stdout-1600790478368.txt","computername":"PRDMEATAPPW01","pid":6908,"type":"stdout","created":1600790478368},{"file":"PRDMEATAPPW01-6908-stdout-1600790956857.txt","computername":"PRDMEATAPPW01","pid":6908,"type":"stdout","created":1600790956857},{"file":"PRDMEATAPPW01-7056-stderr-1600793918744.txt","computername":"PRDMEATAPPW01","pid":7056,"type":"stderr","created":1600793918744},{"file":"PRDMEATAPPW01-7056-stdout-1600793918741.txt","computername":"PRDMEATAPPW01","pid":7056,"type":"stdout","created":1600793918741},{"file":"PRDMEATAPPW01-7672-stderr-1600793027871.txt","computername":"PRDMEATAPPW01","pid":7672,"type":"stderr","created":1600793027871},{"file":"PRDMEATAPPW01-7672-stdout-1600793027869.txt","computername":"PRDMEATAPPW01","pid":7672,"type":"stdout","created":1600793027869},{"file":"PRDMEATAPPW01-7672-stdout-1600793322977.txt","computername":"PRDMEATAPPW01","pid":7672,"type":"stdout","created":1600793322977}];
+        var lastUpdated = 1600794039797;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

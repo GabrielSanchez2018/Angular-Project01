@@ -43,3 +43,12 @@ margin: 0 auto;
 margin-left: 20%;
 }
 
+.mat-header-cell {
+  background-color: lightgrey;
+}
+.mat-cell{
+  border-right-width: 1px;
+  border-right-style:double;
+  border-right-color: lightgray;
+
+}

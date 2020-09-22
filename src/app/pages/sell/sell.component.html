@@ -1,7 +1,6 @@
 
 
 
-
   <mat-card class="insert">
 
 
@@ -11,8 +10,8 @@
 
 
 
-    <br/>
-    <form [formGroup]="form" (ngSubmit)="create();" #barcodeForm= "ngForm">
+    
+    <form [formGroup]="form" (ngSubmit)="create() ;" #barcodeForm= "ngForm">
       <mat-card-content>
         <div fxLayout="column" fxLayoutGap="15px">
           <mat-form-field>
@@ -29,27 +28,128 @@
      <p> Employee ID:<span style="color: green;"> {{employees?.EmployeeID}}</span>
      </p>
 
-      <br/>
+     
       <mat-card-actions align="end">
         <!-- <button mat-raised-button (click)="cancel()" color="warn">Cancel</button> -->
 
         <button mat-raised-button color="accent">Submit</button>
+        <div  id="print-section" style="display: none;" >
+
+ <!----------------------------------------------------------------------------------------------------------------------------------------------->
+ <!----------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--
+ <mat-divider></mat-divider>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0" style="width: 90%;" >
+            <tr class="top">
+                <td colspan="4">
+                    <table >
+                        <tr>
+                            <td class="title">
+                              <img src="../../../assets/images/gop.png" alt="GOP" style="width: 200px;" >
+                            </td>
+                            <td style="text-align: right;">
+                             {{now |  date:'MM-dd-yyyy'}} <br>
+                             {{now |  date:'HH:mm a'}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="information">
+              <td colspan="4">
+                  <table>
+                      <tr>
+                          <td>
+                              Greater Omaha Packing, Inc.<br>
+                              3001 L St<br>
+                              Omaha, NE 68117 <br>
+                          </td>
+                          <td>
+                            {{employees?.EmployeeID}} <br>
+                            {{employees?.FirstName}} <br>
+                            {{employees?.LastName}} <br>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+          <tr class="heading" >
+              <td style="text-align: justify;">
+                  Description
+              </td>
+              <td style="text-align: center;">
+                Weight
+              </td>
+              <td style="text-align: center;">
+                Price P/L
+              </td >
+              <td style="text-align: center;">
+                  Price
+              </td>
+          </tr>
+          <tr class="item" *ngFor="let barcode of barcodes">
+              <td style="text-align: justify;">
+                  {{barcode.itemdescription}}
+              </td>
+              <td style="text-align: center;">
+                {{barcode.barBoxNetWeight.toFixed(2)}}
+              </td>
+              <td style="text-align: center;">
+                {{barcode.price | currency}}
+              </td>
+              <td style="text-align: center;">
+                {{barcode.totalprice | currency}}
+            </td>
+          </tr>
+          <tr class="total" >
+              <td></td>
+              <td></td>
+              <td></td>
+              <td style="text-align: center; font-weight: bolder;">
+                <br>
+                Total:  {{getTotalCost() | currency}}
+              </td>
+          </tr>
+      </table>
+      <br>
+      <br>
+      <div class="signature">
+        <p>
+          I authorize Greater Omaha Packing to make a deduction from my net pay and I agree that my net pay will be reduced
+          by the amount shown on this Sales Receipt.
+        </p>
+        <br>
+        <p>
+          Yo autorizo a Greater Omaha Packing hacer una deduccion de mi pago neto y estoy de acuerdo que mi pago neto va
+          a ser reducido por la cantidad de este recibo.
+        </p>
+        <br>
+        <hr class="line" style="width:50%;text-align:left;margin-left:0; background-color: black; border-width: 5px ;">
+      </div>
+      <div mat-dialog-actions class="submitButtons" align="end">
+    <button mat-raised-button matDialogClose="cancel" color="primary">Cancel</button>
+    <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial onclick="window.print()" >Print</button>
+      </div>
+  </div>
+ -->
+
+ <!----------------------------------------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------------------------------------->
+
+          </div>
+
+          <!-- <button
+              printTitle="MyTitle"
+              printSectionId="print-section"
+              ngxPrint>print</button> -->
         <button mat-raised-button (click)="print()" style="background-color:#005640 ; color: white">Print</button>
       </mat-card-actions>
     </form>
   </mat-card>
+
 <!-- THIS IS THE LINE  -->
-<button
-
-    class='order'
-    style='margin-right: 5%; text-align: center; float:right;'
-    routerLink='/barcode-info'
-    mat-raised-button
-    color='accent'>Nexts</button>
-
-<br>
-<br>
-
 
 <mat-card-content *ngIf='show'>
 
@@ -186,7 +286,7 @@
 
 
 <br>
-<br>
+
 
 
 
@@ -217,13 +317,87 @@
 
 
 
+
+
+<mat-card-content *ngIf='barcodes'>
+
+<table mat-table  [dataSource]="barcodes" class="mat-elevation-z8">
+
+<!-- - Note that these columns can be defined in any order.
+    The actual rendered columns are set as a property on the row definition" -->
+<!-- Position Column -->
+  <ng-container matColumnDef="username">
+  <th mat-header-cell *matHeaderCellDef> Username </th>
+  <td mat-cell *matCellDef="let element">{{element.username}}  </td>
+  <td mat-footer-cell *matFooterCellDef> Total </td>
+  </ng-container>
+
+
+<ng-container matColumnDef="barcode">
+<th mat-header-cell *matHeaderCellDef> Barcode </th>
+<td mat-cell *matCellDef="let element">{{element.barcode}} </td>
+<td mat-footer-cell *matFooterCellDef> </td>
+</ng-container>
+
+<ng-container matColumnDef="productcode">
+<th mat-header-cell *matHeaderCellDef> Product Code </th>
+<td mat-cell *matCellDef="let element">
+  {{element.barProductCode}}</td>
+  <td mat-footer-cell *matFooterCellDef> </td>
+</ng-container>
+
+<ng-container matColumnDef="itemdescription">
+  <th mat-header-cell *matHeaderCellDef> Description </th>
+  <td mat-cell *matCellDef="let element">{{element.itemdescription}}</td>
+  <td mat-footer-cell *matFooterCellDef> </td>
+  </ng-container>
+
+
+<ng-container matColumnDef="boxweight">
+<th mat-header-cell *matHeaderCellDef> Box Weight </th>
+<td mat-cell *matCellDef="let element"> {{element.barBoxNetWeight}} </td>
+<td mat-footer-cell *matFooterCellDef> </td>
+</ng-container>
+
+<ng-container matColumnDef="priceperpound">
+  <th mat-header-cell *matHeaderCellDef> Price </th>
+  <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+  <td mat-footer-cell *matFooterCellDef> </td>
+  </ng-container>
+
+<ng-container matColumnDef="total">
+  <th mat-header-cell *matHeaderCellDef> Total Price </th>
+  <td style="color: red;" mat-cell *matCellDef="let element">{{element.totalprice}} </td>
+  <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+  </ng-container>
+
+
+
+<ng-container matColumnDef="functions">
+  <th mat-header-cell *matHeaderCellDef>Functions</th>
+
+  <td mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="deleteBarcode(element._id)">
+        <mat-icon color="accent">delete</mat-icon>
+      </button>
+  </td>
+  <td mat-footer-cell *matFooterCellDef> </td>
+</ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+  </table>
+</mat-card-content>
+
+
+
+
 <!-- PARTITION -->
 
 
   <!-- <mat-card-title style="text-align: center;">Barcodes</mat-card-title>
-
 <mat-card-content *ngIf='barcodes'>
-
 <table mat-table  [dataSource]="barcodes" class="mat-elevation-z8"> -->
 
 <!--- Note that these columns can be defined in any order.
@@ -233,53 +407,38 @@
   <th mat-header-cell *matHeaderCellDef> Barcode </th>
   <td mat-cell *matCellDef="let element">{{element.username}}  </td>
   </ng-container>
-
-
-
 <ng-container matColumnDef="barcode">
 <th mat-header-cell *matHeaderCellDef> Barcode </th>
 <td mat-cell *matCellDef="let element">{{element.barcode}} </td>
 </ng-container>
-
-
 <ng-container matColumnDef="productcode">
 <th mat-header-cell *matHeaderCellDef> Product Code </th>
 <td mat-cell *matCellDef="let element"> {{element.barProductCode}}</td>
 </ng-container>
-
 <ng-container matColumnDef="itemdescription">
   <th mat-header-cell *matHeaderCellDef> Description </th>
   <td mat-cell *matCellDef="let element">{{element.itemdescription}}</td>
   </ng-container>
-
-
 <ng-container matColumnDef="boxweight">
 <th mat-header-cell *matHeaderCellDef> Box Weight </th>
 <td mat-cell *matCellDef="let element"> {{element.barBoxNetWeight}} </td>
 </ng-container>
-
 <ng-container matColumnDef="priceperpound">
   <th mat-header-cell *matHeaderCellDef> Price </th>
   <td mat-cell *matCellDef="let element"> {{element.price}} </td>
   </ng-container>
-
 <ng-container matColumnDef="total">
   <th mat-header-cell *matHeaderCellDef> Price </th>
   <td style="color: red;" mat-cell *matCellDef="let element">{{element.totalprice}} </td>
   </ng-container>
-
-
-
 <ng-container matColumnDef="functions">
   <th mat-header-cell *matHeaderCellDef>Functions</th>
-
   <td mat-cell *matCellDef="let element">
       <button mat-icon-button (click)="delete(element._id)">
         <mat-icon color="accent">delete</mat-icon>
       </button>
   </td>
 </ng-container>
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
@@ -288,11 +447,9 @@
   <h1 id="id1">Here is the barcode: <span></span></h1>
   <h1 id="id2">Here is the barcode: <span></span></h1>
   <h1 id="demo">Here is the barcode: <span></span></h1>
-
 </mat-card> -->
 <br>
 <br>
 <br>
 <br>
 <br>
-

@@ -86,7 +86,7 @@ export class BaseLayoutComponent implements OnInit {
     console.log('this is res', compare)
 
 
-      if (compare == 'standardtest02') {
+      if (compare == 'standardmeatsale') {
           this.show = true;
           console.log('false')
       } else {

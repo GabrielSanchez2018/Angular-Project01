@@ -62,7 +62,7 @@ import { AccountRegistrationComponent } from './pages/account-registration/accou
 import { PurchasesByServiceComponent } from './pages/purchases-by-service/purchases-by-service.component';
 import { InvoiceSummaryDialogComponent } from './dialogs/invoice-summary-dialog/invoice-summary-dialog.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { ServiceOrderComponent } from './pages/service-order/service-order.component';
 import { RoleCreateComponent } from './pages/role-create/role-create.component';
 import { SecurityQuestionAskComponent } from './pages/security-question-ask/security-question-ask.component';
 import { PasswordResetComponent } from './pages/password-reset/password-reset.component';
@@ -119,7 +119,7 @@ import { TimerComponent } from './pages/timer/timer.component';
     PurchasesByServiceComponent,
     InvoiceSummaryDialogComponent,
     AdminComponent,
-    ServiceRepairComponent,
+    ServiceOrderComponent,
     RoleCreateComponent,
     SecurityQuestionAskComponent,
     PasswordResetComponent,

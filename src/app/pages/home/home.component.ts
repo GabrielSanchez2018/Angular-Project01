@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-import { truncate } from 'fs';
+
 import { Router } from '@angular/router';
-import { getLocaleTimeFormat } from '@angular/common';
 
 @Component({
   selector: 'app-home',

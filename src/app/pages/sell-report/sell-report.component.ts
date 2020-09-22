@@ -159,6 +159,12 @@ export class SellReportComponent implements OnInit {
 
         );
     }
+    exportAsXLSXThird(): void{
+        this.exportService.exportToExcel(this.orderssum , this.orderssum, this.orderssum, this.orderssum, 'Scanned_Items');
+     
+   }
+    
+  
 /***
  * I will have to make another excel exporter for the following data.
  */

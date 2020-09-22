@@ -1,0 +1,16 @@
+Application started and listening on port: \\.\pipe\894a3ccf-68ed-415f-a7ca-85aaa74f7aa6
+Connection to the database instance was successful 8-19-20
+this is the employee null
+[0mGET /api/employees/MEATSALE [32m200[0m 15.897 ms - 4[0m
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+[]
+[0mGET /api/time/ [32m200[0m 12.338 ms - 93[0m
+[0mGET /api/invoices/MEATSALE [32m200[0m 12.733 ms - 2[0m
+[0mGET /api/users/meatsale/role [32m200[0m 4.651 ms - 7[0m

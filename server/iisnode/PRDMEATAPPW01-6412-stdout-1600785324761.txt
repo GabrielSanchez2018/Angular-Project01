@@ -1,0 +1,3 @@
+Application started and listening on port: \\.\pipe\92257394-2933-4f18-959d-55dcdc3c73d5
+Connection to the database instance was successful 8-19-20
+[0mGET /api/users/meatsale/role [32m200[0m 18.091 ms - 7[0m

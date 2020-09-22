@@ -1,8 +1,8 @@
 /*
 ============================================
-; Title:  role-create.component.ts
-; Author: Professor Krasso
-; Date:   3 December 2019
+;
+; Author: Gabriel Sanchez
+; Date:   3 May 2020
 ; Description: Create role page
 ;===========================================
 */

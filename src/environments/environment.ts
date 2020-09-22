@@ -5,7 +5,7 @@
 
 // if you set it to true will clear all the console logs.
 export const environment = {
-  production: false
+  production: true
 };
 
 /*

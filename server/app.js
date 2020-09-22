@@ -1,7 +1,6 @@
 /*=========================
 Name: Gabriel Sanchez
 Date: April 19, 2020
-Assignment: app.js
 Description: the required backend code to run the app
 ==========================*/
 
@@ -38,7 +37,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended': true}));
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../dist/bcrs')));
-app.use('/', express.static(path.join(__dirname, '../dist/bcrs')));
+app.use('/test', express.static(path.join(__dirname, '../dist/bcrs')));
 app.use(cors());
 
 app.use(bodyParser.json({limit: '200mb'}));
@@ -47,9 +46,10 @@ app.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
 /**
  * Variables
  */
-const port = process.env.PORT || '3000' // server port
+const port = process.env.PORT // server port
 
-const conn = 'mongodb+srv://Gabriel:Jairo500!@cluster0-djivq.gcp.mongodb.net/brcs?retryWrites=true&w=majority';
+//const conn = 'mongodb+srv://Gabriel:Jairo500!@cluster0-djivq.gcp.mongodb.net/brcs?retryWrites=true&w=majority';
+const conn = "mongodb://localhost:27017/meatsale"
 /**
  * Database connection
  */
@@ -59,7 +59,7 @@ mongoose.connect(conn, {
   useNewUrlParser: true,
   autoIndex: true
 }).then(() => {
-  console.debug(`Connection to the database instance was successful`);
+  console.debug(`Connection to the database instance was successful 8-19-20`);
 }).catch(err => {
   console.log(`MongoDB Error: ${err.message}`)
 }); // end mongoose connection

@@ -8,21 +8,12 @@ const mongoose = require('mongoose');
 
 let orderverifySchema = mongoose.Schema({
   username: {type: String},
-  barcode: {type: String },
+  barcode: {type: String, unique: true, required: true, dropDups: true},
   price: {type: Number},
+  barBoxNetWeight:{type: Number},
   totalprice:{type: Number},
   itemdescription:{type: String},
-  barShippingContainerCode:{type: Number},
-  barPackagingIndicator:{type: Number},
-  barManufacturerNumber:{type: Number},
   barProductCode:{type: Number},
-  barShippingContainerCS:{type: Number},
-  barBoxNetWeightIdentifier:{type: Number},
-  barBoxNetWeight:{type: Number},
-  barDateOfProduction:{type: Number},
-  barDateOfProductionyymmdd:{type: Number},
-  barSerialNumberIndentifier:{type: Number},
-  barTenDigitSerial:{type: Number},
   orderDate: {type: Date}
 });
 
