@@ -185,7 +185,7 @@ router.get('/', function(req, res, next){
 router.delete('/alldelete', function () {
   console.log("db connect");
   var db = mongoose.connection;
-  db.dropCollection("barcodes", function (err, result) {
+  db.dropCollection("orderverifies", function (err, result) {
       if (err) {
           console.log("error delete collection");
       } else {

@@ -76,8 +76,8 @@ export class DatabaseManagementComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/invoice/alldelete' ).subscribe(res => {
-          console.log('Barcode deleted');
+        this.http.delete('/api/invoices/alldelete' ).subscribe(res => {
+          console.log('Invoices deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           console.log(this.barcodes);
@@ -101,6 +101,29 @@ export class DatabaseManagementComponent implements OnInit {
       if (result === 'confirm'){
         this.http.delete('/api/leftover/alldelete' ).subscribe(res => {
           console.log('leftover deleted');
+
+          //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
+         
+        });
+      }
+    });
+
+    
+   }
+
+   deleteleCheckedinInventory(alldelete) {
+    const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+      data: {
+        alldelete
+      },
+      disableClose: true,
+      width: '800px'
+    });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      if (result === 'confirm'){
+        this.http.delete('/api/orderVerify/alldelete' ).subscribe(res => {
+          console.log('Checked In inventory deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
          

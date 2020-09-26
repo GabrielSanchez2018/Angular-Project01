@@ -176,6 +176,9 @@ export class SellReportComponent implements OnInit {
                             "#3366ff",
                             "#660000"
                         ],
+                        color:[
+                          'white',
+                        ],
                         hoverBackgroundColor: [
                             "#66ffcc",
 

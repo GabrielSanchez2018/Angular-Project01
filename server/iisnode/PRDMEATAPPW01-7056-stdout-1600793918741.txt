@@ -1,0 +1,28 @@
+Application started and listening on port: \\.\pipe\7a0dd846-0063-48ef-b56a-6fb88646478c
+Connection to the database instance was successful 8-19-20
+[0mGET / [32m200[0m 4.320 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 1.278 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 2.521 ms - 275435[0m
+[0mGET /main-es2015.js [32m200[0m 3.070 ms - 747201[0m
+[0mGET /styles-es2015.js [32m200[0m 2.304 ms - 737032[0m
+[0mGET /scripts.js [32m200[0m 1.213 ms - 428368[0m
+[0mGET /vendor-es2015.js [32m200[0m 2.538 ms - 9890292[0m
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 39.598 ms - 10[0m
+[0mGET /api/employees [32m200[0m 482.746 ms - 164033[0m
+[0mGET /meatsale [33m404[0m 1.651 ms - 147[0m
+[0mGET / [32m200[0m 1.053 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 3.843 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 2.689 ms - 275435[0m
+[0mGET /styles-es2015.js [32m200[0m 2.717 ms - 737032[0m
+[0mGET /main-es2015.js [32m200[0m 2.740 ms - 747201[0m
+[0mGET /scripts.js [32m200[0m 0.869 ms - 428368[0m
+[0mGET /vendor-es2015.js [32m200[0m 3.906 ms - 9890292[0m
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 14.214 ms - 10[0m
+[0mGET /api/employees [32m200[0m 453.818 ms - 164033[0m
+[0mGET /runtime-es2015.js.map [32m200[0m 2.875 ms - 6289[0m
+[0mGET /polyfills-es2015.js.map [32m200[0m 3.072 ms - 265646[0m
+[0mGET /main-es2015.js.map [32m200[0m 2.046 ms - 757827[0m
+[0mGET /styles-es2015.js.map [32m200[0m 4.280 ms - 791169[0m
+[0mGET /vendor-es2015.js.map [32m200[0m 3.898 ms - 11083800[0m

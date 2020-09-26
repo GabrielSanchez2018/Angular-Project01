@@ -30,7 +30,7 @@ export class SellComponent implements OnInit {
   invoices: any;
   services: Object;
   barcodes: any;
-  displayedColumnsOne = ['id','code','lineitems','total','date', 'functions'];
+  displayedColumnsOne = ['code','lineitems', 'functions'];
   displayedColumns = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   barcodeId: Object;
   name: string;
@@ -296,7 +296,7 @@ rerender(){
             duration: 4000,
             panelClass: ['blue-snackbar'],
             verticalPosition: "top"
-           
+
           }
         );
       }
@@ -619,7 +619,7 @@ this.changeDetectorRefs.detectChanges();
   });
   }
 
-  
+
 
   // print(){
   //   this.http.get('api/barcodes/').subscribe(res =>{

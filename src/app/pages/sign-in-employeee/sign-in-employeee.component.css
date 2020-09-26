@@ -9,7 +9,8 @@
 }
 
 .signin-title{
-  color: #005640;
+  /* color: #005640; */
+  color:  #005640;;
   font-size: xx-large;
   text-align: center;
 }
@@ -18,10 +19,17 @@
   text-align: center;
   color: black;
 }
-.buttonSubmit{
-  background-color: #005640;
+.buttonSubmit, .btn-grad:hover, .buttonSubmit:hover{
+  background-image: linear-gradient(to right, #348F50 0%, #56B4D3 51%, #348F50 100%);
+  background-position: right center;
   color: white;
 }
+.buttonSubmit:hover{
+  background-position: right center;
+}
+
+.buttonSubmit {background-image: linear-gradient(to right, #348F50 0%, #56B4D3 51%, #348F50 100%)}
+.buttonSubmit:hover { background-position: right center; }
 
 ul {
   text-align: center;
@@ -71,7 +79,8 @@ input {
 }
 
 .simple-keyboard.hg-theme-default.myTheme {
-  border: 5px solid rgba(0,86,64);
+  border: 5px solid linear-gradient(to right, #348F50 0%, #56B4D3 51%, #348F50 100%);
+  background-image: linear-gradient(to right, #348F50 0%, #56B4D3 51%, #348F50 100%);
   border-radius: 10px;
   margin: 10px;
   width: calc(100% - 20px);

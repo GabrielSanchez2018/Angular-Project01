@@ -27,7 +27,7 @@
     </td>
   </ng-container> -->
     </mat-tab>
-    <mat-tab label="Orders by the Employees">
+    <mat-tab label="Employee Orders Delete">
       <mat-card>
         <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all the orders inputed by the Employees, becareful this cannot be undone</p>
 
@@ -37,14 +37,14 @@
               <span class="material-icons">
                 delete_forever
                 </span>
-                Delete All Orders
+                Delete Orders
             </button>
 
         </mat-card>
 
     </mat-tab>
 
-    <mat-tab label="Left Over Data">
+    <mat-tab label="Left Over Delete">
       <mat-card>
         <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will arase all the leftover data, becareful this cannot be undone</p>
 
@@ -54,7 +54,24 @@
               <span class="material-icons">
                 delete_forever
                 </span>
-                Delete All Orders
+                Delete Leftover Data
+            </button>
+
+        </mat-card>
+
+    </mat-tab>
+
+    <mat-tab label="Inventory Available Delete">
+      <mat-card>
+        <p style='font-weight: lighter; color: red; text-align: justify; text-align: center;'>This button will erase all the inventory checked in, becareful this cannot be undone</p>
+
+      <br>
+
+            <button class="button" mat-raised-button (click)="deleteleCheckedinInventory(_id)" color="warn" >
+              <span class="material-icons">
+                delete_forever
+                </span>
+                Delete Inventory Available Data
             </button>
 
         </mat-card>

@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name: Gabriel Sanchez
 Date: April 19, 2020
-Assignment: security question list
 Description: pulls question Id for the list
 ==========================*/
 

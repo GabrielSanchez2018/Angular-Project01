@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name:  Gabriel Sanchez
 Date: April 19, 2020
-Assignment: sign in component
 Description: backend functions for allowing a user to sign in
 ==========================*/
 
@@ -10,10 +9,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
-import { FnParam } from '@angular/compiler/src/output/output_ast';
-import { ɵparseCookieValue } from '@angular/common';
-import { SSL_OP_COOKIE_EXCHANGE, SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } from 'constants';
-import { strictEqual } from 'assert';
 
 @Component({
   selector: 'app-signin',
@@ -53,7 +48,7 @@ export class SigninComponent implements OnInit {
         var date = new Date();
         date.setTime(date.getTime() + (60 * 1000));
         //'/', 'localhost', false, "Strict" will secure the cookie
-        this.cookieService.set('sessionuser', username, this.date , '/', '', false, 'Strict' );
+        this.cookieService.set('sessionuser', username, 1 , '/', '', false, 'Strict' );
 
         this.router.navigate(['/admin']);
       } else {

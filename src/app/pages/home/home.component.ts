@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-import { truncate } from 'fs';
+
 import { Router } from '@angular/router';
-import { getLocaleTimeFormat } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -76,12 +75,23 @@ export class HomeComponent implements OnInit {
       const year = timenow.getUTCFullYear()
       const month = timenow.getMonth()
 
-      console.log('this is the time now', day + year + month)
-      console.log('this is set', this.time[0].time)
 
-      var timerightnow = day + year + month
 
-      if(timerightnow < this.time[0].time){
+      var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    let diff = Math.abs( now.valueOf() - start.valueOf());
+    var oneday = 1000 * 60 * 60* 24;
+
+    var timerightnow = Math.floor(  oneday / diff);
+
+    var diffe = Math.abs( start.valueOf()- now.valueOf());
+    var lastdate = Math.floor(diffe / (1000 * 3600 * 24));
+
+    console.log('this is the time now', lastdate)
+    console.log('this is set', this.time[0].time)
+
+
+      if(lastdate < this.time[0].time){
         console.log('true')
         this.appear = true
 

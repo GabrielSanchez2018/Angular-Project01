@@ -11,9 +11,16 @@
     <!-- <img src="../../../assets/images/gop.png" style="width: 200px;"> &nbsp;&nbsp; -->
     <br>
     <br>
+    
 
     <span> &nbsp;&nbsp;GOP MEAT SALE</span>
+      &nbsp;&nbsp;
 
+    <button mat-fab *ngIf='show' [routerLink]="'/admin'" aria-label="Example icon button with a home icon">
+      <mat-icon>home</mat-icon>
+    </button>
+
+    
     <div fxFlex fxLayout fxLayoutAlign="flex-end">
 
 
@@ -57,7 +64,10 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="over" style="background-color: #92AA83; width: 30%;">
+  <mat-sidenav #sidenav mode="over" style="background: #1f4037;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ; width: 30%; ">
     <mat-nav-list>
 
 
@@ -65,7 +75,7 @@
         <span class="material-icons">
           view_quilt
           </span>
-          <span style="color: #ffd740;"> &nbsp;&nbsp; Dashboard</span>
+          <span style="color: white;"> &nbsp;&nbsp; Dashboard</span>
       </a>
       <a mat-list-item [routerLink]="'/'">
         <span class="material-icons">
@@ -162,20 +172,45 @@
         <span class="example-fill-remaining-space"></span>
           <button class="navbar-link" (click)='onLogout()' mat-button>Logout</button>
     </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-      <span style="font-size: 20px;">Welcome {{username.toUpperCase()}}</span>
+  
+  
+  
+  
+  </mat-sidenav-container>
+  
+  
+  </body>
+  
+  
+  
+  
+  
+  
+      <!-- <span class="menu-spacer"></span>
+      <div>
+        <button class="navbar-link" routerLink="/" mat-button>Home</button>
+        <button class="navbar-link" routerLink="/session/signin" mat-button>Login</button>
+        <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
+        <button mat-icon-button *ngIf='show' class="navbar-link" routerLink="/admin" mat-icon-button><span class="material-icons">
+          home</span></button>
+          <span class="example-fill-remaining-space"></span>
+            <button class="navbar-link" (click)='onLogout()' mat-button>Logout</button>
+      </div>
     </mat-toolbar-row>
-</mat-toolbar> -->
-
-
-
-
-
-
-
-
-<!-- main content -->
-
-
-<!-- footer -->
+    <mat-toolbar-row>
+        <span style="font-size: 20px;">Welcome {{username.toUpperCase()}}</span>
+      </mat-toolbar-row>
+  </mat-toolbar> -->
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- main content -->
+  
+  
+  <!-- footer -->
+  

@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter
+Name: Gabriel Sanchez
 Date: April 19, 2020
-Assignment: error interceptor
 Description: handles errors for 404 and 500 status codes
 ==========================*/
 
