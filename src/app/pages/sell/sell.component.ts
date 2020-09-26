@@ -13,6 +13,7 @@ import { DataSource } from '@angular/cdk/table';
 import { toArray } from 'rxjs/operators';
 import { PrintDialogComponent } from 'src/app/dialogs/print-dialog/print-dialog.component';
 import { error } from 'util';
+import { InvoiceComponent } from '../invoice/invoice.component';
 
 
 
@@ -71,7 +72,7 @@ export class SellComponent implements OnInit {
      this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' + this.username).subscribe(res =>{
       this.invoices = res;
-      console.log('this ivocices', this.invoices)
+      
       var invoiceCounter = this.invoices.length
     console.log('This counts the invoice length',invoiceCounter)
      /**
@@ -578,14 +579,13 @@ function descriptionFunction(){
 
   }
 
+
+
+
 // passing the functions to variables to inject them in the http.post method
 var totalpriceResult = totalPrice();
 var totalprice = totalpriceResult.toFixed(2)
-
-
 var itemdescription = descriptionFunction();
-
-
 var price = myFunction();
 
 
@@ -594,6 +594,23 @@ console.log('here is the total price', totalprice);
 console.log('here is the total description', itemdescription);
 console.log('get name', this.getName())
 this.changeDetectorRefs.detectChanges();
+
+console.log('this is what this user orderded', this.invoices[0].lineItems[0].id)
+console.log('this is what this user orderded', this.invoices[0].lineItems[1].id)
+
+console.log('this is the barcode inputed', labelproductCode)
+
+// if (labelproductCode == this.invoices[0].lineItems[0].id){
+//   document.getElementById("change").style.backgroundColor = '#99C262';
+//   console.log('Color Changed')
+// } else if (labelproductCode === this.invoices[0].lineItems[1].id) {
+//   document.getElementById("change").style.backgroundColor = '#99C262';
+//   console.log('Color Changed')
+
+// } else {
+//   console.log('no color changed')
+// }
+
 
 
 

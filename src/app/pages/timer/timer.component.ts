@@ -1,4 +1,12 @@
-
+/***
+ * 
+ * Author: Gabriel Sanchez 
+ * Date: 9/26/2020
+ * Description: This component will get a day number from the year (0-365 | 366). 
+ * The ordering service will desapear after the last date is set up, this is 
+ * to stop employees from placing orders after the last date. 
+ * 
+ */
 
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
@@ -80,6 +88,8 @@ export class TimerComponent implements OnInit {
     var lastdate = Math.floor(diffe / (1000 * 3600 * 24));
 
     console.log('last day set up', lastdate)
+    var setOnemoreday =  1;
+    console.log('this is one more day', setOnemoreday)
 
 
 
@@ -89,7 +99,7 @@ export class TimerComponent implements OnInit {
 
     this.http.post('/api/time', {
       text: description,
-      time: lastdate,
+      time: lastdate + setOnemoreday,
       time1: date
     }).subscribe(res => {
       this.time = this.time.concat([res]);

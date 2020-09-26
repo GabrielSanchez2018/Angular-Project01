@@ -170,6 +170,8 @@ console.log('esto', this.selectedValue)
 
       }
 
+      
+
       /**
        * This if statement shows the Quantity area if is true or false.
        */
@@ -177,6 +179,8 @@ console.log('esto', this.selectedValue)
         this.show = true
         console.log('this is this.show', this.show)
       }
+
+      
 
     /**
      * Build the invoice object
@@ -197,6 +201,11 @@ console.log('esto', this.selectedValue)
            * to have an accourate count of boxes.
            *
            */
+      
+
+
+
+
           if ( boxesChosen == "Two"){
             lineItems.push({
             title: savedService.title,
@@ -240,7 +249,10 @@ console.log('esto', this.selectedValue)
       username: this.username,
       orderDate: new Date()
     };
-    console.log(invoice);
+   
+
+    
+    console.log('invoice line items',invoice.lineItems.length);
 
     const dialogRef = this.dialog.open(InvoiceSummaryDialogComponent, {
       data: {
@@ -249,6 +261,20 @@ console.log('esto', this.selectedValue)
       disableClose: true,
       width: '800px'
     });
+
+    if(invoice.lineItems.length > 2){
+      dialogRef.close()
+      this.selection.clear();
+        return this.snackBar.open(
+          "You have selected more than 2 Items | Try again",
+          "ERROR",
+          {
+            duration: 7000,
+            verticalPosition: "top"
+          }
+
+        );
+    }
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirm') {
