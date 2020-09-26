@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataSource } from '@angular/cdk/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -15,7 +15,11 @@ import { CookieService } from 'ngx-cookie-service';
   templateUrl: './sell-report.component.html',
   styleUrls: ['./sell-report.component.css']
 })
+
+
 export class SellReportComponent implements OnInit {
+
+
   displayedColumns = ['code','itemdescription', 'totalboxes','priceperitem','totalweight', 'totalprice'];
   displayedColumnsOne = ['username', 'barcode', 'productcode','itemdescription', 'boxweight','priceperpound','total', 'functions'];
   displayedColumnsTwo = ['username','total', 'functions'];
@@ -35,6 +39,9 @@ export class SellReportComponent implements OnInit {
   leftover: any;
   orderVerify: any;
   leftoverTable: any;
+  time: Object;
+
+
 
 
    applyFilter(event: Event) {
@@ -45,9 +52,9 @@ export class SellReportComponent implements OnInit {
 
 
 
-
-
     constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog , private cookieService: CookieService ) {
+
+
 
       this.username = this.cookieService.get('paysession');
       this.http.get('/api/employees/' + this.username).subscribe(res =>{
@@ -95,6 +102,46 @@ export class SellReportComponent implements OnInit {
       }), err =>{
         console.log(err)
       }
+
+      //timer
+      this.http.get('api/time/' ).subscribe(res =>{
+        this.time = res;
+        console.log('time set up',this.time)
+
+        var timenow = new Date()
+
+        const day = timenow.getUTCDate()
+        const year = timenow.getUTCFullYear()
+        const month = timenow.getMonth()
+
+        console.log('this is the time now', day + year + month)
+        console.log('this is set', this.time[0].time)
+
+        var timerightnow = day + year + month
+
+        if(timerightnow < this.time[0].time){
+          console.log('true')
+
+        } else {
+          console.log('false')
+          // this.exportAsXLSX()
+          setTimeout(function(){
+           this.exportService.exportToExcel(
+            this.barcodes, this.leftoverTable, this.ventas, this.leftover, 'Credit_Report',
+            );
+          },3000);
+
+
+
+
+        }
+
+      }, err => {
+        console.log(err);
+      })
+
+
+
         // Call the purchases-graph API
         this.http.get('api/barcodes/barcodes-graph').subscribe(res => {
             // map the response data to the purchases variable
@@ -151,14 +198,7 @@ export class SellReportComponent implements OnInit {
     }
 
 
-    exportAsXLSX(): void{
-      this.exportService.exportToExcel(
-        this.barcodes, this.leftoverTable, this.ventas, this.leftover, 'Credit_Report',
 
-
-
-        );
-    }
 /***
  * I will have to make another excel exporter for the following data.
  */
@@ -177,6 +217,12 @@ export class SellReportComponent implements OnInit {
     // exportAsXLSXProductReturnedTable(): void{
     //   this.exportService.exportToExcel(this.leftover , 'Leftover-table');
     // }
+
+    exportAsXLSX(): void{
+      this.exportService.exportToExcel(
+        this.barcodes, this.leftoverTable, this.ventas, this.leftover, 'Credit_Report',
+        );
+    }
 
 
     /***

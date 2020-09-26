@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
+import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
     selector: 'app-purchases-by-service',
@@ -13,8 +16,18 @@ export class PurchasesByServiceComponent implements OnInit {
     labels = [];
     code = [];
     displayedColumns = ['code','description','count'];
+    displayedColumns01 = ['id','lineitems','total','date', 'functions'];
+    username: any;
+    invoices: any;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient,  private cookieService: CookieService, private dialog: MatDialog) {
+        
+        this.username = this.cookieService.get('sessionuser');
+        this.http.get('api/invoices/' ).subscribe(res =>{
+          this.invoices = res;
+        }, err => {
+          console.log(err);
+        })
         // Call the purchases-graph API
         this.http.get('api/invoices/purchases-graph').subscribe(res => {
             // map the response data to the purchases variable
@@ -75,4 +88,24 @@ export class PurchasesByServiceComponent implements OnInit {
     getTotalBoxes(){
       return this.purchases.map(t => t.count).reduce((acc, value) => acc + value, 0 );
     }
+
+    delete(invoiceId) {
+        const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
+          data: {
+            invoiceId
+          },
+          disableClose: true,
+          width: '800px'
+        });
+      
+        dialogRef.afterClosed().subscribe(result =>{
+          if (result === 'confirm'){
+            this.http.delete('/api/invoices/' + invoiceId).subscribe(res => {
+              console.log('Invoice deleted');
+              this.invoices = this.invoices.filter(q => q._id !== invoiceId);
+              console.log(this.invoices);
+            });
+          }
+        });
+      }
 }

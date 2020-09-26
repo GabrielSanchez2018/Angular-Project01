@@ -40,8 +40,10 @@ export class AllOrdersComponent implements OnInit {
     }, err => {
       console.log(err);
     })
+
   }
 
+  
   
 
 ngOnInit(){

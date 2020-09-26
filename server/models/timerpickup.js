@@ -1,13 +1,13 @@
 /*=========================
 Name: Gabriel Sanchez
 Date: April 20, 2020
-Description: This timer will set up the last day to order
+Description: This timer will set up the day to pick up.
 ==========================*/
 
 const mongoose = require('mongoose');
 
 // role schema
-let timeSchema = mongoose.Schema({
+let timepickupSchema = mongoose.Schema({
 
     time: {type: String},
     time1: {type: String},
@@ -15,4 +15,4 @@ let timeSchema = mongoose.Schema({
 });
 
 // export for public use
-module.exports = mongoose.model('Timer', timeSchema);
+module.exports = mongoose.model('Timepickup', timepickupSchema);

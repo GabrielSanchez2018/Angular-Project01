@@ -63,9 +63,9 @@
 
       <a mat-list-item *ngIf='show' [routerLink]="'/admin'">
         <span class="material-icons">
-          settings
+          view_quilt
           </span>
-          <span style="color: #ffd740;"> &nbsp;&nbsp; Admin</span>
+          <span style="color: #ffd740;"> &nbsp;&nbsp; Dashboard</span>
       </a>
       <a mat-list-item [routerLink]="'/'">
         <span class="material-icons">
@@ -73,26 +73,16 @@
           </span>
           <span style="color: #ffd740;">&nbsp;&nbsp;Services</span>
       </a>
-      <a mat-list-item [routerLink]="'/my-orders'">
+      <!-- <a mat-list-item [routerLink]="'/my-orders'">
         <span class="material-icons">
           shopping_cart
           </span>
           <span style="color: #ffd740;">&nbsp;&nbsp;My Orders</span>
-      </a>
+      </a> -->
 
-      <a mat-list-item *ngIf='show' [routerLink]="'/purchases-by-service'">
-        <span class="material-icons">
-          assignment_turned_in
-          </span>
-          <span style="color: #ffd740;">&nbsp;&nbsp;Submited Orders</span>
-      </a>
+      
 
-      <a mat-list-item *ngIf='show' [routerLink]="'/sell-report'">
-        <span class="material-icons">
-          pie_chart
-          </span>
-          <span style="color: #ffd740;">&nbsp;&nbsp;Purchase Reports</span>
-      </a>
+     
 
       <a mat-list-item *ngIf='show' [routerLink]="'/leftover-product'">
         <span class="material-icons">
@@ -126,19 +116,8 @@
           <span style="color: #ffd740;">&nbsp;&nbsp;Employee Sale</span>
       </a>
 
-      <a mat-list-item *ngIf='show' [routerLink]="'/all-orders'">
-        <span class="material-icons" style="size: 20px;">
-          ballot
-          </span>
-          <span style="color: #ffd740;">&nbsp;&nbsp;All Orders</span>
-      </a>
-      <a mat-list-item *ngIf='show' [routerLink]="'/database-management'">
-        <span class="material-icons">
-          warning
-          </span>
-          <span style="color: red;">&nbsp;&nbsp;Database Management</span>
-      </a>
-
+     
+     
       <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
 
     </mat-nav-list>

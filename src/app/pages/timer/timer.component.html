@@ -1,174 +1,95 @@
-<!-- <mat-card > -->
-
-  <!-- <form [formGroup]="form" (ngSubmit)="enterTime();" #loginForm="ngForm">
-  <mat-form-field appearance="fill">
-    <mat-label>Input & change events</mat-label>
-    <input matInput [matDatepicker]="picker"
-           (dateInput)="addEvent('input', $event)"  (dateChange)="addEvent('change', $event)">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-
-  <mat-card-actions>
-
-    <button type="submit" fxFlex mat-raised-button  class="buttonSubmit">Submit</button>
-  </mat-card-actions>
-
-  <br>
-  <span>
-    {{now |  date:'MM-dd-yyyy'}} <br>
-     {{now |  date:'HH:mm:ss a'}}
-  </span>
-  </form> -->
-  <!-- <form [formGroup]="form" (ngSubmit)="login();form.reset()" #loginForm="ngForm">
-    <mat-card-content style="background-color: white;">
-
-      <mat-form-field>
-        <input type="text" matInput fxFlex [formControl]="form.controls['des']"
-            placeholder="description" autofocus />
-    </mat-form-field>
-    <br>
-
-   <mat-form-field class="example-full-width" appearance="fill">
-
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
-  </mat-form-field> -->
-
-  <!-- </mat-card-content>
-  <mat-card-actions>
-    <button type="submit" fxFlex mat-raised-button style="background-color: #005640; color: white;">Submit</button>
-</mat-card-actions>
-  </form>
-</mat-card> -->
-<!-- <mat-card class="signinForm">
-  <mat-card-title style="text-align: center; font-size: 25px; font-weight: lighter;"
-      class="mat-headline">Employee Sign In
-  </mat-card-title>
+<br>
 
 
-  <mat-card-subtitle style="text-align: center; font-weight: lighter;">
-  <a routerLink="/session/account-registration" class="register-link">or create an account</a>
-</mat-card-subtitle>
+    <div  style='margin: 50px; width: 50%; margin: 0 auto;'>
+      <mat-card class="mat-elevation-z8">
+        <mat-card-title>Set Up Last Date</mat-card-title>
+        <p>Please set up a last day to order</p>
+        <br/>
+        <form [formGroup]="form" (ngSubmit)="create()" #roleForm>
+          <mat-card-content>
+            <div fxLayout="column" fxLayoutGap="10px">
+              <!-- <mat-form-field>
+                <input matInput
+                       [formControl]="form.controls['description']"
+                       placeholder="Role"/>
+              </mat-form-field> -->
+              <br>
+              <mat-form-field class="example-full-width" appearance="fill">
+    
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="to" formControlName="to">
+                <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+                <mat-datepicker [dateClass]="dateClass" #to></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+    
+          <br/>
+          <mat-card-actions align="end">
+            <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+            <button mat-raised-button color="accent">Submit</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    
+    
+    
+    <mat-card>
+      <mat-card-title style="text-align: center;">Time Out</mat-card-title>
+      <p style="text-align: center;"></p>
+      <!-- <mat-card-subtitle>
+          <button mat-raised-button routerLink="/timer-edit" color="accent">Create a new Service</button>
+      </mat-card-subtitle> -->
+    <mat-card-content>
+    
+    
+    <table mat-table  [dataSource]="time" class="mat-elevation-z8">
+    
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+    
+    <!-- Position Column -->
+    <!-- <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element">{{element.id}}  </td>
+    </ng-container> -->
+    
+    <!-- Name Column -->
+    <!-- <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <td mat-cell *matCellDef="let element">{{element.text}}  </td>
+    </ng-container> -->
+    
+    <!-- Weight Column -->
+    <ng-container matColumnDef="time">
+    <th mat-header-cell *matHeaderCellDef> Last Day </th>
+    <td mat-cell *matCellDef="let element"> {{element.time1 | date}} </td>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="functions">
+      <th mat-header-cell *matHeaderCellDef>Functions</th>
+    
+      <td mat-cell *matCellDef="let element">
+          <!-- <button mat-icon-button routerLink="/time-edit/{{element._id}}">
+              <mat-icon color="accent">edit</mat-icon>
+          </button> -->
+          <button mat-icon-button (click)="delete(element._id)">
+            <mat-icon color="accent">delete</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+    
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+    </mat-card-content>
+    </mat-card>
+    
+    </div>
+    <br><br><br>
 
 
-<mat-card-subtitle style="text-align: center;" class="mat-headline">You must enter a valid
-username/password to proceed
-</mat-card-subtitle>
-
-<mat-card-content>
-<small style="color: #df546a;" *ngIf="errorMessage">{{ errorMessage }}<br /></small>
-<mat-card class="mat-elevation-z0">
-  <form [formGroup]="form" (ngSubmit)="timer(); form.reset()" #loginForm="ngForm">
-      <mat-card-content fxLayout="column" fxLayoutGap="10px">
-          <mat-form-field>
-              <input type="text" matInput fxFlex [formControl]="form.controls['des']"
-                  placeholder="Username" autofocus />
-          </mat-form-field>
-
-      </mat-card-content>
-      <mat-card-actions>
-          <button type="submit" fxFlex mat-raised-button style="background-color: #005640; color: white;">Submit</button>
-      </mat-card-actions>
-      <br />
-      <a fxLayoutAlign="end" class="forgot-password-link" routerLink="/session/forgot-password">Forgot password?</a>
-      <br>
-
-  </form>
-</mat-card>
-</mat-card-content>
-</mat-card> -->
-
-
-
-<div  style='margin: 50px; width: 50%; margin: 0 auto;'>
-  <mat-card class="mat-elevation-z8">
-    <mat-card-title>Set up last date</mat-card-title>
-    <br/>
-    <form [formGroup]="form" (ngSubmit)="create()" #roleForm>
-      <mat-card-content>
-        <div fxLayout="column" fxLayoutGap="10px">
-          <!-- <mat-form-field>
-            <input matInput
-                   [formControl]="form.controls['description']"
-                   placeholder="Role"/>
-          </mat-form-field> -->
-          <br>
-          <mat-form-field class="example-full-width" appearance="fill">
-
-            <mat-label>Choose a date</mat-label>
-            <input matInput [matDatepicker]="to" formControlName="to">
-            <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
-            <mat-datepicker [dateClass]="dateClass" #to></mat-datepicker>
-          </mat-form-field>
-        </div>
-      </mat-card-content>
-
-      <br/>
-      <mat-card-actions align="end">
-        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
-        <button mat-raised-button color="accent">Submit</button>
-      </mat-card-actions>
-    </form>
-  </mat-card>
-
-
-
-<mat-card>
-  <mat-card-title style="text-align: center;">Time Out</mat-card-title>
-  <p style="text-align: center;">Last day of ordering</p>
-  <!-- <mat-card-subtitle>
-      <button mat-raised-button routerLink="/timer-edit" color="accent">Create a new Service</button>
-  </mat-card-subtitle> -->
-<mat-card-content>
-
-
-<table mat-table  [dataSource]="time" class="mat-elevation-z8">
-
-<!--- Note that these columns can be defined in any order.
-    The actual rendered columns are set as a property on the row definition" -->
-
-<!-- Position Column -->
-<!-- <ng-container matColumnDef="id">
-<th mat-header-cell *matHeaderCellDef> No. </th>
-<td mat-cell *matCellDef="let element">{{element.id}}  </td>
-</ng-container> -->
-
-<!-- Name Column -->
-<!-- <ng-container matColumnDef="description">
-<th mat-header-cell *matHeaderCellDef> Description </th>
-<td mat-cell *matCellDef="let element">{{element.text}}  </td>
-</ng-container> -->
-
-<!-- Weight Column -->
-<ng-container matColumnDef="time">
-<th mat-header-cell *matHeaderCellDef> Last Day </th>
-<td mat-cell *matCellDef="let element"> {{element.time1 | date}} </td>
-</ng-container>
-
-
-<ng-container matColumnDef="functions">
-  <th mat-header-cell *matHeaderCellDef>Functions</th>
-
-  <td mat-cell *matCellDef="let element">
-      <!-- <button mat-icon-button routerLink="/time-edit/{{element._id}}">
-          <mat-icon color="accent">edit</mat-icon>
-      </button> -->
-      <button mat-icon-button (click)="delete(element._id)">
-        <mat-icon color="accent">delete</mat-icon>
-      </button>
-  </td>
-</ng-container>
-
-
-<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
-</mat-card-content>
-</mat-card>
-
-</div>
-<br><br><br>
