@@ -1,7 +1,6 @@
 /*=========================
 Name: Gabriel Sanchez
 Date: April 16, 2020
-Assignment: user API's
 Description: all API's used for users
 ==========================*/
 

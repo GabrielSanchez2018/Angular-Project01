@@ -1,7 +1,6 @@
 /*=========================
 Name:Gabriel Sanchez
 Date: April 16, 2020
-Assignment: session API
 Description: all API's used for sessions
 ==========================*/
 
@@ -15,7 +14,7 @@ const saltRounds = 10;
 
 const router = express.Router();
 
-// document.cookie = "tagname = test;secure";
+
 // const cookie = "sessionuser=hussein; samesite=strict; secure"
 
 

@@ -165,6 +165,9 @@ export class SellReportComponent implements OnInit {
                             "#3366ff",
                             "#660000"
                         ],
+                        color:[
+                          'white',
+                        ],
                         hoverBackgroundColor: [
                             "#66ffcc",
 
@@ -195,6 +198,12 @@ export class SellReportComponent implements OnInit {
 
         );
     }
+    exportAsXLSXThird(): void{
+        this.exportService.exportToExceltwo(this.orderssum , 'HR Report');
+     
+   }
+    
+  
 /***
  * I will have to make another excel exporter for the following data.
  */

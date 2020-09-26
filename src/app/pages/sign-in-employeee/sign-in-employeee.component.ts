@@ -272,6 +272,7 @@ export class SignInEmployeeeComponent implements OnInit {
         // console.log('this is the cookie timeout',timeout)
 
         //this.stepper
+        console.log('cookie info',this.cookieService)
        this.router.navigate(["/"]);
       } else {
 

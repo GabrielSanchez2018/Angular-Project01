@@ -1,7 +1,6 @@
 
 
 
-
   <mat-card class="insert">
 
 
@@ -41,9 +40,12 @@
 
 <!--
  <mat-divider></mat-divider>
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
     <div class="invoice-box">
         <table cellpadding="0" cellspacing="0" style="width: 90%;" >
             <tr class="top">
@@ -53,6 +55,11 @@
                             <td class="title">
                               <img src="../../../assets/images/gop.png" alt="GOP" style="width: 200px;" >
                             </td>
+<<<<<<< HEAD
+                            <td style="text-align: right;">
+                             {{now |  date:'MM-dd-yyyy'}} <br>
+                             {{now |  date:'HH:mm a'}}
+=======
 
 
                             <td style="text-align: right;">
@@ -60,12 +67,16 @@
                              {{now |  date:'MM-dd-yyyy'}} <br>
                              {{now |  date:'HH:mm a'}}
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
             <tr class="information">
               <td colspan="4">
                   <table>
@@ -75,23 +86,33 @@
                               3001 L St<br>
                               Omaha, NE 68117 <br>
                           </td>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
                           <td>
                             {{employees?.EmployeeID}} <br>
                             {{employees?.FirstName}} <br>
                             {{employees?.LastName}} <br>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
                           </td>
                       </tr>
                   </table>
               </td>
           </tr>
+<<<<<<< HEAD
+          <tr class="heading" >
+=======
 
 
 
           <tr class="heading" >
 
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
               <td style="text-align: justify;">
                   Description
               </td>
@@ -101,16 +122,23 @@
               <td style="text-align: center;">
                 Price P/L
               </td >
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
               <td style="text-align: center;">
                   Price
               </td>
           </tr>
+<<<<<<< HEAD
+          <tr class="item" *ngFor="let barcode of barcodes">
+=======
 
           <tr class="item" *ngFor="let barcode of barcodes">
 
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
               <td style="text-align: justify;">
                   {{barcode.itemdescription}}
               </td>
@@ -120,12 +148,18 @@
               <td style="text-align: center;">
                 {{barcode.price | currency}}
               </td>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
               <td style="text-align: center;">
                 {{barcode.totalprice | currency}}
             </td>
           </tr>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
           <tr class="total" >
               <td></td>
               <td></td>
@@ -138,7 +172,10 @@
       </table>
       <br>
       <br>
+<<<<<<< HEAD
+=======
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
       <div class="signature">
         <p>
           I authorize Greater Omaha Packing to make a deduction from my net pay and I agree that my net pay will be reduced
@@ -150,18 +187,26 @@
           a ser reducido por la cantidad de este recibo.
         </p>
         <br>
+<<<<<<< HEAD
+        <hr class="line" style="width:50%;text-align:left;margin-left:0; background-color: black; border-width: 5px ;">
+      </div>
+=======
 
 
         <hr class="line" style="width:50%;text-align:left;margin-left:0; background-color: black; border-width: 5px ;">
       </div>
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
       <div mat-dialog-actions class="submitButtons" align="end">
     <button mat-raised-button matDialogClose="cancel" color="primary">Cancel</button>
     <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial onclick="window.print()" >Print</button>
       </div>
   </div>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> c28aaf98345abce823d68f3548fec2ae45d2f5de
  -->
 
  <!----------------------------------------------------------------------------------------------------------------------------------------------->
@@ -426,9 +471,7 @@
 
 
   <!-- <mat-card-title style="text-align: center;">Barcodes</mat-card-title>
-
 <mat-card-content *ngIf='barcodes'>
-
 <table mat-table  [dataSource]="barcodes" class="mat-elevation-z8"> -->
 
 <!--- Note that these columns can be defined in any order.
@@ -438,53 +481,38 @@
   <th mat-header-cell *matHeaderCellDef> Barcode </th>
   <td mat-cell *matCellDef="let element">{{element.username}}  </td>
   </ng-container>
-
-
-
 <ng-container matColumnDef="barcode">
 <th mat-header-cell *matHeaderCellDef> Barcode </th>
 <td mat-cell *matCellDef="let element">{{element.barcode}} </td>
 </ng-container>
-
-
 <ng-container matColumnDef="productcode">
 <th mat-header-cell *matHeaderCellDef> Product Code </th>
 <td mat-cell *matCellDef="let element"> {{element.barProductCode}}</td>
 </ng-container>
-
 <ng-container matColumnDef="itemdescription">
   <th mat-header-cell *matHeaderCellDef> Description </th>
   <td mat-cell *matCellDef="let element">{{element.itemdescription}}</td>
   </ng-container>
-
-
 <ng-container matColumnDef="boxweight">
 <th mat-header-cell *matHeaderCellDef> Box Weight </th>
 <td mat-cell *matCellDef="let element"> {{element.barBoxNetWeight}} </td>
 </ng-container>
-
 <ng-container matColumnDef="priceperpound">
   <th mat-header-cell *matHeaderCellDef> Price </th>
   <td mat-cell *matCellDef="let element"> {{element.price}} </td>
   </ng-container>
-
 <ng-container matColumnDef="total">
   <th mat-header-cell *matHeaderCellDef> Price </th>
   <td style="color: red;" mat-cell *matCellDef="let element">{{element.totalprice}} </td>
   </ng-container>
-
-
-
 <ng-container matColumnDef="functions">
   <th mat-header-cell *matHeaderCellDef>Functions</th>
-
   <td mat-cell *matCellDef="let element">
       <button mat-icon-button (click)="delete(element._id)">
         <mat-icon color="accent">delete</mat-icon>
       </button>
   </td>
 </ng-container>
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
@@ -493,11 +521,9 @@
   <h1 id="id1">Here is the barcode: <span></span></h1>
   <h1 id="id2">Here is the barcode: <span></span></h1>
   <h1 id="demo">Here is the barcode: <span></span></h1>
-
 </mat-card> -->
 <br>
 <br>
 <br>
 <br>
 <br>
-

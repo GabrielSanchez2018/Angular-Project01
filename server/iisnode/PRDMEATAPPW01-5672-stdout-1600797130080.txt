@@ -1,0 +1,6370 @@
+Application started and listening on port: \\.\pipe\751dad1c-2b62-4a78-bfc4-ebb3e49e53ae
+Connection to the database instance was successful 8-19-20
+[0mGET / [32m200[0m 5.046 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 3.617 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 4.033 ms - 275435[0m
+[0mGET /main-es2015.js [32m200[0m 3.663 ms - 750654[0m
+[0mGET /styles-es2015.js [32m200[0m 3.290 ms - 737032[0m
+[0mGET /scripts.js [32m200[0m 1.181 ms - 428368[0m
+[0mGET /vendor-es2015.js [32m200[0m 3.087 ms - 9890292[0m
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 44.377 ms - 10[0m
+[0mGET /api/employees [32m200[0m 535.015 ms - 164033[0m
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+[]
+this is the employee null
+[0mGET /api/time/ [32m200[0m 14.306 ms - 93[0m
+[0mGET /api/invoices/MEATSALE [32m200[0m 14.821 ms - 2[0m
+[0mGET /api/employees/MEATSALE [32m200[0m 16.564 ms - 4[0m
+[0mGET /herd-of-cattle-in-daytime.jpg [32m200[0m 12.192 ms - 517881[0m
+[0mGET /api/users/meatsale/role [32m200[0m 3.655 ms - 7[0m
+[0mGET /api/employees/ [32m200[0m 455.604 ms - 164033[0m
+[0mGET /api/users/meatsale/role [32m200[0m 3.015 ms - 7[0m
+[
+  {
+    _id: 5f5cc167ec202112bce0e57f,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'SANGJ',
+    orderDate: 2020-09-12T12:38:34.365Z,
+    __v: 0
+  },
+  {
+    _id: 5f6223ef06d564009cc010e2,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 206,
+    total: 206,
+    username: 'STANP',
+    orderDate: 2020-09-16T14:40:46.824Z,
+    __v: 0
+  },
+  {
+    _id: 5f62240306d564009cc010e5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'ADKBJ',
+    orderDate: 2020-09-16T14:41:06.593Z,
+    __v: 0
+  },
+  {
+    _id: 5f62241c06d564009cc010e7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 98,
+    total: 98,
+    username: 'LEWHC',
+    orderDate: 2020-09-16T14:41:31.318Z,
+    __v: 0
+  },
+  {
+    _id: 5f62244006d564009cc010ea,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 206,
+    total: 206,
+    username: 'LEWAA',
+    orderDate: 2020-09-16T14:42:07.506Z,
+    __v: 0
+  },
+  {
+    _id: 5f62245406d564009cc010ed,
+    lineItems: [ [Object] ],
+    lineItemTotal: 110.5,
+    total: 110.5,
+    username: 'RIEAM',
+    orderDate: 2020-09-16T14:42:27.570Z,
+    __v: 0
+  },
+  {
+    _id: 5f62246b06d564009cc010ef,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 256,
+    total: 256,
+    username: 'CORME',
+    orderDate: 2020-09-16T14:42:50.394Z,
+    __v: 0
+  },
+  {
+    _id: 5f62249006d564009cc010f2,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'RISJE',
+    orderDate: 2020-09-16T14:43:27.405Z,
+    __v: 0
+  },
+  {
+    _id: 5f6224b206d564009cc010f4,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'SHEER',
+    orderDate: 2020-09-16T14:44:01.202Z,
+    __v: 0
+  },
+  {
+    _id: 5f6224d106d564009cc010f7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'MORJON',
+    orderDate: 2020-09-16T14:44:23.414Z,
+    __v: 0
+  },
+  {
+    _id: 5f6224f606d564009cc010fa,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 342,
+    total: 342,
+    username: 'BELAD',
+    orderDate: 2020-09-16T14:45:08.751Z,
+    __v: 0
+  },
+  {
+    _id: 5f62254606d564009cc010fd,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 221,
+    total: 221,
+    username: 'PARBM',
+    orderDate: 2020-09-16T14:46:14.135Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f02131f1a081456f944,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 156,
+    total: 156,
+    username: 'ZEIKA',
+    orderDate: 2020-09-16T15:28:00.504Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f16131f1a081456f947,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 342,
+    total: 342,
+    username: 'STADO',
+    orderDate: 2020-09-16T15:28:20.740Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f3d131f1a081456f94a,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 221,
+    total: 221,
+    username: 'DAUPD',
+    orderDate: 2020-09-16T15:28:56.690Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f55131f1a081456f94d,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'HINST',
+    orderDate: 2020-09-16T15:29:24.196Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f6b131f1a081456f950,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'PANLM',
+    orderDate: 2020-09-16T15:29:45.607Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f81131f1a081456f952,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'LOPSP',
+    orderDate: 2020-09-16T15:30:08.144Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f96131f1a081456f954,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 158.5,
+    total: 158.5,
+    username: 'BANBL',
+    orderDate: 2020-09-16T15:30:28.832Z,
+    __v: 0
+  },
+  {
+    _id: 5f622fab131f1a081456f957,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 69,
+    total: 69,
+    username: 'DELIS',
+    orderDate: 2020-09-16T15:30:50.454Z,
+    __v: 0
+  },
+  {
+    _id: 5f622fd8131f1a081456f95a,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'DREDA',
+    orderDate: 2020-09-16T15:31:32.852Z,
+    __v: 0
+  },
+  {
+    _id: 5f622fed131f1a081456f95d,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'BAUJC',
+    orderDate: 2020-09-16T15:31:55.379Z,
+    __v: 0
+  },
+  {
+    _id: 5f623015131f1a081456f960,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 312,
+    total: 312,
+    username: 'ARRFB',
+    orderDate: 2020-09-16T15:32:35.486Z,
+    __v: 0
+  },
+  {
+    _id: 5f62307a131f1a081456f963,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'AVAJO',
+    orderDate: 2020-09-16T15:34:15.443Z,
+    __v: 0
+  },
+  {
+    _id: 5f6230a1131f1a081456f965,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 156,
+    total: 156,
+    username: 'GOMSAM',
+    orderDate: 2020-09-16T15:34:54.719Z,
+    __v: 0
+  },
+  {
+    _id: 5f6230b6131f1a081456f968,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'VILMAA',
+    orderDate: 2020-09-16T15:35:16.984Z,
+    __v: 0
+  },
+  {
+    _id: 5f6230f1131f1a081456f96a,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 42,
+    total: 42,
+    username: 'CISNO',
+    orderDate: 2020-09-16T15:36:15.592Z,
+    __v: 0
+  },
+  {
+    _id: 5f623112131f1a081456f96d,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'PARPE',
+    orderDate: 2020-09-16T15:36:48.543Z,
+    __v: 0
+  },
+  {
+    _id: 5f623127131f1a081456f96f,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'MARANT',
+    orderDate: 2020-09-16T15:37:09.869Z,
+    __v: 0
+  },
+  {
+    _id: 5f62313d131f1a081456f971,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'VALLP',
+    orderDate: 2020-09-16T15:37:31.846Z,
+    __v: 0
+  },
+  {
+    _id: 5f623568131f1a081456f973,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 96,
+    total: 96,
+    username: 'CRIJO',
+    orderDate: 2020-09-16T15:55:17.995Z,
+    __v: 0
+  },
+  {
+    _id: 5f62357d131f1a081456f976,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'HERMAE',
+    orderDate: 2020-09-16T15:55:40.156Z,
+    __v: 0
+  },
+  {
+    _id: 5f623594131f1a081456f978,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'LOPMAG',
+    orderDate: 2020-09-16T15:56:03.520Z,
+    __v: 0
+  },
+  {
+    _id: 5f6235b6131f1a081456f97a,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'KANCL',
+    orderDate: 2020-09-16T15:56:37.020Z,
+    __v: 0
+  },
+  {
+    _id: 5f6235db131f1a081456f97c,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'VINSM',
+    orderDate: 2020-09-16T15:57:14.393Z,
+    __v: 0
+  },
+  {
+    _id: 5f6235f3131f1a081456f97e,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'BANMJ',
+    orderDate: 2020-09-16T15:57:37.210Z,
+    __v: 0
+  },
+  {
+    _id: 5f623628131f1a081456f980,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 342,
+    total: 342,
+    username: 'KEMRC',
+    orderDate: 2020-09-16T15:58:27.694Z,
+    __v: 0
+  },
+  {
+    _id: 5f623718131f1a081456f983,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 128,
+    total: 128,
+    username: 'GARROB',
+    orderDate: 2020-09-16T16:02:30.753Z,
+    __v: 0
+  },
+  {
+    _id: 5f623752131f1a081456f986,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'MARSAL',
+    orderDate: 2020-09-16T16:03:29.994Z,
+    __v: 0
+  },
+  {
+    _id: 5f623911131f1a081456f988,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'CHAIS',
+    orderDate: 2020-09-16T16:10:56.531Z,
+    __v: 0
+  },
+  {
+    _id: 5f62394d131f1a081456f98a,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'CEROS',
+    orderDate: 2020-09-16T16:11:56.621Z,
+    __v: 0
+  },
+  {
+    _id: 5f62397f131f1a081456f98c,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'CHIMR',
+    orderDate: 2020-09-16T16:12:46.197Z,
+    __v: 0
+  },
+  {
+    _id: 5f6239b6131f1a081456f991,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 229,
+    total: 229,
+    username: 'DIABG',
+    orderDate: 2020-09-16T16:13:41.397Z,
+    __v: 0
+  },
+  {
+    _id: 5f6239d0131f1a081456f994,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 232,
+    total: 232,
+    username: 'JACCI',
+    orderDate: 2020-09-16T16:14:06.462Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a3e131f1a081456f997,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'AVASR',
+    orderDate: 2020-09-16T16:15:56.924Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a61131f1a081456f99a,
+    lineItems: [ [Object] ],
+    lineItemTotal: 110.5,
+    total: 110.5,
+    username: 'SOLCP',
+    orderDate: 2020-09-16T16:16:32.078Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a7b131f1a081456f99c,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'GONREG',
+    orderDate: 2020-09-16T16:16:56.310Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a8e131f1a081456f99f,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'VALAE',
+    orderDate: 2020-09-16T16:17:17.238Z,
+    __v: 0
+  },
+  {
+    _id: 5f623aba131f1a081456f9a1,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'BARLU',
+    orderDate: 2020-09-16T16:18:01.562Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ad9131f1a081456f9a4,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'OREEB',
+    orderDate: 2020-09-16T16:18:27.443Z,
+    __v: 0
+  },
+  {
+    _id: 5f623afd131f1a081456f9a6,
+    lineItems: [ [Object] ],
+    lineItemTotal: 21,
+    total: 21,
+    username: 'RODROD',
+    orderDate: 2020-09-16T16:19:08.027Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b0e131f1a081456f9a8,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'GONROH',
+    orderDate: 2020-09-16T16:19:25.776Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b28131f1a081456f9aa,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'MIRFC',
+    orderDate: 2020-09-16T16:19:51.080Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b44131f1a081456f9ac,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 249,
+    total: 249,
+    username: 'HERMY',
+    orderDate: 2020-09-16T16:20:19.846Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b5d131f1a081456f9af,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 229,
+    total: 229,
+    username: 'LOPJF',
+    orderDate: 2020-09-16T16:20:43.941Z,
+    __v: 0
+  },
+  {
+    _id: 5f623e92131f1a081456f9b2,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'RAMROG',
+    orderDate: 2020-09-16T16:34:24.809Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ed8131f1a081456f9b5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'JIMLM',
+    orderDate: 2020-09-16T16:35:34.605Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ef6131f1a081456f9b7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 125,
+    total: 125,
+    username: 'SANEDS',
+    orderDate: 2020-09-16T16:36:05.078Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f04131f1a081456f9ba,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'CARDL',
+    orderDate: 2020-09-16T16:36:19.354Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f13131f1a081456f9bc,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'SOTRE',
+    orderDate: 2020-09-16T16:36:34.556Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f26131f1a081456f9be,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'BALJD',
+    orderDate: 2020-09-16T16:36:53.587Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f3d131f1a081456f9c0,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 286,
+    total: 286,
+    username: 'PATAG',
+    orderDate: 2020-09-16T16:37:16.171Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f56131f1a081456f9c3,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'BARRM',
+    orderDate: 2020-09-16T16:37:41.036Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f67131f1a081456f9c5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'FLOJOS',
+    orderDate: 2020-09-16T16:37:58.196Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f7e131f1a081456f9c7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 312,
+    total: 312,
+    username: 'CENST',
+    orderDate: 2020-09-16T16:38:21.867Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f96131f1a081456f9ca,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 100,
+    total: 100,
+    username: 'VUKTD',
+    orderDate: 2020-09-16T16:38:45.230Z,
+    __v: 0
+  },
+  {
+    _id: 5f623fb2131f1a081456f9cd,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 286,
+    total: 286,
+    username: 'FRAOG',
+    orderDate: 2020-09-16T16:39:13.293Z,
+    __v: 0
+  },
+  {
+    _id: 5f623fc4131f1a081456f9d0,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'GUTIM',
+    orderDate: 2020-09-16T16:39:31.140Z,
+    __v: 0
+  },
+  {
+    _id: 5f623fe4131f1a081456f9d2,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 69,
+    total: 69,
+    username: 'MORGL',
+    orderDate: 2020-09-16T16:40:03.413Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ffc131f1a081456f9d5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'CARRS',
+    orderDate: 2020-09-16T16:40:26.927Z,
+    __v: 0
+  },
+  {
+    _id: 5f624059131f1a081456f9d7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'LAKSM',
+    orderDate: 2020-09-16T16:42:00.514Z,
+    __v: 0
+  },
+  {
+    _id: 5f62406a131f1a081456f9da,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 128,
+    total: 128,
+    username: 'RODLA',
+    orderDate: 2020-09-16T16:42:17.141Z,
+    __v: 0
+  },
+  {
+    _id: 5f624086131f1a081456f9dd,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'GONPL',
+    orderDate: 2020-09-16T16:42:45.420Z,
+    __v: 0
+  },
+  {
+    _id: 5f62409b131f1a081456f9df,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 100,
+    total: 100,
+    username: 'PIEDG',
+    orderDate: 2020-09-16T16:43:06.474Z,
+    __v: 0
+  },
+  {
+    _id: 5f624235131f1a081456f9e2,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'TORGE',
+    orderDate: 2020-09-16T16:49:55.874Z,
+    __v: 0
+  },
+  {
+    _id: 5f624265131f1a081456f9e4,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'SANJA',
+    orderDate: 2020-09-16T16:50:44.264Z,
+    __v: 0
+  },
+  {
+    _id: 5f624276131f1a081456f9e7,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'GARVH',
+    orderDate: 2020-09-16T16:51:01.132Z,
+    __v: 0
+  },
+  {
+    _id: 5f62428a131f1a081456f9e9,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'DURCR',
+    orderDate: 2020-09-16T16:51:20.733Z,
+    __v: 0
+  },
+  {
+    _id: 5f62429d131f1a081456f9eb,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'IBAEV',
+    orderDate: 2020-09-16T16:51:39.677Z,
+    __v: 0
+  },
+  {
+    _id: 5f6242c2131f1a081456f9ee,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 156,
+    total: 156,
+    username: 'BAUAP',
+    orderDate: 2020-09-16T16:52:17.804Z,
+    __v: 0
+  },
+  {
+    _id: 5f6242d6131f1a081456f9f1,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'CASIR',
+    orderDate: 2020-09-16T16:52:36.330Z,
+    __v: 0
+  },
+  {
+    _id: 5f6242eb131f1a081456f9f4,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'DIAGA',
+    orderDate: 2020-09-16T16:52:58.727Z,
+    __v: 0
+  },
+  {
+    _id: 5f624302131f1a081456f9f6,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 152,
+    total: 152,
+    username: 'SEGED',
+    orderDate: 2020-09-16T16:53:21.670Z,
+    __v: 0
+  },
+  {
+    _id: 5f62433a131f1a081456f9f9,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 379,
+    total: 379,
+    username: 'GALRS',
+    orderDate: 2020-09-16T16:54:17.505Z,
+    __v: 0
+  },
+  {
+    _id: 5f624353131f1a081456f9fc,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'ISLRI',
+    orderDate: 2020-09-16T16:54:42.070Z,
+    __v: 0
+  },
+  {
+    _id: 5f624373131f1a081456f9ff,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 69,
+    total: 69,
+    username: 'TAPSG',
+    orderDate: 2020-09-16T16:55:14.492Z,
+    __v: 0
+  },
+  {
+    _id: 5f624382131f1a081456fa02,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 45,
+    total: 45,
+    username: 'SANJUP',
+    orderDate: 2020-09-16T16:55:29.656Z,
+    __v: 0
+  },
+  {
+    _id: 5f624394131f1a081456fa05,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'DOMFM',
+    orderDate: 2020-09-16T16:55:46.930Z,
+    __v: 0
+  },
+  {
+    _id: 5f6243a6131f1a081456fa07,
+    lineItems: [ [Object] ],
+    lineItemTotal: 21,
+    total: 21,
+    username: 'CERFR',
+    orderDate: 2020-09-16T16:56:05.398Z,
+    __v: 0
+  },
+  {
+    _id: 5f6243e4131f1a081456fa09,
+    lineItems: [ [Object] ],
+    lineItemTotal: 24,
+    total: 24,
+    username: 'MEDLI',
+    orderDate: 2020-09-16T16:57:06.729Z,
+    __v: 0
+  },
+  {
+    _id: 5f6243f8131f1a081456fa0b,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'MENDA',
+    orderDate: 2020-09-16T16:57:26.995Z,
+    __v: 0
+  },
+  {
+    _id: 5f62440c131f1a081456fa0e,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 42,
+    total: 42,
+    username: 'NIEMG',
+    orderDate: 2020-09-16T16:57:47.051Z,
+    __v: 0
+  },
+  {
+    _id: 5f624421131f1a081456fa11,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 312,
+    total: 312,
+    username: 'DEAGU',
+    orderDate: 2020-09-16T16:58:07.946Z,
+    __v: 0
+  },
+  {
+    _id: 5f624448131f1a081456fa14,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 98,
+    total: 98,
+    username: 'JOHJW',
+    orderDate: 2020-09-16T16:58:46.992Z,
+    __v: 0
+  },
+  {
+    _id: 5f62445e131f1a081456fa17,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'HINGU',
+    orderDate: 2020-09-16T16:59:09.713Z,
+    __v: 0
+  },
+  {
+    _id: 5f624480131f1a081456fa19,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'TAPMG',
+    orderDate: 2020-09-16T16:59:43.494Z,
+    __v: 0
+  },
+  {
+    _id: 5f624494131f1a081456fa1c,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 72,
+    total: 72,
+    username: 'BALHU',
+    orderDate: 2020-09-16T17:00:02.976Z,
+    __v: 0
+  },
+  {
+    _id: 5f6244a4131f1a081456fa1f,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'REPEM',
+    orderDate: 2020-09-16T17:00:19.469Z,
+    __v: 0
+  },
+  {
+    _id: 5f6244bb131f1a081456fa21,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 152,
+    total: 152,
+    username: 'HERLN',
+    orderDate: 2020-09-16T17:00:42.476Z,
+    __v: 0
+  },
+  {
+    _id: 5f6244ce131f1a081456fa24,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'VALPM',
+    orderDate: 2020-09-16T17:01:00.538Z,
+    __v: 0
+  },
+  ... 102 more items
+]
+[
+  {
+    isDisabled: false,
+    _id: 5f5b7d5f7b6f3a01a8e2eba4,
+    title: 'HONEYCOMB TRIPE',
+    price: 1.45,
+    extimate: 21,
+    id: 90163,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7d997b6f3a01a8e2eba7,
+    title: 'SMALL INTESTINES',
+    price: 0.8,
+    extimate: 24,
+    id: 90170,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7db57b6f3a01a8e2eba8,
+    title: 'TONGUES',
+    price: 4,
+    extimate: 104,
+    id: 90187,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7df87b6f3a01a8e2eba9,
+    title: 'RIBEYE 2 PK',
+    price: 5.7,
+    extimate: 171,
+    id: 20212,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7e217b6f3a01a8e2ebaa,
+    title: 'BRISKET',
+    price: 1.95,
+    extimate: 156,
+    id: 30120,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7e4d7b6f3a01a8e2ebab,
+    title: 'TENDERLOIN MEDALLIONS',
+    price: 8.5,
+    extimate: 110.5,
+    id: 31019,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7e827b6f3a01a8e2ebac,
+    title: 'CHUCK ROLL',
+    price: 2.6,
+    extimate: 208,
+    id: 33116,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7ebe7b6f3a01a8e2ebad,
+    title: 'FAJITA STRIPS',
+    price: 3.25,
+    extimate: 78,
+    id: 31003,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7eed7b6f3a01a8e2ebae,
+    title: 'CHUCK STEAK 8 OZ',
+    price: 4,
+    extimate: 48,
+    id: 42163,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7f197b6f3a01a8e2ebaf,
+    title: 'GROUD BEEF 81% 3# CHUB',
+    price: 1.4,
+    extimate: 50,
+    id: 69386,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f68b93d1d43070e88a49d10,
+    title: 'RIBEYE 2 PK',
+    price: 5.7,
+    extimate: 104,
+    id: 30212,
+    __v: 0
+  }
+]
+[0mGET /api/invoices/ [32m200[0m 113.214 ms - 56054[0m
+[0mGET /api/services/ [32m200[0m 114.881 ms - 1367[0m
+[
+  {
+    _id: 5f68c360c37f431db034b2c4,
+    username: 'products',
+    barcode: '0196303080331161320100077311200919211007934599',
+    price: 2.6,
+    barBoxNetWeight: 77.3,
+    totalprice: 200.98,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:40.517Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c363c37f431db034b2c5,
+    username: 'products',
+    barcode: '0196303080331161320100082711200919211007934483',
+    price: 2.6,
+    barBoxNetWeight: 82.7,
+    totalprice: 215.02,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:42.878Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c366c37f431db034b2c6,
+    username: 'products',
+    barcode: '0196303080331161320100075511200919212009095880',
+    price: 2.6,
+    barBoxNetWeight: 75.5,
+    totalprice: 196.3,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:45.921Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c368c37f431db034b2c7,
+    username: 'products',
+    barcode: '0196303080331161320100078011200919211007934773',
+    price: 2.6,
+    barBoxNetWeight: 78,
+    totalprice: 202.8,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:48.529Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c36bc37f431db034b2c8,
+    username: 'products',
+    barcode: '0196303080331161320100077211200919212009096051',
+    price: 2.6,
+    barBoxNetWeight: 77.2,
+    totalprice: 200.72,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:51.545Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c371c37f431db034b2c9,
+    username: 'products',
+    barcode: '0196303080331161320100075411200919212009096308',
+    price: 2.6,
+    barBoxNetWeight: 75.4,
+    totalprice: 196.04,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:57.457Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c373c37f431db034b2ca,
+    username: 'products',
+    barcode: '0196303080331161320100077711200919213001262925',
+    price: 2.6,
+    barBoxNetWeight: 77.7,
+    totalprice: 202.02,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:14:59.666Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c376c37f431db034b2cb,
+    username: 'products',
+    barcode: '0196303080331161320100075611200919211007934899',
+    price: 2.6,
+    barBoxNetWeight: 75.6,
+    totalprice: 196.56,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:02.411Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c378c37f431db034b2cc,
+    username: 'products',
+    barcode: '0196303080331161320100080111200919212009095964',
+    price: 2.6,
+    barBoxNetWeight: 80.1,
+    totalprice: 208.26,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:04.502Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c37bc37f431db034b2cd,
+    username: 'products',
+    barcode: '0196303080331161320100079111200919211007934798',
+    price: 2.6,
+    barBoxNetWeight: 79.1,
+    totalprice: 205.66,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:07.370Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c37fc37f431db034b2ce,
+    username: 'products',
+    barcode: '0196303080331161320100079511200919211007934623',
+    price: 2.6,
+    barBoxNetWeight: 79.5,
+    totalprice: 206.7,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:11.503Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c382c37f431db034b2cf,
+    username: 'products',
+    barcode: '0196303080331161320100077811200919211007934460',
+    price: 2.6,
+    barBoxNetWeight: 77.8,
+    totalprice: 202.28,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:14.113Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c38cc37f431db034b2d0,
+    username: 'products',
+    barcode: '0196303080331161320100078311200919211007934343',
+    price: 2.6,
+    barBoxNetWeight: 78.3,
+    totalprice: 203.58,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:23.947Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c38ec37f431db034b2d1,
+    username: 'products',
+    barcode: '0196303080331161320100077411200919212009096006',
+    price: 2.6,
+    barBoxNetWeight: 77.4,
+    totalprice: 201.24,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:25.836Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c390c37f431db034b2d2,
+    username: 'products',
+    barcode: '0196303080331161320100081611200919212009095985',
+    price: 2.6,
+    barBoxNetWeight: 81.6,
+    totalprice: 212.16,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:27.882Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c392c37f431db034b2d3,
+    username: 'products',
+    barcode: '0196303080331161320100077711200919212009096093',
+    price: 2.6,
+    barBoxNetWeight: 77.7,
+    totalprice: 202.02,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:30.265Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c39ec37f431db034b2d4,
+    username: 'products',
+    barcode: '0196303080331161320100074611200919211007934339',
+    price: 2.6,
+    barBoxNetWeight: 74.6,
+    totalprice: 193.96,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:42.643Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3a5c37f431db034b2d5,
+    username: 'products',
+    barcode: '0196303080331161320100077211200919211007935017',
+    price: 2.6,
+    barBoxNetWeight: 77.2,
+    totalprice: 200.72,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:49.172Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3a9c37f431db034b2d6,
+    username: 'products',
+    barcode: '0196303080331161320100082611200919212009096420',
+    price: 2.6,
+    barBoxNetWeight: 82.6,
+    totalprice: 214.76,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:53.450Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3abc37f431db034b2d7,
+    username: 'products',
+    barcode: '0196303080331161320100076511200919212009096114',
+    price: 2.6,
+    barBoxNetWeight: 76.5,
+    totalprice: 198.9,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:55.042Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3adc37f431db034b2d8,
+    username: 'products',
+    barcode: '0196303080331161320100082611200919211007934812',
+    price: 2.6,
+    barBoxNetWeight: 82.6,
+    totalprice: 214.76,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:57.331Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3afc37f431db034b2d9,
+    username: 'products',
+    barcode: '0196303080331161320100079711200919211007934335',
+    price: 2.6,
+    barBoxNetWeight: 79.7,
+    totalprice: 207.22,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:15:59.164Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3b2c37f431db034b2da,
+    username: 'products',
+    barcode: '0196303080331161320100074711200919211007934397',
+    price: 2.6,
+    barBoxNetWeight: 74.7,
+    totalprice: 194.22,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:01.980Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3b5c37f431db034b2db,
+    username: 'products',
+    barcode: '0196303080331161320100074411200919212009096201',
+    price: 2.6,
+    barBoxNetWeight: 74.4,
+    totalprice: 193.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:04.731Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3bec37f431db034b2dc,
+    username: 'products',
+    barcode: '0196303080331161320100079211200919212009096135',
+    price: 2.6,
+    barBoxNetWeight: 79.2,
+    totalprice: 205.92,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:14.171Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3c0c37f431db034b2dd,
+    username: 'products',
+    barcode: '0196303080331161320100074711200919211007934745',
+    price: 2.6,
+    barBoxNetWeight: 74.7,
+    totalprice: 194.22,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:16.106Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3c2c37f431db034b2de,
+    username: 'products',
+    barcode: '0196303080331161320100080411200919212009096265',
+    price: 2.6,
+    barBoxNetWeight: 80.4,
+    totalprice: 209.04,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:18.036Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3c7c37f431db034b2df,
+    username: 'products',
+    barcode: '0196303080331161320100076511200919213001262796',
+    price: 2.6,
+    barBoxNetWeight: 76.5,
+    totalprice: 198.9,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:23.613Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3c9c37f431db034b2e0,
+    username: 'products',
+    barcode: '0196303080331161320100079011200919211007934760',
+    price: 2.6,
+    barBoxNetWeight: 79,
+    totalprice: 205.4,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:25.652Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3cbc37f431db034b2e1,
+    username: 'products',
+    barcode: '0196303080331161320100074211200919213001262937',
+    price: 2.6,
+    barBoxNetWeight: 74.2,
+    totalprice: 192.92,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:27.540Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3cec37f431db034b2e2,
+    username: 'products',
+    barcode: '0196303080331161320100076511200919212009096049',
+    price: 2.6,
+    barBoxNetWeight: 76.5,
+    totalprice: 198.9,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:30.128Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3d0c37f431db034b2e3,
+    username: 'products',
+    barcode: '0196303080331161320100077711200919213001262980',
+    price: 2.6,
+    barBoxNetWeight: 77.7,
+    totalprice: 202.02,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:31.862Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3d2c37f431db034b2e4,
+    username: 'products',
+    barcode: '0196303080331161320100074511200919211007934452',
+    price: 2.6,
+    barBoxNetWeight: 74.5,
+    totalprice: 193.7,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:34.013Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3d5c37f431db034b2e5,
+    username: 'products',
+    barcode: '0196303080331161320100080211200919211007934494',
+    price: 2.6,
+    barBoxNetWeight: 80.2,
+    totalprice: 208.52,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:36.747Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3d7c37f431db034b2e6,
+    username: 'products',
+    barcode: '0196303080331161320100079611200919211007934567',
+    price: 2.6,
+    barBoxNetWeight: 79.6,
+    totalprice: 206.96,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:39.652Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3dac37f431db034b2e7,
+    username: 'products',
+    barcode: '0196303080331161320100080311200919212009095885',
+    price: 2.6,
+    barBoxNetWeight: 80.3,
+    totalprice: 208.78,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:41.742Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3e3c37f431db034b2e8,
+    username: 'products',
+    barcode: '0196303080331161320100080311200919212009096103',
+    price: 2.6,
+    barBoxNetWeight: 80.3,
+    totalprice: 208.78,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:51.358Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3e5c37f431db034b2e9,
+    username: 'products',
+    barcode: '0196303080331161320100081311200919212009095873',
+    price: 2.6,
+    barBoxNetWeight: 81.3,
+    totalprice: 211.38,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:53.495Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3e7c37f431db034b2ea,
+    username: 'products',
+    barcode: '0196303080331161320100078511200919212009096014',
+    price: 2.6,
+    barBoxNetWeight: 78.5,
+    totalprice: 204.1,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:55.494Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3e9c37f431db034b2eb,
+    username: 'products',
+    barcode: '0196303080331161320100074311200919212009096098',
+    price: 2.6,
+    barBoxNetWeight: 74.3,
+    totalprice: 193.18,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:57.271Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3ecc37f431db034b2ec,
+    username: 'products',
+    barcode: '0196303080331161320100081111200919211007935022',
+    price: 2.6,
+    barBoxNetWeight: 81.1,
+    totalprice: 210.86,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:16:59.821Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3f2c37f431db034b2ed,
+    username: 'products',
+    barcode: '0196303080331161320100076711200919211007935025',
+    price: 2.6,
+    barBoxNetWeight: 76.7,
+    totalprice: 199.42,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:05.904Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3f5c37f431db034b2ee,
+    username: 'products',
+    barcode: '0196303080331161320100077211200919211007934893',
+    price: 2.6,
+    barBoxNetWeight: 77.2,
+    totalprice: 200.72,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:09.206Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3f7c37f431db034b2ef,
+    username: 'products',
+    barcode: '0196303080331161320100076411200919212009096315',
+    price: 2.6,
+    barBoxNetWeight: 76.4,
+    totalprice: 198.64,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:10.965Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3f9c37f431db034b2f0,
+    username: 'products',
+    barcode: '0196303080331161320100076511200919212009095998',
+    price: 2.6,
+    barBoxNetWeight: 76.5,
+    totalprice: 198.9,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:12.822Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c3fbc37f431db034b2f1,
+    username: 'products',
+    barcode: '0196303080331161320100079811200919212009095958',
+    price: 2.6,
+    barBoxNetWeight: 79.8,
+    totalprice: 207.48,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:15.124Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c408c37f431db034b2f2,
+    username: 'products',
+    barcode: '0196303080331161320100076511200919213001262793',
+    price: 2.6,
+    barBoxNetWeight: 76.5,
+    totalprice: 198.9,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:28.103Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c40ac37f431db034b2f3,
+    username: 'products',
+    barcode: '0196303080331161320100079311200919211007935020',
+    price: 2.6,
+    barBoxNetWeight: 79.3,
+    totalprice: 206.18,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:30.671Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c413c37f431db034b2f4,
+    username: 'products',
+    barcode: '0196303080331161320100077111200919211007934756',
+    price: 2.6,
+    barBoxNetWeight: 77.1,
+    totalprice: 200.46,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:39.591Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c416c37f431db034b2f5,
+    username: 'products',
+    barcode: '0196303080331161320100079411200919212009096215',
+    price: 2.6,
+    barBoxNetWeight: 79.4,
+    totalprice: 206.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:42.496Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c419c37f431db034b2f6,
+    username: 'products',
+    barcode: '0196303080331161320100074811200919212009095969',
+    price: 2.6,
+    barBoxNetWeight: 74.8,
+    totalprice: 194.48,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:45.232Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c41cc37f431db034b2f7,
+    username: 'products',
+    barcode: '0196303080301201320100086811200917211007925368',
+    price: 1.95,
+    barBoxNetWeight: 86.8,
+    totalprice: 169.26,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T15:17:48.225Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c41fc37f431db034b2f8,
+    username: 'products',
+    barcode: '0196303080331161320100074411200919213001262804',
+    price: 2.6,
+    barBoxNetWeight: 74.4,
+    totalprice: 193.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:51.107Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c421c37f431db034b2f9,
+    username: 'products',
+    barcode: '0196303080331161320100076311200919212009095968',
+    price: 2.6,
+    barBoxNetWeight: 76.3,
+    totalprice: 198.38,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:17:53.338Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c423c37f431db034b2fa,
+    username: 'products',
+    barcode: '0196303080301201320100086711200917213001257208',
+    price: 1.95,
+    barBoxNetWeight: 86.7,
+    totalprice: 169.06,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T15:17:55.447Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c429c37f431db034b2fb,
+    username: 'products',
+    barcode: '0196303080301201320100086911200917211007924888',
+    price: 1.95,
+    barBoxNetWeight: 86.9,
+    totalprice: 169.45,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T15:18:01.527Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c42bc37f431db034b2fc,
+    username: 'products',
+    barcode: '0196303080331161320100081811200919212009096267',
+    price: 2.6,
+    barBoxNetWeight: 81.8,
+    totalprice: 212.68,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:18:03.292Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c42ec37f431db034b2fd,
+    username: 'products',
+    barcode: '0196303080331161320100081111200919212009095939',
+    price: 2.6,
+    barBoxNetWeight: 81.1,
+    totalprice: 210.86,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:18:06.011Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c430c37f431db034b2fe,
+    username: 'products',
+    barcode: '0196303080301201320100087211200917211007925348',
+    price: 1.95,
+    barBoxNetWeight: 87.2,
+    totalprice: 170.04,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T15:18:07.696Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c438c37f431db034b2ff,
+    username: 'products',
+    barcode: '0196303080301201320100087311200917212009089001',
+    price: 1.95,
+    barBoxNetWeight: 87.3,
+    totalprice: 170.23,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T15:18:16.522Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c43bc37f431db034b300,
+    username: 'products',
+    barcode: '0196303080331161320100080511200919213001262785',
+    price: 2.6,
+    barBoxNetWeight: 80.5,
+    totalprice: 209.3,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:18:18.850Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c43dc37f431db034b301,
+    username: 'products',
+    barcode: '0196303080331161320100076611200919212009096242',
+    price: 2.6,
+    barBoxNetWeight: 76.6,
+    totalprice: 199.16,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T15:18:21.183Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c45ac37f431db034b302,
+    username: 'products',
+    barcode: '0196303080302123320100027711200921211007936585',
+    price: 5.7,
+    barBoxNetWeight: 27.7,
+    totalprice: 157.89,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:18:49.858Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c45cc37f431db034b303,
+    username: 'products',
+    barcode: '0196303080302123320100028111200921213001265036',
+    price: 5.7,
+    barBoxNetWeight: 28.1,
+    totalprice: 160.17,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:18:52.373Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c460c37f431db034b304,
+    username: 'products',
+    barcode: '0196303080302123320100028211200921211007936614',
+    price: 5.7,
+    barBoxNetWeight: 28.2,
+    totalprice: 160.74,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:18:56.234Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c463c37f431db034b305,
+    username: 'products',
+    barcode: '0196303080302123320100027411200921211007936576',
+    price: 5.7,
+    barBoxNetWeight: 27.4,
+    totalprice: 156.18,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:18:58.712Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c466c37f431db034b306,
+    username: 'products',
+    barcode: '0196303080302123320100027611200921211007936597',
+    price: 5.7,
+    barBoxNetWeight: 27.6,
+    totalprice: 157.32,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:02.248Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c469c37f431db034b307,
+    username: 'products',
+    barcode: '0196303080302123320100031211200921211007936555',
+    price: 5.7,
+    barBoxNetWeight: 31.2,
+    totalprice: 177.84,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:05.553Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c46dc37f431db034b308,
+    username: 'products',
+    barcode: '0196303080302123320100033211200921212009099145',
+    price: 5.7,
+    barBoxNetWeight: 33.2,
+    totalprice: 189.24,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:09.196Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c46fc37f431db034b309,
+    username: 'products',
+    barcode: '0196303080302123320100033411200921212009099137',
+    price: 5.7,
+    barBoxNetWeight: 33.4,
+    totalprice: 190.38,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:10.932Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c471c37f431db034b30a,
+    username: 'products',
+    barcode: '0196303080302123320100032311200921213001265209',
+    price: 5.7,
+    barBoxNetWeight: 32.3,
+    totalprice: 184.11,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:12.900Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c472c37f431db034b30b,
+    username: 'products',
+    barcode: '0196303080302123320100030511200921213001265223',
+    price: 5.7,
+    barBoxNetWeight: 30.5,
+    totalprice: 173.85,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:14.503Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c474c37f431db034b30c,
+    username: 'products',
+    barcode: '0196303080302123320100031911200921213001265219',
+    price: 5.7,
+    barBoxNetWeight: 31.9,
+    totalprice: 181.83,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:16.169Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c477c37f431db034b30d,
+    username: 'products',
+    barcode: '0196303080302123320100029811200921213001265071',
+    price: 5.7,
+    barBoxNetWeight: 29.8,
+    totalprice: 169.86,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:19.225Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c47bc37f431db034b30e,
+    username: 'products',
+    barcode: '0196303080302123320100027911200921213001265028',
+    price: 5.7,
+    barBoxNetWeight: 27.9,
+    totalprice: 159.03,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:22.867Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c47ec37f431db034b30f,
+    username: 'products',
+    barcode: '0196303080302123320100027311200921213001265053',
+    price: 5.7,
+    barBoxNetWeight: 27.3,
+    totalprice: 155.61,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:25.867Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c480c37f431db034b310,
+    username: 'products',
+    barcode: '0196303080302123320100027911200921213001265073',
+    price: 5.7,
+    barBoxNetWeight: 27.9,
+    totalprice: 159.03,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:28.396Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c483c37f431db034b311,
+    username: 'products',
+    barcode: '0196303080302123320100030511200921212009098908',
+    price: 5.7,
+    barBoxNetWeight: 30.5,
+    totalprice: 173.85,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:30.829Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c485c37f431db034b312,
+    username: 'products',
+    barcode: '0196303080302123320100025511200921212009098918',
+    price: 5.7,
+    barBoxNetWeight: 25.5,
+    totalprice: 145.35,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:32.964Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c48fc37f431db034b313,
+    username: 'products',
+    barcode: '0196303080302123320100028411200921211007936605',
+    price: 5.7,
+    barBoxNetWeight: 28.4,
+    totalprice: 161.88,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:42.981Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c49cc37f431db034b314,
+    username: 'products',
+    barcode: '0196303080302123320100028511200921212009098904',
+    price: 5.7,
+    barBoxNetWeight: 28.5,
+    totalprice: 162.45,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:19:56.379Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4a3c37f431db034b315,
+    username: 'products',
+    barcode: '0196303080302123320100034011200921212009098923',
+    price: 5.7,
+    barBoxNetWeight: 34,
+    totalprice: 193.8,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:02.870Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4a5c37f431db034b316,
+    username: 'products',
+    barcode: '0196303080302123320100026211200921211007936583',
+    price: 5.7,
+    barBoxNetWeight: 26.2,
+    totalprice: 149.34,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:05.347Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4a9c37f431db034b317,
+    username: 'products',
+    barcode: '0196303080302123320100030411200921211007936604',
+    price: 5.7,
+    barBoxNetWeight: 30.4,
+    totalprice: 173.28,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:09.500Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4aec37f431db034b318,
+    username: 'products',
+    barcode: '0196303080302123320100030211200921213001265066',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:14.365Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4b5c37f431db034b319,
+    username: 'products',
+    barcode: '0196303080302123320100026611200921211007936595',
+    price: 5.7,
+    barBoxNetWeight: 26.6,
+    totalprice: 151.62,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:21.374Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4b7c37f431db034b31a,
+    username: 'products',
+    barcode: '0196303080302123320100028111200921211007936593',
+    price: 5.7,
+    barBoxNetWeight: 28.1,
+    totalprice: 160.17,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:23.140Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4b9c37f431db034b31b,
+    username: 'products',
+    barcode: '0196303080302123320100033211200921213001265065',
+    price: 5.7,
+    barBoxNetWeight: 33.2,
+    totalprice: 189.24,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:25.285Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4bcc37f431db034b31c,
+    username: 'products',
+    barcode: '0196303080302123320100030311200921211007936563',
+    price: 5.7,
+    barBoxNetWeight: 30.3,
+    totalprice: 172.71,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:27.743Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4bdc37f431db034b31d,
+    username: 'products',
+    barcode: '0196303080302123320100031211200921213001265040',
+    price: 5.7,
+    barBoxNetWeight: 31.2,
+    totalprice: 177.84,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:29.630Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4bfc37f431db034b31e,
+    username: 'products',
+    barcode: '0196303080302123320100030211200921213001265021',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:31.661Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4c1c37f431db034b31f,
+    username: 'products',
+    barcode: '0196303080302123320100030211200921211007936572',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:33.556Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4c3c37f431db034b320,
+    username: 'products',
+    barcode: '0196303080302123320100035511200921213001265067',
+    price: 5.7,
+    barBoxNetWeight: 35.5,
+    totalprice: 202.35,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:35.517Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4c6c37f431db034b321,
+    username: 'products',
+    barcode: '0196303080302123320100035611200921211007936568',
+    price: 5.7,
+    barBoxNetWeight: 35.6,
+    totalprice: 202.92,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T15:20:38.534Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4d9c37f431db034b322,
+    username: 'products',
+    barcode: '0116303080693867320100036011200703211118510067',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T15:20:57.453Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4ddc37f431db034b323,
+    username: 'products',
+    barcode: '0116303080693867320100036011200703211118510194',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T15:21:01.206Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4e0c37f431db034b324,
+    username: 'products',
+    barcode: '0116303080693867320100036011200703211118510120',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T15:21:04.502Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4e2c37f431db034b325,
+    username: 'products',
+    barcode: '0116303080693867320100036011200703211118510129',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T15:21:06.653Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4e5c37f431db034b326,
+    username: 'products',
+    barcode: '0116303080693867320100036011200703211118510092',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T15:21:09.454Z,
+    __v: 0
+  },
+  {
+    _id: 5f68c4e8c37f431db034b327,
+    username: 'products',
+    barcode: '0116303080693867320100036011200703211118510180',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T15:21:12.597Z,
+    __v: 0
+  },
+  ... 217 more items
+]
+[0mGET /api/orderverify/ [32m200[0m 181.092 ms - 86631[0m
+[0mGET /api/users/meatsale/role [32m200[0m 2.728 ms - 7[0m
+[
+  {
+    _id: 5f6928b54b72331e48ef7e9d,
+    username: 'Leftover',
+    barcode: '0196303080421633320100011311200918217005943212',
+    price: 4,
+    barBoxNetWeight: 11.3,
+    totalprice: 45.2,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T22:27:01.754Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928b74b72331e48ef7e9e,
+    username: 'Leftover',
+    barcode: '0196303080421633320100011711200918217005943209',
+    price: 4,
+    barBoxNetWeight: 11.7,
+    totalprice: 46.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T22:27:03.956Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928ba4b72331e48ef7e9f,
+    username: 'Leftover',
+    barcode: '0196303080901700320100030011200915219006197835',
+    price: 0.8,
+    barBoxNetWeight: 30,
+    totalprice: 24,
+    itemdescription: 'SMALL INTESTINES',
+    barProductCode: 90170,
+    orderDate: 2020-09-21T22:27:05.999Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928bb4b72331e48ef7ea0,
+    username: 'Leftover',
+    barcode: '0196303080901700320100030011200915219006197807',
+    price: 0.8,
+    barBoxNetWeight: 30,
+    totalprice: 24,
+    itemdescription: 'SMALL INTESTINES',
+    barProductCode: 90170,
+    orderDate: 2020-09-21T22:27:07.814Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928cb4b72331e48ef7ea3,
+    username: 'Leftover',
+    barcode: '0116303080693867320100036011200703211118510163',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T22:27:23.840Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928db4b72331e48ef7ea5,
+    username: 'Leftover',
+    barcode: '0116303080693867320100036011200703211118510105',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T22:27:39.670Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928dd4b72331e48ef7ea6,
+    username: 'Leftover',
+    barcode: '0116303080693867320100036011200703211118510164',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T22:27:41.796Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928e34b72331e48ef7ea7,
+    username: 'Leftover',
+    barcode: '0196303080901870320100028211200912219006190312',
+    price: 4,
+    barBoxNetWeight: 28.2,
+    totalprice: 112.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T22:27:47.251Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928e64b72331e48ef7ea9,
+    username: 'Leftover',
+    barcode: '0196303080310036320100025011200917210005943034',
+    price: 3.25,
+    barBoxNetWeight: 25,
+    totalprice: 81.25,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T22:27:50.807Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928e84b72331e48ef7eaa,
+    username: 'Leftover',
+    barcode: '0196303080310036320100025011200917210005943038',
+    price: 3.25,
+    barBoxNetWeight: 25,
+    totalprice: 81.25,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T22:27:52.421Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928e94b72331e48ef7eab,
+    username: 'Leftover',
+    barcode: '0196303080310036320100024911200917210005943039',
+    price: 3.25,
+    barBoxNetWeight: 24.9,
+    totalprice: 80.92,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T22:27:53.900Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928ec4b72331e48ef7eac,
+    username: 'Leftover',
+    barcode: '0196303080901630320100015011200911219006190138',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T22:27:56.147Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928f04b72331e48ef7ead,
+    username: 'Leftover',
+    barcode: '0196303080310197320100013011200813210005929698',
+    price: 8.5,
+    barBoxNetWeight: 13,
+    totalprice: 110.5,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T22:28:00.820Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928f24b72331e48ef7eae,
+    username: 'Leftover',
+    barcode: '0196303080310197320100013811200813210005929697',
+    price: 8.5,
+    barBoxNetWeight: 13.8,
+    totalprice: 117.3,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T22:28:02.638Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928f44b72331e48ef7eaf,
+    username: 'Leftover',
+    barcode: '0196303080310197320100012111200813210005929700',
+    price: 8.5,
+    barBoxNetWeight: 12.1,
+    totalprice: 102.85,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T22:28:04.451Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928f84b72331e48ef7eb0,
+    username: 'Leftover',
+    barcode: '0196303080302123320100030211200921211007936572',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T22:28:08.438Z,
+    __v: 0
+  },
+  {
+    _id: 5f6928fa4b72331e48ef7eb1,
+    username: 'Leftover',
+    barcode: '0196303080302123320100030211200921213001265021',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T22:28:10.237Z,
+    __v: 0
+  },
+  {
+    _id: 5f69292c4b72331e48ef7eb7,
+    username: 'Leftover',
+    barcode: '0196303080331161320100080211200919211007934494',
+    price: 2.6,
+    barBoxNetWeight: 80.2,
+    totalprice: 208.52,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T22:29:00.427Z,
+    __v: 0
+  },
+  {
+    _id: 5f69292d4b72331e48ef7eb8,
+    username: 'Leftover',
+    barcode: '0196303080331161320100079611200919211007934567',
+    price: 2.6,
+    barBoxNetWeight: 79.6,
+    totalprice: 206.96,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T22:29:01.700Z,
+    __v: 0
+  },
+  {
+    _id: 5f69292f4b72331e48ef7eb9,
+    username: 'Leftover',
+    barcode: '0196303080331161320100080311200919212009095885',
+    price: 2.6,
+    barBoxNetWeight: 80.3,
+    totalprice: 208.78,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T22:29:03.220Z,
+    __v: 0
+  }
+]
+[
+  {
+    isDisabled: false,
+    _id: 5f5b7d5f7b6f3a01a8e2eba4,
+    title: 'HONEYCOMB TRIPE',
+    price: 1.45,
+    extimate: 21,
+    id: 90163,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7d997b6f3a01a8e2eba7,
+    title: 'SMALL INTESTINES',
+    price: 0.8,
+    extimate: 24,
+    id: 90170,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7db57b6f3a01a8e2eba8,
+    title: 'TONGUES',
+    price: 4,
+    extimate: 104,
+    id: 90187,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7df87b6f3a01a8e2eba9,
+    title: 'RIBEYE 2 PK',
+    price: 5.7,
+    extimate: 171,
+    id: 20212,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7e217b6f3a01a8e2ebaa,
+    title: 'BRISKET',
+    price: 1.95,
+    extimate: 156,
+    id: 30120,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7e4d7b6f3a01a8e2ebab,
+    title: 'TENDERLOIN MEDALLIONS',
+    price: 8.5,
+    extimate: 110.5,
+    id: 31019,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7e827b6f3a01a8e2ebac,
+    title: 'CHUCK ROLL',
+    price: 2.6,
+    extimate: 208,
+    id: 33116,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7ebe7b6f3a01a8e2ebad,
+    title: 'FAJITA STRIPS',
+    price: 3.25,
+    extimate: 78,
+    id: 31003,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7eed7b6f3a01a8e2ebae,
+    title: 'CHUCK STEAK 8 OZ',
+    price: 4,
+    extimate: 48,
+    id: 42163,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f5b7f197b6f3a01a8e2ebaf,
+    title: 'GROUD BEEF 81% 3# CHUB',
+    price: 1.4,
+    extimate: 50,
+    id: 69386,
+    __v: 0
+  },
+  {
+    isDisabled: false,
+    _id: 5f68b93d1d43070e88a49d10,
+    title: 'RIBEYE 2 PK',
+    price: 5.7,
+    extimate: 104,
+    id: 30212,
+    __v: 0
+  }
+]
+[
+  {
+    _id: 5f5cc167ec202112bce0e57f,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'SANGJ',
+    orderDate: 2020-09-12T12:38:34.365Z,
+    __v: 0
+  },
+  {
+    _id: 5f6223ef06d564009cc010e2,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 206,
+    total: 206,
+    username: 'STANP',
+    orderDate: 2020-09-16T14:40:46.824Z,
+    __v: 0
+  },
+  {
+    _id: 5f62240306d564009cc010e5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'ADKBJ',
+    orderDate: 2020-09-16T14:41:06.593Z,
+    __v: 0
+  },
+  {
+    _id: 5f62241c06d564009cc010e7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 98,
+    total: 98,
+    username: 'LEWHC',
+    orderDate: 2020-09-16T14:41:31.318Z,
+    __v: 0
+  },
+  {
+    _id: 5f62244006d564009cc010ea,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 206,
+    total: 206,
+    username: 'LEWAA',
+    orderDate: 2020-09-16T14:42:07.506Z,
+    __v: 0
+  },
+  {
+    _id: 5f62245406d564009cc010ed,
+    lineItems: [ [Object] ],
+    lineItemTotal: 110.5,
+    total: 110.5,
+    username: 'RIEAM',
+    orderDate: 2020-09-16T14:42:27.570Z,
+    __v: 0
+  },
+  {
+    _id: 5f62246b06d564009cc010ef,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 256,
+    total: 256,
+    username: 'CORME',
+    orderDate: 2020-09-16T14:42:50.394Z,
+    __v: 0
+  },
+  {
+    _id: 5f62249006d564009cc010f2,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'RISJE',
+    orderDate: 2020-09-16T14:43:27.405Z,
+    __v: 0
+  },
+  {
+    _id: 5f6224b206d564009cc010f4,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'SHEER',
+    orderDate: 2020-09-16T14:44:01.202Z,
+    __v: 0
+  },
+  {
+    _id: 5f6224d106d564009cc010f7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'MORJON',
+    orderDate: 2020-09-16T14:44:23.414Z,
+    __v: 0
+  },
+  {
+    _id: 5f6224f606d564009cc010fa,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 342,
+    total: 342,
+    username: 'BELAD',
+    orderDate: 2020-09-16T14:45:08.751Z,
+    __v: 0
+  },
+  {
+    _id: 5f62254606d564009cc010fd,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 221,
+    total: 221,
+    username: 'PARBM',
+    orderDate: 2020-09-16T14:46:14.135Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f02131f1a081456f944,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 156,
+    total: 156,
+    username: 'ZEIKA',
+    orderDate: 2020-09-16T15:28:00.504Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f16131f1a081456f947,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 342,
+    total: 342,
+    username: 'STADO',
+    orderDate: 2020-09-16T15:28:20.740Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f3d131f1a081456f94a,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 221,
+    total: 221,
+    username: 'DAUPD',
+    orderDate: 2020-09-16T15:28:56.690Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f55131f1a081456f94d,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'HINST',
+    orderDate: 2020-09-16T15:29:24.196Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f6b131f1a081456f950,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'PANLM',
+    orderDate: 2020-09-16T15:29:45.607Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f81131f1a081456f952,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'LOPSP',
+    orderDate: 2020-09-16T15:30:08.144Z,
+    __v: 0
+  },
+  {
+    _id: 5f622f96131f1a081456f954,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 158.5,
+    total: 158.5,
+    username: 'BANBL',
+    orderDate: 2020-09-16T15:30:28.832Z,
+    __v: 0
+  },
+  {
+    _id: 5f622fab131f1a081456f957,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 69,
+    total: 69,
+    username: 'DELIS',
+    orderDate: 2020-09-16T15:30:50.454Z,
+    __v: 0
+  },
+  {
+    _id: 5f622fd8131f1a081456f95a,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'DREDA',
+    orderDate: 2020-09-16T15:31:32.852Z,
+    __v: 0
+  },
+  {
+    _id: 5f622fed131f1a081456f95d,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'BAUJC',
+    orderDate: 2020-09-16T15:31:55.379Z,
+    __v: 0
+  },
+  {
+    _id: 5f623015131f1a081456f960,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 312,
+    total: 312,
+    username: 'ARRFB',
+    orderDate: 2020-09-16T15:32:35.486Z,
+    __v: 0
+  },
+  {
+    _id: 5f62307a131f1a081456f963,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'AVAJO',
+    orderDate: 2020-09-16T15:34:15.443Z,
+    __v: 0
+  },
+  {
+    _id: 5f6230a1131f1a081456f965,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 156,
+    total: 156,
+    username: 'GOMSAM',
+    orderDate: 2020-09-16T15:34:54.719Z,
+    __v: 0
+  },
+  {
+    _id: 5f6230b6131f1a081456f968,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'VILMAA',
+    orderDate: 2020-09-16T15:35:16.984Z,
+    __v: 0
+  },
+  {
+    _id: 5f6230f1131f1a081456f96a,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 42,
+    total: 42,
+    username: 'CISNO',
+    orderDate: 2020-09-16T15:36:15.592Z,
+    __v: 0
+  },
+  {
+    _id: 5f623112131f1a081456f96d,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'PARPE',
+    orderDate: 2020-09-16T15:36:48.543Z,
+    __v: 0
+  },
+  {
+    _id: 5f623127131f1a081456f96f,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'MARANT',
+    orderDate: 2020-09-16T15:37:09.869Z,
+    __v: 0
+  },
+  {
+    _id: 5f62313d131f1a081456f971,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'VALLP',
+    orderDate: 2020-09-16T15:37:31.846Z,
+    __v: 0
+  },
+  {
+    _id: 5f623568131f1a081456f973,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 96,
+    total: 96,
+    username: 'CRIJO',
+    orderDate: 2020-09-16T15:55:17.995Z,
+    __v: 0
+  },
+  {
+    _id: 5f62357d131f1a081456f976,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'HERMAE',
+    orderDate: 2020-09-16T15:55:40.156Z,
+    __v: 0
+  },
+  {
+    _id: 5f623594131f1a081456f978,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'LOPMAG',
+    orderDate: 2020-09-16T15:56:03.520Z,
+    __v: 0
+  },
+  {
+    _id: 5f6235b6131f1a081456f97a,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'KANCL',
+    orderDate: 2020-09-16T15:56:37.020Z,
+    __v: 0
+  },
+  {
+    _id: 5f6235db131f1a081456f97c,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'VINSM',
+    orderDate: 2020-09-16T15:57:14.393Z,
+    __v: 0
+  },
+  {
+    _id: 5f6235f3131f1a081456f97e,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'BANMJ',
+    orderDate: 2020-09-16T15:57:37.210Z,
+    __v: 0
+  },
+  {
+    _id: 5f623628131f1a081456f980,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 342,
+    total: 342,
+    username: 'KEMRC',
+    orderDate: 2020-09-16T15:58:27.694Z,
+    __v: 0
+  },
+  {
+    _id: 5f623718131f1a081456f983,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 128,
+    total: 128,
+    username: 'GARROB',
+    orderDate: 2020-09-16T16:02:30.753Z,
+    __v: 0
+  },
+  {
+    _id: 5f623752131f1a081456f986,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'MARSAL',
+    orderDate: 2020-09-16T16:03:29.994Z,
+    __v: 0
+  },
+  {
+    _id: 5f623911131f1a081456f988,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'CHAIS',
+    orderDate: 2020-09-16T16:10:56.531Z,
+    __v: 0
+  },
+  {
+    _id: 5f62394d131f1a081456f98a,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'CEROS',
+    orderDate: 2020-09-16T16:11:56.621Z,
+    __v: 0
+  },
+  {
+    _id: 5f62397f131f1a081456f98c,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'CHIMR',
+    orderDate: 2020-09-16T16:12:46.197Z,
+    __v: 0
+  },
+  {
+    _id: 5f6239b6131f1a081456f991,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 229,
+    total: 229,
+    username: 'DIABG',
+    orderDate: 2020-09-16T16:13:41.397Z,
+    __v: 0
+  },
+  {
+    _id: 5f6239d0131f1a081456f994,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 232,
+    total: 232,
+    username: 'JACCI',
+    orderDate: 2020-09-16T16:14:06.462Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a3e131f1a081456f997,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'AVASR',
+    orderDate: 2020-09-16T16:15:56.924Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a61131f1a081456f99a,
+    lineItems: [ [Object] ],
+    lineItemTotal: 110.5,
+    total: 110.5,
+    username: 'SOLCP',
+    orderDate: 2020-09-16T16:16:32.078Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a7b131f1a081456f99c,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'GONREG',
+    orderDate: 2020-09-16T16:16:56.310Z,
+    __v: 0
+  },
+  {
+    _id: 5f623a8e131f1a081456f99f,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'VALAE',
+    orderDate: 2020-09-16T16:17:17.238Z,
+    __v: 0
+  },
+  {
+    _id: 5f623aba131f1a081456f9a1,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'BARLU',
+    orderDate: 2020-09-16T16:18:01.562Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ad9131f1a081456f9a4,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'OREEB',
+    orderDate: 2020-09-16T16:18:27.443Z,
+    __v: 0
+  },
+  {
+    _id: 5f623afd131f1a081456f9a6,
+    lineItems: [ [Object] ],
+    lineItemTotal: 21,
+    total: 21,
+    username: 'RODROD',
+    orderDate: 2020-09-16T16:19:08.027Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b0e131f1a081456f9a8,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'GONROH',
+    orderDate: 2020-09-16T16:19:25.776Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b28131f1a081456f9aa,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'MIRFC',
+    orderDate: 2020-09-16T16:19:51.080Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b44131f1a081456f9ac,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 249,
+    total: 249,
+    username: 'HERMY',
+    orderDate: 2020-09-16T16:20:19.846Z,
+    __v: 0
+  },
+  {
+    _id: 5f623b5d131f1a081456f9af,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 229,
+    total: 229,
+    username: 'LOPJF',
+    orderDate: 2020-09-16T16:20:43.941Z,
+    __v: 0
+  },
+  {
+    _id: 5f623e92131f1a081456f9b2,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'RAMROG',
+    orderDate: 2020-09-16T16:34:24.809Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ed8131f1a081456f9b5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'JIMLM',
+    orderDate: 2020-09-16T16:35:34.605Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ef6131f1a081456f9b7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 125,
+    total: 125,
+    username: 'SANEDS',
+    orderDate: 2020-09-16T16:36:05.078Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f04131f1a081456f9ba,
+    lineItems: [ [Object] ],
+    lineItemTotal: 50,
+    total: 50,
+    username: 'CARDL',
+    orderDate: 2020-09-16T16:36:19.354Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f13131f1a081456f9bc,
+    lineItems: [ [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'SOTRE',
+    orderDate: 2020-09-16T16:36:34.556Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f26131f1a081456f9be,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'BALJD',
+    orderDate: 2020-09-16T16:36:53.587Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f3d131f1a081456f9c0,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 286,
+    total: 286,
+    username: 'PATAG',
+    orderDate: 2020-09-16T16:37:16.171Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f56131f1a081456f9c3,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'BARRM',
+    orderDate: 2020-09-16T16:37:41.036Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f67131f1a081456f9c5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'FLOJOS',
+    orderDate: 2020-09-16T16:37:58.196Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f7e131f1a081456f9c7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 312,
+    total: 312,
+    username: 'CENST',
+    orderDate: 2020-09-16T16:38:21.867Z,
+    __v: 0
+  },
+  {
+    _id: 5f623f96131f1a081456f9ca,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 100,
+    total: 100,
+    username: 'VUKTD',
+    orderDate: 2020-09-16T16:38:45.230Z,
+    __v: 0
+  },
+  {
+    _id: 5f623fb2131f1a081456f9cd,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 286,
+    total: 286,
+    username: 'FRAOG',
+    orderDate: 2020-09-16T16:39:13.293Z,
+    __v: 0
+  },
+  {
+    _id: 5f623fc4131f1a081456f9d0,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'GUTIM',
+    orderDate: 2020-09-16T16:39:31.140Z,
+    __v: 0
+  },
+  {
+    _id: 5f623fe4131f1a081456f9d2,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 69,
+    total: 69,
+    username: 'MORGL',
+    orderDate: 2020-09-16T16:40:03.413Z,
+    __v: 0
+  },
+  {
+    _id: 5f623ffc131f1a081456f9d5,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'CARRS',
+    orderDate: 2020-09-16T16:40:26.927Z,
+    __v: 0
+  },
+  {
+    _id: 5f624059131f1a081456f9d7,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'LAKSM',
+    orderDate: 2020-09-16T16:42:00.514Z,
+    __v: 0
+  },
+  {
+    _id: 5f62406a131f1a081456f9da,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 128,
+    total: 128,
+    username: 'RODLA',
+    orderDate: 2020-09-16T16:42:17.141Z,
+    __v: 0
+  },
+  {
+    _id: 5f624086131f1a081456f9dd,
+    lineItems: [ [Object] ],
+    lineItemTotal: 78,
+    total: 78,
+    username: 'GONPL',
+    orderDate: 2020-09-16T16:42:45.420Z,
+    __v: 0
+  },
+  {
+    _id: 5f62409b131f1a081456f9df,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 100,
+    total: 100,
+    username: 'PIEDG',
+    orderDate: 2020-09-16T16:43:06.474Z,
+    __v: 0
+  },
+  {
+    _id: 5f624235131f1a081456f9e2,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'TORGE',
+    orderDate: 2020-09-16T16:49:55.874Z,
+    __v: 0
+  },
+  {
+    _id: 5f624265131f1a081456f9e4,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'SANJA',
+    orderDate: 2020-09-16T16:50:44.264Z,
+    __v: 0
+  },
+  {
+    _id: 5f624276131f1a081456f9e7,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'GARVH',
+    orderDate: 2020-09-16T16:51:01.132Z,
+    __v: 0
+  },
+  {
+    _id: 5f62428a131f1a081456f9e9,
+    lineItems: [ [Object] ],
+    lineItemTotal: 171,
+    total: 171,
+    username: 'DURCR',
+    orderDate: 2020-09-16T16:51:20.733Z,
+    __v: 0
+  },
+  {
+    _id: 5f62429d131f1a081456f9eb,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 416,
+    total: 416,
+    username: 'IBAEV',
+    orderDate: 2020-09-16T16:51:39.677Z,
+    __v: 0
+  },
+  {
+    _id: 5f6242c2131f1a081456f9ee,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 156,
+    total: 156,
+    username: 'BAUAP',
+    orderDate: 2020-09-16T16:52:17.804Z,
+    __v: 0
+  },
+  {
+    _id: 5f6242d6131f1a081456f9f1,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'CASIR',
+    orderDate: 2020-09-16T16:52:36.330Z,
+    __v: 0
+  },
+  {
+    _id: 5f6242eb131f1a081456f9f4,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'DIAGA',
+    orderDate: 2020-09-16T16:52:58.727Z,
+    __v: 0
+  },
+  {
+    _id: 5f624302131f1a081456f9f6,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 152,
+    total: 152,
+    username: 'SEGED',
+    orderDate: 2020-09-16T16:53:21.670Z,
+    __v: 0
+  },
+  {
+    _id: 5f62433a131f1a081456f9f9,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 379,
+    total: 379,
+    username: 'GALRS',
+    orderDate: 2020-09-16T16:54:17.505Z,
+    __v: 0
+  },
+  {
+    _id: 5f624353131f1a081456f9fc,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 126,
+    total: 126,
+    username: 'ISLRI',
+    orderDate: 2020-09-16T16:54:42.070Z,
+    __v: 0
+  },
+  {
+    _id: 5f624373131f1a081456f9ff,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 69,
+    total: 69,
+    username: 'TAPSG',
+    orderDate: 2020-09-16T16:55:14.492Z,
+    __v: 0
+  },
+  {
+    _id: 5f624382131f1a081456fa02,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 45,
+    total: 45,
+    username: 'SANJUP',
+    orderDate: 2020-09-16T16:55:29.656Z,
+    __v: 0
+  },
+  {
+    _id: 5f624394131f1a081456fa05,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'DOMFM',
+    orderDate: 2020-09-16T16:55:46.930Z,
+    __v: 0
+  },
+  {
+    _id: 5f6243a6131f1a081456fa07,
+    lineItems: [ [Object] ],
+    lineItemTotal: 21,
+    total: 21,
+    username: 'CERFR',
+    orderDate: 2020-09-16T16:56:05.398Z,
+    __v: 0
+  },
+  {
+    _id: 5f6243e4131f1a081456fa09,
+    lineItems: [ [Object] ],
+    lineItemTotal: 24,
+    total: 24,
+    username: 'MEDLI',
+    orderDate: 2020-09-16T16:57:06.729Z,
+    __v: 0
+  },
+  {
+    _id: 5f6243f8131f1a081456fa0b,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'MENDA',
+    orderDate: 2020-09-16T16:57:26.995Z,
+    __v: 0
+  },
+  {
+    _id: 5f62440c131f1a081456fa0e,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 42,
+    total: 42,
+    username: 'NIEMG',
+    orderDate: 2020-09-16T16:57:47.051Z,
+    __v: 0
+  },
+  {
+    _id: 5f624421131f1a081456fa11,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 312,
+    total: 312,
+    username: 'DEAGU',
+    orderDate: 2020-09-16T16:58:07.946Z,
+    __v: 0
+  },
+  {
+    _id: 5f624448131f1a081456fa14,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 98,
+    total: 98,
+    username: 'JOHJW',
+    orderDate: 2020-09-16T16:58:46.992Z,
+    __v: 0
+  },
+  {
+    _id: 5f62445e131f1a081456fa17,
+    lineItems: [ [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'HINGU',
+    orderDate: 2020-09-16T16:59:09.713Z,
+    __v: 0
+  },
+  {
+    _id: 5f624480131f1a081456fa19,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 48,
+    total: 48,
+    username: 'TAPMG',
+    orderDate: 2020-09-16T16:59:43.494Z,
+    __v: 0
+  },
+  {
+    _id: 5f624494131f1a081456fa1c,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 72,
+    total: 72,
+    username: 'BALHU',
+    orderDate: 2020-09-16T17:00:02.976Z,
+    __v: 0
+  },
+  {
+    _id: 5f6244a4131f1a081456fa1f,
+    lineItems: [ [Object] ],
+    lineItemTotal: 104,
+    total: 104,
+    username: 'REPEM',
+    orderDate: 2020-09-16T17:00:19.469Z,
+    __v: 0
+  },
+  {
+    _id: 5f6244bb131f1a081456fa21,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 152,
+    total: 152,
+    username: 'HERLN',
+    orderDate: 2020-09-16T17:00:42.476Z,
+    __v: 0
+  },
+  {
+    _id: 5f6244ce131f1a081456fa24,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 208,
+    total: 208,
+    username: 'VALPM',
+    orderDate: 2020-09-16T17:01:00.538Z,
+    __v: 0
+  },
+  ... 102 more items
+]
+[0mGET /api/leftover/ [32m200[0m 11.370 ms - 5502[0m
+[0mGET /api/services/ [32m200[0m 17.524 ms - 1367[0m
+[0mGET /api/invoices/ [32m200[0m 88.803 ms - 56054[0m
+this is the employee null
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+[]
+[0mGET /api/employees/MEATSALE [32m200[0m 6.416 ms - 4[0m
+[0mGET /api/time/ [32m200[0m 4.857 ms - 93[0m
+[0mGET /api/invoices/MEATSALE [32m200[0m 5.455 ms - 2[0m
+[0mGET /api/users/meatsale/role [32m200[0m 2.763 ms - 7[0m
+[
+  {
+    _id: 5f68cbcac37f431db034b429,
+    username: 'ZEIKA',
+    barcode: '0196303080310036320100024211200918210005943478',
+    price: 3.25,
+    barBoxNetWeight: 24.2,
+    totalprice: 78.65,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T15:50:34.284Z,
+    __v: 0
+  },
+  {
+    _id: 5f68cbccc37f431db034b42a,
+    username: 'ZEIKA',
+    barcode: '0196303080310036320100024411200918210005943485',
+    price: 3.25,
+    barBoxNetWeight: 24.4,
+    totalprice: 79.3,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T15:50:36.734Z,
+    __v: 0
+  },
+  {
+    _id: 5f68eba84b72331e48ef7d7d,
+    username: 'LEWAA',
+    barcode: '0116303080693867320100036011200703211118510189',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:06:31.713Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ebab4b72331e48ef7d7e,
+    username: 'LEWAA',
+    barcode: '0196303080301201320100086911200917211007924888',
+    price: 1.95,
+    barBoxNetWeight: 86.9,
+    totalprice: 169.45,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T18:06:34.549Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ec864b72331e48ef7d7f,
+    username: 'MERDA',
+    barcode: '0116303080693867320100036011200703211118510071',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:10:13.487Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ec984b72331e48ef7d80,
+    username: 'MERDA',
+    barcode: '0196303080310036320100028811200918210005943487',
+    price: 3.25,
+    barBoxNetWeight: 28.8,
+    totalprice: 93.6,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T18:10:31.794Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ecc74b72331e48ef7d81,
+    username: 'LEWHC',
+    barcode: '0116303080693867320100036011200703211118510022',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:11:18.858Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ecd34b72331e48ef7d82,
+    username: 'LEWHC',
+    barcode: '0196303080421633320100013511200918217005943269',
+    price: 4,
+    barBoxNetWeight: 13.5,
+    totalprice: 54,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:11:30.298Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ed1a4b72331e48ef7d83,
+    username: 'SEGED',
+    barcode: '0196303080421633320100011011200918217005943256',
+    price: 4,
+    barBoxNetWeight: 11,
+    totalprice: 44,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:12:41.508Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ed1c4b72331e48ef7d84,
+    username: 'SEGED',
+    barcode: '0196303080901870320100022711200914219006192891',
+    price: 4,
+    barBoxNetWeight: 22.7,
+    totalprice: 90.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:12:43.325Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ed8a4b72331e48ef7d85,
+    username: 'GONDEN',
+    barcode: '0196303080421633320100013511200918217005943267',
+    price: 4,
+    barBoxNetWeight: 13.5,
+    totalprice: 54,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:14:33.394Z,
+    __v: 0
+  },
+  {
+    _id: 5f68edc64b72331e48ef7d86,
+    username: 'JOHJW',
+    barcode: '0116303080693867320100036011200703211118510098',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:15:33.569Z,
+    __v: 0
+  },
+  {
+    _id: 5f68edcc4b72331e48ef7d87,
+    username: 'JOHJW',
+    barcode: '0196303080421633320100011111200918217005943265',
+    price: 4,
+    barBoxNetWeight: 11.1,
+    totalprice: 44.4,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:15:40.105Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ede34b72331e48ef7d88,
+    username: 'VINSM',
+    barcode: '0116303080693867320100036011200703211118510194',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:16:02.527Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee164b72331e48ef7d89,
+    username: 'RIEAM',
+    barcode: '0196303080310197320100012411200813210005929701',
+    price: 8.5,
+    barBoxNetWeight: 12.4,
+    totalprice: 105.4,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T18:16:53.647Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee3e4b72331e48ef7d8a,
+    username: 'BALJD',
+    barcode: '0196303080331161320100081811200919212009096267',
+    price: 2.6,
+    barBoxNetWeight: 81.8,
+    totalprice: 212.68,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:17:33.738Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee714b72331e48ef7d8b,
+    username: 'DRERJ',
+    barcode: '0116303080693867320100036011200703211118510160',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:18:25.126Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee734b72331e48ef7d8c,
+    username: 'DRERJ',
+    barcode: '0116303080693867320100036011200703211118510080',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:18:26.520Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee9c4b72331e48ef7d8d,
+    username: 'JOHJN',
+    barcode: '0196303080302123320100033411200921212009099137',
+    price: 5.7,
+    barBoxNetWeight: 33.4,
+    totalprice: 190.38,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T18:19:07.868Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee9e4b72331e48ef7d8e,
+    username: 'JOHJN',
+    barcode: '0196303080310197320100013211200813210005929765',
+    price: 8.5,
+    barBoxNetWeight: 13.2,
+    totalprice: 112.2,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T18:19:10.042Z,
+    __v: 0
+  },
+  {
+    _id: 5f68eeda4b72331e48ef7d8f,
+    username: 'CUBNB',
+    barcode: '0196303080302123320100031911200921213001265219',
+    price: 5.7,
+    barBoxNetWeight: 31.9,
+    totalprice: 181.83,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T18:20:09.579Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4014b72331e48ef7d90,
+    username: 'CHAIS',
+    barcode: '0196303080901870320100027011200914219006192864',
+    price: 4,
+    barBoxNetWeight: 27,
+    totalprice: 108,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:42:08.294Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4934b72331e48ef7d91,
+    username: 'VALLP',
+    barcode: '0116303080693867320100036011200703211118510068',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:44:34.239Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4b94b72331e48ef7d92,
+    username: 'DEAGU',
+    barcode: '0196303080901870320100021511200914219006192744',
+    price: 4,
+    barBoxNetWeight: 21.5,
+    totalprice: 86,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:45:12.908Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4ba4b72331e48ef7d93,
+    username: 'DEAGU',
+    barcode: '0196303080331161320100076611200919212009096242',
+    price: 2.6,
+    barBoxNetWeight: 76.6,
+    totalprice: 199.16,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:45:14.084Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5214b72331e48ef7d94,
+    username: 'BAKCY',
+    barcode: '0196303080421633320100011511200904217005938896',
+    price: 4,
+    barBoxNetWeight: 11.5,
+    totalprice: 46,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:46:57.005Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5254b72331e48ef7d95,
+    username: 'BAKCY',
+    barcode: '0116303080693867320100036011200703211118510088',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:47:00.293Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f53d4b72331e48ef7d96,
+    username: 'ADKBJ',
+    barcode: '0116303080693867320100036011200703211118510055',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:47:24.760Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f57c4b72331e48ef7d97,
+    username: 'DIAGA',
+    barcode: '0196303080901870320100023511200914219006192752',
+    price: 4,
+    barBoxNetWeight: 23.5,
+    totalprice: 94,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:48:27.717Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5f64b72331e48ef7d98,
+    username: 'DREDA',
+    barcode: '0196303080421633320100011211200918217005943263',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:50:29.610Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5f94b72331e48ef7d99,
+    username: 'DREDA',
+    barcode: '0196303080310036320100024511200918210005943483',
+    price: 3.25,
+    barBoxNetWeight: 24.5,
+    totalprice: 79.63,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T18:50:32.854Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6234b72331e48ef7d9a,
+    username: 'CEROS',
+    barcode: '0196303080331161320100074411200919213001262804',
+    price: 2.6,
+    barBoxNetWeight: 74.4,
+    totalprice: 193.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:51:14.515Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6494b72331e48ef7d9b,
+    username: 'JIMLM',
+    barcode: '0196303080901870320100022811200914219006192892',
+    price: 4,
+    barBoxNetWeight: 22.8,
+    totalprice: 91.2,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:51:52.827Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6e64b72331e48ef7d9c,
+    username: 'VUKTD',
+    barcode: '0116303080693867320100036011200703211118510195',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:54:29.978Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6e84b72331e48ef7d9d,
+    username: 'VUKTD',
+    barcode: '0116303080693867320100036011200703211118510119',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:54:31.179Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f7924b72331e48ef7d9e,
+    username: 'BUSJC',
+    barcode: '0196303080302123320100030511200921213001265223',
+    price: 5.7,
+    barBoxNetWeight: 30.5,
+    totalprice: 173.85,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T18:57:21.730Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f8164b72331e48ef7d9f,
+    username: 'SANJA',
+    barcode: '0196303080331161320100080511200919213001262785',
+    price: 2.6,
+    barBoxNetWeight: 80.5,
+    totalprice: 209.3,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:59:33.441Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f81c4b72331e48ef7da0,
+    username: 'SANJA',
+    barcode: '0196303080331161320100081111200919212009095939',
+    price: 2.6,
+    barBoxNetWeight: 81.1,
+    totalprice: 210.86,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:59:39.283Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f9174b72331e48ef7da1,
+    username: 'VARAG',
+    barcode: '0196303080302123320100028411200921211007936605',
+    price: 5.7,
+    barBoxNetWeight: 28.4,
+    totalprice: 161.88,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:03:51.294Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa014b72331e48ef7da2,
+    username: 'STANP',
+    barcode: '0196303080301201320100087311200917212009089001',
+    price: 1.95,
+    barBoxNetWeight: 87.3,
+    totalprice: 170.23,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T19:07:45.047Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa104b72331e48ef7da3,
+    username: 'STANP',
+    barcode: '0116303080693867320100036011200703211118510079',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:08:00.511Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa4d4b72331e48ef7da4,
+    username: 'TOBTL',
+    barcode: '0196303080310036320100024411200918210005943482',
+    price: 3.25,
+    barBoxNetWeight: 24.4,
+    totalprice: 79.3,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:09:01.438Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa5b4b72331e48ef7da5,
+    username: 'TOBTL',
+    barcode: '0116303080693867320100036011200703211118510067',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:09:15.453Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa994b72331e48ef7da6,
+    username: 'HINST',
+    barcode: '0196303080310197320100014311200813210005929704',
+    price: 8.5,
+    barBoxNetWeight: 14.3,
+    totalprice: 121.55,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T19:10:16.889Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa9a4b72331e48ef7da7,
+    username: 'HINST',
+    barcode: '0196303080302123320100033211200921212009099145',
+    price: 5.7,
+    barBoxNetWeight: 33.2,
+    totalprice: 189.24,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:10:18.287Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb274b72331e48ef7da8,
+    username: 'CASIR',
+    barcode: '0196303080421633320100011411200918217005943254',
+    price: 4,
+    barBoxNetWeight: 11.4,
+    totalprice: 45.6,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:12:39.536Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb294b72331e48ef7da9,
+    username: 'CASIR',
+    barcode: '0196303080310036320100024611200917210005943056',
+    price: 3.25,
+    barBoxNetWeight: 24.6,
+    totalprice: 79.95,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:12:40.842Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb4d4b72331e48ef7daa,
+    username: 'BAUAP',
+    barcode: '0196303080310036320100025211200917210005943053',
+    price: 3.25,
+    barBoxNetWeight: 25.2,
+    totalprice: 81.9,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:13:17.383Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb4e4b72331e48ef7dab,
+    username: 'BAUAP',
+    barcode: '0196303080310036320100025211200917210005943055',
+    price: 3.25,
+    barBoxNetWeight: 25.2,
+    totalprice: 81.9,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:13:18.817Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcb44b72331e48ef7dac,
+    username: 'NIEMG',
+    barcode: '0196303080901630320100015011200911219006190207',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:19:16.122Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcb54b72331e48ef7dad,
+    username: 'NIEMG',
+    barcode: '0196303080901630320100015011200912219006190375',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:19:17.512Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcd84b72331e48ef7dae,
+    username: 'CHAAG',
+    barcode: '0196303080901630320100015011200911219006189854',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:19:52.298Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcea4b72331e48ef7daf,
+    username: 'MIRFC',
+    barcode: '0196303080331161320100077111200919211007934756',
+    price: 2.6,
+    barBoxNetWeight: 77.1,
+    totalprice: 200.46,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:20:10.609Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd654b72331e48ef7db0,
+    username: 'TAPSG',
+    barcode: '0196303080421633320100011211200918217005943262',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:22:13.097Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd664b72331e48ef7db1,
+    username: 'TAPSG',
+    barcode: '0196303080901630320100015011200911219006189852',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:22:14.264Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd874b72331e48ef7db2,
+    username: 'MORJON',
+    barcode: '0196303080331161320100079411200919212009096215',
+    price: 2.6,
+    barBoxNetWeight: 79.4,
+    totalprice: 206.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:22:47.179Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd8f4b72331e48ef7db3,
+    username: 'MORJON',
+    barcode: '0196303080331161320100074811200919212009095969',
+    price: 2.6,
+    barBoxNetWeight: 74.8,
+    totalprice: 194.48,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:22:55.340Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdbc4b72331e48ef7db4,
+    username: 'DEGJE',
+    barcode: '0196303080901630320100015011200912219006190383',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:23:39.965Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdd84b72331e48ef7db5,
+    username: 'DEGJE',
+    barcode: '0196303080421633320100011411200918217005943253',
+    price: 4,
+    barBoxNetWeight: 11.4,
+    totalprice: 45.6,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:24:08.608Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdf64b72331e48ef7db6,
+    username: 'CAMJAM',
+    barcode: '0116303080693867320100036011200703211118510025',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:24:38.128Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdf74b72331e48ef7db7,
+    username: 'CAMJAM',
+    barcode: '0196303080302123320100027711200921211007936585',
+    price: 5.7,
+    barBoxNetWeight: 27.7,
+    totalprice: 157.89,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:24:39.757Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fe2d4b72331e48ef7db8,
+    username: 'GONJO',
+    barcode: '0196303080901870320100023711200914219006192782',
+    price: 4,
+    barBoxNetWeight: 23.7,
+    totalprice: 94.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:25:33.000Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fe2e4b72331e48ef7db9,
+    username: 'GONJO',
+    barcode: '0196303080901630320100015011200911219006189740',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:25:34.723Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fea44b72331e48ef7dba,
+    username: 'SOEML',
+    barcode: '0196303080302123320100028511200921212009098904',
+    price: 5.7,
+    barBoxNetWeight: 28.5,
+    totalprice: 162.45,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:27:32.513Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fea74b72331e48ef7dbb,
+    username: 'SOEML',
+    barcode: '0196303080421633320100011211200918217005943260',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:27:35.129Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fece4b72331e48ef7dbc,
+    username: 'PENSE',
+    barcode: '0196303080331161320100076311200919212009095968',
+    price: 2.6,
+    barBoxNetWeight: 76.3,
+    totalprice: 198.38,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:28:14.867Z,
+    __v: 0
+  },
+  {
+    _id: 5f68feee4b72331e48ef7dbd,
+    username: 'PENSE',
+    barcode: '0196303080331161320100077711200919213001262925',
+    price: 2.6,
+    barBoxNetWeight: 77.7,
+    totalprice: 202.02,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:28:46.175Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff214b72331e48ef7dbe,
+    username: 'FRAOG',
+    barcode: '0196303080310036320100024911200917210005943054',
+    price: 3.25,
+    barBoxNetWeight: 24.9,
+    totalprice: 80.92,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:29:37.530Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff2a4b72331e48ef7dbf,
+    username: 'FRAOG',
+    barcode: '0196303080331161320100075611200919211007934899',
+    price: 2.6,
+    barBoxNetWeight: 75.6,
+    totalprice: 196.56,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:29:46.686Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff714b72331e48ef7dc0,
+    username: 'JENKA',
+    barcode: '0116303080693867320100036011200703211118510203',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:30:57.131Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff734b72331e48ef7dc1,
+    username: 'JENKA',
+    barcode: '0196303080310036320100025111200917210005943057',
+    price: 3.25,
+    barBoxNetWeight: 25.1,
+    totalprice: 81.58,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:30:59.779Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ffa64b72331e48ef7dc2,
+    username: 'REPEM',
+    barcode: '0196303080901870320100020111200914219006192721',
+    price: 4,
+    barBoxNetWeight: 20.1,
+    totalprice: 80.4,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:31:50.560Z,
+    __v: 0
+  },
+  {
+    _id: 5f69000f4b72331e48ef7dc3,
+    username: 'CLAJB',
+    barcode: '0116303080693867320100036011200703211118510122',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:33:35.209Z,
+    __v: 0
+  },
+  {
+    _id: 5f6900114b72331e48ef7dc4,
+    username: 'CLAJB',
+    barcode: '0116303080693867320100036011200703211118510136',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:33:37.937Z,
+    __v: 0
+  },
+  {
+    _id: 5f6900614b72331e48ef7dc5,
+    username: 'HINGU',
+    barcode: '0196303080331161320100080111200919212009095964',
+    price: 2.6,
+    barBoxNetWeight: 80.1,
+    totalprice: 208.26,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:34:57.694Z,
+    __v: 0
+  },
+  {
+    _id: 5f6900914b72331e48ef7dc6,
+    username: 'SALDZ',
+    barcode: '0116303080693867320100036011200703211118509963',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:35:45.744Z,
+    __v: 0
+  },
+  {
+    _id: 5f69014c4b72331e48ef7dc7,
+    username: 'CENST',
+    barcode: '0196303080331161320100079111200919211007934798',
+    price: 2.6,
+    barBoxNetWeight: 79.1,
+    totalprice: 205.66,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:38:52.500Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901564b72331e48ef7dc8,
+    username: 'CENST',
+    barcode: '0196303080901870320100024311200914219006192879',
+    price: 4,
+    barBoxNetWeight: 24.3,
+    totalprice: 97.2,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:39:02.138Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901694b72331e48ef7dc9,
+    username: 'KEMRC',
+    barcode: '0196303080302123320100034011200921212009098923',
+    price: 5.7,
+    barBoxNetWeight: 34,
+    totalprice: 193.8,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:39:21.290Z,
+    __v: 0
+  },
+  {
+    _id: 5f69016a4b72331e48ef7dca,
+    username: 'KEMRC',
+    barcode: '0196303080302123320100032311200921213001265209',
+    price: 5.7,
+    barBoxNetWeight: 32.3,
+    totalprice: 184.11,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:39:22.534Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901f04b72331e48ef7dcd,
+    username: 'BAUJC',
+    barcode: '0196303080901870320100025211200914219006192813',
+    price: 4,
+    barBoxNetWeight: 25.2,
+    totalprice: 100.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:41:36.106Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901f14b72331e48ef7dce,
+    username: 'BAUJC',
+    barcode: '0196303080901870320100023311200914219006192831',
+    price: 4,
+    barBoxNetWeight: 23.3,
+    totalprice: 93.2,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:41:37.725Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902204b72331e48ef7dcf,
+    username: 'GONPL',
+    barcode: '0196303080310036320100025011200917210005943052',
+    price: 3.25,
+    barBoxNetWeight: 25,
+    totalprice: 81.25,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:42:24.488Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902484b72331e48ef7dd0,
+    username: 'OREEB',
+    barcode: '0196303080421633320100011611200918217005943248',
+    price: 4,
+    barBoxNetWeight: 11.6,
+    totalprice: 46.4,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:43:04.612Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902714b72331e48ef7dd1,
+    username: 'DELIS',
+    barcode: '0196303080421633320100011211200918217005943258',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:43:45.377Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902784b72331e48ef7dd2,
+    username: 'DELIS',
+    barcode: '0196303080901630320100015011200912219006190547',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:43:52.745Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902934b72331e48ef7dd3,
+    username: 'GALRS',
+    barcode: '0196303080302123320100026611200921211007936595',
+    price: 5.7,
+    barBoxNetWeight: 26.6,
+    totalprice: 151.62,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:44:19.883Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902ae4b72331e48ef7dd4,
+    username: 'GALRS',
+    barcode: '0196303080331161320100077311200919211007934599',
+    price: 2.6,
+    barBoxNetWeight: 77.3,
+    totalprice: 200.98,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:44:46.533Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903814b72331e48ef7dd5,
+    username: 'GARROB',
+    barcode: '0196303080310036320100025011200917210005943051',
+    price: 3.25,
+    barBoxNetWeight: 25,
+    totalprice: 81.25,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:48:17.059Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903824b72331e48ef7dd6,
+    username: 'GARROB',
+    barcode: '0116303080693867320100036011200703211118510109',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:48:18.535Z,
+    __v: 0
+  },
+  {
+    _id: 5f69039d4b72331e48ef7dd7,
+    username: 'FLOJOS',
+    barcode: '0196303080302123320100029811200921213001265071',
+    price: 5.7,
+    barBoxNetWeight: 29.8,
+    totalprice: 169.86,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:48:45.678Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903e64b72331e48ef7dd8,
+    username: 'AVAMC',
+    barcode: '0196303080302123320100025511200921212009098918',
+    price: 5.7,
+    barBoxNetWeight: 25.5,
+    totalprice: 145.35,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:49:58.226Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903e74b72331e48ef7dd9,
+    username: 'AVAMC',
+    barcode: '0196303080301201320100086811200917211007925368',
+    price: 1.95,
+    barBoxNetWeight: 86.8,
+    totalprice: 169.26,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T19:49:59.251Z,
+    __v: 0
+  },
+  {
+    _id: 5f69041d4b72331e48ef7dda,
+    username: 'PABRJ',
+    barcode: '0196303080302123320100028111200921211007936593',
+    price: 5.7,
+    barBoxNetWeight: 28.1,
+    totalprice: 160.17,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:50:53.283Z,
+    __v: 0
+  },
+  {
+    _id: 5f69046b4b72331e48ef7ddb,
+    username: 'BELAD',
+    barcode: '0196303080302123320100030411200921211007936604',
+    price: 5.7,
+    barBoxNetWeight: 30.4,
+    totalprice: 173.28,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:52:11.407Z,
+    __v: 0
+  },
+  {
+    _id: 5f69046c4b72331e48ef7ddc,
+    username: 'BELAD',
+    barcode: '0196303080302123320100030211200921213001265066',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:52:12.991Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904aa4b72331e48ef7ddd,
+    username: 'ZAMJL',
+    barcode: '0196303080901630320100015011200911219006189780',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:53:14.510Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904b44b72331e48ef7dde,
+    username: 'ZAMJL',
+    barcode: '0196303080301201320100087211200917211007925348',
+    price: 1.95,
+    barBoxNetWeight: 87.2,
+    totalprice: 170.04,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T19:53:24.849Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904cd4b72331e48ef7ddf,
+    username: 'HERMAE',
+    barcode: '0196303080302123320100028111200921213001265036',
+    price: 5.7,
+    barBoxNetWeight: 28.1,
+    totalprice: 160.17,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:53:49.139Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904ec4b72331e48ef7de0,
+    username: 'BERGU',
+    barcode: '0196303080421633320100011711200918217005943241',
+    price: 4,
+    barBoxNetWeight: 11.7,
+    totalprice: 46.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:54:20.323Z,
+    __v: 0
+  },
+  ... 197 more items
+]
+--PurchaseGraph data structure--
+[
+  {
+    _id: 'CHUCK ROLL',
+    code: 33116,
+    price: 2.6,
+    count: 54,
+    totalweight: 4205.8,
+    totalprice: 10935.08
+  },
+  {
+    _id: 'RIBEYE 2 PK',
+    code: 30212,
+    price: 5.7,
+    count: 30,
+    totalweight: 898.6,
+    totalprice: 5122.02
+  },
+  {
+    _id: 'TONGUES',
+    code: 90187,
+    price: 4,
+    count: 41,
+    totalweight: 1036.3,
+    totalprice: 4145.2
+  },
+  {
+    _id: 'FAJITA STRIPS',
+    code: 31003,
+    price: 3.25,
+    count: 27,
+    totalweight: 676.5,
+    totalprice: 2198.65
+  },
+  {
+    _id: 'GROUD BEEF 81% 3# CHUB',
+    code: 69386,
+    price: 1.4,
+    count: 39,
+    totalweight: 1404,
+    totalprice: 1965.6
+  },
+  {
+    _id: 'CHUCK STEAK 8 OZ',
+    code: 42163,
+    price: 4,
+    count: 42,
+    totalweight: 483.4,
+    totalprice: 1933.6
+  },
+  {
+    _id: 'TENDERLOIN MEDALLIONS',
+    code: 31019,
+    price: 8.5,
+    count: 11,
+    totalweight: 140.3,
+    totalprice: 1192.55
+  },
+  {
+    _id: 'BRISKET',
+    code: 30120,
+    price: 1.95,
+    count: 5,
+    totalweight: 434.9,
+    totalprice: 848.04
+  },
+  {
+    _id: 'HONEYCOMB TRIPE',
+    code: 90163,
+    price: 1.45,
+    count: 29,
+    totalweight: 435,
+    totalprice: 630.75
+  },
+  {
+    _id: 'SMALL INTESTINES',
+    code: 90170,
+    price: 0.8,
+    count: 19,
+    totalweight: 570,
+    totalprice: 456
+  }
+]
+--PurchaseGraph data structure--
+[
+  {
+    _id: 'CHUCK ROLL',
+    code: 33116,
+    price: 2.6,
+    count: 3,
+    totalweight: 240.1,
+    totalprice: 624.26
+  },
+  {
+    _id: 'RIBEYE 2 PK',
+    code: 30212,
+    price: 5.7,
+    count: 2,
+    totalweight: 60.4,
+    totalprice: 344.28
+  },
+  {
+    _id: 'TENDERLOIN MEDALLIONS',
+    code: 31019,
+    price: 8.5,
+    count: 3,
+    totalweight: 38.9,
+    totalprice: 330.65
+  },
+  {
+    _id: 'FAJITA STRIPS',
+    code: 31003,
+    price: 3.25,
+    count: 3,
+    totalweight: 74.9,
+    totalprice: 243.42000000000002
+  },
+  {
+    _id: 'GROUD BEEF 81% 3# CHUB',
+    code: 69386,
+    price: 1.4,
+    count: 3,
+    totalweight: 108,
+    totalprice: 151.2
+  },
+  {
+    _id: 'TONGUES',
+    code: 90187,
+    price: 4,
+    count: 1,
+    totalweight: 28.2,
+    totalprice: 112.8
+  },
+  {
+    _id: 'CHUCK STEAK 8 OZ',
+    code: 42163,
+    price: 4,
+    count: 2,
+    totalweight: 23,
+    totalprice: 92
+  },
+  {
+    _id: 'SMALL INTESTINES',
+    code: 90170,
+    price: 0.8,
+    count: 2,
+    totalweight: 60,
+    totalprice: 48
+  },
+  {
+    _id: 'HONEYCOMB TRIPE',
+    code: 90163,
+    price: 1.45,
+    count: 1,
+    totalweight: 15,
+    totalprice: 21.75
+  }
+]
+[0mGET /api/barcodes/ [32m200[0m 48.168 ms - 80271[0m
+[0mGET /api/barcodes/barcodes-graph [32m200[0m 46.611 ms - 1006[0m
+[0mGET /api/leftover/leftover-report [32m200[0m 47.669 ms - 890[0m
+[0mGET / [32m200[0m 1.181 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 4.211 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 4.464 ms - 275435[0m
+[0mGET /scripts.js [32m200[0m 4.003 ms - 428368[0m
+[0mGET /styles-es2015.js [32m200[0m 4.183 ms - 737032[0m
+[0mGET /main-es2015.js [32m200[0m 3.510 ms - 750654[0m
+[0mGET /vendor-es2015.js [32m200[0m 3.264 ms - 9890292[0m
+[0mGET / [32m200[0m 0.786 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 2.816 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 3.034 ms - 275435[0m
+[0mGET /styles-es2015.js [32m200[0m 2.999 ms - 737032[0m
+[0mGET /main-es2015.js [32m200[0m 2.794 ms - 750654[0m
+[0mGET /scripts.js [32m200[0m 0.701 ms - 428368[0m
+[0mGET /vendor-es2015.js [32m200[0m 2.913 ms - 9890292[0m
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 5.796 ms - 10[0m
+[0mGET /api/employees [32m200[0m 446.091 ms - 164033[0m
+[]
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+this is the employee null
+[0mGET /api/invoices/MEATSALE [32m200[0m 24.655 ms - 2[0m
+[0mGET /api/time/ [32m200[0m 26.947 ms - 93[0m
+[0mGET /api/employees/MEATSALE [32m200[0m 28.627 ms - 4[0m
+[0mGET /herd-of-cattle-in-daytime.jpg [32m200[0m 29.255 ms - 517881[0m
+[0mGET /favicon.ico [32m200[0m 0.595 ms - 15406[0m
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+[0mGET /api/time/ [32m200[0m 5.336 ms - 93[0m
+[0mGET /api/employees/ [32m200[0m 381.531 ms - 164033[0m
+[0mGET /assets/images/gop.png [32m200[0m 11.449 ms - 19487[0m
+this is the employee {
+  role: 'standard',
+  _id: 5f62420122497c1330b6c198,
+  EmployeeID: 'SANGJ',
+  LastName: 'SANCHEZ SERNA',
+  FirstName: 'GABRIEL',
+  '': ''
+}
+[0mGET /api/employees/SANGJ [32m200[0m 5.128 ms - 128[0m
+[0mGET /api/employees [32m200[0m 384.546 ms - 164033[0m
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 5f5cc167ec202112bce0e57f,
+    lineItems: [ [Object], [Object] ],
+    lineItemTotal: 281.5,
+    total: 281.5,
+    username: 'SANGJ',
+    orderDate: 2020-09-12T12:38:34.365Z,
+    __v: 0
+  }
+]
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+this is the employee {
+  role: 'standard',
+  _id: 5f62420122497c1330b6c198,
+  EmployeeID: 'SANGJ',
+  LastName: 'SANCHEZ SERNA',
+  FirstName: 'GABRIEL',
+  '': ''
+}
+[0mGET /api/time/ [32m200[0m 10.614 ms - 93[0m
+[0mGET /api/invoices/SANGJ [32m200[0m 13.287 ms - 322[0m
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 392.128 ms - 10[0m
+[0mGET /api/employees/SANGJ [32m200[0m 393.324 ms - 128[0m
+[
+  {
+    _id: 5f694c2cba819118241e8668,
+    time: '2048',
+    time1: '2020-09-20T05:00:00.000Z',
+    __v: 0
+  }
+]
+[0mGET /api/time/ [32m200[0m 4.228 ms - 93[0m
+[0mGET /api/employees/ [32m200[0m 412.464 ms - 164033[0m
+[0mGET / [32m200[0m 0.976 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 1.850 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 1.643 ms - 275435[0m
+[0mGET /styles-es2015.js [32m200[0m 1.917 ms - 737032[0m
+[0mGET /main-es2015.js [32m200[0m 2.155 ms - 750654[0m
+[0mGET /scripts.js [36m304[0m 1.512 ms - -[0m
+[0mGET /vendor-es2015.js [32m200[0m 2.186 ms - 9890292[0m
+{
+  cookie: 'sessionuser=hussein; samesite=strict; secure',
+  username: 'meatsale',
+  password: 'meatsaleadmin'
+}
+this is the user {
+  isDisabled: false,
+  role: 'admin',
+  date_created: 2020-09-05T22:37:39.417Z,
+  _id: 5f5418792ef5de15ac34cf97,
+  username: 'meatsale',
+  password: '$2a$10$Ixf5mSQmnDt14WSMtT7r7udYJWmzLTVmru8DEd/OZC6lY3rGLzi6u',
+  firstname: 'meatsale',
+  lastname: 'meatsale',
+  phoneNumber: '000000000',
+  address: '3001 L st',
+  email: 'meatsale.com',
+  securityQuestion: [
+    {
+      _id: 5f5418792ef5de15ac34cf98,
+      questionId: '5ea8dfb57e6331502025fd19',
+      answer: 'IT'
+    },
+    {
+      _id: 5f5418792ef5de15ac34cf99,
+      questionId: '5ea8dfb57e6331502025fd19',
+      answer: 'IT'
+    },
+    {
+      _id: 5f5418792ef5de15ac34cf9a,
+      questionId: '5ea8dfb57e6331502025fd19',
+      answer: 'IT'
+    }
+  ],
+  __v: 0
+}
+[0mPOST /api/session/signin [32m200[0m 137.619 ms - 92[0m
+[0mGET /api/users/meatsale/role [32m200[0m 3.393 ms - 7[0m
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 5.179 ms - 10[0m
+--PurchaseGraph data structure--
+[
+  {
+    _id: 'CHUCK ROLL',
+    code: 33116,
+    price: 2.6,
+    count: 54,
+    totalweight: 4205.8,
+    totalprice: 10935.08
+  },
+  {
+    _id: 'RIBEYE 2 PK',
+    code: 30212,
+    price: 5.7,
+    count: 30,
+    totalweight: 898.6,
+    totalprice: 5122.02
+  },
+  {
+    _id: 'TONGUES',
+    code: 90187,
+    price: 4,
+    count: 41,
+    totalweight: 1036.3,
+    totalprice: 4145.2
+  },
+  {
+    _id: 'FAJITA STRIPS',
+    code: 31003,
+    price: 3.25,
+    count: 27,
+    totalweight: 676.5,
+    totalprice: 2198.65
+  },
+  {
+    _id: 'GROUD BEEF 81% 3# CHUB',
+    code: 69386,
+    price: 1.4,
+    count: 39,
+    totalweight: 1404,
+    totalprice: 1965.6
+  },
+  {
+    _id: 'CHUCK STEAK 8 OZ',
+    code: 42163,
+    price: 4,
+    count: 42,
+    totalweight: 483.4,
+    totalprice: 1933.6
+  },
+  {
+    _id: 'TENDERLOIN MEDALLIONS',
+    code: 31019,
+    price: 8.5,
+    count: 11,
+    totalweight: 140.3,
+    totalprice: 1192.55
+  },
+  {
+    _id: 'BRISKET',
+    code: 30120,
+    price: 1.95,
+    count: 5,
+    totalweight: 434.9,
+    totalprice: 848.04
+  },
+  {
+    _id: 'HONEYCOMB TRIPE',
+    code: 90163,
+    price: 1.45,
+    count: 29,
+    totalweight: 435,
+    totalprice: 630.75
+  },
+  {
+    _id: 'SMALL INTESTINES',
+    code: 90170,
+    price: 0.8,
+    count: 19,
+    totalweight: 570,
+    totalprice: 456
+  }
+]
+--PurchaseGraph data structure--
+[
+  {
+    _id: 'CHUCK ROLL',
+    code: 33116,
+    price: 2.6,
+    count: 3,
+    totalweight: 240.1,
+    totalprice: 624.26
+  },
+  {
+    _id: 'RIBEYE 2 PK',
+    code: 30212,
+    price: 5.7,
+    count: 2,
+    totalweight: 60.4,
+    totalprice: 344.28
+  },
+  {
+    _id: 'TENDERLOIN MEDALLIONS',
+    code: 31019,
+    price: 8.5,
+    count: 3,
+    totalweight: 38.9,
+    totalprice: 330.65
+  },
+  {
+    _id: 'FAJITA STRIPS',
+    code: 31003,
+    price: 3.25,
+    count: 3,
+    totalweight: 74.9,
+    totalprice: 243.42000000000002
+  },
+  {
+    _id: 'GROUD BEEF 81% 3# CHUB',
+    code: 69386,
+    price: 1.4,
+    count: 3,
+    totalweight: 108,
+    totalprice: 151.2
+  },
+  {
+    _id: 'TONGUES',
+    code: 90187,
+    price: 4,
+    count: 1,
+    totalweight: 28.2,
+    totalprice: 112.8
+  },
+  {
+    _id: 'CHUCK STEAK 8 OZ',
+    code: 42163,
+    price: 4,
+    count: 2,
+    totalweight: 23,
+    totalprice: 92
+  },
+  {
+    _id: 'SMALL INTESTINES',
+    code: 90170,
+    price: 0.8,
+    count: 2,
+    totalweight: 60,
+    totalprice: 48
+  },
+  {
+    _id: 'HONEYCOMB TRIPE',
+    code: 90163,
+    price: 1.45,
+    count: 1,
+    totalweight: 15,
+    totalprice: 21.75
+  }
+]
+[
+  {
+    _id: 5f68cbcac37f431db034b429,
+    username: 'ZEIKA',
+    barcode: '0196303080310036320100024211200918210005943478',
+    price: 3.25,
+    barBoxNetWeight: 24.2,
+    totalprice: 78.65,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T15:50:34.284Z,
+    __v: 0
+  },
+  {
+    _id: 5f68cbccc37f431db034b42a,
+    username: 'ZEIKA',
+    barcode: '0196303080310036320100024411200918210005943485',
+    price: 3.25,
+    barBoxNetWeight: 24.4,
+    totalprice: 79.3,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T15:50:36.734Z,
+    __v: 0
+  },
+  {
+    _id: 5f68eba84b72331e48ef7d7d,
+    username: 'LEWAA',
+    barcode: '0116303080693867320100036011200703211118510189',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:06:31.713Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ebab4b72331e48ef7d7e,
+    username: 'LEWAA',
+    barcode: '0196303080301201320100086911200917211007924888',
+    price: 1.95,
+    barBoxNetWeight: 86.9,
+    totalprice: 169.45,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T18:06:34.549Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ec864b72331e48ef7d7f,
+    username: 'MERDA',
+    barcode: '0116303080693867320100036011200703211118510071',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:10:13.487Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ec984b72331e48ef7d80,
+    username: 'MERDA',
+    barcode: '0196303080310036320100028811200918210005943487',
+    price: 3.25,
+    barBoxNetWeight: 28.8,
+    totalprice: 93.6,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T18:10:31.794Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ecc74b72331e48ef7d81,
+    username: 'LEWHC',
+    barcode: '0116303080693867320100036011200703211118510022',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:11:18.858Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ecd34b72331e48ef7d82,
+    username: 'LEWHC',
+    barcode: '0196303080421633320100013511200918217005943269',
+    price: 4,
+    barBoxNetWeight: 13.5,
+    totalprice: 54,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:11:30.298Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ed1a4b72331e48ef7d83,
+    username: 'SEGED',
+    barcode: '0196303080421633320100011011200918217005943256',
+    price: 4,
+    barBoxNetWeight: 11,
+    totalprice: 44,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:12:41.508Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ed1c4b72331e48ef7d84,
+    username: 'SEGED',
+    barcode: '0196303080901870320100022711200914219006192891',
+    price: 4,
+    barBoxNetWeight: 22.7,
+    totalprice: 90.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:12:43.325Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ed8a4b72331e48ef7d85,
+    username: 'GONDEN',
+    barcode: '0196303080421633320100013511200918217005943267',
+    price: 4,
+    barBoxNetWeight: 13.5,
+    totalprice: 54,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:14:33.394Z,
+    __v: 0
+  },
+  {
+    _id: 5f68edc64b72331e48ef7d86,
+    username: 'JOHJW',
+    barcode: '0116303080693867320100036011200703211118510098',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:15:33.569Z,
+    __v: 0
+  },
+  {
+    _id: 5f68edcc4b72331e48ef7d87,
+    username: 'JOHJW',
+    barcode: '0196303080421633320100011111200918217005943265',
+    price: 4,
+    barBoxNetWeight: 11.1,
+    totalprice: 44.4,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:15:40.105Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ede34b72331e48ef7d88,
+    username: 'VINSM',
+    barcode: '0116303080693867320100036011200703211118510194',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:16:02.527Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee164b72331e48ef7d89,
+    username: 'RIEAM',
+    barcode: '0196303080310197320100012411200813210005929701',
+    price: 8.5,
+    barBoxNetWeight: 12.4,
+    totalprice: 105.4,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T18:16:53.647Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee3e4b72331e48ef7d8a,
+    username: 'BALJD',
+    barcode: '0196303080331161320100081811200919212009096267',
+    price: 2.6,
+    barBoxNetWeight: 81.8,
+    totalprice: 212.68,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:17:33.738Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee714b72331e48ef7d8b,
+    username: 'DRERJ',
+    barcode: '0116303080693867320100036011200703211118510160',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:18:25.126Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee734b72331e48ef7d8c,
+    username: 'DRERJ',
+    barcode: '0116303080693867320100036011200703211118510080',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:18:26.520Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee9c4b72331e48ef7d8d,
+    username: 'JOHJN',
+    barcode: '0196303080302123320100033411200921212009099137',
+    price: 5.7,
+    barBoxNetWeight: 33.4,
+    totalprice: 190.38,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T18:19:07.868Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ee9e4b72331e48ef7d8e,
+    username: 'JOHJN',
+    barcode: '0196303080310197320100013211200813210005929765',
+    price: 8.5,
+    barBoxNetWeight: 13.2,
+    totalprice: 112.2,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T18:19:10.042Z,
+    __v: 0
+  },
+  {
+    _id: 5f68eeda4b72331e48ef7d8f,
+    username: 'CUBNB',
+    barcode: '0196303080302123320100031911200921213001265219',
+    price: 5.7,
+    barBoxNetWeight: 31.9,
+    totalprice: 181.83,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T18:20:09.579Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4014b72331e48ef7d90,
+    username: 'CHAIS',
+    barcode: '0196303080901870320100027011200914219006192864',
+    price: 4,
+    barBoxNetWeight: 27,
+    totalprice: 108,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:42:08.294Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4934b72331e48ef7d91,
+    username: 'VALLP',
+    barcode: '0116303080693867320100036011200703211118510068',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:44:34.239Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4b94b72331e48ef7d92,
+    username: 'DEAGU',
+    barcode: '0196303080901870320100021511200914219006192744',
+    price: 4,
+    barBoxNetWeight: 21.5,
+    totalprice: 86,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:45:12.908Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f4ba4b72331e48ef7d93,
+    username: 'DEAGU',
+    barcode: '0196303080331161320100076611200919212009096242',
+    price: 2.6,
+    barBoxNetWeight: 76.6,
+    totalprice: 199.16,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:45:14.084Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5214b72331e48ef7d94,
+    username: 'BAKCY',
+    barcode: '0196303080421633320100011511200904217005938896',
+    price: 4,
+    barBoxNetWeight: 11.5,
+    totalprice: 46,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:46:57.005Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5254b72331e48ef7d95,
+    username: 'BAKCY',
+    barcode: '0116303080693867320100036011200703211118510088',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:47:00.293Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f53d4b72331e48ef7d96,
+    username: 'ADKBJ',
+    barcode: '0116303080693867320100036011200703211118510055',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:47:24.760Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f57c4b72331e48ef7d97,
+    username: 'DIAGA',
+    barcode: '0196303080901870320100023511200914219006192752',
+    price: 4,
+    barBoxNetWeight: 23.5,
+    totalprice: 94,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:48:27.717Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5f64b72331e48ef7d98,
+    username: 'DREDA',
+    barcode: '0196303080421633320100011211200918217005943263',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T18:50:29.610Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f5f94b72331e48ef7d99,
+    username: 'DREDA',
+    barcode: '0196303080310036320100024511200918210005943483',
+    price: 3.25,
+    barBoxNetWeight: 24.5,
+    totalprice: 79.63,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T18:50:32.854Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6234b72331e48ef7d9a,
+    username: 'CEROS',
+    barcode: '0196303080331161320100074411200919213001262804',
+    price: 2.6,
+    barBoxNetWeight: 74.4,
+    totalprice: 193.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:51:14.515Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6494b72331e48ef7d9b,
+    username: 'JIMLM',
+    barcode: '0196303080901870320100022811200914219006192892',
+    price: 4,
+    barBoxNetWeight: 22.8,
+    totalprice: 91.2,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T18:51:52.827Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6e64b72331e48ef7d9c,
+    username: 'VUKTD',
+    barcode: '0116303080693867320100036011200703211118510195',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:54:29.978Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f6e84b72331e48ef7d9d,
+    username: 'VUKTD',
+    barcode: '0116303080693867320100036011200703211118510119',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T18:54:31.179Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f7924b72331e48ef7d9e,
+    username: 'BUSJC',
+    barcode: '0196303080302123320100030511200921213001265223',
+    price: 5.7,
+    barBoxNetWeight: 30.5,
+    totalprice: 173.85,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T18:57:21.730Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f8164b72331e48ef7d9f,
+    username: 'SANJA',
+    barcode: '0196303080331161320100080511200919213001262785',
+    price: 2.6,
+    barBoxNetWeight: 80.5,
+    totalprice: 209.3,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:59:33.441Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f81c4b72331e48ef7da0,
+    username: 'SANJA',
+    barcode: '0196303080331161320100081111200919212009095939',
+    price: 2.6,
+    barBoxNetWeight: 81.1,
+    totalprice: 210.86,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T18:59:39.283Z,
+    __v: 0
+  },
+  {
+    _id: 5f68f9174b72331e48ef7da1,
+    username: 'VARAG',
+    barcode: '0196303080302123320100028411200921211007936605',
+    price: 5.7,
+    barBoxNetWeight: 28.4,
+    totalprice: 161.88,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:03:51.294Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa014b72331e48ef7da2,
+    username: 'STANP',
+    barcode: '0196303080301201320100087311200917212009089001',
+    price: 1.95,
+    barBoxNetWeight: 87.3,
+    totalprice: 170.23,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T19:07:45.047Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa104b72331e48ef7da3,
+    username: 'STANP',
+    barcode: '0116303080693867320100036011200703211118510079',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:08:00.511Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa4d4b72331e48ef7da4,
+    username: 'TOBTL',
+    barcode: '0196303080310036320100024411200918210005943482',
+    price: 3.25,
+    barBoxNetWeight: 24.4,
+    totalprice: 79.3,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:09:01.438Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa5b4b72331e48ef7da5,
+    username: 'TOBTL',
+    barcode: '0116303080693867320100036011200703211118510067',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:09:15.453Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa994b72331e48ef7da6,
+    username: 'HINST',
+    barcode: '0196303080310197320100014311200813210005929704',
+    price: 8.5,
+    barBoxNetWeight: 14.3,
+    totalprice: 121.55,
+    itemdescription: 'TENDERLOIN MEDALLIONS',
+    barProductCode: 31019,
+    orderDate: 2020-09-21T19:10:16.889Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fa9a4b72331e48ef7da7,
+    username: 'HINST',
+    barcode: '0196303080302123320100033211200921212009099145',
+    price: 5.7,
+    barBoxNetWeight: 33.2,
+    totalprice: 189.24,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:10:18.287Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb274b72331e48ef7da8,
+    username: 'CASIR',
+    barcode: '0196303080421633320100011411200918217005943254',
+    price: 4,
+    barBoxNetWeight: 11.4,
+    totalprice: 45.6,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:12:39.536Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb294b72331e48ef7da9,
+    username: 'CASIR',
+    barcode: '0196303080310036320100024611200917210005943056',
+    price: 3.25,
+    barBoxNetWeight: 24.6,
+    totalprice: 79.95,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:12:40.842Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb4d4b72331e48ef7daa,
+    username: 'BAUAP',
+    barcode: '0196303080310036320100025211200917210005943053',
+    price: 3.25,
+    barBoxNetWeight: 25.2,
+    totalprice: 81.9,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:13:17.383Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fb4e4b72331e48ef7dab,
+    username: 'BAUAP',
+    barcode: '0196303080310036320100025211200917210005943055',
+    price: 3.25,
+    barBoxNetWeight: 25.2,
+    totalprice: 81.9,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:13:18.817Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcb44b72331e48ef7dac,
+    username: 'NIEMG',
+    barcode: '0196303080901630320100015011200911219006190207',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:19:16.122Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcb54b72331e48ef7dad,
+    username: 'NIEMG',
+    barcode: '0196303080901630320100015011200912219006190375',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:19:17.512Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcd84b72331e48ef7dae,
+    username: 'CHAAG',
+    barcode: '0196303080901630320100015011200911219006189854',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:19:52.298Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fcea4b72331e48ef7daf,
+    username: 'MIRFC',
+    barcode: '0196303080331161320100077111200919211007934756',
+    price: 2.6,
+    barBoxNetWeight: 77.1,
+    totalprice: 200.46,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:20:10.609Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd654b72331e48ef7db0,
+    username: 'TAPSG',
+    barcode: '0196303080421633320100011211200918217005943262',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:22:13.097Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd664b72331e48ef7db1,
+    username: 'TAPSG',
+    barcode: '0196303080901630320100015011200911219006189852',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:22:14.264Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd874b72331e48ef7db2,
+    username: 'MORJON',
+    barcode: '0196303080331161320100079411200919212009096215',
+    price: 2.6,
+    barBoxNetWeight: 79.4,
+    totalprice: 206.44,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:22:47.179Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fd8f4b72331e48ef7db3,
+    username: 'MORJON',
+    barcode: '0196303080331161320100074811200919212009095969',
+    price: 2.6,
+    barBoxNetWeight: 74.8,
+    totalprice: 194.48,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:22:55.340Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdbc4b72331e48ef7db4,
+    username: 'DEGJE',
+    barcode: '0196303080901630320100015011200912219006190383',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:23:39.965Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdd84b72331e48ef7db5,
+    username: 'DEGJE',
+    barcode: '0196303080421633320100011411200918217005943253',
+    price: 4,
+    barBoxNetWeight: 11.4,
+    totalprice: 45.6,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:24:08.608Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdf64b72331e48ef7db6,
+    username: 'CAMJAM',
+    barcode: '0116303080693867320100036011200703211118510025',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:24:38.128Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fdf74b72331e48ef7db7,
+    username: 'CAMJAM',
+    barcode: '0196303080302123320100027711200921211007936585',
+    price: 5.7,
+    barBoxNetWeight: 27.7,
+    totalprice: 157.89,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:24:39.757Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fe2d4b72331e48ef7db8,
+    username: 'GONJO',
+    barcode: '0196303080901870320100023711200914219006192782',
+    price: 4,
+    barBoxNetWeight: 23.7,
+    totalprice: 94.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:25:33.000Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fe2e4b72331e48ef7db9,
+    username: 'GONJO',
+    barcode: '0196303080901630320100015011200911219006189740',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:25:34.723Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fea44b72331e48ef7dba,
+    username: 'SOEML',
+    barcode: '0196303080302123320100028511200921212009098904',
+    price: 5.7,
+    barBoxNetWeight: 28.5,
+    totalprice: 162.45,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:27:32.513Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fea74b72331e48ef7dbb,
+    username: 'SOEML',
+    barcode: '0196303080421633320100011211200918217005943260',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:27:35.129Z,
+    __v: 0
+  },
+  {
+    _id: 5f68fece4b72331e48ef7dbc,
+    username: 'PENSE',
+    barcode: '0196303080331161320100076311200919212009095968',
+    price: 2.6,
+    barBoxNetWeight: 76.3,
+    totalprice: 198.38,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:28:14.867Z,
+    __v: 0
+  },
+  {
+    _id: 5f68feee4b72331e48ef7dbd,
+    username: 'PENSE',
+    barcode: '0196303080331161320100077711200919213001262925',
+    price: 2.6,
+    barBoxNetWeight: 77.7,
+    totalprice: 202.02,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:28:46.175Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff214b72331e48ef7dbe,
+    username: 'FRAOG',
+    barcode: '0196303080310036320100024911200917210005943054',
+    price: 3.25,
+    barBoxNetWeight: 24.9,
+    totalprice: 80.92,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:29:37.530Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff2a4b72331e48ef7dbf,
+    username: 'FRAOG',
+    barcode: '0196303080331161320100075611200919211007934899',
+    price: 2.6,
+    barBoxNetWeight: 75.6,
+    totalprice: 196.56,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:29:46.686Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff714b72331e48ef7dc0,
+    username: 'JENKA',
+    barcode: '0116303080693867320100036011200703211118510203',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:30:57.131Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ff734b72331e48ef7dc1,
+    username: 'JENKA',
+    barcode: '0196303080310036320100025111200917210005943057',
+    price: 3.25,
+    barBoxNetWeight: 25.1,
+    totalprice: 81.58,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:30:59.779Z,
+    __v: 0
+  },
+  {
+    _id: 5f68ffa64b72331e48ef7dc2,
+    username: 'REPEM',
+    barcode: '0196303080901870320100020111200914219006192721',
+    price: 4,
+    barBoxNetWeight: 20.1,
+    totalprice: 80.4,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:31:50.560Z,
+    __v: 0
+  },
+  {
+    _id: 5f69000f4b72331e48ef7dc3,
+    username: 'CLAJB',
+    barcode: '0116303080693867320100036011200703211118510122',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:33:35.209Z,
+    __v: 0
+  },
+  {
+    _id: 5f6900114b72331e48ef7dc4,
+    username: 'CLAJB',
+    barcode: '0116303080693867320100036011200703211118510136',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:33:37.937Z,
+    __v: 0
+  },
+  {
+    _id: 5f6900614b72331e48ef7dc5,
+    username: 'HINGU',
+    barcode: '0196303080331161320100080111200919212009095964',
+    price: 2.6,
+    barBoxNetWeight: 80.1,
+    totalprice: 208.26,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:34:57.694Z,
+    __v: 0
+  },
+  {
+    _id: 5f6900914b72331e48ef7dc6,
+    username: 'SALDZ',
+    barcode: '0116303080693867320100036011200703211118509963',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:35:45.744Z,
+    __v: 0
+  },
+  {
+    _id: 5f69014c4b72331e48ef7dc7,
+    username: 'CENST',
+    barcode: '0196303080331161320100079111200919211007934798',
+    price: 2.6,
+    barBoxNetWeight: 79.1,
+    totalprice: 205.66,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:38:52.500Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901564b72331e48ef7dc8,
+    username: 'CENST',
+    barcode: '0196303080901870320100024311200914219006192879',
+    price: 4,
+    barBoxNetWeight: 24.3,
+    totalprice: 97.2,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:39:02.138Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901694b72331e48ef7dc9,
+    username: 'KEMRC',
+    barcode: '0196303080302123320100034011200921212009098923',
+    price: 5.7,
+    barBoxNetWeight: 34,
+    totalprice: 193.8,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:39:21.290Z,
+    __v: 0
+  },
+  {
+    _id: 5f69016a4b72331e48ef7dca,
+    username: 'KEMRC',
+    barcode: '0196303080302123320100032311200921213001265209',
+    price: 5.7,
+    barBoxNetWeight: 32.3,
+    totalprice: 184.11,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:39:22.534Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901f04b72331e48ef7dcd,
+    username: 'BAUJC',
+    barcode: '0196303080901870320100025211200914219006192813',
+    price: 4,
+    barBoxNetWeight: 25.2,
+    totalprice: 100.8,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:41:36.106Z,
+    __v: 0
+  },
+  {
+    _id: 5f6901f14b72331e48ef7dce,
+    username: 'BAUJC',
+    barcode: '0196303080901870320100023311200914219006192831',
+    price: 4,
+    barBoxNetWeight: 23.3,
+    totalprice: 93.2,
+    itemdescription: 'TONGUES',
+    barProductCode: 90187,
+    orderDate: 2020-09-21T19:41:37.725Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902204b72331e48ef7dcf,
+    username: 'GONPL',
+    barcode: '0196303080310036320100025011200917210005943052',
+    price: 3.25,
+    barBoxNetWeight: 25,
+    totalprice: 81.25,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:42:24.488Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902484b72331e48ef7dd0,
+    username: 'OREEB',
+    barcode: '0196303080421633320100011611200918217005943248',
+    price: 4,
+    barBoxNetWeight: 11.6,
+    totalprice: 46.4,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:43:04.612Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902714b72331e48ef7dd1,
+    username: 'DELIS',
+    barcode: '0196303080421633320100011211200918217005943258',
+    price: 4,
+    barBoxNetWeight: 11.2,
+    totalprice: 44.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:43:45.377Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902784b72331e48ef7dd2,
+    username: 'DELIS',
+    barcode: '0196303080901630320100015011200912219006190547',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:43:52.745Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902934b72331e48ef7dd3,
+    username: 'GALRS',
+    barcode: '0196303080302123320100026611200921211007936595',
+    price: 5.7,
+    barBoxNetWeight: 26.6,
+    totalprice: 151.62,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:44:19.883Z,
+    __v: 0
+  },
+  {
+    _id: 5f6902ae4b72331e48ef7dd4,
+    username: 'GALRS',
+    barcode: '0196303080331161320100077311200919211007934599',
+    price: 2.6,
+    barBoxNetWeight: 77.3,
+    totalprice: 200.98,
+    itemdescription: 'CHUCK ROLL',
+    barProductCode: 33116,
+    orderDate: 2020-09-21T19:44:46.533Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903814b72331e48ef7dd5,
+    username: 'GARROB',
+    barcode: '0196303080310036320100025011200917210005943051',
+    price: 3.25,
+    barBoxNetWeight: 25,
+    totalprice: 81.25,
+    itemdescription: 'FAJITA STRIPS',
+    barProductCode: 31003,
+    orderDate: 2020-09-21T19:48:17.059Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903824b72331e48ef7dd6,
+    username: 'GARROB',
+    barcode: '0116303080693867320100036011200703211118510109',
+    price: 1.4,
+    barBoxNetWeight: 36,
+    totalprice: 50.4,
+    itemdescription: 'GROUD BEEF 81% 3# CHUB',
+    barProductCode: 69386,
+    orderDate: 2020-09-21T19:48:18.535Z,
+    __v: 0
+  },
+  {
+    _id: 5f69039d4b72331e48ef7dd7,
+    username: 'FLOJOS',
+    barcode: '0196303080302123320100029811200921213001265071',
+    price: 5.7,
+    barBoxNetWeight: 29.8,
+    totalprice: 169.86,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:48:45.678Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903e64b72331e48ef7dd8,
+    username: 'AVAMC',
+    barcode: '0196303080302123320100025511200921212009098918',
+    price: 5.7,
+    barBoxNetWeight: 25.5,
+    totalprice: 145.35,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:49:58.226Z,
+    __v: 0
+  },
+  {
+    _id: 5f6903e74b72331e48ef7dd9,
+    username: 'AVAMC',
+    barcode: '0196303080301201320100086811200917211007925368',
+    price: 1.95,
+    barBoxNetWeight: 86.8,
+    totalprice: 169.26,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T19:49:59.251Z,
+    __v: 0
+  },
+  {
+    _id: 5f69041d4b72331e48ef7dda,
+    username: 'PABRJ',
+    barcode: '0196303080302123320100028111200921211007936593',
+    price: 5.7,
+    barBoxNetWeight: 28.1,
+    totalprice: 160.17,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:50:53.283Z,
+    __v: 0
+  },
+  {
+    _id: 5f69046b4b72331e48ef7ddb,
+    username: 'BELAD',
+    barcode: '0196303080302123320100030411200921211007936604',
+    price: 5.7,
+    barBoxNetWeight: 30.4,
+    totalprice: 173.28,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:52:11.407Z,
+    __v: 0
+  },
+  {
+    _id: 5f69046c4b72331e48ef7ddc,
+    username: 'BELAD',
+    barcode: '0196303080302123320100030211200921213001265066',
+    price: 5.7,
+    barBoxNetWeight: 30.2,
+    totalprice: 172.14,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:52:12.991Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904aa4b72331e48ef7ddd,
+    username: 'ZAMJL',
+    barcode: '0196303080901630320100015011200911219006189780',
+    price: 1.45,
+    barBoxNetWeight: 15,
+    totalprice: 21.75,
+    itemdescription: 'HONEYCOMB TRIPE',
+    barProductCode: 90163,
+    orderDate: 2020-09-21T19:53:14.510Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904b44b72331e48ef7dde,
+    username: 'ZAMJL',
+    barcode: '0196303080301201320100087211200917211007925348',
+    price: 1.95,
+    barBoxNetWeight: 87.2,
+    totalprice: 170.04,
+    itemdescription: 'BRISKET',
+    barProductCode: 30120,
+    orderDate: 2020-09-21T19:53:24.849Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904cd4b72331e48ef7ddf,
+    username: 'HERMAE',
+    barcode: '0196303080302123320100028111200921213001265036',
+    price: 5.7,
+    barBoxNetWeight: 28.1,
+    totalprice: 160.17,
+    itemdescription: 'RIBEYE 2 PK',
+    barProductCode: 30212,
+    orderDate: 2020-09-21T19:53:49.139Z,
+    __v: 0
+  },
+  {
+    _id: 5f6904ec4b72331e48ef7de0,
+    username: 'BERGU',
+    barcode: '0196303080421633320100011711200918217005943241',
+    price: 4,
+    barBoxNetWeight: 11.7,
+    totalprice: 46.8,
+    itemdescription: 'CHUCK STEAK 8 OZ',
+    barProductCode: 42163,
+    orderDate: 2020-09-21T19:54:20.323Z,
+    __v: 0
+  },
+  ... 197 more items
+]

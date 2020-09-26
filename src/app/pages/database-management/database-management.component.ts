@@ -76,8 +76,8 @@ export class DatabaseManagementComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result =>{
       if (result === 'confirm'){
-        this.http.delete('/api/invoice/alldelete' ).subscribe(res => {
-          console.log('Barcode deleted');
+        this.http.delete('/api/invoices/alldelete' ).subscribe(res => {
+          console.log('Invoices deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
           console.log(this.barcodes);

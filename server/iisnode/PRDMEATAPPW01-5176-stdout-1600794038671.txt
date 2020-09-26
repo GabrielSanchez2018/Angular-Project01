@@ -1,0 +1,12 @@
+Application started and listening on port: \\.\pipe\ac3950a3-5972-4549-8965-808e371cd457
+Connection to the database instance was successful 8-19-20
+[0mGET / [32m200[0m 5.214 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 4.548 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 4.712 ms - 275435[0m
+[0mGET /styles-es2015.js [32m200[0m 3.317 ms - 737032[0m
+[0mGET /main-es2015.js [32m200[0m 4.289 ms - 747201[0m
+[0mGET /scripts.js [32m200[0m 1.215 ms - 428368[0m
+[0mGET /vendor-es2015.js [32m200[0m 4.620 ms - 9890292[0m
+this employee { role: 'standard', _id: 5f62420122497c1330b6bda1 }
+[0mGET /api/employees/function%20toUpperCase()%20{%20[native%20code]%20}/role [32m200[0m 30.727 ms - 10[0m
+[0mGET /api/employees [32m200[0m 500.465 ms - 164033[0m

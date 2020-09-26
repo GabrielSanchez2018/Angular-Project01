@@ -5,6 +5,7 @@
 import {Injectable} from '@angular/core'
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
+import { JAN } from '@angular/material';
 
 
 const EXCEL_TYPE =
@@ -14,6 +15,7 @@ const EXCEL_EXT = '.xlsx';
 @Injectable()
 
 export class ExporterService{
+ 
 
   constructor(){}
 
@@ -38,8 +40,69 @@ export class ExporterService{
   }
   private savedAsExcel(buffer: any, fileName: string): void{
     const data: Blob = new Blob([buffer], {type: EXCEL_TYPE});
-    FileSaver.saveAs(data, fileName + '_export' + new Date().getTime() + EXCEL_EXT);
+    
+    var date = new Date()
+    
+    const day = date.getUTCDate()
+    const year = date.getUTCFullYear()
+    const month = date.getMonth()
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+const d = new Date();
+
+
+     var downloadDate = monthNames[d.getMonth()] + '/' + day + '/' + year 
+
+    FileSaver.saveAs(data, fileName + '_export' + '_'+ downloadDate + EXCEL_EXT);
   }
+
+
+/**
+ * Function to download the HR Report 
+ * 
+ */
+
+
+
+  exportToExceltwo(hrdownload: any[], excelFileNameTwo: string): void{
+    const worksheetscanneditems: XLSX.WorkSheet = XLSX.utils.json_to_sheet(hrdownload);
+   
+    const workbook: XLSX.WorkBook = {
+      Sheets: {
+        'HR REPORT': worksheetscanneditems,
+       
+
+      },
+      SheetNames: ['HR REPORT']
+    };
+    const excelBuffer: any = XLSX.write(workbook, {bookType: 'xlsx', type: 'array'});
+    //call method buffer and file Name
+    this.savedAsExceltwo(excelBuffer, excelFileNameTwo);
+  }
+  private savedAsExceltwo(buffer: any, fileName: string): void{
+    const data: Blob = new Blob([buffer], {type: EXCEL_TYPE});
+    
+    var date = new Date()
+    
+    const day = date.getUTCDate()
+    const year = date.getUTCFullYear()
+    const month = date.getMonth()
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+const d = new Date();
+
+
+     var downloadDate = monthNames[d.getMonth()] + '/' + day + '/' + year 
+
+    FileSaver.saveAs(data, fileName + '_export'+'_' + downloadDate + EXCEL_EXT);
+  }
+
+
 }
 
 

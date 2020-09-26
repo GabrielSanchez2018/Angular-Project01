@@ -4,9 +4,10 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
-import { time } from 'console';
+
 import { ServiceCreateDeleteDialogComponent } from 'src/app/dialogs/service-create-delete-dialog/service-create-delete-dialog.component';
 import { MatDialog } from '@angular/material';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-timer',
@@ -19,6 +20,7 @@ export class TimerComponent implements OnInit {
   maxDate: Date;
   form: FormGroup;
   time: any;
+  
   // displayedColumns = ['id','description', 'time','functions'];
   displayedColumns = [ 'time','functions'];
   displayedColumns1 = [ 'time','functions'];
@@ -61,6 +63,24 @@ export class TimerComponent implements OnInit {
     const year = date.getUTCFullYear()
     const month = date.getMonth()
 
+    console.log('this is the date we want to edit', date)
+    
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    let diff = Math.abs( now.valueOf() - start.valueOf());
+    var oneday = 1000 * 60 * 60* 24;
+   
+    var dayy = Math.floor(  oneday / diff);
+    console.log('this is the differnce 0000', dayy)
+
+    console.log('number day now', now, 'this is start ', start, 'this is one day', oneday)
+    
+    var diffe = Math.abs( start.valueOf()- date.valueOf());
+    var lastdate = Math.floor(diffe / (1000 * 3600 * 24)); 
+
+    console.log('last day set up', lastdate)
+    
+   
 
 
 
@@ -69,7 +89,7 @@ export class TimerComponent implements OnInit {
     this.http.post('/api/time', {
       text: description,
       time: day + year + month,
-      time1: date
+      time1: lastdate
     }).subscribe(res => {
       this.time = this.time.concat([res]);
 

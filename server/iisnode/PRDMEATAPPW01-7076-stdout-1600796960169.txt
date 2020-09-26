@@ -1,0 +1,14 @@
+Application started and listening on port: \\.\pipe\6ffd4f80-0dfb-4155-b077-18fcebcaa549
+Connection to the database instance was successful 8-19-20
+[0mGET / [32m200[0m 4.561 ms - 2136[0m
+[0mGET /runtime-es2015.js [32m200[0m 3.141 ms - 6306[0m
+[0mGET /polyfills-es2015.js [32m200[0m 8.418 ms - 275435[0m
+[0mGET /main-es2015.js [32m200[0m 4.110 ms - 755433[0m
+[0mGET /styles-es2015.js [32m200[0m 5.727 ms - 737032[0m
+[0mGET /scripts.js [32m200[0m 1.633 ms - 428368[0m
+[0mGET /vendor-es2015.js [32m200[0m 3.031 ms - 9890292[0m
+[0mGET /runtime-es2015.js.map [32m200[0m 3.919 ms - 6289[0m
+[0mGET /polyfills-es2015.js.map [32m200[0m 3.627 ms - 265646[0m
+[0mGET /main-es2015.js.map [32m200[0m 3.558 ms - 767579[0m
+[0mGET /styles-es2015.js.map [32m200[0m 3.423 ms - 791169[0m
+[0mGET /vendor-es2015.js.map [32m200[0m 3.761 ms - 11083800[0m

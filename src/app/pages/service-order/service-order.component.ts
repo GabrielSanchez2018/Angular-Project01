@@ -14,13 +14,13 @@ interface Item {
 
 
 @Component({
-  selector: 'app-service-repair',
-  templateUrl: './service-repair.component.html',
-  styleUrls: ['./service-repair.component.css']
+  selector: 'app-service-order',
+  templateUrl: './service-order.component.html',
+  styleUrls: ['./service-order.component.css']
 })
-export class ServiceRepairComponent implements OnInit {
+export class ServiceOrderComponent implements OnInit {
 //services = new MatTableDataSource<ServiceRepairComponent>(this.services);
-selection = new SelectionModel<ServiceRepairComponent>(true, []);
+selection = new SelectionModel<ServiceOrderComponent>(true, []);
 selectedValue: string;
   displayedColumns = ['select','id', 'title', 'price', 'extimate'];
   username: string;
@@ -104,7 +104,7 @@ selectedValue: string;
 
   }
 
-  checkboxLabel(row?: ServiceRepairComponent): string {
+  checkboxLabel(row?: ServiceOrderComponent): string {
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }

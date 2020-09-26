@@ -1,7 +1,6 @@
 /*=========================
-Name: Brittany Dockter, Justin Singleton, Gabriel Sanchez
+Name:  Gabriel Sanchez
 Date: April 19, 2020
-Assignment: user list component
 Description: ability to delete users from the list
 ==========================*/
 

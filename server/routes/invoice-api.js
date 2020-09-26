@@ -23,6 +23,23 @@ router.get('/', function(req, res, next){
 })
 
 
+router.delete('/alldelete', function () {
+  console.log("db connect");
+  var db = mongoose.connection;
+  db.dropCollection("invoices", function (err, result) {
+      if (err) {
+          console.log("error delete collection");
+      } else {
+
+          console.log("delete collection success");
+
+      }
+
+  });
+
+
+})
+
 // Create Invoice
 router.post('/:username', function(req, res, next) {
   const username = req.params.username;
@@ -160,22 +177,7 @@ router.get('/:usernameId/barcode', function(req, res, next){
 //     }
 //   });
 // });
-router.delete('/alldelete', function () {
-  console.log("db connect");
-  var db = mongoose.connection;
-  db.dropCollection("invoices", function (err, result) {
-      if (err) {
-          console.log("error delete collection");
-      } else {
 
-          console.log("delete collection success");
-
-      }
-
-  });
-
-
-})
 
 //Delete Barcode
 router.delete('/:usernameId/barcode/:barcodeId', function(req, res, next){
