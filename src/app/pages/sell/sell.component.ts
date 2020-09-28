@@ -72,7 +72,7 @@ export class SellComponent implements OnInit {
      this.username = this.cookieService.get('paysession');
     this.http.get('api/invoices/' + this.username).subscribe(res =>{
       this.invoices = res;
-      
+
       var invoiceCounter = this.invoices.length
     console.log('This counts the invoice length',invoiceCounter)
      /**
@@ -123,6 +123,11 @@ this.http.get('api/barcodes/' ).subscribe(res =>{
   getTotalCost() {
     if(Array.isArray(this.barcodes)){
     return this.barcodes.map(t => t.totalprice).reduce((acc, value) => acc + value, 0);
+    }
+  }
+  getBarcode() {
+    if(Array.isArray(this.barcodes)){
+    return this.barcodes.map(t => t.barProductCode).reduce((acc, value) => acc + value, 0);
     }
   }
 
@@ -595,22 +600,34 @@ console.log('here is the total description', itemdescription);
 console.log('get name', this.getName())
 this.changeDetectorRefs.detectChanges();
 
-console.log('this is what this user orderded', this.invoices[0].lineItems[0].id)
-console.log('this is what this user orderded', this.invoices[0].lineItems[1].id)
+// console.log('this is what this user orderded', this.invoices[0].lineItems[0].id)
+// console.log('this is what this user orderded', this.invoices[0].lineItems[1].id)
 
 console.log('this is the barcode inputed', labelproductCode)
 
-// if (labelproductCode == this.invoices[0].lineItems[0].id){
-//   document.getElementById("change").style.backgroundColor = '#99C262';
-//   console.log('Color Changed')
-// } else if (labelproductCode === this.invoices[0].lineItems[1].id) {
-//   document.getElementById("change").style.backgroundColor = '#99C262';
-//   console.log('Color Changed')
+if (labelproductCode == this.invoices[0].lineItems[0].id){
+  document.getElementById("change0").style.color = "green";
+  document.getElementById("change2").style.color = "green";
+  console.log('Color Changed')
 
-// } else {
-//   console.log('no color changed')
-// }
 
+} else if (labelproductCode == this.invoices[0].lineItems[1].id) {
+  document.getElementById("change1").style.color = "green";
+  document.getElementById("change3").style.color = "green";
+  console.log('Color Changed')
+
+
+} else if (labelproductCode !== this.invoices[0].lineItems[0].id) {
+  document.getElementById("change00").style.display = "";
+  document.getElementById("change000").innerHTML = labelproductCode;
+  document.getElementById("change000").style.display = '';
+} else if (labelproductCode !== this.invoices[0].lineItems[1].id) {
+  document.getElementById("change11").style.display = "";
+  document.getElementById("change111").innerHTML = labelproductCode;
+  document.getElementById("change111").style.display = '';
+} else {
+console.log('no order')
+}
 
 
 
