@@ -165,9 +165,9 @@ print(){
       barcode: barcode
     },
     disableClose: true,
-    maxWidth: '100vw',
-    maxHeight: '90vh',
-    height: '100%',
+     maxWidth: '100vw',
+    // maxHeight: '90vh',
+    // height: '100%',
     width: '100%'
 
   });

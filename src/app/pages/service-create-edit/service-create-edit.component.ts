@@ -38,11 +38,18 @@ export class ServiceCreateEditComponent implements OnInit {
   }
 
   saveService() {
+    var id = this.form.controls['id'].value;
+    var newid = id.toString()
+
+    if( newid.length > 5){
+     var newid = newid.slice(1,6)
+    }
+
     this.http.put('/api/services/' + this.serviceId, {
       title: this.form.controls.title.value,
       price: this.form.controls.price.value,
       extimate: this.form.controls.extimate.value,
-      id: this.form.controls.id.value,
+      id: newid
     }).subscribe(res => {
       this.router.navigate(['/service-management']);
     });

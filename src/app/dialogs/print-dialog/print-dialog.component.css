@@ -11,6 +11,14 @@
   font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
   color: #555;
 }
+
+br{
+  display: none;
+}
+
+.employeeIdClass{
+  display: none;
+}
 .signature {
   font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
   color: #555;
@@ -87,17 +95,22 @@
 @media print {
 .table{
   width: 1200px;
+  padding-left: 50%;
+}
+.title{
+  display: none;
 }
 
   .invoice-box {
-    margin-top: -50%;
-    width: 1500px;
-    margin: 0 auto;
+   
+    width: 750px;
+    margin-right: 40%;
+
     margin-bottom: 1000px;
-    font-size: 23px;
+    font-size: 35px;
     font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
     color: black;
-    border: 3px solid;
+    /* border: 3px solid; */
 
   }
   .signature{
@@ -110,6 +123,21 @@
   .line{
     background-color: black;
   }
+
+  .locationInfo{
+    font-size: larger;
+  }
+  .employeeIdClass{
+  display: inline;
+  }
+  .hr{
+    display: inline;
+  }
+
+  br{
+    display: inline;
+  }
+
 }
 
 

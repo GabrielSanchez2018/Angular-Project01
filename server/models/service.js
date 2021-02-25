@@ -13,6 +13,7 @@ let serviceSchema = mongoose.Schema({
     price: {type: Number},
     extimate: {type: Number},
     id: {type: Number },
+    inStockProd: {type: Number, default: 0},
     isDisabled: {type: Boolean, default: false}
 });
 

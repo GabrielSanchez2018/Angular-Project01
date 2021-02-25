@@ -16,7 +16,7 @@ export class PurchasesByServiceComponent implements OnInit {
     labels = [];
     code = [];
     displayedColumns = ['code','description','count'];
-    displayedColumns01 = ['id','lineitems','total','date', 'functions'];
+    displayedColumns01 = ['FirstName','LastName', 'Department','id','lineitems','total','date', 'functions'];
     username: any;
     invoices: any;
 
@@ -25,6 +25,7 @@ export class PurchasesByServiceComponent implements OnInit {
         this.username = this.cookieService.get('sessionuser');
         this.http.get('api/invoices/' ).subscribe(res =>{
           this.invoices = res;
+          console.log("this is the the invoices", this.invoices)
         }, err => {
           console.log(err);
         })

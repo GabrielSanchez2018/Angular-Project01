@@ -2,48 +2,7 @@
 
 
 
-<!--
-<mat-horizontal-stepper labelPosition="bottom" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup" optional>
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-horizontal-stepper>
- -->
 
- <!-- <mat-card>
-  <p id="demo">{{timeExpire()}}</p>
- </mat-card> -->
 
  <div class="logOut" fxLayout="column" style="float: right; padding-right: 15%; margin-top: 14%; height: 50px;">
 
@@ -54,29 +13,33 @@
   (click)="onLogout()"
   color='warn'> <span class="material-icons">
     exit_to_app
-    </span> Logout | Salir
+    </span> {{logoutLanguageChange()}}
 
 </button>
 
 </div>
+
+
 <div class="outsideContainer">
 
   <div class="insideContainer" *ngIf="appear">
-    <h1>
+    <h1 class="h1Names">
       {{user?.FirstName}}
       {{user?.LastName}}
     </h1>
 
 
-  <h1 class="title" *ngIf="show">
-    Place your order right now! <br />
-    <span class="subtitle" >
-      Select only two items
-    </span>
+  <h1 id="demo" class="title" *ngIf="show">
+    {{firstLanguageChange()}}<br />
+    <h2 id="susdemo" class="subtitle" >
+
+     {{secondLanguageChange()}} 
+      
+    </h2>
   </h1>
 
   <h1 class="title" *ngIf="!show">
-    Thank you for your order! <br />
+    {{sixLanguageChange()}} <br />
 
   </h1>
 
@@ -96,7 +59,9 @@
     style='margin: 0 auto; text-align: center;'
     routerLink='/service-order'
     mat-raised-button
-    color='accent'>Order Meat Now! | Ordena Carne Aqui!</button>
+    color='accent'>
+    
+    {{buttonOneLanguageChange()}}</button>
 
 <br>
 <br>
@@ -121,7 +86,7 @@
   matBadge={{invoice?.length}}
   matBadgePosition="before"
   matBadgeColor="warn"
-  color='accent'>Check my Order | Vee tu Order Aqui
+  color='accent'>{{buttonTwoLanguageChange()}}
 
 </button>
 
@@ -136,18 +101,37 @@
 
 
 <h1 class="title">
-  No longer accepting more orders! <br />
+  {{thirdLanguageChange()}} <br />
   <span class="subtitle" >
-    See you next time
+    {{fourthLanguageChange()}}
   </span><br>
   <span class="subtitle" >
-    Thank you
+    {{fifthLanguageChange()}}
   </span>
   </h1>
 
-</div>
+
+  <div fxLayout="column" class="main-welcome">
+    <button
+    class='order2'
+    style='margin: 0 auto; text-align: center;'
+    routerLink='/my-orders/{{username}}'
+    mat-raised-button
+    matBadge={{invoice?.length}}
+    matBadgePosition="before"
+    matBadgeColor="warn"
+    color='accent'>{{buttonTwoLanguageChange()}}
+  
+  </button>
+  
+  </div>
 
 </div>
+
+
+</div>
+
+
 
 
 

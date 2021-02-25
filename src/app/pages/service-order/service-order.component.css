@@ -16,3 +16,26 @@ table {
   margin-top: 3%;
 }
 
+.mat-row:hover {
+  background-color: gainsboro;
+}
+
+
+.mat-header-cell {
+  background-color:  grey;
+}
+@media only screen and (max-width: 500px) {
+  table{
+    width: 97%;
+    
+  }
+  th,td{
+    font-size: 10px;
+    
+  }
+  .mat-card{
+    width: 95%;
+    min-width:200px ;
+  }
+  
+}

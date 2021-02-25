@@ -94,6 +94,12 @@ import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-
 import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 import { OrderVerify01Component } from './pages/order-verify01/order-verify01.component';
 import { TimerComponent } from './pages/timer/timer.component';
+import { OrderManuallyComponent } from './pages/order-manually/order-manually.component';
+import { ServiceOrderManualComponent } from './pages/service-order-manual/service-order-manual.component';
+import { EmployeeCreateDialogComponent } from './dialogs/employee-create-dialog/employee-create-dialog.component';
+import { LanguageComponent } from './dialogs/language/language.component';
+import { InvoiceHistoryComponent } from './pages/invoice-history/invoice-history.component';
+
 
 //import { TimeEditComponent } from './pages/time-edit/time-edit.component';
 
@@ -148,6 +154,12 @@ import { TimerComponent } from './pages/timer/timer.component';
    EmployeeCreateComponent,
    OrderVerify01Component,
    TimerComponent,
+   OrderManuallyComponent,
+   ServiceOrderManualComponent,
+   EmployeeCreateDialogComponent,
+   LanguageComponent,
+   InvoiceHistoryComponent,
+
   // TimeEditComponent,
 
   ],

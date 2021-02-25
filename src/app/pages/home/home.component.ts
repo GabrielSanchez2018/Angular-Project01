@@ -22,6 +22,9 @@ export class HomeComponent implements OnInit {
   show: boolean = true;
   appear: boolean = true;
   time: Object;
+  Language_sh: boolean = true;
+
+  
 
 
   constructor(private http: HttpClient, private cookieService: CookieService,private router: Router) {
@@ -104,6 +107,20 @@ export class HomeComponent implements OnInit {
       console.log(err);
     })
 
+    /**
+     * Getting Language starting
+     */
+
+     var EnglishCookie = cookieService.get("Language");
+
+     console.log('this is the cookie',EnglishCookie)
+
+     if(EnglishCookie = "english"){
+      this.Language_sh = true
+     } else {
+       this.Language_sh = false
+     }
+
   }
 
   timeExpire(){
@@ -155,5 +172,121 @@ console.log(this.timeExpire())
   }
 
 
+  //Language Code 
+  //This will translate English, Spanish and Burmise. 
+firstLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Ordena Ahora!"
+  } else if(lan == "english"){
+    return "Place your order Right Now!"
+  } else if(lan == "burmise"){
+    return "သင်ရဲ့ ပြစ် စီးကိုအခုပဲမှာထားပါ "
+
+  }
+
+}
+
+secondLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Por Favor, Selecciona solo dos cajas"
+  } else if(lan == "english"){
+    return "Select only two items"
+  } else if(lan == "burmise"){
+    return "ပစ္စည်း နှစ်ခုကို ပဲရွေးချယ်ပါ  "
+
+  } 
+}
+
+buttonOneLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Orderna Carne Aqui"
+  } else if(lan == "english"){
+    return "Order Meat Now!"
+  }  else if(lan == "burmise"){
+    return "အသားကိုအခုပဲမှာပါ "
+
+  } 
+}
+buttonTwoLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Verifica tu orden Aqui!"
+  } else if(lan == "english"){
+    return "Check My Order!"
+  }  else if(lan == "burmise"){
+    return "ကိုမှာတဲ့ပစ္စည်းကိုစစ်ဆေး"
+
+  } 
+}
+
+thirdLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "No mas Ordenes"
+  } else if(lan == "english"){
+    return "No longer accepting orders"
+  }  else if(lan == "burmise"){
+    return "ပစ္စည်းကိုမှာပို့လက်မခံတော့ပူး"
+
+  } 
+}
+
+fourthLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Asta la proxima"
+  } else if(lan == "english"){
+    return "See you next time"
+  }  else if(lan == "burmise"){
+    return "နောက်တစ်ခါတွေ့ကြမယ် "
+
+  } 
+}
+
+fifthLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Gracias"
+  } else if(lan == "english"){
+    return "Thank you"
+  }  else if(lan == "burmise"){
+    return "ကျေးဇူးတင်ပါတယ် "
+
+  } 
+}
+sixLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Gracias por tu orden"
+  } else if(lan == "english"){
+    return "Thank you for your order!"
+  } else if(lan == "burmise"){
+    return "သင်ပစ္စည်းမှာတဲ့အတွက်ကျေးဇူးတင်ပါတယ် "
+
+  }  
+}
+logoutLanguageChange(){
+  var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Salir"
+  } else if(lan == "english"){
+    return "Logout"
+  }  else if(lan == "burmise"){
+    return "အကောင့်ဟနေထွက်လက်ပါ "
+
+  } 
+}
 
 }

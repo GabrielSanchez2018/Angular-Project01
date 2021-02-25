@@ -36,7 +36,8 @@ let invoiceSchema = mongoose.Schema({
     lineItemTotal: {type: Number},
     total: {type: Number},
     username: {type: String},
-    orderDate: {type: Date}
+    orderDate: {type: Date},
+    employeeInformation: {type: Array}
 });
 
 // export for public use

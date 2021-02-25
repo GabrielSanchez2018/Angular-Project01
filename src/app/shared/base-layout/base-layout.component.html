@@ -13,8 +13,8 @@
     <br>
     
 
-    <span> &nbsp;&nbsp;GOP MEAT SALE</span>
-      &nbsp;&nbsp;
+    <span class="meatsaleTitle"> &nbsp;&nbsp;GOP MEAT SALE</span>
+      <span class="meatsaleTitle" ></span> 
 
     <button mat-fab *ngIf='show' [routerLink]="'/admin'" aria-label="Example icon button with a home icon">
       <mat-icon>home</mat-icon>
@@ -27,7 +27,7 @@
       <ul fxLayout fxLayoutGap="20px" style="list-style: none;">
 
         <li fxhide.xs>
-          <span style="font-size: 15px;">Welcome {{username.toUpperCase()}}</span>
+          <span style="font-size: 15px;" class="meatsaleTitle"> Welcome </span> <span class="meatsaleTitle" > {{username.toUpperCase()}}</span>
         </li>
 
 
@@ -64,10 +64,9 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="over" style="background: #1f4037;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  ; width: 30%; ">
+  <mat-sidenav #sidenav mode="over" 
+  style="background-color: white;"
+  >
     <mat-nav-list>
 
 
@@ -124,6 +123,13 @@
           store
           </span>
           <span style="color: #ffd740;">&nbsp;&nbsp;Employee Sale</span>
+      </a>
+      <!----History Button-->
+      <a mat-list-item  [routerLink]="'/invoice-history'">
+        <span class="material-icons">
+          view_quilt
+          </span>
+          <span style="color: #ffd740;"> &nbsp;&nbsp; Invoice History</span>
       </a>
 
      

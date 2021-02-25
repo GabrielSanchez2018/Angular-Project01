@@ -16,27 +16,28 @@ export class DatabaseManagementComponent implements OnInit {
   leftover: any;
 
 
-  constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog ) {
-    this.http.get('api/barcodes/').subscribe(res =>{
+  constructor(private http: HttpClient, private exportService: ExporterService, private dialog: MatDialog) {
+    this.http.get('api/barcodes/').subscribe(res => {
       this.barcodes = res;
-    }), err =>{
+      console.log('Barcodes Api', this.barcodes)
+    }), err => {
       console.log(err)
     }
-    this.http.get('api/invoices/').subscribe(res =>{
+    this.http.get('api/invoices/').subscribe(res => {
       this.invoices = res;
-    }), err =>{
+    }), err => {
       console.log(err)
     }
 
-    this.http.get('api/leftover/').subscribe(res =>{
+    this.http.get('api/leftover/').subscribe(res => {
       this.leftover = res;
       console.log('leftover', this.leftover)
-    }), err =>{
+    }), err => {
       console.log(err)
     }
 
 
-   }
+  }
 
 
 
@@ -53,9 +54,23 @@ export class DatabaseManagementComponent implements OnInit {
       width: '800px'
     });
 
-    dialogRef.afterClosed().subscribe(result =>{
-      if (result === 'confirm'){
-        this.http.delete('/api/barcodes/alldelete' ).subscribe(res => {
+
+    dialogRef.afterClosed().subscribe(result => {
+
+
+      console.log('history', history)
+      //post barcodes into the history 
+      this.http.post('/api/history/', {
+        history: this.barcodes,
+        leftoverhistory: this.leftover
+
+      }).subscribe(res => {
+        console.log('copy and paste', res)
+      })
+
+
+      if (result === 'confirm') {
+        this.http.delete('/api/barcodes/alldelete').subscribe(res => {
           console.log('Barcode deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
@@ -63,9 +78,9 @@ export class DatabaseManagementComponent implements OnInit {
         });
       }
     });
-   }
+  }
 
-   deleteInvoice(alldelete) {
+  deleteInvoice(alldelete) {
     const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
       data: {
         alldelete
@@ -74,9 +89,9 @@ export class DatabaseManagementComponent implements OnInit {
       width: '800px'
     });
 
-    dialogRef.afterClosed().subscribe(result =>{
-      if (result === 'confirm'){
-        this.http.delete('/api/invoices/alldelete' ).subscribe(res => {
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'confirm') {
+        this.http.delete('/api/invoices/alldelete').subscribe(res => {
           console.log('Invoices deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
@@ -85,10 +100,10 @@ export class DatabaseManagementComponent implements OnInit {
       }
     });
 
-    
-   }
 
-   deleteleftover(alldelete) {
+  }
+
+  deleteleftover(alldelete) {
     const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
       data: {
         alldelete
@@ -97,21 +112,21 @@ export class DatabaseManagementComponent implements OnInit {
       width: '800px'
     });
 
-    dialogRef.afterClosed().subscribe(result =>{
-      if (result === 'confirm'){
-        this.http.delete('/api/leftover/alldelete' ).subscribe(res => {
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'confirm') {
+        this.http.delete('/api/leftover/alldelete').subscribe(res => {
           console.log('leftover deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
-         
+
         });
       }
     });
 
-    
-   }
 
-   deleteleCheckedinInventory(alldelete) {
+  }
+
+  deleteleCheckedinInventory(alldelete) {
     const dialogRef = this.dialog.open(ServiceCreateDeleteDialogComponent, {
       data: {
         alldelete
@@ -120,21 +135,21 @@ export class DatabaseManagementComponent implements OnInit {
       width: '800px'
     });
 
-    dialogRef.afterClosed().subscribe(result =>{
-      if (result === 'confirm'){
-        this.http.delete('/api/orderVerify/alldelete' ).subscribe(res => {
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'confirm') {
+        this.http.delete('/api/orderVerify/alldelete').subscribe(res => {
           console.log('Checked In inventory deleted');
 
           //this.barcodes = this.barcodes.filter(q => q._id !== barcodeId);
-         
+
         });
       }
     });
 
-    
-   }
-  
-   
+
+  }
+
+
 
 
 }

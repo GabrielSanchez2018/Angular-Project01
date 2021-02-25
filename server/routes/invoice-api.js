@@ -10,6 +10,7 @@ const Invoice = require('../models/invoice');
 const router = express.Router();
 
 
+
 router.get('/', function(req, res, next){
   Invoice.find({}, function(err, invoices){
     if(err){
@@ -51,7 +52,8 @@ router.post('/:username', function(req, res, next) {
       lineItemTotal: req.body.lineItemTotal,
       total: req.body.total,
       username: username,
-      orderDate: req.body.orderDate
+      orderDate: req.body.orderDate,
+      employeeInformation: req.body.employeeInformation
   };
 
   console.log(invoice);

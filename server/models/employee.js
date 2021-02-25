@@ -8,11 +8,12 @@ const mongoose = require('mongoose');
 
 
 let employeeSchema = mongoose.Schema({
-  EmployeeId: {type: String,},
+  EmployeeID: {type: String,},
   LastName: {type:String},
   FirstName: {type: String},
-  Department: {type: Number},
+  Department: {type: String},
   StartDate: {type: Number},
+  EmployeeNumberId:{type: Number},
   role: {type: String, default: 'standard'},
 
 

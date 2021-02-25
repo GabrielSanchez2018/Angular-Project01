@@ -2,12 +2,17 @@
 <!-- <meta http-equiv="refresh" content="30" /> -->
 <br><br>
 
-  <mat-card class="signin-container" >
-    <img src="../../../assets/images/gop.png" alt="gop" style="float: center;">
+
+
+<br> <br>
+
+  <mat-card id="keyboard-version"  class="signin-container01" >
+    <img src="../../../assets/images/gop.png" alt="gop" style="margin: 0 auto;" class="image">
+<br>
 <br>
     <mat-card-subtitle class="signin-subtitle mat-headline">You must enter a valid employee id to proceed
     </mat-card-subtitle>
-    <mat-card-content >
+    <mat-card-content class="matContent">
       <mat-card class="mat-elevation-z0"fxLayout="column" fxLayoutGap="10px">
         <form [formGroup]="form" (ngSubmit)="login(); form.reset()" #loginForm="ngForm">
 
@@ -24,7 +29,7 @@
                 Employee ID must be letters.
               </mat-error>
             </mat-form-field>
-            <div class="simple-keyboard"></div>
+            
           </mat-card-content>
 
           <mat-card-actions>
@@ -35,6 +40,24 @@
       </mat-card>
     </mat-card-content>
   </mat-card>
+
+  <mat-card class="Links">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="https://greateromaha.awardco.com/"><img style="width: 100%; " src="../../../assets/images/awardco.png" alt="awardco"></a>
+        </div>
+        <div class="col-md-6">
+          <a href="
+          https://hcm.paycor.com/authentication/signin"><img  style="width: 100%; " src="../../../assets/images/paycore.png" alt="paycore"></a>
+        </div>
+      </div>
+    </div>
+
+  </mat-card>
+
+  <br><br><br>
 
   <!-- <div style="text-align:center">
     <input (input)="onInputChange($event)" class="input" value={{value}} placeholder="Tap on the virtual keyboard to start" />

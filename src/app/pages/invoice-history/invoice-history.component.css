@@ -1,0 +1,45 @@
+table {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+  
+  
+  .ng-container, th, td, .mat-header-cell {
+    text-align: center;
+  }
+  
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+  .card{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+  
+  }
+  .return{
+    width: 50px;
+    margin: 0 auto;
+  
+  }
+  
+  .title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    text-align: center;
+  
+  
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+  
+  }
+  
+  
+  
+  

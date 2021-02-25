@@ -10,6 +10,7 @@ const Timer = require('../models/timer');
 const { Time } = require('mssql');
 const router = express.Router();
 
+
 //Get Time
 router.get('/', function(req, res, next) {
   Timer.find({}, function(err, time) {

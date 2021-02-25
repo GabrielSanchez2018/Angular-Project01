@@ -47,7 +47,8 @@ router.post('/', function(req, res, next){
     title: req.body.title,
     price : req.body.price,
     extimate: req.body.extimate,
-    id : req.body.id
+    id : req.body.id,
+    inStockProd: req.body.inStockprod
   };
 
   Services.create(newService, function(err, services){

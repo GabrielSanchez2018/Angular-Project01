@@ -45,6 +45,12 @@ import { LeftoverProduct01Component } from './pages/leftover-product01/leftover-
 import { EmployeeCreateComponent } from './pages/employee-create/employee-create.component';
 import { OrderVerify01Component } from './pages/order-verify01/order-verify01.component';
 import { TimerComponent } from './pages/timer/timer.component';
+import { OrderManuallyComponent } from './pages/order-manually/order-manually.component';
+import { ServiceOrderManualComponent } from './pages/service-order-manual/service-order-manual.component';
+import { EmployeeCreateDialogComponent } from './dialogs/employee-create-dialog/employee-create-dialog.component';
+import { LanguageComponent } from './dialogs/language/language.component';
+import { InvoiceHistoryComponent } from './pages/invoice-history/invoice-history.component';
+
 //import { TimeEditComponent } from './pages/time-edit/time-edit.component';
 
 
@@ -56,6 +62,11 @@ export const AppRoutes: Routes = [
       {
         path: '',
         component: HomeComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'invoice-history',
+        component: InvoiceHistoryComponent,
         canActivate: [SessionGuard]
       },
       {
@@ -99,13 +110,28 @@ export const AppRoutes: Routes = [
         canActivate: [RoleGuard]
       },
       {
-        path: 'employee-create',
-        component: EmployeeCreateComponent,
+        path: 'order-manually',
+        component: OrderManuallyComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'service-order-manual',
+        component: ServiceOrderManualComponent,
+        canActivate: [RoleGuard]
+      },
+      {
+        path: 'employee-create-dialog',
+        component: EmployeeCreateDialogComponent,
         canActivate: [RoleGuard]
       },
       {
         path: 'invoice',
         component: InvoiceComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'language',
+        component: LanguageComponent,
         canActivate: [SessionGuard]
       },
       {
@@ -168,11 +194,13 @@ export const AppRoutes: Routes = [
         path: 'internal-server',
         component: InternalServerComponent
       },
+     
       {
         path: 'service-order',
         component: ServiceOrderComponent,
         canActivate: [SessionGuard]
       },
+     
       {
         path: 'print',
         component: PrintDialogComponent,
@@ -217,6 +245,11 @@ export const AppRoutes: Routes = [
       {
         path: 'service-create',
         component: ServiceCreateComponent,
+        canActivate: [SessionGuard]
+      },
+      {
+        path: 'employee-create',
+        component: EmployeeCreateComponent,
         canActivate: [SessionGuard]
       },
       {

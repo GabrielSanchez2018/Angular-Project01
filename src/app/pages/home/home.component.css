@@ -67,3 +67,28 @@ body{
 .ng-hide.ng-hide-animate{
   display: none !important;
 }
+
+
+@media only screen and (max-width: 500px) {
+
+  .h1Names{
+    margin-top: 15px;
+    padding-top: 60px;
+    font-size: 20px;
+  }
+
+  .title{
+    font-size: 15px;
+  }
+  .subtitle{
+    font-size: 13px;
+  }
+  .order{
+    color: blue;
+   font-size: 10px;
+  }
+  .order2{
+    color: blue;
+    font-size: 10px;
+  }
+}

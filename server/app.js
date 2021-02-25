@@ -27,15 +27,25 @@ const Orderverify = require('./routes/order-verify-api');
 const Leftover = require('./routes/leftover-api');
 const TimerAPI = require('./routes/time-api');
 const TimePickupAPI = require('./routes/timepickup-api');
+const HistoryApi = require('./routes/history-api');
+const ExternalApi = require('./routes/test');
+const DeletedBarcodesApi = require('./routes/deletedbarcodes-api');
 
+const os = require('os')
+
+
+
+const computerName = os.hostname()
+
+console.log(computerName)
 //const SQLEmp = require('./routes/sql-employee-api');
 
 /**
  * App configurations
  */
 let app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({'extended': true}));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({'extended': true}));
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../dist/bcrs')));
 app.use('/test', express.static(path.join(__dirname, '../dist/bcrs')));
@@ -81,6 +91,9 @@ app.use('/api/orderverify',Orderverify);
 app.use('/api/leftover', Leftover);
 app.use('/api/time', TimerAPI);
 app.use('/api/timepickup', TimePickupAPI);
+app.use('/api/history', HistoryApi);
+app.use('/api/test', ExternalApi);
+app.use('/api/deletedbarcodes', DeletedBarcodesApi);
 //app.use('/api/sqlemp', SQLEmp);
 
 /**

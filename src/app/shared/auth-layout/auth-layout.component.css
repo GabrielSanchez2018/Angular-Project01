@@ -74,3 +74,10 @@ mat-grid-tile {
   margin: 0 auto;
 
 }
+
+@media only screen and (max-width: 500px) {
+  .footer-content-info{
+  display: none;
+  }
+  
+}

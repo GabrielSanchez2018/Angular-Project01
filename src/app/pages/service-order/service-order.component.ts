@@ -30,6 +30,7 @@ selectedValue: string;
   service: any;
   invoice: any;
   id: any;
+  Department: Object;
  //selection: any;
   position: number;
   dataSource: any;
@@ -37,12 +38,21 @@ selectedValue: string;
   show: boolean = true;
   mySelections: string[];
   //checked: boolean = true;
+  filter:Object;
+  
+
+
 
   items: Item[] = [
+
+   
     {value: "", viewValue: '1 Box'},
     {value: "Two", viewValue: '2 Boxes'},
 
+
   ];
+  employees: Object;
+  employee: Object;
 
 
 
@@ -61,9 +71,7 @@ selectedValue: string;
       console.log(err);
 
     })
-
-
-
+    
 
   }
 
@@ -234,9 +242,22 @@ console.log('esto', this.selectedValue)
         }
       }
     }
+
+    /***
+     * This Api will bring the employee info 
+     */
+   
+    this.http.get('api/employees/' + this.username.toUpperCase() ).subscribe(res =>{
+      this.employee = res;
+    }, err => {
+      console.log(err);
+
+    })
     /**
       * Build the invoice object
      */
+
+    
 
     console.log("here we are again in line items two", lineItems);
     const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.extimate, 0);
@@ -283,13 +304,14 @@ console.log('esto', this.selectedValue)
           lineItems: invoice.lineItems,
           lineItemTotal: invoice.lineItemTotal,
           total: invoice.total,
-          orderDate: invoice.orderDate
+          orderDate: invoice.orderDate,
+          employeeInformation: this.employee
         }).subscribe(res => {
 
           this.router.navigate(['/']);
 
           setTimeout(function(){
-            window.location.href = "http://localhost:4200/#/session/sign-in-employee";
+            // window.location.href = "http://localhost:4200/#/session/sign-in-employee";
             document.cookie = "sessionuser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
           },22000);
         }, err => {
@@ -299,6 +321,18 @@ console.log('esto', this.selectedValue)
     });
   }
 
+  firstLanguageChangeServiceOrderPage(){
+    var lan = this.cookieService.get('Language')
+
+  if (lan == "espanol"){
+    return "Porfavor, selecciona el numero de cajas"
+  } else if(lan == "english"){
+    return " Please select the number of boxes you want!"
+  }  else if(lan == "burmise"){
+    return "ကျေးဇူးပြုပြီဖန်နံပါတ်ကိုရွေးချယ်ပါ"
+
+  } 
+  }
 
 }
 

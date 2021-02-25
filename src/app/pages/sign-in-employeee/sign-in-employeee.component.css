@@ -1,12 +1,21 @@
- .signin-container{
+ /* .signin-container{
   width: 100%;
-  min-width: 70%;
+  min-width: 30%;
   max-width: 100%;
   margin-top: 20%;
   margin-bottom: 0;
   margin: 0 auto;
 
-}
+} */
+/* .signin-container01{
+  width: 50%;
+  min-width: 300px;
+  max-width: 100%;
+  margin-top: 20%;
+  margin-bottom: 0;
+  margin: 0 auto;
+
+} */
 
 .signin-title{
   /* color: #005640; */
@@ -44,9 +53,9 @@ input {
   box-sizing: border-box;
 }
 
-.simple-keyboard {
+/* .simple-keyboard {
   max-width: 100%;
-}
+} */
 
 
 /*
@@ -96,3 +105,50 @@ input {
   z-index: 1;
 } */
 
+@media only screen and (max-device-width: 500px) {
+  .signin-container01{
+   
+   
+    
+    margin-bottom: 0;
+  
+    
+  }
+  .image{
+    width: 100%;
+  }
+  .matContent{
+    width: auto;
+  }
+  
+}
+
+@media only screen and (min-width: 500px) {
+  .signin-container01{
+   
+   
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+  
+    
+  
+  }
+  .image{
+    width: none;
+  }
+  .matContent{
+    width: auto;
+  }
+  
+}
+
+/* Links to Paycor and award co.
+**
+*/
+
+.Links{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+}

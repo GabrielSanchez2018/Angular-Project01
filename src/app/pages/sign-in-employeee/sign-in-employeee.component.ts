@@ -39,6 +39,9 @@ export class SignInEmployeeeComponent implements OnInit {
   employees: Object;
   time: Object;
   appear: boolean = true;
+  computerName: any;
+  showKeyboard: boolean;
+  
 
   constructor(
     private router: Router,
@@ -62,44 +65,58 @@ export class SignInEmployeeeComponent implements OnInit {
       console.log(err);
     })
 
+    // this.http.get('/api/employees/computerName/').subscribe(res =>{
+    //   this.computerName = res;
+    //   console.log('this is the computer name', this.computerName)
+    //   if(this.computerName == "GOP001649"){
+    //     this.showKeyboard = false
+    //     console.log('keyboard True')
+    //   } else {
+    //     this.showKeyboard = true
+    //   }
 
 
+    // }, err =>{
+    //   console.log(err);
+    // })
+
+
+    
     /***
      * Get the time to hide the fuction after a time
      */
 
-    this.http.get('api/time/' ).subscribe(res =>{
-      this.time = res;
-      console.log('time set up',this.time)
+    // this.http.get('api/time/' ).subscribe(res =>{
+    //   this.time = res;
+    //   console.log('time set up',this.time)
 
-      const timenow = new Date()
+    //   const timenow = new Date()
 
-      const day = timenow.getUTCDate()
-      const year = timenow.getUTCFullYear()
-      const month = timenow.getMonth()
+    //   const day = timenow.getUTCDate()
+    //   const year = timenow.getUTCFullYear()
+    //   const month = timenow.getMonth()
 
-      console.log('this is the time now', day + year + month)
-      console.log('last day', this.time[0].time)
+    //   console.log('this is the time now', day + year + month)
+    //   console.log('last day', this.time[0].time)
 
-      var timerightnow = day + year + month
+    //   var timerightnow = day + year + month
 
-      if( timerightnow < this.time[0].time){
-        console.log('true')
-        this.show = true
+    //   if( timerightnow < this.time[0].time){
+    //     console.log('true')
+    //     this.show = true
 
-      } else {
-        console.log('false')
-        this.show = false
-      }
+    //   } else {
+    //     console.log('false')
+    //     this.show = false
+    //   }
 
-    }, err => {
-      console.log(err);
-    })
+    // }, err => {
+    //   console.log(err);
+    // })
 
 
 
   }
-
 
 
 
@@ -258,6 +275,7 @@ export class SignInEmployeeeComponent implements OnInit {
       if (EmployeeId === null){
          EmployeeId = this.value
       }
+     
 
     this.http.get("/api/employees/" + EmployeeId.toUpperCase()).subscribe(res => {
       if (res) {
@@ -273,7 +291,7 @@ export class SignInEmployeeeComponent implements OnInit {
 
         //this.stepper
         console.log('cookie info',this.cookieService)
-       this.router.navigate(["/"]);
+       this.router.navigate(["/language"]);
       } else {
 
         this.snackBar.open(
